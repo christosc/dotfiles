@@ -963,8 +963,8 @@ variable `calendar-month-genitive-name-array'."
 
 ;; do not confirm a new file or buffer
 ;; (setq confirm-nonexistent-file-or-buffer nil)
-(require 'ido)
-;; (ido-mode 1)
+;; (require 'ido)
+(ido-mode 1)
 ;; (ido-everywhere 1)
 ;; (setq ido-enable-flex-matching t)
 ;; (setq ido-create-new-buffer 'always)
