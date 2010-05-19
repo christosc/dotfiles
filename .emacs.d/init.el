@@ -1155,8 +1155,18 @@ variable `calendar-month-genitive-name-array'."
 					  (re-search-forward "@\\<interface\\>" magic-mode-regexp-match-limit t)))
 			   . objc-mode))
 
+;;; ----------------------------------------------------------------
+   ;;; set .m <-> .h correspondence for ff-find-other-file
+(add-hook 'objc-mode-hook
+		  (lambda ()
+			(set (make-local-variable 'cc-other-file-alist)  '(("\\.m\\'" (".h")) ("\\.h\\'" (".m" ".c" ".cpp"))))))
+   ;;; word movement for camelCasey names
+(add-hook 'objc-mode-hook 'c-subword-mode)
 
 
+(add-hook 'c-mode-common-hook
+  (lambda() 
+    (local-set-key  (kbd "C-c o") 'ff-find-other-file)))
 
 
 ;;; ΔΙΑ imenu
