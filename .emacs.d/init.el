@@ -1140,11 +1140,7 @@ variable `calendar-month-genitive-name-array'."
 (setq holiday-hebrew-holidays nil)
 (setq holiday-islamic-holidays nil)
 (setq holiday-oriental-holidays nil)
-(setq other-holidays '((holiday-fixed 5 1 "Πρωτομαϊά")))
-(add-to-list 'other-holidays '(holiday-fixed 3 25 "Εὐαγγελισμὸς ὑπεραγίας Θεοτόκου"))
-(add-to-list 'other-holidays '(holiday-fixed 3 25 "Ἐθνικὴ ἐπέτειος ἀπελευθερώσεως ἀπὸ τοὺς Τούρκους"))
-(add-to-list 'other-holidays '(holiday-fixed 10 28 "Ἐθνικὴ ἐπέτειος ἀρνήσεως ὑποταγῆς στοὺς Ἰταλούς"))
-(add-to-list 'other-holidays '(holiday-fixed 8 15 "Κοίμησις ὑπεραγίας Θεοτόκου"))
+(load-file "~/.emacs.d/my-holidays.el")
 
 ;;; ΔΙΑ OBJECTIVE-C
 (setq auto-mode-alist (cons '("\\.m$" . objc-mode) auto-mode-alist))
