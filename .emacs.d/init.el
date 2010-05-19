@@ -1095,7 +1095,15 @@ variable `calendar-month-genitive-name-array'."
 ;; (set-face-italic-p 'font-lock-comment-face nil) ;; Πλάγια στοιχεῖα
 
 ;; Ἵνα ἐμφαίνεται ὡς τίτλος τοῦ πλαισίου τὸ ὄνομα τοῦ buffer
-(setq frame-title-format '( "%b"))
+;; format title bar to show full path of current file 
+(setq-default frame-title-format 
+			  (list '((buffer-file-name " %f" 
+										(dired-directory 
+										 dired-directory 
+										 (revert-buffer-function " %b" 
+																 ("%b - Dir:  " default-directory))))))) 
+
+
 
 
 (global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
@@ -1140,6 +1148,15 @@ variable `calendar-month-genitive-name-array'."
 
 ;;; ΔΙΑ OBJECTIVE-C
 (setq auto-mode-alist (cons '("\\.m$" . objc-mode) auto-mode-alist))
+;; load objc-mode for .h files, which default to c-mode
+(add-to-list 'magic-mode-alist
+			 '((lambda ()
+				 (and (string= (file-name-extension buffer-file-name) "h")
+					  (re-search-forward "@\\<interface\\>" magic-mode-regexp-match-limit t)))
+			   . objc-mode))
+
+
+
 
 
 ;;; ΔΙΑ imenu
