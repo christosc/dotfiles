@@ -74,6 +74,6 @@
 (global-set-key (kbd "C-ξ") 'newline-and-indent)
 (global-set-key (kbd "C-μ") 'newline-and-indent)
 (global-set-key (kbd "C-ο") 'open-line)
-
+(global-set-key (kbd "C-M-κ") 'kill-sexp)
 
 
