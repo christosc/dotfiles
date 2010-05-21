@@ -326,7 +326,7 @@
 
 ;; (display-time)
 (setq display-time-day-and-date t
-	  display-time-24hr-format t)
+	  display-time-24hr-format nil)
 ;; (setq display-time-load-average-threshold 1)
 ;; (setq display-time-string-forms '((propertize display-time-string 'face 'bold)))
 
