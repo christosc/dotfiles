@@ -83,3 +83,8 @@
 (global-set-key (kbd "C-χ 5 .") 'find-tag-other-frame)
 (global-set-key (kbd "C-χ 5 ρ") 'ido-find-file-read-only-other-frame)
 (global-set-key (kbd "C-χ σ") 'save-some-buffers)
+(global-set-key (kbd "C-χ C-ρ") 'recentf-open-files)
+(global-set-key (kbd "C-χ 1") 'delete-other-windows)
+(global-set-key (kbd "C-χ 0") 'delete-window)
+(global-set-key (kbd "C-χ 2") 'split-window-vertically)
+(global-set-key (kbd "C-χ 3") 'split-window-horizontally)
