@@ -75,5 +75,11 @@
 (global-set-key (kbd "C-μ") 'newline-and-indent)
 (global-set-key (kbd "C-ο") 'open-line)
 (global-set-key (kbd "C-M-κ") 'kill-sexp)
-
+(global-set-key (kbd "C-χ 5 2") 'make-frame-command)
+(global-set-key (kbd "C-χ 5 0") 'delete-frame)
+(global-set-key (kbd "C-χ 5 β") 'ido-switch-buffer-other-frame)
+(global-set-key (kbd "C-χ 5 φ") 'ido-find-file-other-frame)
+(global-set-key (kbd "C-χ 5 μ") 'compose-mail-other-frame)
+(global-set-key (kbd "C-χ 5 .") 'find-tag-other-frame)
+(global-set-key (kbd "C-χ 5 ρ") 'ido-find-file-read-only-other-frame)
 
