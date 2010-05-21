@@ -82,4 +82,4 @@
 (global-set-key (kbd "C-χ 5 μ") 'compose-mail-other-frame)
 (global-set-key (kbd "C-χ 5 .") 'find-tag-other-frame)
 (global-set-key (kbd "C-χ 5 ρ") 'ido-find-file-read-only-other-frame)
-
+(global-set-key (kbd "C-χ σ") 'save-some-buffers)

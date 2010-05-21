@@ -650,7 +650,7 @@
  '(org-agenda-scheduled-leaders (quote ("Προγραμματισμένον: " "Προγραμ.%2dx: ")))
  '(org-clock-auto-clock-resolution t)
  '(org-closed-string "ΕΚΛΕΙΣΘΗ:")
- '(org-deadline-string "ΔΙΟΡΙΑ:")
+ '(org-deadline-string "ΠΡΟΘΕΣΜΙΑ:")
  '(org-effort-property "Κόπος")
  '(org-scheduled-string "ΠΡΟΓΡΑΜΜΑΤΙΣΜΕΝΟΝ:")
  '(show-paren-mode t))
