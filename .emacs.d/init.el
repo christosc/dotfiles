@@ -725,6 +725,10 @@ variable `calendar-month-genitive-name-array'."
 ;;(set-face-attribute 'default nil :family "Lucida Grande" :height 130)
 
 
+;; Γιὰ autopair
+(add-to-list 'load-path "~/.emacs.d/autopair-read-only") ;; comment if autopair.el is in standard load path 
+(require 'autopair)
+(autopair-global-mode)
 
 ;;; <SCALA>
 
@@ -948,7 +952,7 @@ variable `calendar-month-genitive-name-array'."
 
 
 ;; Διὰ νὰ δύναμαι νὰ μετακινηθῆ ἀπὸ frame σὲ frame διὰ τοῦ Alt-βέλη
-(windmove-default-keybindings 'meta)
+(windmove-default-keybindings 'ctrl)
 
 ;; (load-file "/Users/christos/.emacs.d/themes/color-theme-irblack.el")
 
