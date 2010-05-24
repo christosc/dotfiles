@@ -128,7 +128,7 @@ alias hibernateon="sudo pmset -a hibernatemode 1"
 alias hibernateoff="sudo pmset -a hibernatemode 3"
 
 ##############################   PYTHON   #################################################
-export PYTHONSTARTUP=/Users/christos/.pystartup
+# export PYTHONSTARTUP=/Users/christos/.pystartup
 export PYTHONPATH=/Library/Python/2.6/site-packages
 #####################################
 
@@ -269,19 +269,17 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 
-# Setting PATH for MacPython 2.6
-# The orginal version is saved in .profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
-export PATH
+
 
 # Setting PATH for MacPython 2.6
 # The orginal version is saved in .profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
-export PATH
+# PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
+# export PATH
 
-# Setting PATH for MacPython 2.6
-# The orginal version is saved in .profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
+
+
+# Θέσις PATH γιὰ MacPython 3.1
+PATH="/Library/Frameworks/Python.framework/Versions/3.1/bin:${PATH}"
 export PATH
 
 export ONLOCATION=Automatic

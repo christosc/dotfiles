@@ -714,12 +714,12 @@ variable `calendar-month-genitive-name-array'."
 
 ;(setq visible-bell t)
 ;; enable skeleton-pair insert globally
-(setq skeleton-pair t)
-;(setq skeleton-pair-on-word t) ; apply skeleton trick even in front of a word.
-(global-set-key (kbd "(")  'skeleton-pair-insert-maybe)
-(global-set-key (kbd "[")  'skeleton-pair-insert-maybe)
-(global-set-key (kbd "{")  'skeleton-pair-insert-maybe)
-(global-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
+;; (setq skeleton-pair t)
+;; ;(setq skeleton-pair-on-word t) ; apply skeleton trick even in front of a word.
+;; (global-set-key (kbd "(")  'skeleton-pair-insert-maybe)
+;; (global-set-key (kbd "[")  'skeleton-pair-insert-maybe)
+;; (global-set-key (kbd "{")  'skeleton-pair-insert-maybe)
+;; (global-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
 ;(global-set-key (kbd "\'") 'skeleton-pair-insert-maybe)
 ;(global-set-key (kbd "<") 'skeleton-pair-insert-maybe)
 ;;(set-face-attribute 'default nil :family "Lucida Grande" :height 130)
@@ -1203,3 +1203,12 @@ variable `calendar-month-genitive-name-array'."
 ;; that Emacs needs to be restarted.
 (setq scion-completing-read-function 'ido-completing-read)
 (setq scion-set-command-line-flag "-Wall")
+
+
+(global-linum-mode 1)
+
+
+(add-hook 'python-mode '(lambda () flymake-mode))
+
+
+
