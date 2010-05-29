@@ -284,3 +284,4 @@ export PATH
 
 export ONLOCATION=Automatic
 export OFFLOCATION=disconnected
+export PATH=$PATH:$HOME/sdk/lua/Current
