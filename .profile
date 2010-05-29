@@ -7,9 +7,9 @@ export PATH=$PATH:/usr/local/mysql/bin
 #export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig
 
 
-
-
-
+# export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "
+# export PS1="\[\033]0;\u@\h: \w\007\][\u@\h] \w \$ "
+export PS1="[\u@\h: \w]\$ "
 
 
 

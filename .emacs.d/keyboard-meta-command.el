@@ -2,6 +2,7 @@
 
 ;(setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
+;; (cua-mode t)
 
 (global-set-key (kbd "M-`") 'other-frame)
 (global-set-key (kbd "M-~") (lambda () (interactive) (other-frame (- 1))))
@@ -91,4 +92,26 @@
 (global-set-key (kbd "C-χ C-φ") 'find-file)
 (global-set-key (kbd "M-<left>") 'beginning-of-visual-line)
 (global-set-key (kbd "M-<right>") 'end-of-visual-line)
+
+(global-set-key (kbd "M-c") 'kill-ring-save)
+(global-set-key (kbd "M-v") 'yank)
+(global-set-key (kbd "M-z") 'undo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
