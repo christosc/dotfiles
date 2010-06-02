@@ -1113,8 +1113,8 @@ variable `calendar-month-genitive-name-array'."
 (global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
 
 ;; Ὁμαλωτέρα κατακόρυφος ὀλίσθησις
-(setq scroll-conservatively 10000) ;; ἵνα ὀλισθαίνῃ κατὰ μίαν γραμμὴν μὲ τὸ πληκτρολόγιον
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; ἵνα ὀλισθάνῃ κατὰ μίαν γραμμὴν τὸ ποντίκι
+;; (setq scroll-conservatively 10000) ;; ἵνα ὀλισθαίνῃ κατὰ μίαν γραμμὴν μὲ τὸ πληκτρολόγιον
+;; (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; ἵνα ὀλισθάνῃ κατὰ μίαν γραμμὴν τὸ ποντίκι
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

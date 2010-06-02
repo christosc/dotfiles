@@ -128,7 +128,7 @@ alias hibernateon="sudo pmset -a hibernatemode 1"
 alias hibernateoff="sudo pmset -a hibernatemode 3"
 
 ##############################   PYTHON   #################################################
-# export PYTHONSTARTUP=/Users/christos/.pystartup
+export PYTHONSTARTUP=/Users/christos/.pythonrc
 export PYTHONPATH=/Library/Python/2.6/site-packages
 #####################################
 
