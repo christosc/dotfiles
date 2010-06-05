@@ -128,7 +128,7 @@ alias hibernateon="sudo pmset -a hibernatemode 1"
 alias hibernateoff="sudo pmset -a hibernatemode 3"
 
 ##############################   PYTHON   #################################################
-export PYTHONSTARTUP=/Users/christos/.pythonrc
+export PYTHONSTARTUP=/Users/christos/.pythonrc.py
 export PYTHONPATH=/Library/Python/2.6/site-packages
 #####################################
 
@@ -285,3 +285,6 @@ export PATH
 export ONLOCATION=Automatic
 export OFFLOCATION=disconnected
 export PATH=$PATH:$HOME/sdk/lua/Current
+export PATH=$PATH:$HOME/.local/bin
+
+chars() { l="$@"; echo ${#l};}
