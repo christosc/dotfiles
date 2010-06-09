@@ -725,10 +725,11 @@ variable `calendar-month-genitive-name-array'."
 ;;(set-face-attribute 'default nil :family "Lucida Grande" :height 130)
 
 
-;; Γιὰ autopair
-(add-to-list 'load-path "~/.emacs.d/autopair-read-only") ;; comment if autopair.el is in standard load path 
-(require 'autopair)
-(autopair-global-mode)
+;;;;;;;;;;;;;;;;;;;  AUTOPAIR  ;;;;;;;;;;;;;;;;;;
+;; (add-to-list 'load-path "~/.emacs.d/autopair-read-only") ;; comment if autopair.el is in standard load path 
+;; (require 'autopair)
+;; (autopair-global-mode)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; <SCALA>
 
@@ -1212,3 +1213,15 @@ variable `calendar-month-genitive-name-array'."
 
 
 
+;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
+(autoload 'paredit-mode "paredit-beta"
+  "Minor mode for pseudo-structurally editing Lisp code." t)
+(add-hook 'emacs-lisp-mode-hook       (lambda () (paredit-mode +1)))
+(add-hook 'lisp-mode-hook             (lambda () (paredit-mode +1)))
+(add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
+(add-hook 'c-mode-common-hook         (lambda () (paredit-mode +1)))
+(add-hook 'objc-mode-hook             (lambda () (paredit-mode +1)))
+(add-hook 'haskell-mode-hook          (lambda () (paredit-mode +1)))
+(add-hook 'python-mode-hook           (lambda () (paredit-mode +1)))
+(add-hook 'java-mode-hook             (lambda () (paredit-mode +1)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
