@@ -288,3 +288,9 @@ export PATH=$PATH:$HOME/sdk/lua/Current
 export PATH=$PATH:$HOME/.local/bin
 
 chars() { l="$@"; echo ${#l};}
+
+### APCHE MAVEN
+export PATH="$HOME"/tools/apache-maven-2.2.1/bin:$PATH
+
+#######  CLASSPATH  ###############
+export CLASSPATH=.:/Users/christos/lib/clojure-contrib/target/clojure-contrib-1.2.0-SNAPSHOT.jar
