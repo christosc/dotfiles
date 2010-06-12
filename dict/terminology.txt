@@ -2,3 +2,4 @@ default : ἐν παραλείψει, παραλείψεως, κατὰ παρά
 delegate : πρευσβευτής, πρόξενος
 garbage collection : περισυλλογὴ ἀχρήστων
 multi-threaded : πολύμιτος
+script : γραφή
