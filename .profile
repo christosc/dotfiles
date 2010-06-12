@@ -294,3 +294,7 @@ export PATH="$HOME"/tools/apache-maven-2.2.1/bin:$PATH
 
 #######  CLASSPATH  ###############
 export CLASSPATH=.:/Users/christos/lib/clojure-contrib/target/clojure-contrib-1.2.0-SNAPSHOT.jar
+# Setting PATH for MacPython 2.6
+# The orginal version is saved in .profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
+export PATH
