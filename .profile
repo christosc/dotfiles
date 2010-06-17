@@ -308,3 +308,22 @@ PATH=/usr/local/bin:$PATH
 PATH=/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages:$PATH
 export PATH
 
+function en0 () {
+    case "$1" in
+    up)
+        sudo ifconfig en0 up
+        ;;
+    down)
+        sudo ifconfig en0 down
+        sudo -k
+        ;;
+    "")
+        ifconfig en0
+        ;;
+    *)
+        echo "Usage: en0 [up | down]"
+        echo    
+        ;;
+    esac
+}
+
