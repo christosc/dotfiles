@@ -20,7 +20,7 @@
 	  ))
 
 
-(setq org-startup-indented t)
+;(setq org-startup-indented t)
 ;(add-hook 'org-mode-hook (lambda () (variable-pitch-mode t)))
 ;(setq org-agenda-show-all-dates nil)
 
@@ -52,7 +52,7 @@
 ;; #+TBLFM: $3='(day-diff @4$1 $1);%.1f::$4='(/ (1+ (- (string-to-number $2) (string-to-number @-1$2))) (day-diff @-1$1 $1));%.2f::$5=(492-$2 +1)/$4;N%.1f::$6='(/ (1+ (- 492 (string-to-number $2)))(hour-diff $1 "<2010-05-01 Σάβ 00:00>"));%.2f::$7='(hour-diff $1 "<2010-05-01 Σαβ 00:00>");%.1f::@4$4=-
 
 (setq org-todo-keywords
-       '((sequence "ΠΟΙΗΤΕΟΝ" "ΑΝΑΒΕΒΛΗΜΕΝΟΝ(@/!)" "|" "ΤΕΤΕΛΕΣΜΕΝΟΝ(!)" "ΗΚΥΡΩΜΕΝΟΝ(@!)")))
+       '((sequence "ΠΟΙΗΤΕΟΝ" "ΑΝΑΒΕΒΛΗΜΕΝΟΝ" "|" "ΤΕΤΕΛΕΣΜΕΝΟΝ(!)" "ΗΚΥΡΩΜΕΝΟΝ(@!)")))
 ;(setq org-fast-tag-selection-single-key t)
 ;; (setq org-deadline-string "ΔΙΟΡΙΑ:")
 ;; (setq org-scheduled-string "ΠΡΟΓΡΑΜΜΑΤΙΣΜΕΝΟΝ:")

@@ -9,9 +9,9 @@ export PATH=$PATH:/usr/local/mysql/bin
 
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h] \w \$ "
-export PS1="[\u@\h: \w]\$ "
+export PS1="[\u@\h: \W]\$ "
 
-umask 077
+#umask 077
 
 
 
@@ -129,7 +129,7 @@ alias hibernateoff="sudo pmset -a hibernatemode 3"
 
 ##############################   PYTHON   #################################################
 export PYTHONSTARTUP=/Users/christos/.pythonrc.py
-export PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages
+export PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/setuptools-0.6c11-py2.6.egg:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/Trac-0.12-py2.6.egg:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/lib-dynload/zlib.so:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/lib-dynload:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/Genshi-0.6-py2.6/genshi:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/mod_python
 #####################################
 
 
@@ -298,3 +298,13 @@ export CLASSPATH=.:/Users/christos/lib/clojure-contrib/target/clojure-contrib-1.
 # The orginal version is saved in .profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
 export PATH
+
+# Setting PATH for MacPython 2.6
+# The orginal version is saved in .profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
+export PATH
+
+PATH=/usr/local/bin:$PATH
+PATH=/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages:$PATH
+export PATH
+
