@@ -103,7 +103,7 @@ alias ecj="java org.eclipse.jdt.internal.compiler.batch.Main -source 1.5"
 
 #alias gnatmake="/usr/local/ada-4.3/bin/gnatmake"
 
-export EDITOR=emacs
+export EDITOR=vim
 export SUDO_USER=christoschryssochodis
 
 #alias xelatex="xelatex -output-driver='xdvipdfmx -q -E'"
