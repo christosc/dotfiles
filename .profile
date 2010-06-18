@@ -311,11 +311,11 @@ export PATH
 function en0 () {
     case "$1" in
     up)
+        sudo -k
         sudo ifconfig en0 up
         ;;
     down)
         sudo ifconfig en0 down
-        sudo -k
         ;;
     "")
         ifconfig en0
