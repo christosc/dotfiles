@@ -420,7 +420,7 @@
 
 ;; Haskell Mode
 ;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-mode.el") 
-(load "/Users/christos/devel/haskellmode-emacs/haskell-site-file")
+(load "/Users/christos/repos/haskellmode-emacs/haskell-site-file")
 ;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-indentation.el")
 ;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-simple-indent.el")
 ;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-indent.el")
@@ -894,7 +894,7 @@ variable `calendar-month-genitive-name-array'."
 
 
 ;; Διὰ Org mode
-(add-to-list 'load-path "~/devel/org-mode/lisp")
+(add-to-list 'load-path "~/repos/org-mode/lisp")
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
@@ -1137,7 +1137,7 @@ variable `calendar-month-genitive-name-array'."
 
 ;;; ΔΙΑ ORG-MODE ;;;;;;;;;;;;;;;;;;;;;;
 (load-file "~/.emacs.d/org-custom.el")
-(setq load-path (cons "~/devel/org-mode/lisp" load-path))
+(setq load-path (cons "~/repos/org-mode/lisp" load-path))
 
 
 

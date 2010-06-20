@@ -68,7 +68,7 @@ alias mutt="/usr/local/bin/mutt"
 #export PATH
 
 export CLICOLOR=true
-alias ls="ls -hFG"
+alias ls="ls --color -hF"
 
 export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
 
