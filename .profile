@@ -9,7 +9,7 @@ export PATH=$PATH:/usr/local/mysql/bin
 
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h] \w \$ "
-export PS1="[\u@\h: \W]\$ "
+export PS1="\e[0;34m[\u@\h: \W]\$ \e[m"
 
 #umask 077
 
@@ -119,7 +119,7 @@ export SUDO_USER=christoschryssochodis
 
 
 ## <SCALA>
-export SCALA_HOME="/Users/christos/local/scala"
+export SCALA_HOME="/Users/christos/SDKs/scala-2.8.0.RC6"
 PATH=$SCALA_HOME/bin:$PATH
 ## </SCALA>
 
@@ -325,5 +325,19 @@ function en0 () {
         echo    
         ;;
     esac
+}
+
+
+export VIM_APP_DIR=/Applications/MacVim-7_3a-BETA-52_1
+
+# modified from http://www.nanoant.com/programming/opening-specified-path-in-terminals-new-tab
+alias twd=new_terminal_working_directory
+function new_terminal_working_directory() {
+osascript <<END 
+        tell application "Terminal"
+    	    tell application "System Events" to tell process "Terminal" to keystroke "t" using command down
+        do script "cd $(pwd)" in first window
+    end tell
+END
 }
 
