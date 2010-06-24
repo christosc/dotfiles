@@ -336,8 +336,8 @@ function new_terminal_working_directory() {
 osascript <<END 
         tell application "Terminal"
     	    tell application "System Events" to tell process "Terminal" to keystroke "t" using command down
-        do script "cd $(pwd)" in first window
-    end tell
+            do script "cd $(pwd)" in first window
+        end tell
 END
 }
 
