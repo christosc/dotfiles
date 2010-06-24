@@ -8,3 +8,5 @@ set expandtab
 set number
 set linebreak
 set smartindent
+filetype plugin on
+
