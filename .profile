@@ -341,3 +341,7 @@ osascript <<END
 END
 }
 
+# GRAPHVIZ - DOT
+HAVE_DOT=YES
+DOT_PATH=/usr/local/graphviz-2.14/bin
+
