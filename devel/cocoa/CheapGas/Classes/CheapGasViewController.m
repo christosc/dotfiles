@@ -91,6 +91,7 @@
 		NSLog(@"Connection could not be established.");
         [webView loadHTMLString:@"<html><body><p>Connection could not be established.</p></body></html>" baseURL:nil];
 	}
+    [conn release];
 
 } 
 
@@ -131,10 +132,11 @@
 CCGasStationInfo *infoFromNode(xmlNodePtr currentNode) {
 	
 	
-	NSNumberFormatter *numFomatter = [[NSNumberFormatter alloc] init];
-	[numFomatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"el_GR"] autorelease]];
+	NSNumberFormatter *numFormatter = [[NSNumberFormatter alloc] init];
+	[numFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"el_GR"] autorelease]];
 	NSString *priceString = [NSString stringWithCString:(const char *)currentNode->children->children->children->next->content encoding:NSUTF8StringEncoding];
-	NSNumber *price =  [numFomatter numberFromString:priceString];
+	NSNumber *price =  [numFormatter numberFromString:priceString];
+    [numFormatter release];
 	NSString *product = [[NSString stringWithCString:(const char *)currentNode->children->children->next->next->next->next->children->content encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 	NSString *trademark = [[NSString stringWithCString:(const char *)currentNode->children->children->next->next->next->next->next->next->children->next->content encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 	NSString *address = [[NSString stringWithCString:(const char *)currentNode->children->next->children->children->next->content encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -462,8 +464,8 @@ NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *par
 
 -(NSString*) generateHTMLCell:(CCGasStationInfo *)info {
     
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"el_GR"]];
+    NSNumberFormatter *formatter = [[[NSNumberFormatter alloc] init] autorelease];
+    [formatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"el_GR"] autorelease]];
     [formatter setMaximumFractionDigits:3];
     NSMutableString *cell = [NSMutableString stringWithString:@"<tr><table class=\"entry\"<tr>"];
     [cell appendFormat:@"<td class=\"trademark\">%@</td><td class=\"price\">%@</td></tr><tr>", 
@@ -501,7 +503,7 @@ NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *par
     NSLog(@"Succeeded! Received %d bytes of data",[receivedData length]);  
     NSString *aStr = [[NSString alloc] initWithData:receivedData encoding:NSWindowsCP1253StringEncoding];  
     NSLog(@"%@", aStr);  
-	
+	[aStr release];
 	gasStationInfoEntries = [self parseHTMLData];
 //	[self printParsedData:gasStationInfoEntries];
 	[activityIndicator stopAnimating];
