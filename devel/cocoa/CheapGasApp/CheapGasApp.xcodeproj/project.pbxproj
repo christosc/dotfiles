@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B69609A411F9817100EABC51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69609A311F9817100EABC51 /* UIKit.framework */; };
+		B69609A611F9817100EABC51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69609A511F9817100EABC51 /* Foundation.framework */; };
+		B69609A811F9817100EABC51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69609A711F9817100EABC51 /* CoreGraphics.framework */; };
+		B69609AD11F9817100EABC51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B69609AB11F9817100EABC51 /* InfoPlist.strings */; };
+		B69609AF11F9817100EABC51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B69609AE11F9817100EABC51 /* main.m */; };
+		B69609B211F9817100EABC51 /* CheapGasAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B69609B111F9817100EABC51 /* CheapGasAppAppDelegate.m */; };
+		B69609B511F9817100EABC51 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69609B311F9817100EABC51 /* MainWindow.xib */; };
+		B69609B811F9817100EABC51 /* CheapGasAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69609B711F9817100EABC51 /* CheapGasAppViewController.m */; };
+		B69609BB11F9817100EABC51 /* CheapGasAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69609B911F9817100EABC51 /* CheapGasAppViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B69609A011F9817100EABC51 /* CheapGasApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheapGasApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B69609A311F9817100EABC51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B69609A511F9817100EABC51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B69609A711F9817100EABC51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B69609A911F9817100EABC51 /* CheapGasApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheapGasApp-Info.plist"; sourceTree = "<group>"; };
+		B69609AA11F9817100EABC51 /* CheapGasApp_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheapGasApp_Prefix.pch; sourceTree = "<group>"; };
+		B69609AC11F9817100EABC51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B69609AE11F9817100EABC51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B69609B011F9817100EABC51 /* CheapGasAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheapGasAppAppDelegate.h; sourceTree = "<group>"; };
+		B69609B111F9817100EABC51 /* CheapGasAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheapGasAppAppDelegate.m; sourceTree = "<group>"; };
+		B69609B411F9817100EABC51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B69609B611F9817100EABC51 /* CheapGasAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheapGasAppViewController.h; sourceTree = "<group>"; };
+		B69609B711F9817100EABC51 /* CheapGasAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheapGasAppViewController.m; sourceTree = "<group>"; };
+		B69609BA11F9817100EABC51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CheapGasAppViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B696099D11F9817100EABC51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69609A411F9817100EABC51 /* UIKit.framework in Frameworks */,
+				B69609A611F9817100EABC51 /* Foundation.framework in Frameworks */,
+				B69609A811F9817100EABC51 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B696099111F9817000EABC51 = {
+			isa = PBXGroup;
+			children = (
+				B696099811F9817100EABC51 /* Classes */,
+				B696099911F9817100EABC51 /* Other Sources */,
+				B696099A11F9817100EABC51 /* Resources */,
+				B696099B11F9817100EABC51 /* Frameworks */,
+				B69609A111F9817100EABC51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B696099811F9817100EABC51 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B69609B011F9817100EABC51 /* CheapGasAppAppDelegate.h */,
+				B69609B111F9817100EABC51 /* CheapGasAppAppDelegate.m */,
+				B69609B611F9817100EABC51 /* CheapGasAppViewController.h */,
+				B69609B711F9817100EABC51 /* CheapGasAppViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B696099911F9817100EABC51 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B69609AA11F9817100EABC51 /* CheapGasApp_Prefix.pch */,
+				B69609AE11F9817100EABC51 /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		B696099A11F9817100EABC51 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B69609A911F9817100EABC51 /* CheapGasApp-Info.plist */,
+				B69609AB11F9817100EABC51 /* InfoPlist.strings */,
+				B69609B311F9817100EABC51 /* MainWindow.xib */,
+				B69609B911F9817100EABC51 /* CheapGasAppViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B696099B11F9817100EABC51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B69609A311F9817100EABC51 /* UIKit.framework */,
+				B69609A511F9817100EABC51 /* Foundation.framework */,
+				B69609A711F9817100EABC51 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B69609A111F9817100EABC51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B69609A011F9817100EABC51 /* CheapGasApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B696099F11F9817100EABC51 /* CheapGasApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B69609BE11F9817100EABC51 /* Build configuration list for PBXNativeTarget "CheapGasApp" */;
+			buildPhases = (
+				B696099C11F9817100EABC51 /* Sources */,
+				B696099D11F9817100EABC51 /* Frameworks */,
+				B696099E11F9817100EABC51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CheapGasApp;
+			productName = CheapGasApp;
+			productReference = B69609A011F9817100EABC51 /* CheapGasApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B696099311F9817000EABC51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "University of Athens";
+			};
+			buildConfigurationList = B696099611F9817000EABC51 /* Build configuration list for PBXProject "CheapGasApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B696099111F9817000EABC51;
+			productRefGroup = B69609A111F9817100EABC51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B696099F11F9817100EABC51 /* CheapGasApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B696099E11F9817100EABC51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69609AD11F9817100EABC51 /* InfoPlist.strings in Resources */,
+				B69609B511F9817100EABC51 /* MainWindow.xib in Resources */,
+				B69609BB11F9817100EABC51 /* CheapGasAppViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B696099C11F9817100EABC51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69609AF11F9817100EABC51 /* main.m in Sources */,
+				B69609B211F9817100EABC51 /* CheapGasAppAppDelegate.m in Sources */,
+				B69609B811F9817100EABC51 /* CheapGasAppViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B69609AB11F9817100EABC51 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B69609AC11F9817100EABC51 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B69609B311F9817100EABC51 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B69609B411F9817100EABC51 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		B69609B911F9817100EABC51 /* CheapGasAppViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B69609BA11F9817100EABC51 /* en */,
+			);
+			name = CheapGasAppViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B69609BC11F9817100EABC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		B69609BD11F9817100EABC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+		B69609BF11F9817100EABC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CheapGasApp_Prefix.pch;
+				INFOPLIST_FILE = "CheapGasApp-Info.plist";
+				PRODUCT_NAME = CheapGasApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B69609C011F9817100EABC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CheapGasApp_Prefix.pch;
+				INFOPLIST_FILE = "CheapGasApp-Info.plist";
+				PRODUCT_NAME = CheapGasApp;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B696099611F9817000EABC51 /* Build configuration list for PBXProject "CheapGasApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69609BC11F9817100EABC51 /* Debug */,
+				B69609BD11F9817100EABC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B69609BE11F9817100EABC51 /* Build configuration list for PBXNativeTarget "CheapGasApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69609BF11F9817100EABC51 /* Debug */,
+				B69609C011F9817100EABC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B696099311F9817000EABC51 /* Project object */;
+}

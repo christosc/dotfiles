@@ -10,3 +10,7 @@ set linebreak
 set smartindent
 filetype plugin on
 
+" ΓΙΑ NERDTree
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+

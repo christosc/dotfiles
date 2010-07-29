@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B64D54481200F5AA00965958 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64D54471200F5AA00965958 /* UIKit.framework */; };
+		B64D544A1200F5AA00965958 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64D54491200F5AA00965958 /* Foundation.framework */; };
+		B64D544C1200F5AA00965958 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64D544B1200F5AA00965958 /* CoreGraphics.framework */; };
+		B64D54511200F5AA00965958 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B64D544F1200F5AA00965958 /* InfoPlist.strings */; };
+		B64D54531200F5AA00965958 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B64D54521200F5AA00965958 /* main.m */; };
+		B64D54561200F5AA00965958 /* TestUIWebViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B64D54551200F5AA00965958 /* TestUIWebViewAppDelegate.m */; };
+		B64D54591200F5AA00965958 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64D54571200F5AA00965958 /* MainWindow.xib */; };
+		B64D545C1200F5AA00965958 /* TestUIWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B64D545B1200F5AA00965958 /* TestUIWebViewViewController.m */; };
+		B64D545F1200F5AA00965958 /* TestUIWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64D545D1200F5AA00965958 /* TestUIWebViewViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B64D54441200F5AA00965958 /* TestUIWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestUIWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B64D54471200F5AA00965958 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B64D54491200F5AA00965958 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B64D544B1200F5AA00965958 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B64D544D1200F5AA00965958 /* TestUIWebView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestUIWebView-Info.plist"; sourceTree = "<group>"; };
+		B64D544E1200F5AA00965958 /* TestUIWebView_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUIWebView_Prefix.pch; sourceTree = "<group>"; };
+		B64D54501200F5AA00965958 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B64D54521200F5AA00965958 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B64D54541200F5AA00965958 /* TestUIWebViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUIWebViewAppDelegate.h; sourceTree = "<group>"; };
+		B64D54551200F5AA00965958 /* TestUIWebViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUIWebViewAppDelegate.m; sourceTree = "<group>"; };
+		B64D54581200F5AA00965958 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B64D545A1200F5AA00965958 /* TestUIWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUIWebViewViewController.h; sourceTree = "<group>"; };
+		B64D545B1200F5AA00965958 /* TestUIWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUIWebViewViewController.m; sourceTree = "<group>"; };
+		B64D545E1200F5AA00965958 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TestUIWebViewViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B64D54411200F5AA00965958 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64D54481200F5AA00965958 /* UIKit.framework in Frameworks */,
+				B64D544A1200F5AA00965958 /* Foundation.framework in Frameworks */,
+				B64D544C1200F5AA00965958 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B64D54351200F5AA00965958 = {
+			isa = PBXGroup;
+			children = (
+				B64D543C1200F5AA00965958 /* Classes */,
+				B64D543D1200F5AA00965958 /* Other Sources */,
+				B64D543E1200F5AA00965958 /* Resources */,
+				B64D543F1200F5AA00965958 /* Frameworks */,
+				B64D54451200F5AA00965958 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B64D543C1200F5AA00965958 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B64D54541200F5AA00965958 /* TestUIWebViewAppDelegate.h */,
+				B64D54551200F5AA00965958 /* TestUIWebViewAppDelegate.m */,
+				B64D545A1200F5AA00965958 /* TestUIWebViewViewController.h */,
+				B64D545B1200F5AA00965958 /* TestUIWebViewViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B64D543D1200F5AA00965958 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B64D544E1200F5AA00965958 /* TestUIWebView_Prefix.pch */,
+				B64D54521200F5AA00965958 /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		B64D543E1200F5AA00965958 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B64D544D1200F5AA00965958 /* TestUIWebView-Info.plist */,
+				B64D544F1200F5AA00965958 /* InfoPlist.strings */,
+				B64D54571200F5AA00965958 /* MainWindow.xib */,
+				B64D545D1200F5AA00965958 /* TestUIWebViewViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B64D543F1200F5AA00965958 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B64D54471200F5AA00965958 /* UIKit.framework */,
+				B64D54491200F5AA00965958 /* Foundation.framework */,
+				B64D544B1200F5AA00965958 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B64D54451200F5AA00965958 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B64D54441200F5AA00965958 /* TestUIWebView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B64D54431200F5AA00965958 /* TestUIWebView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B64D54621200F5AA00965958 /* Build configuration list for PBXNativeTarget "TestUIWebView" */;
+			buildPhases = (
+				B64D54401200F5AA00965958 /* Sources */,
+				B64D54411200F5AA00965958 /* Frameworks */,
+				B64D54421200F5AA00965958 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestUIWebView;
+			productName = TestUIWebView;
+			productReference = B64D54441200F5AA00965958 /* TestUIWebView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B64D54371200F5AA00965958 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "University of Athens";
+			};
+			buildConfigurationList = B64D543A1200F5AA00965958 /* Build configuration list for PBXProject "TestUIWebView" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B64D54351200F5AA00965958;
+			productRefGroup = B64D54451200F5AA00965958 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B64D54431200F5AA00965958 /* TestUIWebView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B64D54421200F5AA00965958 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64D54511200F5AA00965958 /* InfoPlist.strings in Resources */,
+				B64D54591200F5AA00965958 /* MainWindow.xib in Resources */,
+				B64D545F1200F5AA00965958 /* TestUIWebViewViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B64D54401200F5AA00965958 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64D54531200F5AA00965958 /* main.m in Sources */,
+				B64D54561200F5AA00965958 /* TestUIWebViewAppDelegate.m in Sources */,
+				B64D545C1200F5AA00965958 /* TestUIWebViewViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B64D544F1200F5AA00965958 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B64D54501200F5AA00965958 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B64D54571200F5AA00965958 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B64D54581200F5AA00965958 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		B64D545D1200F5AA00965958 /* TestUIWebViewViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B64D545E1200F5AA00965958 /* en */,
+			);
+			name = TestUIWebViewViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B64D54601200F5AA00965958 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		B64D54611200F5AA00965958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+		B64D54631200F5AA00965958 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TestUIWebView_Prefix.pch;
+				INFOPLIST_FILE = "TestUIWebView-Info.plist";
+				PRODUCT_NAME = TestUIWebView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B64D54641200F5AA00965958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TestUIWebView_Prefix.pch;
+				INFOPLIST_FILE = "TestUIWebView-Info.plist";
+				PRODUCT_NAME = TestUIWebView;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B64D543A1200F5AA00965958 /* Build configuration list for PBXProject "TestUIWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B64D54601200F5AA00965958 /* Debug */,
+				B64D54611200F5AA00965958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B64D54621200F5AA00965958 /* Build configuration list for PBXNativeTarget "TestUIWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B64D54631200F5AA00965958 /* Debug */,
+				B64D54641200F5AA00965958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B64D54371200F5AA00965958 /* Project object */;
+}

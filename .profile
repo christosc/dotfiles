@@ -119,7 +119,7 @@ export SUDO_USER=christoschryssochodis
 
 
 ## <SCALA>
-export SCALA_HOME="/Users/christos/SDKs/scala-2.8.0.RC6"
+export SCALA_HOME="/Users/christos/SDKs/scala-2.8.0.final"
 PATH=$SCALA_HOME/bin:$PATH
 ## </SCALA>
 
@@ -129,14 +129,14 @@ alias hibernateoff="sudo pmset -a hibernatemode 3"
 
 ##############################   PYTHON   #################################################
 export PYTHONSTARTUP=/Users/christos/.pythonrc.py
-export PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/setuptools-0.6c11-py2.6.egg:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/Trac-0.12-py2.6.egg:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/lib-dynload/zlib.so:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/lib-dynload:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/Genshi-0.6-py2.6/genshi:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/mod_python
+export PYTHONPATH=/Library/Python/2.6/site-packages:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/setuptools-0.6c11-py2.6.egg:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/Trac-0.12-py2.6.egg:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/lib-dynload/zlib.so:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/lib-dynload:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/Genshi-0.6-py2.6/genshi:/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/mod_python
 #####################################
 
 
 
 
 ###############################  MANPATH #######################################################
-export MANPATH=/Developer/usr/share/man:/usr/local/share/man:/usr/local/man:/opt/local/share/man:$MANPATH
+export MANPATH=/Developer/usr/share/man:/usr/local/share/man:/usr/local/man:/opt/local/share/man:/Library/Frameworks/GHC.framework/Versions/Current/usr/share/man:$MANPATH
 
 ##############################################################
 #export LC_CTYPE=el_GR.UTF-8
@@ -235,7 +235,7 @@ export PATH="$HOME"/.cabal/bin:"$HOME"/bin:$PATH
 #export PATH=/usr/local/bin:$PATH
 
 
-export LC_CTYPE=el_GR.UTF-8
+#export LC_CTYPE=el_GR.UTF-8
 
 
 export DEVHOME="$HOME"/devel
@@ -311,7 +311,7 @@ export PATH
 function en0 () {
     case "$1" in
     up)
-        sudo -k
+        #sudo -k
         sudo ifconfig en0 up
         ;;
     down)
@@ -345,3 +345,10 @@ END
 HAVE_DOT=YES
 DOT_PATH=/usr/local/graphviz-2.14/bin
 
+####  ΔΙΑ INFO
+INFOPATH="$HOME"/info:$INFOPATH
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH

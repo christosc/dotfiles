@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	B62897FE1201092A0084169C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B62897FF1201092A0084169C /* page.html */;
+		name = "page.html: 5";
+		rLen = 0;
+		rLoc = 76;
+		rType = 0;
+		vrLen = 91;
+		vrLoc = 0;
+	};
+	B62897FF1201092A0084169C /* page.html */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.html;
+		name = page.html;
+		path = /Users/christos/devel/cocoa/CheapGas/page.html;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {998, 571}}";
+			sepNavSelRange = "{76, 0}";
+			sepNavVisRange = "{0, 91}";
+		};
+	};
+	B62898001201092A0084169C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B69609E711F981FB00EABC51 /* CheapGasViewController.m */;
+		name = "CheapGasViewController.m: 434";
+		rLen = 0;
+		rLoc = 14074;
+		rType = 0;
+		vrLen = 1555;
+		vrLoc = 12550;
+	};
+	B62F71AF11FCCF6B00A79151 /* CheapGasViewController.m:166 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B69609E711F981FB00EABC51 /* CheapGasViewController.m */;
+		functionName = "-parseHTMLData";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 166;
+		location = CheapGas;
+		modificationTime = 301887057.3981739;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	B62F720511FCDC6800A79151 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B62F720611FCDC6800A79151 /* CFCharacterSet.h */;
+		name = "CFCharacterSet.h: 43";
+		rLen = 59;
+		rLoc = 1823;
+		rType = 0;
+		vrLen = 1237;
+		vrLoc = 1297;
+	};
+	B62F720611FCDC6800A79151 /* CFCharacterSet.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CFCharacterSet.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFCharacterSet.h;
+		sourceTree = "<absolute>";
+	};
+	B62F720711FCDC6800A79151 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B62F720811FCDC6800A79151 /* NSCharacterSet.h */;
+		name = "NSCharacterSet.h: 5";
+		rLen = 14;
+		rLoc = 106;
+		rType = 0;
+		vrLen = 1037;
+		vrLoc = 0;
+	};
+	B62F720811FCDC6800A79151 /* NSCharacterSet.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSCharacterSet.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSCharacterSet.h;
+		sourceTree = "<absolute>";
+	};
+	B62F722011FCEF5800A79151 /* CCGasStationInfo.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1013, 653}}";
+			sepNavSelRange = "{475, 0}";
+			sepNavVisRange = "{0, 481}";
+		};
+	};
+	B62F722111FCEF5800A79151 /* CCGasStationInfo.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1032, 603}}";
+			sepNavSelRange = "{628, 0}";
+			sepNavVisRange = "{0, 653}";
+		};
+	};
+	B62F723A11FCFC6900A79151 /* CheapGasViewController.m:309 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B69609E711F981FB00EABC51 /* CheapGasViewController.m */;
+		functionName = "infoFromNode()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 309;
+		location = CheapGas;
+		modificationTime = 301887057.398443;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	B62F72AD11FDA16800A79151 /* CheapGasViewController.m:214 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B69609E711F981FB00EABC51 /* CheapGasViewController.m */;
+		functionName = "DictionaryForNode()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 214;
+		location = CheapGas;
+		modificationTime = 301887057.3985931;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	B62F72E311FDBDA600A79151 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B62F722011FCEF5800A79151 /* CCGasStationInfo.h */;
+		name = "CCGasStationInfo.h: 22";
+		rLen = 0;
+		rLoc = 475;
+		rType = 0;
+		vrLen = 481;
+		vrLoc = 0;
+	};
+	B62F72E411FDBDA600A79151 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B62F722111FCEF5800A79151 /* CCGasStationInfo.m */;
+		name = "CCGasStationInfo.m: 29";
+		rLen = 0;
+		rLoc = 632;
+		rType = 0;
+		vrLen = 611;
+		vrLoc = 0;
+	};
+	B62F731A11FDEC0000A79151 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B69609E611F981FB00EABC51 /* CheapGasViewController.h */;
+		name = "CheapGasViewController.h: 23";
+		rLen = 0;
+		rLoc = 534;
+		rType = 0;
+		vrLen = 534;
+		vrLoc = 0;
+	};
+	B62F734311FE61D600A79151 /* page.html */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text.html;
+		name = page.html;
+		path = /Users/christos/devel/cocoa/CheapGas/page.html;
+		sourceTree = "<absolute>";
+	};
+	B62F735A11FE656F00A79151 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B69609E711F981FB00EABC51 /* CheapGasViewController.m */;
+		name = "CheapGasViewController.m: 447";
+		rLen = 0;
+		rLoc = 15782;
+		rType = 0;
+		vrLen = 1396;
+		vrLoc = 13663;
+	};
+	B62F73A111FEF36F00A79151 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B62F734311FE61D600A79151 /* page.html */;
+		name = "page.html: 5";
+		rLen = 0;
+		rLoc = 76;
+		rType = 0;
+		vrLen = 91;
+		vrLoc = 0;
+	};
+	B62F73A211FEF36F00A79151 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B69609E711F981FB00EABC51 /* CheapGasViewController.m */;
+		name = "CheapGasViewController.m: 432";
+		rLen = 0;
+		rLoc = 14074;
+		rType = 0;
+		vrLen = 1875;
+		vrLoc = 12219;
+	};
+	B653663211FA1C8E00E527E7 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	B6687FD911FF68E8009C504C /* main.html */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {998, 571}}";
+			sepNavSelRange = "{165, 0}";
+			sepNavVisRange = "{0, 573}";
+		};
+	};
+	B673DAC311FC5F6B00210CD4 /* HTMLParser.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {757, 533}}";
+			sepNavSelRange = "{256, 0}";
+			sepNavVisRange = "{0, 265}";
+		};
+	};
+	B673DAC411FC5F6B00210CD4 /* HTMLParser.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 389}}";
+			sepNavSelRange = "{181, 27}";
+			sepNavVisRange = "{0, 214}";
+		};
+	};
+	B673DB3411FC976100210CD4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B673DAC411FC5F6B00210CD4 /* HTMLParser.m */;
+		name = "HTMLParser.m: 12";
+		rLen = 27;
+		rLoc = 181;
+		rType = 0;
+		vrLen = 214;
+		vrLoc = 0;
+	};
+	B673DB3511FC976100210CD4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B673DAC311FC5F6B00210CD4 /* HTMLParser.h */;
+		name = "HTMLParser.h: 13";
+		rLen = 0;
+		rLoc = 256;
+		rType = 0;
+		vrLen = 265;
+		vrLoc = 0;
+	};
+	B673DB3611FC976100210CD4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B673DB3711FC976100210CD4 /* tree.h */;
+		name = "tree.h: 229";
+		rLen = 77;
+		rLoc = 6014;
+		rType = 0;
+		vrLen = 1235;
+		vrLoc = 5453;
+	};
+	B673DB3711FC976100210CD4 /* tree.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = tree.h;
+		path = /usr/include/libxml2/libxml/tree.h;
+		sourceTree = "<absolute>";
+	};
+	B673DB3811FC976100210CD4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B673DB3911FC976100210CD4 /* HTMLtree.h */;
+		name = "HTMLtree.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 742;
+		vrLoc = 197;
+	};
+	B673DB3911FC976100210CD4 /* HTMLtree.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = HTMLtree.h;
+		path = /usr/include/libxml2/libxml/HTMLtree.h;
+		sourceTree = "<absolute>";
+	};
+	B69609C311F981FB00EABC51 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = B69609D211F981FB00EABC51 /* CheapGas */;
+		activeSDKPreference = iphonesimulator4.0;
+		activeTarget = B69609CF11F981FB00EABC51 /* CheapGas */;
+		addToTargets = (
+			B69609CF11F981FB00EABC51 /* CheapGas */,
+		);
+		breakpoints = (
+			B62F71AF11FCCF6B00A79151 /* CheapGasViewController.m:166 */,
+			B62F723A11FCFC6900A79151 /* CheapGasViewController.m:309 */,
+			B62F72AD11FDA16800A79151 /* CheapGasViewController.m:214 */,
+		);
+		codeSenseManager = B69609C711F981FB00EABC51 /* Code sense */;
+		executables = (
+			B69609D211F981FB00EABC51 /* CheapGas */,
+		);
+		expressions = (
+			"currentNode->content",
+		);
+		ignoreBreakpointsInProjectsDict = {
+		};
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					820,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 302057834;
+			PBXWorkspaceStateSaveDate = 302057834;
+		};
+		perUserProjectItems = {
+			B62897FE1201092A0084169C = B62897FE1201092A0084169C /* PBXTextBookmark */;
+			B62898001201092A0084169C = B62898001201092A0084169C /* PBXTextBookmark */;
+			B62F720511FCDC6800A79151 = B62F720511FCDC6800A79151 /* PBXTextBookmark */;
+			B62F720711FCDC6800A79151 = B62F720711FCDC6800A79151 /* PBXTextBookmark */;
+			B62F72E311FDBDA600A79151 = B62F72E311FDBDA600A79151 /* PBXTextBookmark */;
+			B62F72E411FDBDA600A79151 = B62F72E411FDBDA600A79151 /* PBXTextBookmark */;
+			B62F731A11FDEC0000A79151 = B62F731A11FDEC0000A79151 /* PBXTextBookmark */;
+			B62F735A11FE656F00A79151 = B62F735A11FE656F00A79151 /* PBXTextBookmark */;
+			B62F73A111FEF36F00A79151 = B62F73A111FEF36F00A79151 /* PBXTextBookmark */;
+			B62F73A211FEF36F00A79151 = B62F73A211FEF36F00A79151 /* PBXTextBookmark */;
+			B673DB3411FC976100210CD4 = B673DB3411FC976100210CD4 /* PBXTextBookmark */;
+			B673DB3511FC976100210CD4 = B673DB3511FC976100210CD4 /* PBXTextBookmark */;
+			B673DB3611FC976100210CD4 = B673DB3611FC976100210CD4 /* PBXTextBookmark */;
+			B673DB3811FC976100210CD4 = B673DB3811FC976100210CD4 /* PBXTextBookmark */;
+		};
+		sourceControlManager = B653663211FA1C8E00E527E7 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	B69609C711F981FB00EABC51 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	B69609CF11F981FB00EABC51 /* CheapGas */ = {
+		activeExec = 0;
+		executables = (
+			B69609D211F981FB00EABC51 /* CheapGas */,
+		);
+	};
+	B69609D211F981FB00EABC51 /* CheapGas */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = CheapGas;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+			"*(char*)0x5c542b0" = 3;
+			"*currentNode->content-unsigned char-DictionaryForNode" = 3;
+		};
+	};
+	B69609E611F981FB00EABC51 /* CheapGasViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {998, 579}}";
+			sepNavSelRange = "{534, 0}";
+			sepNavVisRange = "{0, 534}";
+		};
+	};
+	B69609E711F981FB00EABC51 /* CheapGasViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {820, 7670}}";
+			sepNavSelRange = "{14074, 0}";
+			sepNavVisRange = "{12550, 1555}";
+			sepNavWindowFrame = "{{439, 24}, {879, 854}}";
+		};
+	};
+}

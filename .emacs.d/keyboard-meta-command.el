@@ -1,6 +1,6 @@
 ;-*- coding: utf-8 -*-
 
-;(setq mac-command-modifier 'meta)
+(setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
 ;; (cua-mode t)
 
