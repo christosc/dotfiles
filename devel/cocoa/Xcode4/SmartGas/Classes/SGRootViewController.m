@@ -31,7 +31,7 @@
 @property (readwrite, retain) NSDictionary *subAdminAreaDictionary;
 @property (readwrite, retain) NSOperationQueue *downloadQueue;
 @property (readwrite, retain) SGEntryDownloader *downloader;
-@property (readwrite) UIActivityIndicatorView *spinner;
+//@property (readwrite, retain) UIActivityIndicatorView *spinner;
 @property (readwrite, retain) CLLocationManager *locationManager;
 //@property (readwrite, assign) BOOL downloadActive;
 @property (readwrite, retain) NSArray *entries;
@@ -72,7 +72,7 @@
 @synthesize reverseGeocoder = _reverseGeocoder;
 @synthesize currentPlacemark = _currentPlacemark;
 @synthesize subAdminAreaDictionary = _subAdminAreaDictionary;
-@synthesize spinner = _spinner;
+//@synthesize spinner = _spinner;
 @synthesize downloadQueue = _downloadQueue;
 @synthesize downloader = _downloader;
 @synthesize locationManager = _locationManager;
@@ -424,7 +424,7 @@
 
 - (void)dealloc {
     //   [webView release];  // released in viewDidUnload
-	[_spinner release];
+//	[_spinner release];
 	[_entries release];
     //	[geocodeInfo release];
 	[_downloader release];
@@ -649,7 +649,7 @@
 
 
 
-
+/*
 -(void)showIndicator 
 {
 	[self.spinner startAnimating];
@@ -659,6 +659,7 @@
 {
 	[self.spinner stopAnimating];
 }
+*/
 
 #pragma mark -
 #pragma mark SGEntryDownloader delegate's methods

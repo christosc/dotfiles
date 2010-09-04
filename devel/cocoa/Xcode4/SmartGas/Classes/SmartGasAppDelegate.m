@@ -28,7 +28,7 @@
 	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
 	FuelType fuelType = [userDefaults integerForKey:@"fuel_type"];
 	if(fuelType == 0) 
-		fuelType = UNLEADED95;  // if default is missing, choose arbitrarily Unleaded 95
+		fuelType = UNLEADED95;  // if a default is missing, choose arbitrarily Unleaded 95
 	int fuelAmount = [userDefaults integerForKey:@"fuel_amount"];
 	if(fuelAmount == 0)
 		fuelAmount = 1; // if default is missing, 1 liter default fuel amount

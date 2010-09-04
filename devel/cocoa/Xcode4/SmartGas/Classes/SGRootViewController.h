@@ -28,7 +28,7 @@
 @private	
     //	BOOL					_downloadActive;
     SGRootView 				*_rootView;
-	UIActivityIndicatorView *_spinner;
+//	UIActivityIndicatorView *_spinner;
     //	UILabel					*loadingLabel;
     //    UINavigationBar         *_navbar;
 	NSArray					*_entries;
