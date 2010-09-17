@@ -9,7 +9,8 @@ set number
 set linebreak
 set smartindent
 filetype plugin on
-
+set incsearch
+set hlsearch
 " ΓΙΑ NERDTree
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p

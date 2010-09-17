@@ -7,7 +7,7 @@
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 (setq org-clock-idle-time 10)
-(setq org-agenda-files '("~/christos-org-files"))
+;;(setq org-agenda-files '("~/christos-org-files"))
 ;; (setq org-upcoming-deadline '(:foreground "blue" :weight bold))
 
 
@@ -63,9 +63,13 @@
 
 ;; ΓΙΑ REMEMBER MODE
 (org-remember-insinuate)
-(setq org-directory "~/christos-org-files")
-(setq org-default-notes-file (concat org-directory "/notes.org"))
+;;(setq org-directory "~/christos-org-files")
+;;(setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cr" 'org-remember)
-(setq org-mobile-directory "/Users/christos/org")
-(setq org-mobile-files (quote ("/Users/christos/christos-org-files/chr-1.org")))
+;;(setq org-mobile-directory "/Users/christos/org")
+;;(setq org-mobile-files (quote ("/Users/christos/christos-org-files/chr-1.org")))
 
+(setq org-todo-keywords
+	  '((type "TODO(t)" "STARTED(s)" "WAITING(w)" "APPT(a)" "|" "CANCELLED(c)" "DEFERRED(e)" "DONE(d)")
+		(sequence "PROJECT(p)" "|" "FINISHED(f)")
+		))

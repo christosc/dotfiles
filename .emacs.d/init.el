@@ -1,8 +1,8 @@
-;-*- coding: utf-8 -*-
+;-*- coding: utf-8 -*-    
 
 
 
-(server-start)                          
+;;(server-start)                          
 
 (setq locale-coding-system 'utf-8)
 (setq system-messages-locale "el_GR.UTF-8")
@@ -57,8 +57,8 @@
 
 
 ;; Γιὰ σύνταξι ἐν τῷ Chrome !
-(require 'edit-server)
-(edit-server-start)
+;;(require 'edit-server)
+;;(edit-server-start)
 
 
 
@@ -424,9 +424,15 @@
 ;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-indentation.el")
 ;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-simple-indent.el")
 ;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-indent.el")
+
+
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-;(add-hook 'haskell-mode-hook 'turn-on-haskell-ghci)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
+
+
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-ghci)
 ;(add-hook 'haskell-mode-hook 'haskell-indent-mode)
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 ;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
@@ -439,7 +445,7 @@
 ;;(add-hook 'haskell-mode-hook 'font-lock-mode)
 (global-set-key [(control meta down-mouse-3)] 'imenu)
 (add-hook 'haskell-mode-hook 'imenu-add-menubar-index)
-
+;;(setq haskell-indentation-layout-offset 4)
 (setq auto-mode-alist (cons '("\\.hs$'" . haskell-mode) auto-mode-alist))
 
 
@@ -475,7 +481,6 @@
 ;;   (setq mmm-global-mode 'true))
 
 ;; (setq mmm-submode-decoration-level 0)
-;; (put 'narrow-to-region 'disabled nil)
 
 
 ;; full screen toggle using command+[RET]
@@ -630,39 +635,32 @@
 ;(partial-completion-mode)
 (setq-default word-wrap t)
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(LaTeX-command "latex")
  '(TeX-command-list (quote (("TeX" "%(PDF)%(tex) %`%S%(PDFout)%(mode)%' %t" TeX-run-TeX nil (plain-tex-mode texinfo-mode ams-tex-mode) :help "Run plain TeX") ("LaTeX" "%`%l%(mode)%' %t" TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX") ("Makeinfo" "makeinfo %t" TeX-run-compile nil (texinfo-mode) :help "Run Makeinfo with Info output") ("Makeinfo HTML" "makeinfo --html %t" TeX-run-compile nil (texinfo-mode) :help "Run Makeinfo with HTML output") ("AmSTeX" "%(PDF)amstex %`%S%(PDFout)%(mode)%' %t" TeX-run-TeX nil (ams-tex-mode) :help "Run AMSTeX") ("ConTeXt" "texexec --once --texutil %(execopts)%t" TeX-run-TeX nil (context-mode) :help "Run ConTeXt once") ("ConTeXt Full" "texexec %(execopts)%t" TeX-run-TeX nil (context-mode) :help "Run ConTeXt until completion") ("BibTeX" "bibtex %s" TeX-run-BibTeX nil t :help "Run BibTeX") ("View" "%V" TeX-run-discard t t :help "Run Viewer") ("Print" "%p" TeX-run-command t t :help "Print the file") ("Queue" "%q" TeX-run-background nil t :help "View the printer queue" :visible TeX-queue-command) ("File" "%(o?)dvips %d -o %f " TeX-run-command t t :help "Generate PostScript file") ("Index" "makeindex %s" TeX-run-command nil t :help "Create index file") ("Check" "lacheck %s" TeX-run-compile nil (latex-mode) :help "Check LaTeX file for correctness") ("Spell" "(TeX-ispell-document \"\")" TeX-run-function nil t :help "Spell-check the document") ("Clean" "TeX-clean" TeX-run-function nil t :help "Delete generated intermediate files") ("Clean All" "(TeX-clean t)" TeX-run-function nil t :help "Delete generated intermediate and output files") ("Other" "" TeX-run-command t t :help "Run an arbitrary command") ("xelatex" "%`xelatex %(mode) %' %t" TeX-run-TeX nil (latex-mode doctex-mode ams-tex-mode)))))
  '(TeX-output-view-style (quote (("^dvi$" ("^landscape$" "^pstricks$\\|^pst-\\|^psfrag$") "%(o?)dvips -t landscape %d -o && gv %f") ("^dvi$" "^pstricks$\\|^pst-\\|^psfrag$" "%(o?)dvips %d -o && gv %f") ("^dvi$" ("^\\(?:a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4\\)$" "^landscape$") "%(o?)xdvi %dS -paper a4r -s 0 %d") ("^dvi$" "^\\(?:a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4\\)$" "%(o?)xdvi %dS -paper a4 %d") ("^dvi$" ("^\\(?:a5\\(?:comb\\|paper\\)\\)$" "^landscape$") "%(o?)xdvi %dS -paper a5r -s 0 %d") ("^dvi$" "^\\(?:a5\\(?:comb\\|paper\\)\\)$" "%(o?)xdvi %dS -paper a5 %d") ("^dvi$" "^b5paper$" "%(o?)xdvi %dS -paper b5 %d") ("^dvi$" "^letterpaper$" "%(o?)xdvi %dS -paper us %d") ("^dvi$" "^legalpaper$" "%(o?)xdvi %dS -paper legal %d") ("^dvi$" "^executivepaper$" "%(o?)xdvi %dS -paper 7.25x10.5in %d") ("^dvi$" "." "%(o?)xdvi %dS %d") ("^pdf$" "." "open  %o %(outpage)") ("^html?$" "." "netscape %o"))))
  '(TeX-source-specials-mode t)
  '(auto-save-interval 150)
  '(blink-cursor-mode t)
- '(calendar-day-name-array ["Κυριακή" "Δευτέρα" "Τρίτη" "Τετάρτη" "Πέμπτη" "Παρασκευή" "Σάββατον"])
- '(calendar-month-name-array ["Ἰανουάριος" "Φεβρουάριος" "Μάρτιος" "Ἀπρίλιος" "Μάϊος" "Ἰούνιος" "Ἰούλιος" "Αὔγουστος" "Σεπτέμβριος" "Ὀκτώβριος" "Νοέμβριος" "Δεκέμβριος"])
  '(column-number-mode t)
  '(display-time-mode t)
  '(haskell-program-name "ghci")
- '(org-agenda-deadline-leaders (quote ("Διορία:  " "Ἐν %3d ἡμ.: ")))
- '(org-agenda-files (quote ("~/Documents/orgfiles/sinastria.org" "/Users/christos/Documents/orgfiles/ProgInObjC2.org" "/Users/christos/Documents/orgfiles/RealWorldHaskell.org" "/Users/christos/Documents/orgfiles/TheHaskellSchoolOfExpression.org" "/Users/christos/Documents/orgfiles/code-jam-2010.org" "/Users/christos/Documents/orgfiles/γενικά.org" "/Users/christos/Documents/orgfiles/ἐπαγγελματικά.org" "/Users/christos/Documents/orgfiles/πτυχιακή.org")))
- '(org-agenda-scheduled-leaders (quote ("Προγραμματισμένον: " "Προγραμ.%2dx: ")))
+ '(nxhtml-skip-welcome t)
  '(org-clock-auto-clock-resolution t)
- '(org-closed-string "ΕΚΛΕΙΣΘΗ:")
- '(org-deadline-string "ΠΡΟΘΕΣΜΙΑ:")
- '(org-effort-property "Κόπος")
- '(org-scheduled-string "ΠΡΟΓΡΑΜΜΑΤΙΣΜΕΝΟΝ:")
+ '(scroll-conservatively 10000000)
  '(show-paren-mode t))
 
 
-(setq calendar-month-genitive-name-array ["Ἰανουαρίου" "Φεβρουαρίου" "Μαρτίου" "Ἀπριλίου" "Μαΐου" "Ἰουνίου" "Ἰουλίου" "Αὐγούστου" "Σεπτεμβρίου" "Ὀκτωβρίου" "Νοεμβρίου" "Δεκεμβρίου"])
+;;(setq calendar-month-genitive-name-array ["Ἰανουαρίου" "Φεβρουαρίου" "Μαρτίου" "Ἀπριλίου" "Μαΐου" "Ἰουνίου" "Ἰουλίου" "Αὐγούστου" "Σεπτεμβρίου" "Ὀκτωβρίου" "Νοεμβρίου" "Δεκεμβρίου"])
 
-(defun calendar-month-genitive-name (month)
-  "Return a string with the name of month number MONTH in genitive case.
-Months are numbered from one.  Month genitive names are taken from the
-variable `calendar-month-genitive-name-array'."
-  (aref  calendar-month-genitive-name-array (1- month)))
+;; (defun calendar-month-genitive-name (month)
+;;   "Return a string with the name of month number MONTH in genitive case.
+;;    Months are numbered from one.  Month genitive names are taken from the
+;;   variable ."
+;;   (aref  calendar-month-genitive-name-array (1- month)))
 
 
 ;;(color-theme-initialize)
@@ -774,7 +772,7 @@ variable `calendar-month-genitive-name-array'."
 ;;(defalias 'list-buffers 'ibuffer)
 
 ;;(add-to-list 'default-frame-alist '(font . "Menlo-11"))
-;; (add-to-list 'default-frame-alist '(font . "Menlo-12"))
+(add-to-list 'default-frame-alist '(font . "Menlo-12"))
 ;;(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-12"))
 ;;(color-theme-deep-blue)
 ;(blink-cursor-mode 1)
@@ -901,7 +899,11 @@ variable `calendar-month-genitive-name-array'."
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
-
+(setq org-directory "~/Documents/orgfiles")
+(setq org-mobile-directory "~/Dropbox/MobileOrg")
+(setq org-agenda-files (quote ("~/Documents/orgfiles/TestMobile.org"
+							   "~/Documents/orgfiles/Projects.org")))
+(setq org-mobile-inbox-for-pull "~/Dropbox/org-mode/inbox.org")
 ;; Διὰ νὰ ἔχω τὸν πληκτρoλογικὴ σύντμησι Μ-# γιὰ τὲς μακροεντολὲς τοῦ Calc
 (global-set-key "\e#" 'calc-dispatch)
 
@@ -952,8 +954,8 @@ variable `calendar-month-genitive-name-array'."
 ;; (color-theme-railscasts)			   
 
 
-;; Διὰ νὰ δύναμαι νὰ μετακινηθῆ ἀπὸ frame σὲ frame διὰ τοῦ Alt-βέλη
-(windmove-default-keybindings 'ctrl)
+;; Διὰ νὰ δύναμαι νὰ μετακινηθῆ ἀπὸ frame σὲ frame διὰ τοῦ meta-βέλη
+(windmove-default-keybindings 'meta)
 
 ;; (load-file "/Users/christos/.emacs.d/themes/color-theme-irblack.el")
 
@@ -1056,7 +1058,8 @@ variable `calendar-month-genitive-name-array'."
 ;;(global-hl-line-mode nil)
 ;;(set-face-background 'hl-line  "lemon chiffon")
 
-;;(add-to-list 'default-frame-alist '(cursor-color . "Black"))
+(add-to-list 'default-frame-alist '(cursor-color . "Black"))
+(add-to-list 'default-frame-alist '(cursor-type . (bar . 1)))
 ;; (setq-default cursor-type '(bar . 1))
 ;;(setq-default cursor-type '(bar . 1))
 ;; (blink-cursor-mode t)
@@ -1117,10 +1120,10 @@ variable `calendar-month-genitive-name-array'."
 ;; (setq scroll-conservatively 10000) ;; ἵνα ὀλισθαίνῃ κατὰ μίαν γραμμὴν μὲ τὸ πληκτρολόγιον
 ;; (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; ἵνα ὀλισθάνῃ κατὰ μίαν γραμμὴν τὸ ποντίκι
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 
 
@@ -1210,20 +1213,20 @@ variable `calendar-month-genitive-name-array'."
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
-(autoload 'paredit-mode "paredit-beta"
-  "Minor mode for pseudo-structurally editing Lisp code." t)
-(add-hook 'emacs-lisp-mode-hook       (lambda () (paredit-mode +1)))
-(add-hook 'lisp-mode-hook             (lambda () (paredit-mode +1)))
-(add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
-(add-hook 'c-mode-common-hook         (lambda () (paredit-mode +1)))
-(add-hook 'objc-mode-hook             (lambda () (paredit-mode +1)))
-(add-hook 'haskell-mode-hook          (lambda () (paredit-mode +1)))
-(add-hook 'python-mode-hook           (lambda () (paredit-mode +1)))
-(add-hook 'java-mode-hook             (lambda () (paredit-mode +1)))
+;; (autoload 'paredit-mode "paredit-beta"
+;;   "Minor mode for pseudo-structurally editing Lisp code." t)
+;; (add-hook 'emacs-lisp-mode-hook       (lambda () (paredit-mode +1)))
+;; (add-hook 'lisp-mode-hook             (lambda () (paredit-mode +1)))
+;; (add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
+;; (add-hook 'c-mode-common-hook         (lambda () (paredit-mode +1)))
+;; ;;(add-hook 'objc-mode-hook             (lambda () (paredit-mode +1)))
+;; ;;(add-hook 'haskell-mode-hook          (lambda () (paredit-mode +1)))
+;; (add-hook 'python-mode-hook           (lambda () (paredit-mode +1)))
+;; (add-hook 'java-mode-hook             (lambda () (paredit-mode +1)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -1232,3 +1235,6 @@ variable `calendar-month-genitive-name-array'."
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (add-hook 'lua-mode-hook 'hs-minor-mode)
 (set-cursor-color "Black")
+(put 'narrow-to-region 'disabled nil)
+
+
