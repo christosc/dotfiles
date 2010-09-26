@@ -9,7 +9,7 @@ export PATH=$PATH:/usr/local/mysql/bin
 
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h] \w \$ "
-export PS1="\u@\h: \W \$ "
+export PS1="\u@\h \w \$ "
 
 #umask 077
 
@@ -361,8 +361,13 @@ export PATH=/opt/subversion/bin:$PATH
 #export PATH
 export DOTFILES="$HOME/.vimrc $HOME/.gvimrc $HOME/.profile $HOME/.emacs.d/init.el $HOME/.emacs.d/keyboard-meta-command.el $HOME/.emacs.d/org-custom.el $HOME/.pythonrc.py $HOME/.irbrc $HOME/.ghci"
 
+
+
+
 function internetoff()
 {
 	rule=$(($(($RANDOM % 30000)) + 35000))  # random number between 35000 and 65000, since $RANDOM in [0, 32767]
-	sudo -b sh -c "(ipfw add $rule deny ip from any to any via en0; sleep $(($1 * 60)); ipfw delete $rule) > /dev/null"
+#	iPhoneRuleNum=$(($rule - 100))
+#	blockRule="ipfw add $rule deny tcp from any to any via en0; sleep $(($1 * 60)); ipfw delete $rule"
+	sudo -b sh -c "(ipfw add $rule deny ip from not 192.168.0.3 to not 192.168.0.3 via en0; sleep $(($1 * 60)); ipfw delete $rule) > /dev/null"
 }
