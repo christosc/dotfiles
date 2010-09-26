@@ -14,4 +14,7 @@ set hlsearch
 " ΓΙΑ NERDTree
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+set textwidth=80
 
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>

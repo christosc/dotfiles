@@ -5,8 +5,8 @@
 ;;(server-start)                          
 
 (setq locale-coding-system 'utf-8)
-(setq system-messages-locale "el_GR.UTF-8")
-(setq system-time-locale "el_GR.UTF-8")
+;;(setq system-messages-locale "el_GR.UTF-8")
+;;(setq system-time-locale "el_GR.UTF-8")
 
 
 ;; Ἡ γραφικὴ ῥάβδος ἐργαλείων κρύβει πολύτιμο χῶρο ἀπὸ τὸ περιεχόμενο τῶν
@@ -899,12 +899,12 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
-(setq org-directory "~/Documents/orgfiles")
+(setq org-directory "~/Dropbox/org-files")
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
-(setq org-agenda-files (quote ("~/Documents/orgfiles/TestMobile.org"
-							   "~/Documents/orgfiles/Projects.org")))
-(setq org-mobile-inbox-for-pull "~/Dropbox/org-mode/inbox.org")
-;; Διὰ νὰ ἔχω τὸν πληκτρoλογικὴ σύντμησι Μ-# γιὰ τὲς μακροεντολὲς τοῦ Calc
+(setq org-agenda-files (quote ("~/Dropbox/org-files")))
+							  
+(setq org-mobile-inbox-for-pull "~/Dropbox/MobileOrg/inbox.org")
+;; Διὰ νὰ ἔχω τὴν πληκτρoλογικὴν σύντμησιν Μ-# γιὰ τὲς μακροεντολὲς τοῦ Calc
 (global-set-key "\e#" 'calc-dispatch)
 
 ;;in the .emacs
@@ -971,7 +971,7 @@
 ;; do not confirm a new file or buffer
 ;; (setq confirm-nonexistent-file-or-buffer nil)
 ;; (require 'ido)
-(ido-mode 1)
+;;(ido-mode 1)
 ;; (ido-everywhere 1)
 ;; (setq ido-enable-flex-matching t)
 ;; (setq ido-create-new-buffer 'always)
@@ -1205,7 +1205,7 @@
 ;;
 ;; WARNING: This causes some versions of Emacs to fail so badly
 ;; that Emacs needs to be restarted.
-(setq scion-completing-read-function 'ido-completing-read)
+;;(setq scion-completing-read-function 'ido-completing-read)
 (setq scion-set-command-line-flag "-Wall")
 
 
@@ -1238,3 +1238,8 @@
 (put 'narrow-to-region 'disabled nil)
 
 
+(global-set-key (kbd "C-.") 'set-mark-command)
+(global-set-key (kbd "C-γ") 'keyboard-quit)
+(global-set-key (kbd "C-α") 'beginning-of-visual-line)
+(global-set-key (kbd "C-ε") 'end-of-visual-line)
+(global-set-key (kbd "C-κ") 'kill-visual-line)

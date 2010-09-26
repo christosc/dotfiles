@@ -344,6 +344,7 @@ INFOPATH="$HOME"/info:$INFOPATH
 # The orginal version is saved in .profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
+export PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages
 
 # ΓΙΑ SVN ΑΠΟ COLLABNET
 export PATH=/opt/subversion/bin:$PATH
@@ -358,3 +359,10 @@ export PATH=/opt/subversion/bin:$PATH
 # The orginal version is saved in .profile.pysave
 #PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
 #export PATH
+export DOTFILES="$HOME/.vimrc $HOME/.profile $HOME/.emacs.d/init.el $HOME/.emacs.d/keyboard-meta-command.el $HOME/.emacs.d/org-custom.el"
+
+function internetoff()
+{
+	rule=$(($(($RANDOM % 30000)) + 35000))  # random number between 35000 and 65000, since $RANDOM in [0, 32767]
+	sudo -b sh -c "(ipfw add $rule deny ip from any to any via en0; sleep $(($1 * 60)); ipfw delete $rule) > /dev/null"
+}
