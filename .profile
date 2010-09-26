@@ -359,7 +359,7 @@ export PATH=/opt/subversion/bin:$PATH
 # The orginal version is saved in .profile.pysave
 #PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
 #export PATH
-export DOTFILES="$HOME/.vimrc $HOME/.profile $HOME/.emacs.d/init.el $HOME/.emacs.d/keyboard-meta-command.el $HOME/.emacs.d/org-custom.el"
+export DOTFILES="$HOME/.vimrc $HOME/.gvimrc $HOME/.profile $HOME/.emacs.d/init.el $HOME/.emacs.d/keyboard-meta-command.el $HOME/.emacs.d/org-custom.el $HOME/.pythonrc.py $HOME/.irbrc $HOME/.ghci"
 
 function internetoff()
 {
