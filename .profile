@@ -68,7 +68,7 @@ alias mutt="/usr/local/bin/mutt"
 #export PATH
 
 export CLICOLOR=true
-alias ls="ls --color -hF"
+alias ls="ls --color -h"
 
 export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
 
@@ -344,8 +344,7 @@ INFOPATH="$HOME"/info:$INFOPATH
 # The orginal version is saved in .profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
-export PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages
-
+export PYTHONPATH=/Library/Python/2.6/site-packages:/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:${PYTHONPATH}
 # ΓΙΑ SVN ΑΠΟ COLLABNET
 export PATH=/opt/subversion/bin:$PATH
 
@@ -369,5 +368,6 @@ function internetoff()
 	rule=$(($(($RANDOM % 30000)) + 35000))  # random number between 35000 and 65000, since $RANDOM in [0, 32767]
 #	iPhoneRuleNum=$(($rule - 100))
 #	blockRule="ipfw add $rule deny tcp from any to any via en0; sleep $(($1 * 60)); ipfw delete $rule"
-	sudo -b sh -c "(ipfw add $rule deny ip from not 192.168.0.3 to not 192.168.0.3 via en0; sleep $(($1 * 60)); ipfw delete $rule) > /dev/null"
+	sudo -b sh -c "(ipfw add $rule deny ip from not 192.168.0.3 to not\
+        192.168.0.3 via en0; sleep $1h; ipfw delete $rule) > /dev/null"
 }
