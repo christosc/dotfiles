@@ -772,7 +772,7 @@
 ;;(defalias 'list-buffers 'ibuffer)
 
 ;;(add-to-list 'default-frame-alist '(font . "Menlo-11"))
-(add-to-list 'default-frame-alist '(font . "Menlo-12"))
+(add-to-list 'default-frame-alist '(font . "Menlo-11"))
 ;;(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-12"))
 ;;(color-theme-deep-blue)
 ;(blink-cursor-mode 1)
