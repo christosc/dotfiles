@@ -771,9 +771,9 @@
 ;;(blink-cursor-mode 0)
 ;;(defalias 'list-buffers 'ibuffer)
 
-;;(add-to-list 'default-frame-alist '(font . "Menlo-11"))
-(add-to-list 'default-frame-alist '(font . "Menlo-11"))
-;;(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-12"))
+
+
+;;(Add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-12"))
 ;;(color-theme-deep-blue)
 ;(blink-cursor-mode 1)
 ;;(add-to-list 'default-frame-alist '(background-color . "Black"))
@@ -1243,3 +1243,7 @@
 (global-set-key (kbd "C-α") 'beginning-of-visual-line)
 (global-set-key (kbd "C-ε") 'end-of-visual-line)
 (global-set-key (kbd "C-κ") 'kill-visual-line)
+
+(assq-delete-all 'font default-frame-alist) 
+(add-to-list 'default-frame-alist '(font . "Menlo-11"))
+
