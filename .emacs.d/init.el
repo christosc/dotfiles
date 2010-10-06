@@ -1209,7 +1209,7 @@
 (setq scion-set-command-line-flag "-Wall")
 
 
-(global-linum-mode 1)
+;;(global-linum-mode 1)
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
