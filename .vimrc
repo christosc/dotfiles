@@ -5,9 +5,9 @@ syntax enable
 set tabstop=4
 set shiftwidth=4
 set expandtab
-"set number
+set number
 set linebreak
-set smartindent
+set autoindent
 filetype plugin on
 set incsearch
 set hlsearch
@@ -19,3 +19,6 @@ set textwidth=80
 
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+
+"autocmd FileType mkd set includeexpr=substitute(v:fname,'\\.','/','g').'.md'

@@ -10,7 +10,7 @@ export PATH=$PATH:/usr/local/mysql/bin
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h] \w \$ "
 #export PS1="\[\033[1;34m\]\u@\h \w \$\[\033[0m\] "
-export PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
+export PS1='\[\e[1;32m\][\u@\h \w]\$\[\e[0m\] '
 #export PS1="\[\033[34m\][\$(date +%H%M)][\u@\h:\w]$ "
 #umask 077
 
@@ -68,8 +68,13 @@ alias mutt="/usr/local/bin/mutt"
 #PATH=/usr/local/include/boost-1_34_1:${PATH}
 #export PATH
 
-export CLICOLOR=true
-alias ls="ls --color -h"
+
+#Γιὰ σκοτεινὰ φόντα
+export CLICOLOR=true export LSCOLORS=dxfxcxdxbxegedabagacad
+#Γιὰ φωτεινὰ φόντα
+#export CLICOLOR=true export LSCOLORS=ExFxCxDxBxegedabagacad
+
+alias ls="ls -h --color=auto"
 
 export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
 
@@ -372,3 +377,9 @@ function internetoff()
 	sudo -b sh -c "(ipfw add $rule deny ip from not 192.168.0.3 to not\
         192.168.0.3 via en0; sleep $1h; ipfw delete $rule) > /dev/null"
 }
+
+export ICORE="$HOME/work/cocoa/icore"
+
+if [ -f /etc/bash_completion ]; then
+   . /etc/bash_completion
+fi

@@ -1,23 +1,19 @@
-set meta-flag on
-set input-meta on
-set output-meta on
-set convert-meta off
 
 # Ignores the case of the letter
 set completion-ignore-case On
 # Automatically show everything instead of you having to press Ctrl+Space (as configured here) twice...
-set show-all-if-ambiguous On
-set show-all-if-unmodified on
+#set show-all-if-ambiguous On
+#set show-all-if-unmodified on
 # Tab
-TAB: complete
+#TAB: complete
 # Shift-Tab (reverse menu-complete)
-"\e[Z": "\e--\t"
+#"\e[Z": "\e--\t"
 # The old style auto-complete (now mapped to Ctrl+space) - so you can still use it...
-Shift-Control-space: complete
+#Shift-Control-space: complete
 
 # Display a "/" at the end for symlinked directories
 #set mark-symlinked-directories on
 
-"\C-x\C-r": re-read-init-file
+#"\C-x\C-r": re-read-init-file
 
 set blink-matching-paren on
