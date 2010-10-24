@@ -44,15 +44,15 @@
 
 
 ;; (add-to-list 'load-path "/usr/share/emacs/site-lisp/w3m")
-;; (add-to-list 'load-path "/Users/christos/.emacs.d/auctex-11.85")
-;; (add-to-list 'load-path "/Users/christos/.emacs.d/auctex-11.85/preview")
-;; (add-to-list 'load-path "/Users/christos/.emacs.d/auctex-11.85/style")
-;; (add-to-list 'load-path "/Users/christos/.emacs.d/auctex-11.85/images")
-;; (add-to-list 'load-path "/Users/christos/.emacs.d/auctex-11.85/style")
-(add-to-list 'load-path "/Users/christos/.emacs.d")
-;(add-to-list 'load-path "/Users/christos/.emacs.d/mmm")
-;(add-to-list 'load-path "/Users/christos/.emacs.d/color-theme-6.6.0")
-; (add-to-list 'load-path "/Users/christos/.emacs.d/themes")
+;; (add-to-list 'load-path "/Users/christos/elisp/auctex-11.85")
+;; (add-to-list 'load-path "/Users/christos/elisp/auctex-11.85/preview")
+;; (add-to-list 'load-path "/Users/christos/elisp/auctex-11.85/style")
+;; (add-to-list 'load-path "/Users/christos/elisp/auctex-11.85/images")
+;; (add-to-list 'load-path "/Users/christos/elisp/auctex-11.85/style")
+(add-to-list 'load-path "/Users/christos/elisp")
+;(add-to-list 'load-path "/Users/christos/elisp/mmm")
+;(add-to-list 'load-path "/Users/christos/elisp/color-theme-6.6.0")
+; (add-to-list 'load-path "/Users/christos/elisp/themes")
 
 
 
@@ -67,24 +67,24 @@
 ;(eval-after-load "color-theme" 	 'color-theme-initialize)
      
 ;(require 'color-theme)
-;;(setq color-theme-directory '("/Users/christos/.emacs.d/themes-test"))
+;;(setq color-theme-directory '("/Users/christos/elisp/themes-test"))
 ;(color-theme-initialize)
 
 
 
 ;(require 'zenburn)
-;; (load-file "~/.emacs.d/color-theme-blue.el")
-;; (load-file "~/.emacs.d/themes/color-theme-blackboard.el")
-;; (load-file "~/.emacs.d/color-theme-twilight.el")
-;; (load-file "~/.emacs.d/color-theme-hober2.el")
-;; (load-file "~/.emacs.d/color-theme-mods.el")
-;; (load-file "~/.emacs.d/color-theme-tango2.el")
-;; (load-file "~/.emacs.d/color-theme-subdued.el")
-;; (load-file "~/.emacs.d/color-theme-less.el")
-;; (load-file "~/.emacs.d/color-theme-wombat.el")
-;; (load-file "~/.emacs.d/color-theme-sunburst.el")
+;; (load-file "~/elisp/color-theme-blue.el")
+;; (load-file "~/elisp/themes/color-theme-blackboard.el")
+;; (load-file "~/elisp/color-theme-twilight.el")
+;; (load-file "~/elisp/color-theme-hober2.el")
+;; (load-file "~/elisp/color-theme-mods.el")
+;; (load-file "~/elisp/color-theme-tango2.el")
+;; (load-file "~/elisp/color-theme-subdued.el")
+;; (load-file "~/elisp/color-theme-less.el")
+;; (load-file "~/elisp/color-theme-wombat.el")
+;; (load-file "~/elisp/color-theme-sunburst.el")
 ;;;;;;;;;;;;;;;;   TUAREG MODE ΓΙΑ OCAML ;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq load-path (cons "/Users/christos/.emacs.d/tuareg-mode-1.45.6" load-path))
+(setq load-path (cons "/Users/christos/elisp/tuareg-mode-1.45.6" load-path))
 
 (setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
 (autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
@@ -98,13 +98,13 @@
 ;;;;;;;;;;;;;;;;;;  ΤΕΛΟΣ TUAREG ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;   NXHTML ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load "/Users/christos/.emacs.d/nxhtml/autostart.el")
+;;(load "/Users/christos/elisp/nxhtml/autostart.el")
 
 
 
 ;;;;;;;;;;;;;;;;    ERLANG    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load "erlang.el" nil t t)
-(setq auto-mode-alist (cons '("\\.erl\\'" . erlang-mode) auto-mode-alist))
+;; (load "erlang.el" nil t t)
+;; (setq auto-mode-alist (cons '("\\.erl\\'" . erlang-mode) auto-mode-alist))
 
 
 ;; (if (eq window-system 'mac) (require 'carbon-font))
@@ -115,7 +115,7 @@
 
 
 ;;;             OCAML
-;;(add-to-list 'load-path "~/.emacs.d/ocaml")
+;;(add-to-list 'load-path "~/elisp/ocaml")
 ;;(load "caml.el" nil t t)
 ;;(load "ocaml.emacs" nil t t)
 ;;(load "inf-caml.el" nil  t t)
@@ -123,7 +123,7 @@
 
 
 ;=====================  <SCALA> ===============================
-;(add-to-list 'load-path "~/.emacs.d/scala-2.7.1")
+;(add-to-list 'load-path "~/elisp/scala-2.7.1")
 
 ;; (load "scala-mode-auto.el" nil t t)
 ;; (load "inferior-scala-mode.el" nil  t t)
@@ -136,8 +136,8 @@
 
 
 ; <AUCTeX>
-(load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
+;; (load "auctex.el" nil t t)
+;; (load "preview-latex.el" nil t t)
 ;;(setq TeX-auto-save t) 
 ; </AUCTeX>
 
@@ -282,14 +282,14 @@
 
 
 
-;; (add-to-list 'load-path "~/.emacs.d/elib-1.0")
-;; (add-to-list 'load-path "~/.emacs.d/cedet-1.0pre4/eieio")
-;; (add-to-list 'load-path "~/.emacs.d/cedet-1.0pre4/common")
-;; (add-to-list 'load-path "~/.emacs.d/cedet-1.0pre4/semantic")
-;; (add-to-list 'load-path "~/.emacs.d/cedet-1.0pre4/speedbar")
+;; (add-to-list 'load-path "~/elisp/elib-1.0")
+;; (add-to-list 'load-path "~/elisp/cedet-1.0pre4/eieio")
+;; (add-to-list 'load-path "~/elisp/cedet-1.0pre4/common")
+;; (add-to-list 'load-path "~/elisp/cedet-1.0pre4/semantic")
+;; (add-to-list 'load-path "~/elisp/cedet-1.0pre4/speedbar")
 
 ;; ; Load CEDET
-;; (load-file "~/.emacs.d/cedet-1.0pre4/common/cedet.el")
+;; (load-file "~/elisp/cedet-1.0pre4/common/cedet.el")
 
 ;;(setq semantic-load-turn-everything-on t)
 ;; Enabling various SEMANTIC minor modes.  See semantic/INSTALL for more ideas.
@@ -315,7 +315,7 @@
 ;; helpers above.                                                                                                                            
 ;; (semantic-load-enable-semantic-debugging-helpers)
 
-;(load-file "/Users/christos/.emacs.d/cedet-1.0pre4/semantic/semantic-load.el")
+;(load-file "/Users/christos/elisp/cedet-1.0pre4/semantic/semantic-load.el")
 
 ;(require 'semantic-ia)
 
@@ -419,11 +419,11 @@
 
 
 ;; Haskell Mode
-;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-mode.el") 
-(load "/Users/christos/repos/haskellmode-emacs/haskell-site-file")
-;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-indentation.el")
-;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-simple-indent.el")
-;(load "~/.emacs.d/fptools/CONTRIB/haskell-modes/emacs/haskell-indent.el")
+;(load "~/elisp/fptools/CONTRIB/haskell-modes/emacs/haskell-mode.el") 
+;(load "/Users/christos/repos/haskellmode-emacs/haskell-site-file")
+;(load "~/elisp/fptools/CONTRIB/haskell-modes/emacs/haskell-indentation.el")
+;(load "~/elisp/fptools/CONTRIB/haskell-modes/emacs/haskell-simple-indent.el")
+;(load "~/elisp/fptools/CONTRIB/haskell-modes/emacs/haskell-indent.el")
 
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
@@ -504,7 +504,7 @@
 
 ;; SLIME
 ;; (setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
-;; (add-to-list 'load-path "~/.emacs.d/slime/") ; your SLIME directory
+;; (add-to-list 'load-path "~/elisp/slime/") ; your SLIME directory
 ;; (require 'slime)
 ;; (slime-setup)
 
@@ -724,7 +724,7 @@
 
 
 ;;;;;;;;;;;;;;;;;;;  AUTOPAIR  ;;;;;;;;;;;;;;;;;;
-;; (add-to-list 'load-path "~/.emacs.d/autopair-read-only") ;; comment if autopair.el is in standard load path 
+;; (add-to-list 'load-path "~/elisp/autopair-read-only") ;; comment if autopair.el is in standard load path 
 ;; (require 'autopair)
 ;; (autopair-global-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -732,7 +732,7 @@
 ;;; <SCALA>
 
 (add-to-list 'load-path "/Users/christos/local/scala/misc/scala-tool-support/emacs")
-(require 'scala-mode-auto)
+;(require 'scala-mode-auto)
 
 ;;;; </SCALA>
 
@@ -755,8 +755,8 @@
 
 
 
-(add-to-list 'load-path "/Users/christos/.emacs.d/apel-10.7")
-(add-to-list 'load-path "/Users/christos/.emacs.d/elscreen-1.4.6")
+(add-to-list 'load-path "/Users/christos/elisp/apel-10.7")
+(add-to-list 'load-path "/Users/christos/elisp/elscreen-1.4.6")
 ;;(load "elscreen" "ElScreen" t)
 
 ;; F9 creates a new elscreen, shift-F9 kills it
@@ -949,22 +949,22 @@
 
 ;; Γιὰ γλῶσσα Go
 (add-to-list 'load-path "/Users/christos/go/misc/emacs/" t)
-(require 'go-mode-load)
-(load-file "/Users/christos/.emacs.d/themes/color-theme-railscasts.el")
+;(require 'go-mode-load)
+;(load-file "/Users/christos/elisp/themes/color-theme-railscasts.el")
 ;; (color-theme-railscasts)			   
 
 
 ;; Διὰ νὰ δύναμαι νὰ μετακινηθῆ ἀπὸ frame σὲ frame διὰ τοῦ meta-βέλη
 (windmove-default-keybindings 'meta)
 
-;; (load-file "/Users/christos/.emacs.d/themes/color-theme-irblack.el")
+;; (load-file "/Users/christos/elisp/themes/color-theme-irblack.el")
 
 
 
 
 ;; Γιὰ Nav:
-(add-to-list 'load-path "/Users/christos/.emacs.d/emacs-nav")
-(require 'nav)
+(add-to-list 'load-path "/Users/christos/elisp/emacs-nav")
+;(require 'nav)
 
 
 
@@ -1028,8 +1028,8 @@
 
 
 ;; Γιὰ βελτιωμένο shell μὲ διὰ ΤΑΒ συμπλήρωσιν ὀνομάτων
-(require 'shell-command)
-(shell-command-completion-mode)
+;(require 'shell-command)
+;(shell-command-completion-mode)
 
 ;; (load "topfunky-theme")
 ;; (load "color-theme-github")
@@ -1042,8 +1042,8 @@
 
 
 ;;; MATLAB mode
-(add-to-list 'load-path "/Users/christos/.emacs.d/matlab-emacs")
-(load-library "matlab-load")
+(add-to-list 'load-path "/Users/christos/elisp/matlab-emacs")
+;(load-library "matlab-load")
 ;;;;;;;;;
 ;; (load "color-theme-almost-monokai")
 
@@ -1068,14 +1068,14 @@
 ;;(cua-mode t)
 
 
-(load-file "~/.emacs.d/keyboard-meta-command.el")
+(load-file "~/elisp/keyboard-meta-command.el")
 
 (filesets-init)
 
 (if (> (x-display-pixel-width) 1280)
 	(progn
-	  (add-to-list 'default-frame-alist '(width . 120))
-	  (add-to-list 'default-frame-alist '(height . 50))
+	  (add-to-list 'default-frame-alist '(width . 80))
+	  (add-to-list 'default-frame-alist '(height . 60))
 
 	  )
   )
@@ -1127,8 +1127,8 @@
  )
 
 
-  ;; (load-file "~/.emacs.d/dark-theme.el")
-(load-file "~/.emacs.d/light-theme.el")
+  ;; (load-file "~/elisp/dark-theme.el")
+;(load-file "~/elisp/light-theme.el")
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
@@ -1139,7 +1139,7 @@
 ;; (setq org-columns-default-format "%25ITEM %TODO %10Effort(Effort){:} %3PRIORITY %10TAGS")
 
 ;;; ΔΙΑ ORG-MODE ;;;;;;;;;;;;;;;;;;;;;;
-(load-file "~/.emacs.d/org-custom.el")
+(load-file "~/elisp/org-custom.el")
 (setq load-path (cons "~/repos/org-mode/lisp" load-path))
 
 
@@ -1148,7 +1148,7 @@
 (setq holiday-hebrew-holidays nil)
 (setq holiday-islamic-holidays nil)
 (setq holiday-oriental-holidays nil)
-(load-file "~/.emacs.d/my-holidays.el")
+;(load-file "~/elisp/my-holidays.el")
 
 ;;; ΔΙΑ OBJECTIVE-C
 (setq auto-mode-alist (cons '("\\.m$" . objc-mode) auto-mode-alist))
@@ -1187,17 +1187,17 @@
 
 ;; Substitute the desired version for <version>
 (add-to-list 'load-path "~/.cabal/share/scion-0.1.0.2/emacs")
-(require 'scion)
+;(require 'scion)
 
 ;; if ./cabal/bin is not in your $PATH
 (setq scion-program "~/.cabal/bin/scion-server")
 
-(defun my-haskell-hook ()
-  ;; Whenever we open a file in Haskell mode, also activate Scion
-  (scion-mode 1)
-  ;; Whenever a file is saved, immediately type check it and
-  ;; highlight errors/warnings in the source.
-  (scion-flycheck-on-save 1))
+;; (defun my-haskell-hook ()
+;;   ;; Whenever we open a file in Haskell mode, also activate Scion
+;;   (scion-mode 1)
+;;   ;; Whenever a file is saved, immediately type check it and
+;;   ;; highlight errors/warnings in the source.
+;;   (scion-flycheck-on-save 1))
 
 (add-hook 'haskell-mode-hook 'my-haskell-hook)
 
@@ -1213,7 +1213,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;

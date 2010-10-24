@@ -6,7 +6,8 @@ set tabstop=2
 set shiftwidth=4
 set expandtab
 set number
-"set linebreak
+set linebreak
+set wrap
 set autoindent
 filetype plugin on
 set incsearch
