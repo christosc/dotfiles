@@ -1,4 +1,4 @@
-;-*- coding: utf-8 -*-    
+										;-*- coding: utf-8 -*-    
 
 
 
@@ -892,7 +892,7 @@
 
 
 ;; Διὰ Org mode
-(add-to-list 'load-path "~/repos/org-mode/lisp")
+(add-to-list 'load-path "~/elisp/org-mode/lisp")
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)

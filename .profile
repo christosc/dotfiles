@@ -6,7 +6,7 @@
 export PATH=$PATH:/usr/local/mysql/bin
 #export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig
 
-export PS1="\[\e[1m\]\h:\w \u\$\[\e[0m\] "
+export PS1="\[\e[1m\]\h:\W \u\$\[\e[0m\] "
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h] \w \$ "
 #export PS1="\[\033[1;34m\]\u@\h \w \$\[\033[0m\] "
@@ -393,3 +393,5 @@ _expand()
 {
     return 0;
 }
+
+export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
