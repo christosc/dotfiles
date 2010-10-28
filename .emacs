@@ -319,7 +319,7 @@
 
 ;(require 'semantic-ia)
 
-(setq-default tab-width 4)
+(setq-default tab-width 2)
 
 ;; Display the time in the mode line
 ;(setq display-time-24hr-format t)

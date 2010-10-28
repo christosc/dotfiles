@@ -394,4 +394,7 @@ _expand()
     return 0;
 }
 
+
 export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
+alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+
