@@ -8,7 +8,7 @@ set expandtab
 set number
 set linebreak
 set wrap
-set autoindent
+"set autoindent
 filetype plugin on
 set incsearch
 set hlsearch
@@ -24,9 +24,12 @@ autocmd VimEnter * wincmd p
 
 "autocmd FileType mkd set includeexpr=substitute(v:fname,'\\.','/','g').'.md'
 
-noremap  <buffer> <silent> k gk
-noremap  <buffer> <silent> j gj
-noremap  <buffer> <silent> 0 g0
-noremap  <buffer> <silent> $ g$
+"noremap  <buffer> <silent> k gk
+"noremap  <buffer> <silent> j gj
+"noremap  <buffer> <silent> 0 g0
+"noremap  <buffer> <silent> $ g$
 
-
+noremap  <buffer> <silent> <Up>   gk
+noremap  <buffer> <silent> <Down> gj
+noremap  <buffer> <silent> <Home> g<Home>
+noremap  <buffer> <silent> <End>  g<End>
