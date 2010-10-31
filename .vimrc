@@ -7,9 +7,12 @@ set shiftwidth=2
 set expandtab
 set number
 set linebreak
+colorscheme desert
+hi LineNr guifg=DarkGray
+hi LineNr ctermfg=DarkGray
 "set wrap
 
-" Γιά νά θέτῃ αὐτόματα κτάλληλον ἐσοχήν.
+" Γιά νά θέτῃ αὐτόματα κατάλληλον ἐσοχήν.
 set autoindent
 filetype plugin on
 set incsearch
