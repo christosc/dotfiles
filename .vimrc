@@ -9,7 +9,7 @@ set number
 set linebreak
 colorscheme desert
 hi LineNr guifg=DarkGray
-"hi LineNr ctermfg=DarkGray
+hi LineNr ctermfg=Gray
 "set wrap
 
 " Γιά νά θέτῃ αὐτόματα κατάλληλον ἐσοχήν.
