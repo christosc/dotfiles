@@ -77,7 +77,7 @@ alias mutt="/usr/local/bin/mutt"
 #export CLICOLOR=true export LSCOLORS=ExFxCxDxBxegedabagacad
 
 alias ls="ls -h --color=auto"
-LS_COLORS='di=94'
+LS_COLORS="ow=94:di=94"
 export LS_COLORS
 
 
