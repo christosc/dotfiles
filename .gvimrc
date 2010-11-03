@@ -4,4 +4,4 @@ set guifont=menlo:h11
 "set textwidth=80
 "colorscheme desert
 colorscheme github
-hi CuresorLine guibg=NONE
+hi CuresorLine guibg=Grey95
