@@ -1246,4 +1246,4 @@
 
 (assq-delete-all 'font default-frame-alist) 
 (add-to-list 'default-frame-alist '(font . "Menlo-11"))
-
+(setq-default indent-tabs-mode nil)
