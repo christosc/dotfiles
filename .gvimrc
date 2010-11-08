@@ -3,5 +3,5 @@ set guicursor+=n-c-v:blinkon0
 set guifont=menlo:h11
 "set textwidth=80
 "colorscheme desert
-colorscheme github
-hi CuresorLine guibg=Grey95
+colorscheme desert
+"hi CuresorLine guibg=Grey95
