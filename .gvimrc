@@ -1,7 +1,8 @@
 set guicursor=i:ver20-blinkwait400-blinkon600-blinkoff600
 set guicursor+=n-c-v:blinkon0
-set guifont=menlo:h11
+set guifont=menlo:h10
 "set textwidth=80
 "colorscheme desert
 colorscheme desert
 "hi CuresorLine guibg=Grey95
+set nocursorline

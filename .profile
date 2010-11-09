@@ -13,7 +13,8 @@ export PATH=$PATH:/usr/local/mysql/bin
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h] \w \$ "
 #export PS1="\[\033[1;34m\]\u@\h \w \$\[\033[0m\] "
-export PS1='\[\e[0;34m\][\u@\h \W]\$\[\e[0m\] '
+#export PS1='\[\e[0;34m\][\u@\h \W]\$\[\e[0m\] '
+export PS1='\[\e[0;37m\][\u@\h \W]\$\[\e[0m\] '
 #export PS1="\[\033[34m\][\$(date +%H%M)][\u@\h:\w]$ "
 #umask 077
 
@@ -383,7 +384,7 @@ function internetoff()
         192.168.0.3 via en0; sleep $1h; ipfw delete $rule) > /dev/null"
 }
 
-export ICORE="$HOME/devel/cocoa/icore"
+export ICORE="$HOME/work/icore"
 
 #if [ -f /etc/bash_completion ]; then
 #   . /etc/bash_completion
