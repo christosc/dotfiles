@@ -13,8 +13,12 @@ export PATH=$PATH:/usr/local/mysql/bin
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h] \w \$ "
 #export PS1="\[\033[1;34m\]\u@\h \w \$\[\033[0m\] "
-#export PS1='\[\e[0;34m\][\u@\h \W]\$\[\e[0m\] '
-export PS1='\[\e[0;37m\][\u@\h \W]\$\[\e[0m\] '
+
+# Προτροπή γιά ἀνοικτόχρωμα παρασκήνια (backgrounds)
+export PS1='\[\e[0;34m\][\u@\h \W]\$\[\e[0m\] ' # κυανῆ προτροπή
+#######
+
+#export PS1='\[\e[0;37m\][\u@\h \W]\$\[\e[0m\] '  # φαιά προτροπή
 #export PS1="\[\033[34m\][\$(date +%H%M)][\u@\h:\w]$ "
 #umask 077
 
