@@ -5,4 +5,4 @@ set guifont=menlo:h11
 "colorscheme desert
 colorscheme macvim
 "hi CuresorLine guibg=Grey95
-
+set background=light
