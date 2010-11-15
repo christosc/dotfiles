@@ -6,3 +6,4 @@ set guifont=menlo:h11
 colorscheme macvim
 "hi CuresorLine guibg=Grey95
 set background=light
+set nonumber
