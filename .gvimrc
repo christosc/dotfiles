@@ -3,8 +3,8 @@ set guicursor+=n-c-v:blinkon0
 set guifont=menlo:h11
 "set textwidth=80
 "colorscheme desert
-colorscheme macvim
+colorscheme Developer
 "hi CuresorLine guibg=Grey95
-set background=light
+"set background=light
 set nonumber
 hi Comment gui=None
