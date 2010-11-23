@@ -1213,7 +1213,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1247,3 +1247,5 @@
 (assq-delete-all 'font default-frame-alist) 
 (add-to-list 'default-frame-alist '(font . "Menlo-11"))
 (setq-default indent-tabs-mode nil)
+
+(global-auto-revert-mode 1)

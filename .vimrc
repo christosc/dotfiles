@@ -42,4 +42,5 @@ noremap  <buffer> <silent> <Home> g<Home>
 noremap  <buffer> <silent> <End>  g<End>
 set expandtab
 nnoremap <Space> l
+set autoread
 

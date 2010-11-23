@@ -8,14 +8,14 @@ export PATH=$PATH:/usr/local/mysql/bin
 
 #export PS1="\[\e[1m\]\h:\W \u\$\[\e[0m\] "  # ἁπλῶς ἔντονα
 #export PS1="\[\e[0;34m\]\h:\W \u\$\[\e[0m\] " # θαλασσύ
-#export PS1="\[\e[0;36m\]\h:\W \u\$\[\e[0m\] " # θαλασσύ
+export PS1="\[\e[0;36m\]\h:\w \u\$\[\e[0m\] " # πρασινοθαλασσύ
 
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h] \w \$ "
 #export PS1="\[\033[1;34m\]\u@\h \w \$\[\033[0m\] "
 
 # Προτροπή γιά ἀνοικτόχρωμα παρασκήνια (backgrounds)
-export PS1='\[\e[0;34m\][\u@\h \W]\$\[\e[0m\] ' # κυανῆ προτροπή
+#export PS1='\[\e[0;34m\][\u@\h \W]\$\[\e[0m\] ' # κυανῆ προτροπή
 #######
 
 #export PS1='\[\e[0;37m\][\u@\h \W]\$\[\e[0m\] '  # φαιά προτροπή
@@ -81,10 +81,11 @@ alias mutt="/usr/local/bin/mutt"
 #Γιὰ φωτεινὰ φόντα
 #export CLICOLOR=true export LSCOLORS=ExFxCxDxBxegedabagacad
 
-alias ls="ls -h --color=auto"
-LS_COLORS="ow=94:di=94"
-export LS_COLORS
-
+export LS_OPTIONS='-h --color=auto'
+export CLICOLOR=1
+#LS_COLORS="ow=94:di=34"
+#export LS_COLORS
+export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 
 export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
 
