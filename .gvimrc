@@ -8,3 +8,4 @@ colorscheme cacdeveloper
 "set background=light
 set nonumber
 hi Comment gui=None
+set columns=80

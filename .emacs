@@ -1248,4 +1248,4 @@
 (add-to-list 'default-frame-alist '(font . "Menlo-11"))
 (setq-default indent-tabs-mode nil)
 
-(global-auto-revert-mode 1)
+;;(global-auto-revert-mode 1)
