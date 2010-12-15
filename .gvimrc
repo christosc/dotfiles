@@ -3,9 +3,10 @@ set guicursor+=n-c-v:blinkon0
 set guifont=menlo:h11
 "set textwidth=80
 "colorscheme desert
-colorscheme cacdeveloper
+"colorscheme cacdeveloper
+colorscheme github
 "hi CuresorLine guibg=Grey95
 "set background=light
-set nonumber
+set number
 hi Comment gui=None
 set columns=80

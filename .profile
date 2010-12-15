@@ -7,8 +7,8 @@ export PATH=$PATH:/usr/local/mysql/bin
 #export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig
 
 #export PS1="\[\e[1m\]\h:\W \u\$\[\e[0m\] "  # ἁπλῶς ἔντονα
-#export PS1="\[\e[0;34m\]\h:\W \u\$\[\e[0m\] " # θαλασσύ
-export PS1="\[\e[0;36m\]\h:\w \u\$\[\e[0m\] " # πρασινοθαλασσύ
+export PS1="\[\e[0;34m\]\h:\W \u\$\[\e[0m\] " # θαλασσύ
+#export PS1="\[\e[0;36m\]\h:\w \u\$\[\e[0m\] " # πρασινοθαλασσύ
 
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h] \w \$ "
@@ -81,12 +81,12 @@ alias mutt="/usr/local/bin/mutt"
 #Γιὰ φωτεινὰ φόντα
 #export CLICOLOR=true export LSCOLORS=ExFxCxDxBxegedabagacad
 
-export LS_OPTIONS='-h --color=auto'
+#export LS_OPTIONS='-h --color=auto'
 export CLICOLOR=1
 #LS_COLORS="ow=94:di=34"
 #export LS_COLORS
 export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
-
+alias ls="ls --color -h"
 export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
 
 #QTDIR=/sw/lib/qt3mac
@@ -180,7 +180,6 @@ alias sbcl="rlwrap sbcl"
 
 export PATH=$PATH:/Users/christos/local/erlang
 
-export CVSROOT=:pserver:anoncvs@cvs.haskell.org:/cvs
 
 # Γιὰ MacPosrts
 #export PATH=/opt/local/bin:/opt/local/sbin:$PATH
@@ -229,7 +228,7 @@ export GOARCH
 
 #############################
 
-ulimit -v 1000000    # stack 1GB, διὰ νὰ μὴ καταλάβῃ ὅλην τὴν μνήμη τοῦ ὑπολογιστοῦ
+#ulimit -v 1000000    # stack 1GB, διὰ νὰ μὴ καταλάβῃ ὅλην τὴν μνήμη τοῦ ὑπολογιστοῦ
 
 ##############################
 
@@ -365,6 +364,8 @@ export PYTHONPATH=/Library/Python/2.6/site-packages:/Library/Frameworks/Python.f
 # ΓΙΑ SVN ΑΠΟ COLLABNET
 export PATH=/opt/subversion/bin:$PATH
 
+#Γιά Android
+export PATH=${HOME}/SDKs/android-sdk-mac_x86/tools:${PATH}
 
 # Setting PATH for MacPython 2.6
 # The orginal version is saved in .profile.pysave
@@ -389,7 +390,8 @@ function internetoff()
         192.168.0.3 via en0; sleep $1h; ipfw delete $rule) > /dev/null"
 }
 
-export ICORE="$HOME/work/icore"
+export ICORE_LIB="$HOME/work/icore/trunk/lib/icore"
+export ICORE_ROOT="$HOME"/work/icore/trunk
 
 #if [ -f /etc/bash_completion ]; then
 #   . /etc/bash_completion
@@ -409,4 +411,8 @@ _expand()
 
 export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+alias "+"=fg
 
+
+
+export PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig

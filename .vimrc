@@ -9,9 +9,9 @@ set expandtab
 set number
 set linebreak
 set ruler
-colorscheme desert
-hi LineNr guifg=DarkGray
-hi LineNr ctermfg=Gray
+"colorscheme desert
+"hi LineNr guifg=DarkGray
+"hi LineNr ctermfg=Gray
 "set wrap
 
 " Γιά νά θέτῃ αὐτόματα κατάλληλον ἐσοχήν.
