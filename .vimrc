@@ -6,7 +6,7 @@ set tabstop=4
 set shiftwidth=4
 set autowrite
 set expandtab
-set number
+"set number
 set linebreak
 set ruler
 "colorscheme desert
