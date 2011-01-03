@@ -4,7 +4,7 @@ set guifont=menlo:h11
 "set textwidth=80
 "colorscheme desert
 "colorscheme cacdeveloper
-colorscheme github
+colorscheme cac_ironman
 "hi CuresorLine guibg=Grey95
 "set background=light
 set number
