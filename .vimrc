@@ -50,4 +50,8 @@ set autoread
 
 
 " Γιὰ νὰ σῴζῃ ἀντίγραφα ἀσφαλείας ἀρχείων.
-set bk
+set backup
+set writebackup
+
+set foldmethod=syntax
+nnoremap <silent> <F8> :TlistToggle<CR>
