@@ -48,3 +48,6 @@ set autoread
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%81v.\+/
 
+
+" Γιὰ νὰ σῴζῃ ἀντίγραφα ἀσφαλείας ἀρχείων.
+set bk
