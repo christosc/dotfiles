@@ -4,9 +4,10 @@ set guifont=menlo:h11
 "set textwidth=80
 "colorscheme desert
 "colorscheme cacdeveloper
-colorscheme cac_ironman
+"colorscheme cac_ironman
+colorscheme AutumnLeaf
 "hi CuresorLine guibg=Grey95
 "set background=light
-set number
-hi Comment gui=None
-set columns=80
+"set number
+"hi Comment gui=None
+"set columns=80

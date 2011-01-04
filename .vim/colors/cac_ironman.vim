@@ -56,7 +56,9 @@ hi CursorColumn              gui=NONE guifg=NONE    guibg=#F9F9F9
                              
 " Fold
 hi Folded                    gui=NONE guifg=#3399ff guibg=#EAF5FF
+"hi Folded                    gui=NONE guifg=#3399ff guibg=NONE
 hi FoldColumn                gui=NONE guifg=#3399ff guibg=#EAF5FF
+"hi FoldColumn                gui=NONE guifg=#3399ff guibg=NONE
                              
 " Other hi Directory         gui=NONE guifg=#0000ff guibg=NONE
 hi LineNr                    gui=NONE guifg=#FFFFFF guibg=#C0D0E0

@@ -55,3 +55,5 @@ set writebackup
 
 set foldmethod=syntax
 nnoremap <silent> <F8> :TlistToggle<CR>
+
+set autoindent
