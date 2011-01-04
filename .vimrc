@@ -44,3 +44,7 @@ set expandtab
 nnoremap <Space> l
 set autoread
 
+" Γιὰ νὰ ἐπισημαίνῃ τὸ κείμενο ποὺ ξεπερανᾷ τὶς 80 στῆλες...
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
+

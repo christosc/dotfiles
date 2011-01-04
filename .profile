@@ -416,3 +416,6 @@ alias "+"=fg
 
 
 export PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig
+
+### Θὲς MANPATH γιὰ /usr/local/share/man
+export MANPATH=/usr/local/share/man:$MANPATH

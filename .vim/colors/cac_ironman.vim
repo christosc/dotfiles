@@ -68,7 +68,7 @@ hi MatchParen                gui=NONE guifg=NONE    guibg=#9FFF82
 
 " Syntax group
 "hi Comment                   gui=ITALIC guifg=#A0B0C0 guibg=#EFEFFF
-hi Comment                   gui=NONE guifg=#1050C0 guibg=NONE
+hi Comment                   gui=ITALIC guifg=#1050C0 guibg=NONE
 hi Paren                     gui=NONE guifg=#9326C1 guibg=NONE
 hi Comma                     gui=NONE guifg=#C12660 guibg=NONE
 hi Constant                  gui=ITALIC guifg=NONE    guibg=NONE
@@ -85,7 +85,8 @@ hi Type                      gui=NONE guifg=#eb7950 guibg=NONE
 hi Underlined                gui=UNDERLINE guifg=#0000ff guibg=NONE
 
 hi Conditional               gui=None guifg=#0053FF guibg=bg
-hi Repeat                    gui=None guifg=SeaGreen2 guibg=bg
+"hi Repeat                    gui=None guifg=SeaGreen2 guibg=bg
+hi! link  Repeat             Conditional
 hi Operator                  gui=None guifg=#0085B1 guibg=bg
 hi Keyword                   gui=None guifg=DarkBlue guibg=bg
 hi Exception                 gui=None guifg=DarkBlue guibg=bg
