@@ -5,9 +5,9 @@
 # Setting the path for DarwinPorts.
 export PATH=$PATH:/usr/local/mysql/bin
 #export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig
-
+export PS1="\W @ \h (\u) \$ "
 #export PS1="\[\e[1m\]\h:\W \u\$\[\e[0m\] "  # ἁπλῶς ἔντονα
-export PS1="\[\e[0;34m\]\h:\W \u\$\[\e[0m\] " # θαλασσύ
+#export PS1="\[\e[0;34m\]\h:\W \u\$\[\e[0m\] " # θαλασσύ
 #export PS1="\[\e[0;36m\]\h:\w \u\$\[\e[0m\] " # πρασινοθαλασσύ
 
 # export PS1="\[\033]0;\u@\h: \w\007\][\u@\h: \w]\$ "

@@ -10,6 +10,7 @@ set expandtab
 set linebreak
 set ruler
 "colorscheme desert
+colorscheme cac_wombat
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
@@ -57,3 +58,6 @@ set foldmethod=syntax
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 set autoindent
+
+
+let  g:netrw_browse_split=2

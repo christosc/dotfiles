@@ -1231,9 +1231,11 @@
 
 
 ;;;;;;;;;;;;;  LUA ;;;;;;;;;;;;
-(setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-(add-hook 'lua-mode-hook 'hs-minor-mode)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
+
 (set-cursor-color "Black")
 (put 'narrow-to-region 'disabled nil)
 
