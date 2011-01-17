@@ -85,7 +85,7 @@ syn keyword luaRepeat contained in
 " other keywords
 syn keyword luaStatement return local break
 syn keyword luaOperator  and or not
-syn keyword luaConstant  nil self
+syn keyword luaConstant  nil 
 if lua_version > 4
   syn keyword luaConstant true false
 endif

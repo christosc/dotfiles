@@ -4,7 +4,7 @@ set laststatus=2
 syntax enable 
 set tabstop=4
 set shiftwidth=4
-set autowrite
+"set autowrite
 set expandtab
 "set number
 set linebreak
@@ -16,7 +16,7 @@ colorscheme cac_wombat
 "set wrap
 
 " Γιά νά θέτῃ αὐτόματα κατάλληλον ἐσοχήν.
-set autoindent
+"set autoindent
 filetype plugin on
 set incsearch
 set hlsearch
@@ -54,7 +54,7 @@ set autoread
 set backup
 set writebackup
 
-set foldmethod=syntax
+"set foldmethod=syntax
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 set autoindent
