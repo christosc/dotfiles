@@ -419,3 +419,7 @@ export PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig
 
 ### Θὲς MANPATH γιὰ /usr/local/share/man
 export MANPATH=/usr/local/share/man:$MANPATH
+
+
+### Βοηθητικὴ μεταβλητὴ γιὰ Loop
+export LOOP_DIR=/usr/local/share/lua/5.1/loop
