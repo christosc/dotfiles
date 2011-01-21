@@ -390,8 +390,11 @@ function internetoff()
         192.168.0.3 via en0; sleep $1h; ipfw delete $rule) > /dev/null"
 }
 
+
+### Βοηθητικαὶ μεταβληταὶ γιὰ iCore ######
 export ICORE_LIB="$HOME/work/icore/trunk/lib/icore"
 export ICORE_ROOT="$HOME"/work/icore/trunk
+export ICORE_TEST="$HOME"/work/icore-test
 
 #if [ -f /etc/bash_completion ]; then
 #   . /etc/bash_completion
@@ -423,3 +426,6 @@ export MANPATH=/usr/local/share/man:$MANPATH
 
 ### Βοηθητικὴ μεταβλητὴ γιὰ Loop
 export LOOP_DIR=/usr/local/share/lua/5.1/loop
+
+### Κάμνε τὸ περιβάλλον τὴν Lua λίγο φιλικώτερο…
+alias lua="rlwrap lua" 
