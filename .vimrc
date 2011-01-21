@@ -61,3 +61,7 @@ set autoindent
 
 
 let  g:netrw_browse_split=2
+
+" Γιὰ νὰ ἀνοίγῃ ὁ κατάλογος τῶν tags δεξιόθεν τοῦ κυρίως viewport.
+let Tlist_Use_Right_Window   = 1
+
