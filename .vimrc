@@ -54,7 +54,7 @@ set autoread
 set backup
 set writebackup
 
-"set foldmethod=syntax
+"set foldmethod=indent
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 set autoindent
@@ -65,3 +65,8 @@ let  g:netrw_browse_split=2
 " Γιὰ νὰ ἀνοίγῃ ὁ κατάλογος τῶν tags δεξιόθεν τοῦ κυρίως viewport.
 let Tlist_Use_Right_Window   = 1
 let Tlist_Auto_Open = 1
+
+
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
