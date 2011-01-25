@@ -5,6 +5,7 @@ syntax enable
 set tabstop=4    " ὁ Μανώλης ἔσι ts = 8 …
 set shiftwidth=4
 set autowrite  " ὁ Μανώλης τὸ ἔχει ἔτσι (συντμ. aw)
+set autoread
 set expandtab
 "set number
 set linebreak
