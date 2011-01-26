@@ -11,7 +11,7 @@ set expandtab
 set linebreak
 set ruler
 "colorscheme desert
-colorscheme cac_wombat
+colorscheme wombat
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
@@ -70,4 +70,8 @@ let Tlist_Auto_Open = 1
 
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" To automatically store/restore folds
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
 

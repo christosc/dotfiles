@@ -9,7 +9,7 @@ set guifont=menlo:h11
 "colorscheme cacdeveloper
 "colorscheme cac_ironman
 "colorscheme anotherdark
-colorscheme cac_railcasts
+colorscheme tango2
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
