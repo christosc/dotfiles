@@ -429,3 +429,6 @@ export LOOP_DIR=/usr/local/share/lua/5.1/loop
 
 ### Κάμνε τὸ περιβάλλον τὴν Lua λίγο φιλικώτερο…
 alias lua="rlwrap lua" 
+
+
+export LUA_PATH="/usr/local/share/lua/5.1/?.lua;"

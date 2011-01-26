@@ -14,7 +14,7 @@ set ruler
 colorscheme wombat
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
-"set wrap
+set wrap
 
 " Γιά νά θέτῃ αὐτόματα κατάλληλον ἐσοχήν.
 "set autoindent
