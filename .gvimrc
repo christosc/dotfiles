@@ -8,11 +8,13 @@ set guifont=menlo:h11
 "colorscheme cac_ironman
 "colorscheme anotherdark
 "colorscheme tango2
-colorscheme biogoo
+"colorscheme biogoo
+colorscheme habiLight
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
 "hi Comment gui=None
 "set columns=80
-set guicursor=i:ver20-blinkwait400-blinkon600-blinkoff600
+set guicursor=i:ver20-blinkwait200-blinkon600-blinkoff600
 set guicursor+=n-c-v:blinkon0
+set guioptions-=T "hide toolbar

@@ -431,4 +431,4 @@ export LOOP_DIR=/usr/local/share/lua/5.1/loop
 alias lua="rlwrap lua" 
 
 
-export LUA_PATH="/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/logging/?.lua;${HOME}/?.lua;"
+export LUA_PATH="/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/logging/?.lua;${HOME}/?.lua;./?.lua;"
