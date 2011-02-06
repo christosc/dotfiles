@@ -1059,7 +1059,7 @@
 ;;(set-face-background 'hl-line  "lemon chiffon")
 
 (add-to-list 'default-frame-alist '(cursor-color . "Black"))
-(add-to-list 'default-frame-alist '(cursor-type . (bar . 1)))
+(add-to-list 'default-frame-alist '(cursor-type . (bar . 2)))
 ;; (setq-default cursor-type '(bar . 1))
 ;;(setq-default cursor-type '(bar . 1))
 ;; (blink-cursor-mode t)
@@ -1213,7 +1213,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1251,4 +1251,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;;(global-auto-revert-mode 1)
-(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
+;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
+(set-face-foreground 'font-lock-comment-face "DarkGreen")
+;;(blink-cursor-mode -1)
+(setq-default blink-cursor-interval 0.6)
