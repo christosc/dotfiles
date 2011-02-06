@@ -1213,7 +1213,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1251,3 +1251,4 @@
 (setq-default indent-tabs-mode nil)
 
 ;;(global-auto-revert-mode 1)
+(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))

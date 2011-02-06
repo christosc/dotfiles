@@ -76,3 +76,4 @@ let Tlist_Auto_Open = 1
 au BufWinLeave * mkview
 au BufWinEnter * silent loadview
 
+

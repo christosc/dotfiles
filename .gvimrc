@@ -9,7 +9,7 @@ set guifont=menlo:h11
 "colorscheme anotherdark
 "colorscheme tango2
 "colorscheme biogoo
-colorscheme habiLight
+colorscheme habiLight1
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
