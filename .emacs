@@ -1254,8 +1254,8 @@
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 (set-face-foreground 'font-lock-comment-face "DarkGreen")
 ;;(blink-cursor-mode -1)
-(setq-default blink-cursor-interval 0.6)
-
+(setq-default blink-cursor-interval 0.5)
+(setq-default indent-tabs-mode nil)
 
 
 (cua-mode t)
