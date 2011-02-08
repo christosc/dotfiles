@@ -1213,7 +1213,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1255,3 +1255,10 @@
 (set-face-foreground 'font-lock-comment-face "DarkGreen")
 ;;(blink-cursor-mode -1)
 (setq-default blink-cursor-interval 0.6)
+
+
+
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+;;(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
