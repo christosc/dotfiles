@@ -1266,3 +1266,6 @@
 
 
 (global-linum-mode 1)
+
+(load-file "~/elisp/tabbar.el")
+(tabbar-mode 1)
