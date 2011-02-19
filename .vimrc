@@ -43,6 +43,8 @@ noremap  <buffer> <silent> <Up>   gk
 noremap  <buffer> <silent> <Down> gj
 noremap  <buffer> <silent> <Home> g<Home>
 noremap  <buffer> <silent> <End>  g<End>
+
+
 set expandtab
 nnoremap <Space> l
 set autoread
@@ -67,13 +69,32 @@ let  g:netrw_browse_split=2
 " Γιὰ νὰ ἀνοίγῃ ὁ κατάλογος τῶν tags δεξιόθεν τοῦ κυρίως viewport.
 let Tlist_Use_Right_Window   = 1
 let Tlist_Auto_Open = 1
-
+let Tlist_Show_One_File = 1
 
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " To automatically store/restore folds
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+"au BufWinLeave * mkview
+"au BufWinEnter * silent loadview
+
+imap <C-Space> <Esc>
+cmap <C-Space> <C-c>
 
 
+" Settings for Vim-LaTeX
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+filetype plugin on
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" " search in a singe file. This will confuse Latex-Suite. Set your grep
+" " program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: This enables automatic indentation as you type.
+filetype indent on
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" " The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'

@@ -1,4 +1,4 @@
-set guifont=menlo:h11
+set guifont=menlo:h12
 ":inoremap <S-space> <ESC>
 :inoremap <D-space> <ESC>
 "inoremap <S-space> <ESC>
@@ -9,7 +9,8 @@ set guifont=menlo:h11
 "colorscheme anotherdark
 "colorscheme tango2
 "colorscheme biogoo
-colorscheme habiLight1
+"colorscheme habiLight1
+colorscheme BClear
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number

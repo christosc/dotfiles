@@ -1214,7 +1214,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1267,5 +1267,5 @@
 
 (global-linum-mode 1)
 
-(load-file "~/elisp/tabbar.el")
-(tabbar-mode 1)
+;;(load-file "~/elisp/tabbar.el")
+;;(tabbar-mode 1)
