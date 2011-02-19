@@ -39,11 +39,16 @@ set nowrap
 "noremap  <buffer> <silent> 0 g0
 "noremap  <buffer> <silent> $ g$
 
-noremap  <buffer> <silent> <Up>   gk
-noremap  <buffer> <silent> <Down> gj
-noremap  <buffer> <silent> <Home> g<Home>
-noremap  <buffer> <silent> <End>  g<End>
-
+map j gj
+map k gk
+map ξ j
+map κ k
+map η h
+map λ l
+map  <Up>   k
+map  <Down> j
+map  <Home> g<Home>
+map  <End>  g<End>
 
 set expandtab
 nnoremap <Space> l
