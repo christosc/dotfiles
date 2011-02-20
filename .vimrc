@@ -45,6 +45,21 @@ map ξ j
 map κ k
 map η h
 map λ l
+map ι i
+map α a
+map ω v
+map Ω V
+map δ d
+map χ x
+map Ξ J
+map ψ c
+map ρ r
+map ο o
+map Ο O
+map θ u
+map υ y
+map π p
+map Π P
 map  <Up>   k
 map  <Down> j
 map  <Home> g<Home>
@@ -83,7 +98,7 @@ let Tlist_Show_One_File = 1
 "au BufWinLeave * mkview
 "au BufWinEnter * silent loadview
 
-imap <C-Space> <Esc>
+map <C-Space> <Esc>
 cmap <C-Space> <C-c>
 
 
