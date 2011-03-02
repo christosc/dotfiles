@@ -41,12 +41,17 @@ set nowrap
 
 map j gj
 map k gk
+map $ g$
+map ^ g^
 map ξ j
 map κ k
 map η h
 map λ l
 map ι i
+map Ι I
+
 map α a
+map Α A
 map ω v
 map Ω V
 map δ d
@@ -60,6 +65,9 @@ map θ u
 map υ y
 map π p
 map Π P
+map γγ gg
+map Γ G
+map ς w
 map  <Up>   k
 map  <Down> j
 map  <Home> g<Home>
@@ -118,3 +126,13 @@ filetype indent on
 " " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+set wrap
