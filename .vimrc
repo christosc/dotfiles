@@ -45,10 +45,10 @@ set nowrap
 "noremap  <buffer> <silent> 0 g0
 "noremap  <buffer> <silent> $ g$
 
-map j gj
-map k gk
-map $ g$
-map ^ g^
+"map j gj
+"map k gk
+"map $ g$
+"map ^ g^
 map ξ j
 map κ k
 map η h
@@ -102,7 +102,7 @@ let  g:netrw_browse_split=2
 
 " Γιὰ νὰ ἀνοίγῃ ὁ κατάλογος τῶν tags δεξιόθεν τοῦ κυρίως viewport.
 let Tlist_Use_Right_Window   = 1
-let Tlist_Auto_Open = 1
+"let Tlist_Auto_Open = 1
 let Tlist_Show_One_File = 1
 
 " Press Space to turn off highlighting and clear any message already displayed.
@@ -141,7 +141,7 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
-set wrap
+"set wrap
 
 if has("vms")
   set nobackup          " do not keep a backup file, use versions instead
@@ -221,3 +221,4 @@ if !exists(":DiffOrig")
    command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
                      \ | wincmd p | diffthis
 endif
+
