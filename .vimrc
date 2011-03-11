@@ -141,7 +141,7 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
-"set wrap
+set wrap
 
 if has("vms")
   set nobackup          " do not keep a backup file, use versions instead

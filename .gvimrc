@@ -19,3 +19,4 @@ colorscheme BClear
 set guicursor=i:ver20-blinkwait200-blinkon600-blinkoff600
 set guicursor+=n-c-v:blinkon0
 set guioptions-=T "hide toolbar
+set columns=80

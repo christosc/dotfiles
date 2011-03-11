@@ -432,3 +432,4 @@ alias lua="rlwrap lua"
 
 
 export LUA_PATH="/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/.lua;${HOME}/?.lua;./?.lua;./?.lua;?/init.lua"
+alias del="rm -i"
