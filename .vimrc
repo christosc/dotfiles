@@ -21,7 +21,7 @@ set ruler
 colorscheme wombat
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
-set wrap
+"set wrap
 
 " Γιά νά θέτῃ αὐτόματα κατάλληλον ἐσοχήν.
 "set autoindent
@@ -32,7 +32,7 @@ set hlsearch
 "autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
-set nowrap
+"set nowrap
 "set columns=80
 " Press Space to turn off highlighting and clear any message already displayed.
 ":nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
@@ -56,6 +56,9 @@ map λ l
 map ι i
 map Ι I
 
+map ε e
+map β b
+map ς w
 map α a
 map Α A
 map ω v
@@ -73,6 +76,14 @@ map π p
 map Π P
 map γγ gg
 map Γ G
+map γ g
+map ; q
+map γ; gq
+map γξ gj
+map γκ gk
+map γ$ g$
+map γ^ g^
+map γ0 g0
 map ς w
 map  <Up>   k
 map  <Down> j
@@ -141,7 +152,7 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
-set wrap
+"set wrap
 
 if has("vms")
   set nobackup          " do not keep a backup file, use versions instead
@@ -222,3 +233,4 @@ if !exists(":DiffOrig")
                      \ | wincmd p | diffthis
 endif
 
+set textwidth=80
