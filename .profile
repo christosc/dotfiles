@@ -438,4 +438,7 @@ export TEXDIR="/usr/local/texlive/2010/texmf-dist/tex"
 export CDPATH="~/work"
 alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
+alias lualatex="rlwrap lualatex"
+alias xelatex="rlwrap xelatex"
+LESS="-I"; export LESS
 

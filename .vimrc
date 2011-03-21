@@ -234,3 +234,8 @@ if !exists(":DiffOrig")
 endif
 
 set textwidth=80
+
+" γιὰ νὰ μὴ τρελλαθῆς μὲ τὶς συμπληρώσεις τοῦ Vim LaTeX suite...
+let g:Imap_UsePlaceHolders = 0
+"call IMAP('SSS', 'SSS', 'tex')
+let g:Tex_SmartKeyQuote=0
