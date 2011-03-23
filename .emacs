@@ -1248,7 +1248,7 @@
 (global-set-key (kbd "C-κ") 'kill-visual-line)
 
 (assq-delete-all 'font default-frame-alist) 
-(add-to-list 'default-frame-alist '(font . "Menlo-11"))
+(add-to-list 'default-frame-alist '(font . "Menlo-12"))
 (setq-default indent-tabs-mode nil)
 
 ;;(global-auto-revert-mode 1)
