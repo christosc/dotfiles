@@ -435,7 +435,7 @@ export LUA_PATH="/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/.lua;${HOME}/?.l
 alias del="rm -i"
 
 export TEXDIR="/usr/local/texlive/2010/texmf-dist/tex"
-export CDPATH="~/work"
+export CDPATH=".:~/work"
 alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
 alias lualatex="rlwrap lualatex"
