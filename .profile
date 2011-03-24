@@ -440,5 +440,5 @@ alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
 alias lualatex="rlwrap lualatex"
 alias xelatex="rlwrap xelatex"
-LESS="-I"; export LESS
+LESS="-IR"; export LESS
 
