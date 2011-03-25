@@ -143,6 +143,7 @@ filetype indent on
 " " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+let g:Tex_ViewRule_pdf = 'Preview'
 
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -237,5 +238,13 @@ set textwidth=80
 
 " γιὰ νὰ μὴ τρελλαθῆς μὲ τὶς συμπληρώσεις τοῦ Vim LaTeX suite...
 let g:Imap_UsePlaceHolders = 0
-"call IMAP('SSS', 'SSS', 'tex')
+autocmd BufRead *.tex call IMAP('SSS', 'SSS', 'tex')
+"autocmd BufRead *.tex set fo+=a
+"autocmd BufRead *.tex set textwidth=0
 let g:Tex_SmartKeyQuote=0
+set whichwrap=bshl
+set display=lastline
+
+map <Up> gk
+map <Down> gj
+
