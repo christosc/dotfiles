@@ -89,6 +89,8 @@ map  <Up>   k
 map  <Down> j
 map  <Home> g<Home>
 map  <End>  g<End>
+map ν n
+map Ν N
 
 set expandtab
 nnoremap <Space> l
@@ -248,3 +250,8 @@ set display=lastline
 map <Up> gk
 map <Down> gj
 
+
+set linespace=3
+set nocp
+set bs=indent,eol,start
+set ww=b,s,h,l

@@ -10,7 +10,8 @@ set guifont=menlo:h12
 "colorscheme tango2
 "colorscheme biogoo
 "colorscheme habiLight1
-colorscheme VYLight
+"colorscheme VYLight
+colorscheme Anotherdark
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
@@ -21,5 +22,4 @@ set guicursor+=n-c-v:blinkon0
 set guioptions-=T "hide toolbar
 "set columns=80
 set hidden
-set linespace=3
-autocmd BufRead *.tex set guifont=menlo:h14
+"autocmd BufRead *.tex set guifont=menlo:h14
