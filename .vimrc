@@ -55,7 +55,6 @@ map η h
 map λ l
 map ι i
 map Ι I
-
 map ε e
 map β b
 map ς w
@@ -79,6 +78,8 @@ map Γ G
 map γ g
 map ; q
 map γ; gq
+map απ ap
+map γς gw
 map γξ gj
 map γκ gk
 map γ$ g$
@@ -238,7 +239,7 @@ endif
 
 set textwidth=80
 
-" γιὰ νὰ μὴ τρελλαθῆς μὲ τὶς συμπληρώσεις τοῦ Vim LaTeX suite...
+" γιὰ νὰ μὴ τρελλαθῇς μὲ τὶς συμπληρώσεις τοῦ Vim LaTeX suite...
 let g:Imap_UsePlaceHolders = 0
 autocmd BufRead *.tex call IMAP('SSS', 'SSS', 'tex')
 "autocmd BufRead *.tex set fo+=a
