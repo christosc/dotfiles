@@ -34,6 +34,21 @@
 (global-set-key (kbd "C-χ C-σ") 'save-buffer)
 (global-set-key (kbd "C-χ σ") 'save-some-buffers)
 (global-set-key (kbd "C-χ C-ς") 'write-file)
+(global-set-key (kbd "M-φ") 'forward-word)
+(global-set-key (kbd "M-β") 'backward-word)
+(global-set-key (kbd "M-δ") 'delete-word)
+(global-set-key (kbd "C-ν") 'next-line)
+(global-set-key (kbd "C-π") 'previous-line)
+(global-set-key (kbd "C-ω") 'scroll-up)
+(global-set-key (kbd "M-ω") 'scroll-down)
+(global-set-key (kbd "C-β") 'backward-char)
+(global-set-key (kbd "C-φ") 'forward-char)
+(global-set-key (kbd "C-χ β") 'switch-to-buffer)
+(global-set-key (kbd "C-χ C-β") 'list-buffer)
+(global-set-key (kbd "C-χ C-f") 'find-file)
+(global-set-key (kbd "M-ρ") 'move-to-window-line-top-bottom)
+(global-set-key (kbd "M-γ γ") 'goto-line)
+(global-set-key (kbd "M-γ M-γ") 'find-file)
 
 
 

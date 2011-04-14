@@ -148,15 +148,15 @@ filetype indent on
 let g:tex_flavor='latex'
 let g:Tex_ViewRule_pdf = 'Preview'
 
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
-"set wrap
+"inoremap  <Up>     <NOP>
+"inoremap  <Down>   <NOP>
+"inoremap  <Left>   <NOP>
+"inoremap  <Right>  <NOP>
+"noremap   <Up>     <NOP>
+"noremap   <Down>   <NOP>
+"noremap   <Left>   <NOP>
+"noremap   <Right>  <NOP>
+set wrap
 
 if has("vms")
   set nobackup          " do not keep a backup file, use versions instead
@@ -245,6 +245,8 @@ autocmd BufRead *.tex call IMAP('SSS', 'SSS', 'tex')
 "autocmd BufRead *.tex set fo+=a
 "autocmd BufRead *.tex set textwidth=0
 let g:Tex_SmartKeyQuote=0
+let g:Tex_Leader=','
+let tex_no_error=1
 set whichwrap=bshl
 set display=lastline
 
@@ -252,7 +254,8 @@ map <Up> gk
 map <Down> gj
 
 
-set linespace=3
+set linespace=5
 set nocp
 set bs=indent,eol,start
 set ww=b,s,h,l
+nnoremap <Space> l

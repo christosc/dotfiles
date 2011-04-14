@@ -6,6 +6,7 @@
 export PATH=$PATH:/usr/local/mysql/bin
 #export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig
 #export PS1="\W @ \h (\u) \$ "
+export PS1="\h \W % "
 #export PS1="\[\e[1m\]\h:\W \u\$\[\e[0m\] "  # ἁπλῶς ἔντονα
 #export PS1="\[\e[0;34m\]\h:\W \u\$\[\e[0m\] " # θαλασσύ
 #export PS1="\[\e[0;36m\]\h:\w \u\$\[\e[0m\] " # πρασινοθαλασσύ
@@ -431,7 +432,7 @@ export LOOP_DIR=/usr/local/share/lua/5.1/loop
 alias lua="rlwrap lua" 
 
 
-export LUA_PATH="/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/.lua;${HOME}/?.lua;./?.lua;./?.lua;?/init.lua"
+export LUA_PATH="/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/?.lua;${HOME}/?.lua;./?.lua;./?.lua;?/init.lua"
 alias del="rm -i"
 
 export TEXDIR="/usr/local/texlive/2010/texmf-dist/tex"
