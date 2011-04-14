@@ -48,7 +48,18 @@
 (global-set-key (kbd "C-χ C-f") 'find-file)
 (global-set-key (kbd "M-ρ") 'move-to-window-line-top-bottom)
 (global-set-key (kbd "M-γ γ") 'goto-line)
-(global-set-key (kbd "M-γ M-γ") 'find-file)
+(global-set-key (kbd "M-γ M-γ") 'goto-line)
+(global-set-key (kbd "M-χ") 'execute-extended-command)
+(global-set-key (kbd "M-ς") 'kill-ring-save)
+(global-set-key (kbd "C-υ") 'yank)
+(global-set-key (kbd "C-ς") 'kill-region)
+(global-set-key (kbd "C-θ") 'universal-argument)
+(global-set-key (kbd "C-χ θ") 'undo)
+(global-set-key (kbd "C-῟") 'undo)
+;;(global-set-key (kbd "C-χ C-+") 'text-scale-adjust)
+;;(global-set-key (kbd "C-χ C--") 'text-scale-adjust)
+
+
 
 
 
