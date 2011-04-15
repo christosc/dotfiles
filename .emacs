@@ -1214,7 +1214,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1255,7 +1255,7 @@
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
 ;;(blink-cursor-mode -1)
-;;(setq-default blink-cursor-interval 0.5)
+(setq-default blink-cursor-interval 0.6)
 (setq-default indent-tabs-mode nil)
 
 
