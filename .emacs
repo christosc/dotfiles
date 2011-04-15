@@ -1269,6 +1269,7 @@
 
 ;;(load-file "~/elisp/tabbar.el")
 ;;(tabbar-mode 1)
-(setq-default line-spacing 3)
+(setq-default line-spacing 2)
 ;;(global-hl-line-mode 1)
 ;;(set-face-background 'hl-line "#E9EFF8") ;; χρῶμα παρούσης γραμμῆς ἀπὸ NetBeans
+(setq kill-whole-line t)
