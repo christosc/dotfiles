@@ -1075,7 +1075,7 @@
 
 (if (> (x-display-pixel-width) 1280)
 	(progn
-	  (add-to-list 'default-frame-alist '(width . 80))
+	  (add-to-list 'default-frame-alist '(width . 100))
 	  (add-to-list 'default-frame-alist '(height . 60))
 
 	  )
@@ -1270,5 +1270,5 @@
 ;;(load-file "~/elisp/tabbar.el")
 ;;(tabbar-mode 1)
 (setq-default line-spacing 3)
-(global-hl-line-mode 1)
-(set-face-background 'hl-line "#E9EFF8") ;; χρῶμα παρούσης γραμμῆς ἀπὸ NetBeans
+;;(global-hl-line-mode 1)
+;;(set-face-background 'hl-line "#E9EFF8") ;; χρῶμα παρούσης γραμμῆς ἀπὸ NetBeans

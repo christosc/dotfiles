@@ -64,7 +64,7 @@
 (global-set-key (kbd "C-χ C-ψ") 'save-buffers-kill-terminal)
 (global-set-key (kbd "C-γ") 'keyboard-quit)
 (define-key minibuffer-local-map (kbd "C-γ") 'minibuffer-keyboard-quit)
-
+(define-key debugger-mode-map (kbd ";") 'top-level)
 ;;(global-set-key (kbd "C-χ C-+") 'text-scale-adjust)
 ;;κ(global-set-key (kbd "C-χ C--") 'text-scale-adjust)
 
