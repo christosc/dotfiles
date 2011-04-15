@@ -33,6 +33,8 @@
 (global-set-key (kbd "M-ζ") 'ns-do-hide-others)
 (global-set-key (kbd "C-χ C-σ") 'save-buffer)
 (global-set-key (kbd "C-χ σ") 'save-some-buffers)
+(global-set-key (kbd "M-s") 'save-buffer)
+(global-set-key (kbd "M-σ") 'save-buffer)
 (global-set-key (kbd "C-χ C-ς") 'write-file)
 (global-set-key (kbd "M-φ") 'forward-word)
 (global-set-key (kbd "M-β") 'backward-word)
@@ -56,8 +58,15 @@
 (global-set-key (kbd "C-θ") 'universal-argument)
 (global-set-key (kbd "C-χ θ") 'undo)
 (global-set-key (kbd "C-῟") 'undo)
+(global-set-key (kbd "C-χ κ") 'kill-buffer)
+(global-set-key (kbd "C-χ ο") 'other-window)
+(global-set-key (kbd "C-χ C-ρ") 'recentf-open-files)
+(global-set-key (kbd "C-χ C-ψ") 'save-buffers-kill-terminal)
+(global-set-key (kbd "C-γ") 'keyboard-quit)
+(define-key minibuffer-local-map (kbd "C-γ") 'minibuffer-keyboard-quit)
+
 ;;(global-set-key (kbd "C-χ C-+") 'text-scale-adjust)
-;;(global-set-key (kbd "C-χ C--") 'text-scale-adjust)
+;;κ(global-set-key (kbd "C-χ C--") 'text-scale-adjust)
 
 
 

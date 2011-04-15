@@ -254,8 +254,13 @@ map <Up> gk
 map <Down> gj
 
 
-set linespace=5
+set linespace=3
 set nocp
 set bs=indent,eol,start
 set ww=b,s,h,l
 nnoremap <Space> l
+
+
+let g:LatexBox_viewer = 'skim'
+let g:LatexBox_latexmk_options = '-pvc'
+

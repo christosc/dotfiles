@@ -1269,4 +1269,4 @@
 
 ;;(load-file "~/elisp/tabbar.el")
 ;;(tabbar-mode 1)
-(setq-default line-spacing 5)
+(setq-default line-spacing 3)
