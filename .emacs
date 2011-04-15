@@ -1255,7 +1255,7 @@
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
 ;;(blink-cursor-mode -1)
-(setq-default blink-cursor-interval 0.5)
+;;(setq-default blink-cursor-interval 0.5)
 (setq-default indent-tabs-mode nil)
 
 
@@ -1270,3 +1270,5 @@
 ;;(load-file "~/elisp/tabbar.el")
 ;;(tabbar-mode 1)
 (setq-default line-spacing 3)
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "#E9EFF8") ;; χρῶμα παρούσης γραμμῆς ἀπὸ NetBeans
