@@ -254,7 +254,7 @@ map <Up> gk
 map <Down> gj
 
 
-set linespace=3
+set linespace=2
 set nocp
 set bs=indent,eol,start
 set ww=b,s,h,l
