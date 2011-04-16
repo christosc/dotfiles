@@ -22,4 +22,5 @@ set guicursor+=n-c-v:blinkon0
 set guioptions-=T "hide toolbar
 "set columns=80
 set hidden
+set number
 "autocmd BufRead *.tex set guifont=menlo:h14

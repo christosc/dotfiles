@@ -14,7 +14,7 @@ set softtabstop=4
 set noexpandtab
 set autowrite  " ὁ Μανώλης τὸ ἔχει ἔτσι (συντμ. aw)
 set autoread
-"set number
+set number
 set linebreak
 set ruler
 "colorscheme desert
