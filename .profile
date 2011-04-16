@@ -413,7 +413,7 @@ _expand()
 }
 
 
-export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 alias "+"=fg
 

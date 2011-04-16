@@ -1073,13 +1073,13 @@
 
 (filesets-init)
 
-(if (> (x-display-pixel-width) 1280)
-	(progn
-	  (add-to-list 'default-frame-alist '(width . 100))
-	  (add-to-list 'default-frame-alist '(height . 60))
-
-	  )
-  )
+;;(if (> (x-display-pixel-width) 1280)
+;;	(progn
+;;	  (add-to-list 'default-frame-alist '(width . 100))
+;;	  (add-to-list 'default-frame-alist '(height . 60))
+;;
+;;	  )
+;;  )
 
 (add-to-list 'initial-frame-alist '(left . 10))
 (add-to-list 'initial-frame-alist '(top . 0))
@@ -1214,7 +1214,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1273,3 +1273,23 @@
 ;;(global-hl-line-mode 1)
 ;;(set-face-background 'hl-line "#E9EFF8") ;; χρῶμα παρούσης γραμμῆς ἀπὸ NetBeans
 (setq kill-whole-line t)
+
+(defun set-frame-size-according-to-resolution ()
+  (interactive)
+  (if window-system
+  (progn
+    ;; use 120 char wide window for largeish displays
+    ;; and smaller 80 column windows for smaller displays
+    ;; pick whatever numbers make sense for you
+    (if (> (x-display-pixel-width) 1280)
+           (add-to-list 'default-frame-alist (cons 'width 120))
+           (add-to-list 'default-frame-alist (cons 'width 80)))
+    ;; for the height, subtract a couple hundred pixels
+    ;; from the screen height (for panels, menubars and
+    ;; whatnot), then divide by the height of a char to
+    ;; get the height we want
+    (add-to-list 'default-frame-alist 
+         (cons 'height (/ (- (x-display-pixel-height) 200)
+                             (frame-char-height)))))))
+
+(set-frame-size-according-to-resolution)
