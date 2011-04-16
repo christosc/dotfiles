@@ -3,6 +3,10 @@
 
 
 ;;(server-start)                          
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+(setq TeX-parse-self t) ; Enable parse on load.
+(setq TeX-auto-save t) ; Enable parse on save.
 
 (setq locale-coding-system 'utf-8)
 ;;(setq system-messages-locale "el_GR.UTF-8")
@@ -1125,7 +1129,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- )
+ '(variable-pitch ((t (:height 150 :family "Sans Serif")))))
 
 
   ;; (load-file "~/elisp/dark-theme.el")
@@ -1293,3 +1297,8 @@
                              (frame-char-height)))))))
 
 (set-frame-size-according-to-resolution)
+
+(add-hook 'LaTeX-mode-hook (lambda () (progn
+                                        (variable-pitch-mode t)
+                                        (auto-fill-mode t)
+                                        (server-start))))
