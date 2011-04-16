@@ -17,7 +17,7 @@ colorscheme Chela_light
 "set number
 "hi Comment gui=None
 "set columns=80
-set guicursor=i:ver20-blinkwait200-blinkon500-blinkoff500
+set guicursor=i:ver10-blinkwait200-blinkon500-blinkoff500
 set guicursor+=n-c-v:blinkon0
 set guioptions-=T "hide toolbar
 "set columns=80
