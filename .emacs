@@ -1064,7 +1064,7 @@
 ;;(set-face-background 'hl-line  "lemon chiffon")
 
 (add-to-list 'default-frame-alist '(cursor-color . "Black"))
-(add-to-list 'default-frame-alist '(cursor-type . (bar . 2)))
+(add-to-list 'default-frame-alist '(cursor-type . (bar . 1)))
 ;; (setq-default cursor-type '(bar . 1))
 ;;(setq-default cursor-type '(bar . 1))
 ;; (blink-cursor-mode t)
@@ -1259,7 +1259,7 @@
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
 ;;(blink-cursor-mode -1)
-(setq-default blink-cursor-interval 0.6)
+;;(setq-default blink-cursor-interval 0.6)
 (setq-default indent-tabs-mode nil)
 
 
@@ -1301,4 +1301,5 @@
 (add-hook 'LaTeX-mode-hook (lambda () (progn
                                         (variable-pitch-mode t)
                                         (auto-fill-mode t)
+                                        (outline-minor-mode t)
                                         (server-start))))
