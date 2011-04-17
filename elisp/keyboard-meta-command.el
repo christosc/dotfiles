@@ -1,7 +1,6 @@
 ;-*- coding: utf-8 -*-
 
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier nil)
+(define-key global-map [ns-drag-file] 'ns-find-file)
 ;; (cua-mode t)
 
 (global-set-key (kbd "M-`") 'other-frame)

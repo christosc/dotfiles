@@ -1,12 +1,36 @@
-										;-*- coding: utf-8 -*-    
-
+;-*- coding: utf-8 -*-    
 
 
 ;;(server-start)                          
+
+(add-to-list 'load-path "/Users/christos/elisp")
+;;;;;;;;;;;;  AUCTeX  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
 (setq TeX-parse-self t) ; Enable parse on load.
 (setq TeX-auto-save t) ; Enable parse on save.
+
+;;;;;;;;;;;; /AUCTeX   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;  GNUS ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;(add-to-list 'gnus-secondary-select-methods '(nnimap "gmail"
+;;                                  (nnimap-address "imap.gmail.com")
+;;                                  (nnimap-server-port 993)
+;;                                  (nnimap-stream ssl)))
+;;
+;;
+;;(setq message-send-mail-function 'smtpmail-send-it
+;;      smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+;;      smtpmail-auth-credentials '(("smtp.gmail.com" 587 "c.chryssochoidis@gmail.com" nil))
+;;      smtpmail-default-smtp-server "smtp.gmail.com"
+;;      smtpmail-smtp-server "smtp.gmail.com"
+;;      smtpmail-smtp-service 587
+;;      smtpmail-local-domain "local")
+;;
+
+;;;;;;;;;;;;;;;;;; /GNUS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 
 (setq locale-coding-system 'utf-8)
 ;;(setq system-messages-locale "el_GR.UTF-8")
@@ -53,7 +77,7 @@
 ;; (add-to-list 'load-path "/Users/christos/elisp/auctex-11.85/style")
 ;; (add-to-list 'load-path "/Users/christos/elisp/auctex-11.85/images")
 ;; (add-to-list 'load-path "/Users/christos/elisp/auctex-11.85/style")
-(add-to-list 'load-path "/Users/christos/elisp")
+
 ;(add-to-list 'load-path "/Users/christos/elisp/mmm")
 ;(add-to-list 'load-path "/Users/christos/elisp/color-theme-6.6.0")
 ; (add-to-list 'load-path "/Users/christos/elisp/themes")
@@ -1064,7 +1088,7 @@
 ;;(set-face-background 'hl-line  "lemon chiffon")
 
 (add-to-list 'default-frame-alist '(cursor-color . "Black"))
-(add-to-list 'default-frame-alist '(cursor-type . (bar . 1)))
+(add-to-list 'default-frame-alist '(cursor-type . (bar . 2)))
 ;; (setq-default cursor-type '(bar . 1))
 ;;(setq-default cursor-type '(bar . 1))
 ;; (blink-cursor-mode t)
@@ -1218,7 +1242,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1258,8 +1282,8 @@
 ;;(global-auto-revert-mode 1)
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
-;;(blink-cursor-mode -1)
-(setq-default blink-cursor-interval 0.7)
+(blink-cursor-mode t)
+(setq-default blink-cursor-interval 0.9)
 (setq-default indent-tabs-mode nil)
 
 
@@ -1303,3 +1327,8 @@
                                         (auto-fill-mode t)
                                         (outline-minor-mode t)
                                         (server-start))))
+
+;;(setq mac-command-modifier nil)
+(setq ns-alternate-modifier 'meta)
+(setq ns-right-alternate-modifier nil)
+(setq ns-command-modifier nil)
