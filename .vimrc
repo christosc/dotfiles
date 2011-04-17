@@ -106,7 +106,7 @@ set autoread
 set backup
 set writebackup
 
-"set foldmethod=indent
+set foldmethod=manual
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 set autoindent
