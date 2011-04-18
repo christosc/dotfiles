@@ -92,6 +92,14 @@ map  <Home> g<Home>
 map  <End>  g<End>
 map ν n
 map Ν N
+imap <C-h> <left>
+imap <C-l> <right>
+imap <C-j> <down>
+imap <C-k> <up>
+imap <C-η> <left>
+imap <C-λ> <right>
+imap <C-ξ> <down>
+imap <C-κ> <up>
 
 set expandtab
 nnoremap <Space> l
