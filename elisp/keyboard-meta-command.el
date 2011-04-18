@@ -78,34 +78,63 @@
 
 (global-set-key (kbd "M-s-h") (quote ns-do-hide-others)) ;; Command-Option γιὰ νὰ κρύπτῃ τὰ ἄλλα παράθυρα
 
-(global-set-key (kbd "s-h") 'backward-char)
-(global-set-key (kbd "s-η") 'backward-char)
-(global-set-key (kbd "s-l") 'forward-char)
-(global-set-key (kbd "s-λ") 'forward-char)
-(global-set-key (kbd "s-j") 'next-line)
-(global-set-key (kbd "s-ξ") 'next-line)
-(global-set-key (kbd "s-k") 'previous-line)
-(global-set-key (kbd "s-κ") 'previous-line)
-(global-set-key (kbd "s-b") 'backward-word)
-(global-set-key (kbd "s-β") 'backward-word)
-(global-set-key (kbd "s-f") 'forward-word)
-(global-set-key (kbd "s-φ") 'forward-word)
+;;(global-set-key (kbd "s-h") 'backward-char)
+;;(global-set-key (kbd "s-η") 'backward-char)
+;;(global-set-key (kbd "s-l") 'forward-char)
+;;(global-set-key (kbd "s-λ") 'forward-char)
+;;(global-set-key (kbd "s-j") 'next-line)
+;;(global-set-key (kbd "s-ξ") 'next-line)
+;;(global-set-key (kbd "s-k") 'previous-line)
+;;(global-set-key (kbd "s-κ") 'previous-line)
+;;(global-set-key (kbd "s-b") 'backward-word)
+;;(global-set-key (kbd "s-β") 'backward-word)
+;;(global-set-key (kbd "s-f") 'forward-word)
+;;(global-set-key (kbd "s-φ") 'forward-word)
+;;
+;;
+;;(global-unset-key (kbd "s-H"))
+;;(global-unset-key (kbd "s-Η"))
+;;(global-unset-key (kbd "s-J"))
+;;(global-unset-key (kbd "s-Ξ"))
+;;(global-unset-key (kbd "s-K"))
+;;(global-unset-key (kbd "s-Κ"))
+;;(global-unset-key (kbd "s-L"))
+;;(global-unset-key (kbd "s-Λ"))
+;;(global-unset-key (kbd "s-F"))
+;;(global-unset-key (kbd "s-Φ"))
+;;(global-unset-key (kbd "s-B"))
+;;(global-unset-key (kbd "s-Β"))
 
 
-(global-unset-key (kbd "s-H"))
-(global-unset-key (kbd "s-Η"))
-(global-unset-key (kbd "s-J"))
-(global-unset-key (kbd "s-Ξ"))
-(global-unset-key (kbd "s-K"))
-(global-unset-key (kbd "s-Κ"))
-(global-unset-key (kbd "s-L"))
-(global-unset-key (kbd "s-Λ"))
-(global-unset-key (kbd "s-F"))
-(global-unset-key (kbd "s-Φ"))
-(global-unset-key (kbd "s-B"))
-(global-unset-key (kbd "s-Β"))
 
 
-(global-set-key (kbd "H-h") 'ns-do-hide-emacs)
-(global-set-key (kbd "M-H-h") 'ns-do-hide-others)
+;;(global-set-key (kbd "H-h") 'backward-char
+;;(global-set-key (kbd "H-η") 'backward-char
+;;(global-set-key (kbd "H-l") 'forward-char)
+;;(global-set-key (kbd "H-λ") 'forward-char)
+;;(global-set-key (kbd "H-j") 'next-line)   
+;;(global-set-key (kbd "H-ξ") 'next-line)   
+;;(global-set-key (kbd "H-k") 'previous-line
+;;(global-set-key (kbd "H-κ") 'previous-line
+;;(global-set-key (kbd "H-b") 'backward-word
+;;(global-set-key (kbd "H-β") 'backward-word
+;;(global-set-key (kbd "H-f") 'forward-word)
+;;(global-set-key (kbd "H-φ") 'forward-word)
+;;
+;;
+;;(global-unset-key (kbd "H-H"))
+;;(global-unset-key (kbd "H-Η"))
+;;(global-unset-key (kbd "H-J"))
+;;(global-unset-key (kbd "H-Ξ"))
+;;(global-unset-key (kbd "H-K"))
+;;(global-unset-key (kbd "H-Κ"))
+;;(global-unset-key (kbd "H-L"))
+;;(global-unset-key (kbd "H-Λ"))
+;;(global-unset-key (kbd "H-F"))
+;;(global-unset-key (kbd "H-Φ"))
+;;(global-unset-key (kbd "H-B"))
+;;(global-unset-key (kbd "H-Β"))
+
+;;(global-set-key (kbd "H-h") 'ns-do-hide-emacs)
+;;(global-set-key (kbd "M-H-h") 'ns-do-hide-others)
 (global-unset-key (kbd "s-q"))

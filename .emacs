@@ -1088,7 +1088,7 @@
 ;;(set-face-background 'hl-line  "lemon chiffon")
 
 (add-to-list 'default-frame-alist '(cursor-color . "Black"))
-(add-to-list 'default-frame-alist '(cursor-type . (bar . 2)))
+(add-to-list 'default-frame-alist '(cursor-type . (bar . 1)))
 ;; (setq-default cursor-type '(bar . 1))
 ;;(setq-default cursor-type '(bar . 1))
 ;; (blink-cursor-mode t)
@@ -1153,7 +1153,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(variable-pitch ((t (:height 140 :family "Helvetica")))))
+ '(variable-pitch ((t (:height 150 :family "Helvetica")))))
 
 
   ;; (load-file "~/elisp/dark-theme.el")
@@ -1283,7 +1283,7 @@
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
 (blink-cursor-mode t)
-(setq-default blink-cursor-interval 0.9)
+;;(setq-default blink-cursor-interval 0.5)
 (setq-default indent-tabs-mode nil)
 
 
