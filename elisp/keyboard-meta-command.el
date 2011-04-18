@@ -3,9 +3,9 @@
 (define-key global-map [ns-drag-file] 'ns-find-file)
 ;; (cua-mode t)
 
-(global-set-key (kbd "M-`") 'other-frame)
-(global-set-key (kbd "M-~") (lambda () (interactive) (other-frame (- 1))))
-(windmove-default-keybindings 'meta)
+;;(global-set-key (kbd "M-`") 'other-frame)
+;;(global-set-key (kbd "M-~") (lambda () (interactive) (other-frame (- 1))))
+;;(windmove-default-keybindings 'meta)
 
 
 
@@ -26,10 +26,10 @@
 (global-set-key [C-tab] 'completion-at-point)
 (define-key minibuffer-local-map [C-tab] 'lisp-complete-symbol)
 ;;(define-key minibuffer-local-map [tab] 'completion-at-point)
-(global-set-key (kbd "M-h") 'ns-do-hide-emacs)
-(global-set-key (kbd "M-η") 'ns-do-hide-emacs)
-(global-set-key (kbd "M-˙") 'ns-do-hide-others)
-(global-set-key (kbd "M-ζ") 'ns-do-hide-others)
+;;(global-set-key (kbd "M-h") 'ns-do-hide-emacs)
+;;(global-set-key (kbd "M-η") 'ns-do-hide-emacs)
+;;(global-set-key (kbd "M-˙") 'ns-do-hide-others)
+;;(global-set-key (kbd "M-ζ") 'ns-do-hide-others)
 (global-set-key (kbd "C-χ C-σ") 'save-buffer)
 (global-set-key (kbd "C-χ σ") 'save-some-buffers)
 (global-set-key (kbd "M-s") 'save-buffer)
@@ -62,7 +62,7 @@
 (global-set-key (kbd "C-χ C-ρ") 'recentf-open-files)
 (global-set-key (kbd "C-χ C-ψ") 'save-buffers-kill-terminal)
 (global-set-key (kbd "C-γ") 'keyboard-quit)
-
+(global-set-key (kbd "C-χ ρ τ") 'string-rectangle)
 (define-key minibuffer-local-map (kbd "C-γ") 'minibuffer-keyboard-quit)
 ;;(define-key debugger-mode-map (kbd ";") 'top-level)
 ;;(global-set-key (kbd "C-χ C-+") 'text-scale-adjust)
@@ -74,3 +74,38 @@
 
 (global-set-key (kbd "M-<up>") 'scroll-down-line)
 (global-set-key (kbd "M-<down>") 'scroll-up-line)
+
+
+(global-set-key (kbd "M-s-h") (quote ns-do-hide-others)) ;; Command-Option γιὰ νὰ κρύπτῃ τὰ ἄλλα παράθυρα
+
+(global-set-key (kbd "s-h") 'backward-char)
+(global-set-key (kbd "s-η") 'backward-char)
+(global-set-key (kbd "s-l") 'forward-char)
+(global-set-key (kbd "s-λ") 'forward-char)
+(global-set-key (kbd "s-j") 'next-line)
+(global-set-key (kbd "s-ξ") 'next-line)
+(global-set-key (kbd "s-k") 'previous-line)
+(global-set-key (kbd "s-κ") 'previous-line)
+(global-set-key (kbd "s-b") 'backward-word)
+(global-set-key (kbd "s-β") 'backward-word)
+(global-set-key (kbd "s-f") 'forward-word)
+(global-set-key (kbd "s-φ") 'forward-word)
+
+
+(global-unset-key (kbd "s-H"))
+(global-unset-key (kbd "s-Η"))
+(global-unset-key (kbd "s-J"))
+(global-unset-key (kbd "s-Ξ"))
+(global-unset-key (kbd "s-K"))
+(global-unset-key (kbd "s-Κ"))
+(global-unset-key (kbd "s-L"))
+(global-unset-key (kbd "s-Λ"))
+(global-unset-key (kbd "s-F"))
+(global-unset-key (kbd "s-Φ"))
+(global-unset-key (kbd "s-B"))
+(global-unset-key (kbd "s-Β"))
+
+
+(global-set-key (kbd "H-h") 'ns-do-hide-emacs)
+(global-set-key (kbd "M-H-h") 'ns-do-hide-others)
+(global-unset-key (kbd "s-q"))

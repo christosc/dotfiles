@@ -1153,7 +1153,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(variable-pitch ((t (:height 140 :family "Lucida Grande")))))
+ '(variable-pitch ((t (:height 140 :family "Helvetica")))))
 
 
   ;; (load-file "~/elisp/dark-theme.el")
@@ -1242,7 +1242,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1297,7 +1297,7 @@
 
 ;;(load-file "~/elisp/tabbar.el")
 ;;(tabbar-mode 1)
-(setq-default line-spacing 1)
+(setq-default line-spacing 2)
 ;;(global-hl-line-mode 1)
 ;;(set-face-background 'hl-line "#E9EFF8") ;; χρῶμα παρούσης γραμμῆς ἀπὸ NetBeans
 (setq kill-whole-line t)
@@ -1331,4 +1331,5 @@
 ;;(setq mac-command-modifier nil)
 (setq ns-alternate-modifier 'meta)
 (setq ns-right-alternate-modifier nil)
-(setq ns-command-modifier nil)
+(setq ns-command-modifier 'super)
+(setq ns-function-modifier 'hyper)
