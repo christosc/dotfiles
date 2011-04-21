@@ -138,3 +138,17 @@
 ;;(global-set-key (kbd "H-h") 'ns-do-hide-emacs)
 ;;(global-set-key (kbd "M-H-h") 'ns-do-hide-others)
 (global-unset-key (kbd "s-q"))
+
+
+(global-set-key (kbd "H-h") 'backward-char)
+(global-set-key (kbd "H-η") 'backward-char)
+(global-set-key (kbd "H-l") 'forward-char)
+(global-set-key (kbd "H-λ") 'forward-char)
+(global-set-key (kbd "H-j") 'next-line)   
+(global-set-key (kbd "H-ξ") 'next-line)   
+(global-set-key (kbd "H-k") 'previous-line)
+(global-set-key (kbd "H-κ") 'previous-line)
+(global-set-key (kbd "H-b") 'backward-word)
+(global-set-key (kbd "H-β") 'backward-word)
+(global-set-key (kbd "H-f") 'forward-word)
+(global-set-key (kbd "H-φ") 'forward-word)

@@ -1242,7 +1242,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1297,7 +1297,7 @@
 
 ;;(load-file "~/elisp/tabbar.el")
 ;;(tabbar-mode 1)
-(setq-default line-spacing 2)
+(setq-default line-spacing 1)
 ;;(global-hl-line-mode 1)
 ;;(set-face-background 'hl-line "#E9EFF8") ;; χρῶμα παρούσης γραμμῆς ἀπὸ NetBeans
 (setq kill-whole-line t)
@@ -1323,7 +1323,8 @@
 (set-frame-size-according-to-resolution)
 
 (add-hook 'LaTeX-mode-hook (lambda () (progn
-                                        (variable-pitch-mode t)
+                                    ;;    (variable-pitch-mode t)
+                                        (set-frame-font "Menlo-13")
                                         (auto-fill-mode t)
                                         (outline-minor-mode t)
                                         (server-start))))
