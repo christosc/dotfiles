@@ -1337,3 +1337,6 @@
 (setq ns-command-modifier 'control)
 (setq ns-control-modifier 'super)
 (setq ns-function-modifier 'hyper)
+
+
+(auto-fill-mode t)

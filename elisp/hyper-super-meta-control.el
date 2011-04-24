@@ -1,6 +1,5 @@
 ;-*- coding: utf-8 -*-
 
-(define-key global-map [ns-drag-file] 'ns-find-file)
 ;; (cua-mode t)
 
 (global-set-key (kbd "C-`") 'other-frame)
