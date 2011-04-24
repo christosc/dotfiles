@@ -413,7 +413,7 @@ _expand()
 }
 
 
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+#alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 alias "+"=fg
 
@@ -443,3 +443,8 @@ alias lualatex="rlwrap lualatex"
 alias xelatex="rlwrap xelatex"
 LESS="-IR"; export LESS
 
+##################  EMACS ##########################################
+export PATH=${PATH}:/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin
+alias emacscl="emacsclient -n"
+#export ALTERNATE_EDITOR="emacs -nw" EDITOR=emacsclient VISUAL=emacsclient
+export EDITOR=~/bin/edit

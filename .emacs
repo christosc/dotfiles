@@ -1,7 +1,7 @@
 ;-*- coding: utf-8 -*-    
 
 
-;;(server-start)                          
+(server-start)                          
 
 (add-to-list 'load-path "/Users/christos/elisp")
 ;;;;;;;;;;;;  AUCTeX  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1097,7 +1097,7 @@
 ;;(cua-mode t)
 
 
-(load-file "~/elisp/keyboard-meta-command.el")
+(load-file "~/elisp/hyper-super-meta-control.el")
 
 (filesets-init)
 
@@ -1242,7 +1242,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1330,7 +1330,10 @@
                                         (server-start))))
 
 ;;(setq mac-command-modifier nil)
+(define-key global-map [ns-drag-file] 'ns-find-file)
+
 (setq ns-alternate-modifier 'meta)
 (setq ns-right-alternate-modifier nil)
-(setq ns-command-modifier 'super)
+(setq ns-command-modifier 'control)
+(setq ns-control-modifier 'super)
 (setq ns-function-modifier 'hyper)

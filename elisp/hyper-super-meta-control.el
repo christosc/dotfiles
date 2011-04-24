@@ -3,8 +3,8 @@
 (define-key global-map [ns-drag-file] 'ns-find-file)
 ;; (cua-mode t)
 
-;;(global-set-key (kbd "M-`") 'other-frame)
-;;(global-set-key (kbd "M-~") (lambda () (interactive) (other-frame (- 1))))
+(global-set-key (kbd "C-`") 'other-frame)
+(global-set-key (kbd "C-~") (lambda () (interactive) (other-frame (- 1))))
 ;;(windmove-default-keybindings 'meta)
 
 
