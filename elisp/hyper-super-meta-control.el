@@ -1,4 +1,4 @@
-;-*- coding: utf-8 -*-
+;-*- coding: utf-8 -*-    
 
 ;; (cua-mode t)
 
@@ -74,8 +74,8 @@
 (global-set-key (kbd "M-<up>") 'scroll-down-line)
 (global-set-key (kbd "M-<down>") 'scroll-up-line)
 
-(global-set-key (kbd "H-s-h") (quote ns-do-hide-emacs))
-(global-set-key (kbd "H-M-s-h") (quote ns-do-hide-others)) ;; Command-Option γιὰ νὰ κρύπτῃ τὰ ἄλλα παράθυρα
+(global-set-key (kbd "H-h") (quote ns-do-hide-emacs))
+(global-set-key (kbd "H-M-h") (quote ns-do-hide-others)) ;; Command-Option γιὰ νὰ κρύπτῃ τὰ ἄλλα παράθυρα
 
 (global-set-key (kbd "s-h") 'backward-char)
 (global-set-key (kbd "s-η") 'backward-char)
@@ -103,6 +103,7 @@
 (global-unset-key (kbd "s-Φ"))
 (global-unset-key (kbd "s-B"))
 (global-unset-key (kbd "s-Β"))
+(global-unset-key (kbd "s-x"))
 
 
 

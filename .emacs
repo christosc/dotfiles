@@ -921,12 +921,17 @@
 
 
 ;; Διὰ Org mode
-(add-to-list 'load-path "~/elisp/org-mode/lisp")
+(add-to-list 'load-path "~/src/org-7.5/lisp")
+(add-to-list 'load-path "~/src/org-7.5/contrib/lisp")
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
+
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+;;(setq org-log-done t)
 
 (setq org-directory "~/Dropbox/org-files")
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
