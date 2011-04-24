@@ -1339,4 +1339,7 @@
 (setq ns-function-modifier 'hyper)
 
 
-(auto-fill-mode t)
+;; (auto-fill-mode t)
+(add-hook 'fundamental-mode-hook 'turn-on-auto-fill)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'lua-mode-hook 'turn-on-auto-fill)
