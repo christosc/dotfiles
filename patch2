@@ -1,0 +1,31 @@
+--- ../emacs-23.3/src/nsterm.m	2011-04-17 22:48:46.000000000 +0300
++++ src/nsterm.m	2011-04-25 06:40:27.000000000 +0300
+@@ -4464,13 +4464,25 @@
+       if (!EQ (ns_right_alternate_modifier, Qleft)
+           && ((flags & NSRightAlternateKeyMask) == NSRightAlternateKeyMask)) 
+ 	{
+-	  emacs_event->modifiers |= parse_solitary_modifier
+-            (ns_right_alternate_modifier);
++        if ((NILP (ns_right_alternate_modifier) || EQ (ns_right_alternate_modifier, Qnone))
++            && !fnKeysym)
++        {   /* accept pre-interp alt comb */
++            if ([[theEvent characters] length] > 0)
++                code = [[theEvent characters] characterAtIndex: 0];
++            /*HACK: clear lone shift modifier to stop next if from firing */
++            if (emacs_event->modifiers == shift_modifier)
++                emacs_event->modifiers = 0;
++        }
++        else
++            emacs_event->modifiers |=
++                parse_solitary_modifier (ns_right_alternate_modifier);
++                
+ 	}
+       else if (flags & NSAlternateKeyMask) /* default = meta */
+         {
+-          if ((NILP (ns_alternate_modifier) || EQ (ns_alternate_modifier, Qnone))
++          if (((NILP (ns_alternate_modifier) || EQ (ns_alternate_modifier, Qnone))
+               && !fnKeysym)
++			  || (flags & NSFunctionKeyMask))
+             {   /* accept pre-interp alt comb */
+               if ([[theEvent characters] length] > 0)
+                 code = [[theEvent characters] characterAtIndex: 0];

@@ -261,7 +261,6 @@ map <Up> gk
 map <Down> gj
 
 
-
 set linespace=1
 set nocp
 set bs=indent,eol,start
@@ -273,5 +272,6 @@ let g:LatexBox_viewer = 'skim'
 let g:LatexBox_latexmk_options = '-pvc'
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 
 

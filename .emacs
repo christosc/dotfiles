@@ -546,7 +546,7 @@
 
 ;; (add-to-list 'default-frame-alist '(cursor-type . bar))
 
-;;(setq blink-cursor-interval 0.5)
+(setq blink-cursor-interval 0.7)
 
 ;(set-default cursor-type 'box)
 
@@ -989,7 +989,7 @@
 
 
 ;; Διὰ νὰ δύναμαι νὰ μετακινηθῆ ἀπὸ frame σὲ frame διὰ τοῦ meta-βέλη
-(windmove-default-keybindings 'meta)
+;;(windmove-default-keybindings 'meta)
 
 ;; (load-file "/Users/christos/elisp/themes/color-theme-irblack.el")
 
@@ -1173,8 +1173,8 @@
 ;; (setq org-columns-default-format "%25ITEM %TODO %10Effort(Effort){:} %3PRIORITY %10TAGS")
 
 ;;; ΔΙΑ ORG-MODE ;;;;;;;;;;;;;;;;;;;;;;
-(load-file "~/elisp/org-custom.el")
-(setq load-path (cons "~/repos/org-mode/lisp" load-path))
+;; (load-file "~/elisp/org-custom.el")
+;; (setq load-path (cons "~/repos/org-mode/lisp" load-path))
 
 
 
@@ -1247,7 +1247,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1338,10 +1338,10 @@
 (define-key global-map [ns-drag-file] 'ns-find-file)
 
 (setq ns-alternate-modifier 'meta)
-(setq ns-right-alternate-modifier nil)
+(setq ns-right-alternate-modifier 'left)
 (setq ns-command-modifier 'control)
 (setq ns-control-modifier 'super)
-(setq ns-function-modifier 'hyper)
+(setq ns-function-modifier 'none)
 
 
 ;; (auto-fill-mode t)
