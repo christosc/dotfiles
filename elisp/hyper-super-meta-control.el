@@ -81,7 +81,7 @@
 (global-set-key (kbd "M-<down>") 'scroll-up-line)
 
 (global-set-key (kbd "H-h") (quote ns-do-hide-emacs))
-(global-set-key (kbd "H-M-h") (quote ns-do-hide-others)) ;; Command-Option γιὰ νὰ κρύπτῃ τὰ ἄλλα παράθυρα
+(global-set-key (kbd "H-H") (quote ns-do-hide-others))
 
 (global-set-key (kbd "s-h") 'backward-char)
 (global-set-key (kbd "s-η") 'backward-char)
