@@ -935,7 +935,7 @@
 
 (setq org-directory "~/Dropbox/org-files")
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
-(setq org-agenda-files (quote ("~/Dropbox/org-files")))
+(setq org-agenda-files (quote ("~/Documents/org-mode")))
 							  
 (setq org-mobile-inbox-for-pull "~/Dropbox/MobileOrg/inbox.org")
 ;; Διὰ νὰ ἔχω τὴν πληκτρoλογικὴν σύντμησιν Μ-# γιὰ τὲς μακροεντολὲς τοῦ Calc

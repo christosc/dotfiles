@@ -5,7 +5,7 @@
 (global-set-key (kbd "C-`") 'other-frame)
 (global-set-key (kbd "C-~") (lambda () (interactive) (other-frame (- 1))))
 
-;;(windmove-default-keybindings 'meta)
+(windmove-default-keybindings 'super)
 
 
 
