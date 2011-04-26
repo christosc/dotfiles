@@ -4,6 +4,7 @@
 
 (global-set-key (kbd "C-`") 'other-frame)
 (global-set-key (kbd "C-~") (lambda () (interactive) (other-frame (- 1))))
+
 ;;(windmove-default-keybindings 'meta)
 
 
@@ -36,7 +37,8 @@
 (global-set-key (kbd "C-χ C-ς") 'write-file)
 (global-set-key (kbd "M-φ") 'forward-word)
 (global-set-key (kbd "M-β") 'backward-word)
-(global-set-key (kbd "M-δ") 'delete-word)
+(global-set-key (kbd "M-δ") 'kill-word)
+(global-set-key (kbd "C-δ") 'delete-char)
 (global-set-key (kbd "C-ν") 'next-line)
 (global-set-key (kbd "C-π") 'previous-line)
 (global-set-key (kbd "C-ω") 'scroll-up)
@@ -67,6 +69,10 @@
 ;;(global-set-key (kbd "C-χ C-+") 'text-scale-adjust)
 ;;κ(global-set-key (kbd "C-χ C--") 'text-scale-adjust)
 
+(global-set-key (kbd "M-<left>") 'backward-word)
+(global-set-key (kbd "M-<right>") 'forward-word)
+(global-set-key (kbd "C-<left>") 'beginning-of-visual-line)
+(global-set-key (kbd "C-<right>") 'end-of-visual-line)
 
 
 

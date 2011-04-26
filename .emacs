@@ -1247,7 +1247,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1305,7 +1305,7 @@
 ;; (setq-default line-spacing 2)
 ;;(global-hl-line-mode 1)
 ;;(set-face-background 'hl-line "#E9EFF8") ;; χρῶμα παρούσης γραμμῆς ἀπὸ NetBeans
-(setq kill-whole-line t)
+;; (setq kill-whole-line t)
 
 (defun set-frame-size-according-to-resolution ()
   (interactive)
@@ -1329,7 +1329,7 @@
 
 (add-hook 'LaTeX-mode-hook (lambda () (progn
                                         (variable-pitch-mode t)
-                                        ;;(set-frame-font "Menlo-13")
+                                        ;; (set-frame-font "Menlo-13")
                                         (auto-fill-mode t)
                                         (outline-minor-mode t)
                                         (server-start))))
@@ -1338,13 +1338,15 @@
 (define-key global-map [ns-drag-file] 'ns-find-file)
 
 (setq ns-alternate-modifier 'meta)
-(setq ns-right-alternate-modifier 'left)
+(setq ns-right-alternate-modifier 'none)
 (setq ns-command-modifier 'control)
 (setq ns-control-modifier 'super)
-(setq ns-function-modifier 'none)
+(setq ns-function-modifier 'hyper)
 
 
 ;; (auto-fill-mode t)
-(add-hook 'fundamental-mode-hook 'turn-on-auto-fill)
+(auto-fill-mode 1)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'lua-mode-hook 'turn-on-auto-fill)
+
+
