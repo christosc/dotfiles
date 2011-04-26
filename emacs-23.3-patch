@@ -1,0 +1,15 @@
+diff --git a/src/nsterm.m b/src/nsterm.m
+index de276f0..42e277b 100644
+--- a/src/nsterm.m
++++ b/src/nsterm.m
+@@ -4480,9 +4480,8 @@ ns_term_shutdown (int sig)
+ 	}
+       else if (flags & NSAlternateKeyMask) /* default = meta */
+         {
+-          if (((NILP (ns_alternate_modifier) || EQ (ns_alternate_modifier, Qnone))
++          if ((NILP (ns_alternate_modifier) || EQ (ns_alternate_modifier, Qnone))
+               && !fnKeysym)
+-			  || (flags & NSFunctionKeyMask))
+             {   /* accept pre-interp alt comb */
+               if ([[theEvent characters] length] > 0)
+                 code = [[theEvent characters] characterAtIndex: 0];
