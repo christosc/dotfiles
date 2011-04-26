@@ -1338,10 +1338,10 @@
 (define-key global-map [ns-drag-file] 'ns-find-file)
 
 (setq ns-alternate-modifier 'meta)
-(setq ns-right-alternate-modifier 'none)
+(setq ns-right-alternate-modifier 'left)
 (setq ns-command-modifier 'control)
 (setq ns-control-modifier 'super)
-(setq ns-function-modifier 'hyper)
+(setq ns-function-modifier 'none)
 
 
 ;; (auto-fill-mode t)
