@@ -7,7 +7,7 @@
 
 (windmove-default-keybindings 'super)
 
-
+(global-set-key (kbd "s-SPC") 'set-mark-command)
 
 ;;(define-key text-mode-map [C-tab] 'ispell-complete-word)
 ;; (add-hook fundamental-mode-hook

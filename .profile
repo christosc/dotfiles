@@ -447,4 +447,4 @@ LESS="-IR"; export LESS
 export PATH=${PATH}:/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin
 alias emacscl="emacsclient -n"
 #export ALTERNATE_EDITOR="emacs -nw" EDITOR=emacsclient VISUAL=emacsclient
-export EDITOR=~/bin/edit
+#export EDITOR=~/bin/edit

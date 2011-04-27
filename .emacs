@@ -544,10 +544,12 @@
 
 ;(blink-cursor-mode)
 
-;; (add-to-list 'default-frame-alist '(cursor-type . bar))
-
-(setq blink-cursor-interval 0.7)
-
+(add-to-list 'default-frame-alist '(cursor-color . "black"))
+(add-to-list 'default-frame-alist '(background-color . "grey95"))
+(set-default 'cursor-type '(bar . 1))
+;;(set-cursor-color "black")
+(setq blink-cursor-interval 0.6)
+(blink-cursor-mode 1)
 ;(set-default cursor-type 'box)
 
 
@@ -556,7 +558,8 @@
 
 
 
-
+;;;;;;;;;;;;;;;;;;;;; Χρώματα ;;;;;;;;;;;;;;;;;;;;
+;; (set-background-color "gray90")
 
 
 
@@ -672,7 +675,6 @@
  '(TeX-output-view-style (quote (("^dvi$" ("^landscape$" "^pstricks$\\|^pst-\\|^psfrag$") "%(o?)dvips -t landscape %d -o && gv %f") ("^dvi$" "^pstricks$\\|^pst-\\|^psfrag$" "%(o?)dvips %d -o && gv %f") ("^dvi$" ("^\\(?:a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4\\)$" "^landscape$") "%(o?)xdvi %dS -paper a4r -s 0 %d") ("^dvi$" "^\\(?:a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4\\)$" "%(o?)xdvi %dS -paper a4 %d") ("^dvi$" ("^\\(?:a5\\(?:comb\\|paper\\)\\)$" "^landscape$") "%(o?)xdvi %dS -paper a5r -s 0 %d") ("^dvi$" "^\\(?:a5\\(?:comb\\|paper\\)\\)$" "%(o?)xdvi %dS -paper a5 %d") ("^dvi$" "^b5paper$" "%(o?)xdvi %dS -paper b5 %d") ("^dvi$" "^letterpaper$" "%(o?)xdvi %dS -paper us %d") ("^dvi$" "^legalpaper$" "%(o?)xdvi %dS -paper legal %d") ("^dvi$" "^executivepaper$" "%(o?)xdvi %dS -paper 7.25x10.5in %d") ("^dvi$" "." "%(o?)xdvi %dS %d") ("^pdf$" "." "open  %o %(outpage)") ("^html?$" "." "netscape %o"))))
  '(TeX-source-specials-mode t)
  '(auto-save-interval 150)
- '(blink-cursor-mode t)
  '(column-number-mode t)
  '(display-time-mode t)
  '(haskell-program-name "ghci")
@@ -828,7 +830,7 @@
 ;(setq-default indent-tabs-mode nil)
 ;(remove-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
-(setq visible-bell t)
+;(setq visible-bell t)                   
 
 
 ;; WHITESPACE-MODE ΔΙΑ HASKELL
@@ -969,9 +971,9 @@
 
 ;; Γιὰ CUA mode· ἀπὸ EmacsWiki
 ;;(cua-mode t)
-(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+;;(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
 (transient-mark-mode 1) ;; No region when it is not highlighted
-(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+;;(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
 
 ;; (require 'color-theme-quasistandard)
@@ -1018,18 +1020,18 @@
 
 ;; Γιὰ νὰ ἔχω εὔκολον τὸν ἀποσχολιασμὸν μιᾶς γραμμῆς κώδικα
 
-(defun my-comment-line-or-region ()
-  (interactive "*")
-  (if (and mark-active transient-mark-mode)
-      (comment-or-uncomment-region (region-beginning) (region-end) nil)
-    (progn
-      (save-excursion
-        (move-beginning-of-line nil)
-        (set-mark-command nil)
-        (move-end-of-line nil)
-        (comment-dwim nil)
-        ))))
-(global-set-key (read-kbd-macro "M-;") 'my-comment-line-or-region)
+;;(defun my-comment-line-or-region ()
+;;  (interactive "*")
+;;  (if (and mark-active transient-mark-mode)
+;;      (comment-or-uncomment-region (region-beginning) (region-end) nil)
+;;    (progn
+;;      (save-excursion
+;;        (move-beginning-of-line nil)
+;;        (set-mark-command nil)
+;;        (move-end-of-line nil)
+;;        (comment-dwim nil)
+;;        ))))
+;;(global-set-key (read-kbd-macro "M-;") 'my-comment-line-or-region)
 
 
 ;; (add-to-list 'default-frame-alist '(width . 81))
@@ -1056,7 +1058,7 @@
 ;;    )
 ;; )
 
-(setq-default fill-column 80)  ;; Διὰ πιέσεως τοῦ Μ-q στοιχεῖται τὸ κείμενον εἰς
+(setq-default fill-column 78)  ;; Διὰ πιέσεως τοῦ Μ-q στοιχεῖται τὸ κείμενον εἰς
 ;; ταύτην τὴν στήλην 
 ;;(add-hook 'haskell-mode-hook 'turn-on-auto-fill)
 
@@ -1092,8 +1094,8 @@
 ;;(global-hl-line-mode nil)
 ;;(set-face-background 'hl-line  "lemon chiffon")
 
-(add-to-list 'default-frame-alist '(cursor-color . "Black"))
-(add-to-list 'default-frame-alist '(cursor-type . (bar . 1)))
+;; (add-to-list 'default-frame-alist '(cursor-color . "Black"))
+;; (add-to-list 'default-frame-alist '(cursor-type . (bar . 1)))
 ;; (setq-default cursor-type '(bar . 1))
 ;;(setq-default cursor-type '(bar . 1))
 ;; (blink-cursor-mode t)
@@ -1163,8 +1165,8 @@
 
   ;; (load-file "~/elisp/dark-theme.el")
 ;(load-file "~/elisp/light-theme.el")
-(put 'upcase-region 'disabled nil)
-(put 'downcase-region 'disabled nil)
+;;(put 'upcase-region 'disabled nil)
+;;(put 'downcase-region 'disabled nil)
 
 ;; (setq org-enforce-todo-dependencies t)
 ;; (setq  org-agenda-dim-blocked-tasks t)
@@ -1270,7 +1272,7 @@
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 
-(set-cursor-color "Black")
+;; (set-cursor-color "Black")
 (put 'narrow-to-region 'disabled nil)
 
 
@@ -1287,7 +1289,7 @@
 ;;(global-auto-revert-mode 1)
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
-(blink-cursor-mode t)
+;; (blink-cursor-mode t)
 ;;(setq-default blink-cursor-interval 0.5)
 (setq-default indent-tabs-mode nil)
 
@@ -1350,4 +1352,9 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'lua-mode-hook 'turn-on-auto-fill)
 
+
+;;;;;;;;; COLOR ;;;;;;;;
+(add-to-list 'load-path "~/elisp/themes") 
+(require 'color-theme)
+(color-theme-initialize)
 

@@ -1,6 +1,8 @@
-set guifont=menlo:h12
+set guifont=Menlo:h12
+"set guifont=DejaVuSansMono:h12
 ":inoremap <S-space> <ESC>
 :inoremap <D-space> <ESC>
+:inoremap <C-space> <ESC>
 "inoremap <S-space> <ESC>
 "set textwidth=80
 "colorscheme desert
@@ -11,7 +13,9 @@ set guifont=menlo:h12
 "colorscheme biogoo
 "colorscheme habiLight1
 "colorscheme VYLight
-colorscheme Chela_light
+"let s:lightcolorscheme="silent"
+"colorscheme silent
+colorscheme moria
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
@@ -23,5 +27,5 @@ set guicursor+=n-c-v:blinkon0
 set guioptions-=T "hide toolbar
 "set columns=80
 set hidden
-set number
+set nonumber
 "autocmd BufRead *.tex set guifont=menlo:h14

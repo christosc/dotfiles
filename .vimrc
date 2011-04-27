@@ -34,8 +34,6 @@ autocmd VimEnter * wincmd p
 
 "set nowrap
 "set columns=80
-" Press Space to turn off highlighting and clear any message already displayed.
-":nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 
 "autocmd FileType mkd set includeexpr=substitute(v:fname,'\\.','/','g').'.md'
@@ -127,15 +125,13 @@ let Tlist_Use_Right_Window   = 1
 "let Tlist_Auto_Open = 1
 let Tlist_Show_One_File = 1
 
-" Press Space to turn off highlighting and clear any message already displayed.
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " To automatically store/restore folds
 "au BufWinLeave * mkview
 "au BufWinEnter * silent loadview
 
 map <C-Space> <Esc>
-cmap <C-Space> <C-c>
+"cmap <C-Space> <C-c>
 
 
 " Settings for Vim-LaTeX
@@ -245,7 +241,7 @@ if !exists(":DiffOrig")
                      \ | wincmd p | diffthis
 endif
 
-set textwidth=80
+set textwidth=78
 
 " γιὰ νὰ μὴ τρελλαθῇς μὲ τὶς συμπληρώσεις τοῦ Vim LaTeX suite...
 let g:Imap_UsePlaceHolders = 0
@@ -265,7 +261,9 @@ map <Down> gj
 set nocp
 set bs=indent,eol,start
 "set ww=b,s,h,l
-nnoremap <Space> l
+nnoremap <silent><Space> :nohlsearch<CR>l
+" Press Space to turn off highlighting and clear any message already displayed.
+"nmap <silent> <Space> :nohlsearch<CR>
 
 
 let g:LatexBox_viewer = 'skim'
