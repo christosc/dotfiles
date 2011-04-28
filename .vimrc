@@ -51,6 +51,9 @@ map ξ j
 map κ k
 map η h
 map λ l
+map Η H
+map Μ M
+map Λ L
 map ι i
 map Ι I
 map ε e

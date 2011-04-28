@@ -544,12 +544,12 @@
 
 ;(blink-cursor-mode)
 
-(add-to-list 'default-frame-alist '(cursor-color . "black"))
+(add-to-list 'default-frame-alist '(cursor-color . "goldenrod"))
 (add-to-list 'default-frame-alist '(background-color . "grey95"))
-(set-default 'cursor-type '(bar . 1))
+;;(set-default 'cursor-type '(bar . 1))
 ;;(set-cursor-color "black")
 (setq blink-cursor-interval 0.6)
-(blink-cursor-mode 1)
+(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1355,6 +1355,8 @@
 
 ;;;;;;;;; COLOR ;;;;;;;;
 (add-to-list 'load-path "~/elisp/themes") 
-(require 'color-theme)
-(color-theme-initialize)
-
+;;(require 'color-theme)
+;;(color-theme-initialize)
+;;
+;;(require 'color-theme-tangotango)
+;;(color-theme-tangotango)
