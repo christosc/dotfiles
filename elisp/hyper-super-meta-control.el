@@ -25,6 +25,8 @@
 
 (global-set-key [s-tab] 'completion-at-point)
 (define-key minibuffer-local-map [s-tab] 'lisp-complete-symbol)
+(global-set-key [M-tab] 'completion-at-point)
+(define-key minibuffer-local-map [M-tab] 'lisp-complete-symbol)
 ;;(define-key minibuffer-local-map [tab] 'completion-at-point)
 ;;(global-set-key (kbd "M-h") 'ns-do-hide-emacs)
 ;;(global-set-key (kbd "M-η") 'ns-do-hide-emacs)
@@ -158,3 +160,8 @@
 ;;(global-set-key (kbd "H-β") 'backward-word)
 ;;(global-set-key (kbd "H-f") 'forward-word)
 ;;(global-set-key (kbd "H-φ") 'forward-word)
+
+(global-set-key (kbd "C-x f") 'select-frame-by-name)
+(global-set-key (kbd "C-χ φ") 'select-frame-by-name)
+;;(global-set-key (kbd "C-x C-f") '(lambda () (interactive) (frame-list)))
+;;(global-set-key (kbd "C-χ C-φ") 'frame-list)

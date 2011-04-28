@@ -544,12 +544,12 @@
 
 ;(blink-cursor-mode)
 
-(add-to-list 'default-frame-alist '(cursor-color . "goldenrod"))
-(add-to-list 'default-frame-alist '(background-color . "grey95"))
-;;(set-default 'cursor-type '(bar . 1))
+(add-to-list 'default-frame-alist '(cursor-color . "black"))
+;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
+(set-default 'cursor-type '(bar . 1))
 ;;(set-cursor-color "black")
 (setq blink-cursor-interval 0.6)
-(blink-cursor-mode 0)
+(blink-cursor-mode 1)
 ;(set-default cursor-type 'box)
 
 
@@ -1140,13 +1140,23 @@
 
 ;; Ἵνα ἐμφαίνεται ὡς τίτλος τοῦ πλαισίου τὸ ὄνομα τοῦ buffer
 ;; format title bar to show full path of current file 
-(setq-default frame-title-format 
-			  (list '((buffer-file-name " %f" 
-										(dired-directory 
-										 dired-directory 
-										 (revert-buffer-function " %b" 
-																 ("%b - Dir:  " default-directory))))))) 
-
+;;(setq-default frame-title-format 
+;;			  (list '((buffer-file-name " %f" 
+;;										(dired-directory 
+;;										 dired-directory 
+;;										 (revert-buffer-function " %b" 
+;;																 ("%b - Dir:  " default-directory))))))) 
+ 
+(setq-default frame-title-format '("%b"
+                                   " [%*]"
+                                   (:eval
+                                    (if (buffer-file-name)
+                                        (concat
+                                         " ("
+                                         (abbreviate-file-name
+                                          (directory-file-name
+                                           (file-name-directory
+                                            (buffer-file-name)))) ")")))))
 
 
 
@@ -1160,7 +1170,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(variable-pitch ((t (:height 140 :family "Lucida Grande")))))
+ '(variable-pitch ((t (:height 150 :family "Arial")))))
 
 
   ;; (load-file "~/elisp/dark-theme.el")
@@ -1249,7 +1259,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1330,8 +1340,8 @@
 (set-frame-size-according-to-resolution)
 
 (add-hook 'LaTeX-mode-hook (lambda () (progn
-                                        ;; (variable-pitch-mode t)
-                                        (set-frame-font "Menlo-13")
+                                        (variable-pitch-mode t)
+                                        ;;(set-frame-font "Menlo-13")
                                         ;; (set line-spacing 1)
                                         (auto-fill-mode t)
                                         (outline-minor-mode t)

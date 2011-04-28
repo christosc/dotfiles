@@ -15,7 +15,7 @@ set guifont=Menlo:h12
 "colorscheme VYLight
 "let s:lightcolorscheme="silent"
 "colorscheme silent
-colorscheme moria
+colorscheme vylight-mod
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
