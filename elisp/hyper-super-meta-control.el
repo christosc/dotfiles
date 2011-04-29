@@ -2,8 +2,8 @@
 
 ;; (cua-mode t)
 
-(global-set-key (kbd "C-`") 'other-frame)
-(global-set-key (kbd "C-~") (lambda () (interactive) (other-frame (- 1))))
+(global-set-key (kbd "C-~") 'other-frame)
+(global-set-key (kbd "C-`") (lambda () (interactive) (other-frame (- 1))))
 
 (windmove-default-keybindings 'super)
 
@@ -193,3 +193,5 @@
 
 (global-set-key (kbd "C-;") 'revert-option-key)
 (global-set-key (kbd "C-´") 'revert-option-key)
+(global-set-key (kbd "s-s") 'save-buffer)
+(global-set-key (kbd "s-σ") 'save-buffer)

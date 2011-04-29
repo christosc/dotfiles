@@ -347,7 +347,7 @@
 
 ;(require 'semantic-ia)
 
-(setq-default tab-width 2)
+;;(setq-default tab-width 2)
 
 ;; Display the time in the mode line
 ;(setq display-time-24hr-format t)
@@ -1035,8 +1035,8 @@
 ;;(global-set-key (read-kbd-macro "M-;") 'my-comment-line-or-region)
 
 
-;; (add-to-list 'default-frame-alist '(width . 81))
-;; (add-to-list 'default-frame-alist '(height . 33))
+(add-to-list 'default-frame-alist '(width . 81))
+(add-to-list 'default-frame-alist '(height . 45))
 ;; (add-to-list 'default-frame-alist '(foreground-color  . "grey9"))
 ;; (add-to-list 'default-frame-alist '(background-color  . "grey91"))
 ;; (add-to-list 'default-frame-alist '(cursor-color  . "red3"))
