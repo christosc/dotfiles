@@ -444,7 +444,7 @@ alias xelatex="rlwrap xelatex"
 LESS="-IR"; export LESS
 
 ##################  EMACS ##########################################
-export PATH=${PATH}:/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin
+export PATH=${HOME}/Applications/emacs-23.3-YAMAMOTO/mac/Emacs.app/Contents/MacOS/:${PATH}:/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin
 alias emacscl="emacsclient -n"
 #export ALTERNATE_EDITOR="emacs -nw" EDITOR=emacsclient VISUAL=emacsclient
 #export EDITOR=~/bin/edit

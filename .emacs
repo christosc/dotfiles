@@ -546,10 +546,11 @@
 
 (add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
-(set-default 'cursor-type '(bar . 1))
+;;(set-default 'cursor-type '(bar . 1))
+(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 (setq blink-cursor-interval 0.6)
-(blink-cursor-mode 1)
+(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1148,7 +1149,7 @@
 ;;																 ("%b - Dir:  " default-directory))))))) 
  
 (setq-default frame-title-format '("%b"
-                                   " [%*]"
+                                   " %*"
                                    (:eval
                                     (if (buffer-file-name)
                                         (concat
@@ -1170,6 +1171,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(cursor ((t (:background "black" :inverse-video t))))
  '(variable-pitch ((t (:height 150 :family "Arial")))))
 
 
@@ -1280,7 +1282,7 @@
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
-
+;;(add-to-list 'lua-mode-abbrev-table '(lambda () (setq tab-always-indent nil)))
 
 ;; (set-cursor-color "Black")
 (put 'narrow-to-region 'disabled nil)
@@ -1356,6 +1358,12 @@
 (setq ns-control-modifier 'super)
 (setq ns-function-modifier 'hyper)
 
+;;;;;;;;;;;;;;;;; Γιὰ τὴν ἔκδοσι τοῦ YAMAMOTO! ;;;;;;;;;;;;;;;;;;;;;;;
+(setq mac-command-modifier 'control)
+(setq mac-option-modifier 'meta)
+(setq mac-control-modifier 'super)
+(setq mac-function-modifer 'hyper)
+(setq mac-pass-command-to-system nil)
 
 ;; (auto-fill-mode t)
 (auto-fill-mode 1)

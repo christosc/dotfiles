@@ -76,6 +76,20 @@
 (global-set-key (kbd "C-<left>") 'beginning-of-visual-line)
 (global-set-key (kbd "C-<right>") 'end-of-visual-line)
 
+(global-set-key (kbd "M-α") 'backward-sentence)
+(global-set-key (kbd "M-ε") 'forward-sentence)
+
+(global-set-key (kbd "H-m") 'iconify-frame)
+(global-set-key (kbd "H-μ") 'iconify-frame)
+
+(global-set-key (kbd "s-i") 'imenu)
+(global-set-key (kbd "s-ι") 'imenu)
+
+(global-set-key (kbd "C-χ <left>") 'previous-buffer)
+(global-set-key (kbd "C-χ <C-left>") 'previous-buffer)
+(global-set-key (kbd "C-χ <right>") 'next-buffer)
+(global-set-key (kbd "C-χ <C-right>") 'next-buffer)
+
 
 
 
@@ -165,3 +179,17 @@
 (global-set-key (kbd "C-χ φ") 'select-frame-by-name)
 ;;(global-set-key (kbd "C-x C-f") '(lambda () (interactive) (frame-list)))
 ;;(global-set-key (kbd "C-χ C-φ") 'frame-list)
+
+(defun revert-option-key ()
+  (interactive)
+  (if (eq mac-option-modifier 'meta)
+      (progn
+        (princ "Option key is not Meta")
+        (setq mac-option-modifier nil))
+    (progn
+      (princ "Option key is Meta")
+      (setq mac-option-modifier 'meta))))
+
+
+(global-set-key (kbd "C-;") 'revert-option-key)
+(global-set-key (kbd "C-´") 'revert-option-key)
