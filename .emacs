@@ -1035,7 +1035,7 @@
 ;;(global-set-key (read-kbd-macro "M-;") 'my-comment-line-or-region)
 
 
-(add-to-list 'default-frame-alist '(width . 81))
+(add-to-list 'default-frame-alist '(width . 90))
 (add-to-list 'default-frame-alist '(height . 45))
 ;; (add-to-list 'default-frame-alist '(foreground-color  . "grey9"))
 ;; (add-to-list 'default-frame-alist '(background-color  . "grey91"))
