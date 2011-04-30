@@ -15,16 +15,17 @@ set guifont=Menlo:h12
 "colorscheme VYLight
 "let s:lightcolorscheme="silent"
 "colorscheme silent
-"colorscheme vylight-mod
-colorscheme emacs
+let Tlist_WinWidth=40
+colorscheme vylight-mod
+"colorscheme emacs
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
 "hi Comment gui=None
 "set columns=80
-set guicursor=i:ver20-blinkwait200-blinkon600-blinkoff500
-"set guicursor+=n-c-v:blinkon0
-set gcr=a:blinkon0
+set guicursor=i:ver10-blinkwait200-blinkon600-blinkoff500
+set guicursor+=n-c-v:blinkon0
+"set gcr=a:blinkon0
 "set guicursor=a:blinkon0
 set guioptions-=T "hide toolbar
 "set columns=80
