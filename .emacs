@@ -1035,7 +1035,7 @@
 ;;(global-set-key (read-kbd-macro "M-;") 'my-comment-line-or-region)
 
 
-(add-to-list 'default-frame-alist '(width . 90))
+(add-to-list 'default-frame-alist '(width . 80))
 (add-to-list 'default-frame-alist '(height . 45))
 ;; (add-to-list 'default-frame-alist '(foreground-color  . "grey9"))
 ;; (add-to-list 'default-frame-alist '(background-color  . "grey91"))
@@ -1329,7 +1329,7 @@
     ;; and smaller 80 column windows for smaller displays
     ;; pick whatever numbers make sense for you
     (if (> (x-display-pixel-width) 1280)
-           (add-to-list 'default-frame-alist (cons 'width 120))
+           (add-to-list 'default-frame-alist (cons 'width 90))
            (add-to-list 'default-frame-alist (cons 'width 80)))
     ;; for the height, subtract a couple hundred pixels
     ;; from the screen height (for panels, menubars and
@@ -1386,7 +1386,7 @@
                  ((eq mac-option-modifier 'hyper) "Hyper")
                  ((eq mac-option-modifier 'super) "Super")
                  (t "none"))))
-    (format "%-7s" mod)))
+    (format "%4s" mod)))
 
 (setq-default  mode-line-format (append (butlast mode-line-format 6)
                                         '(" " (:eval (option-modifier)) " ")
