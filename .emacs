@@ -1172,7 +1172,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(cursor ((t (:background "black" :inverse-video t))))
- '(variable-pitch ((t (:height 150 :family "Arial")))))
+ '(variable-pitch ((t (:height 160 :family "Arial")))))
 
 
   ;; (load-file "~/elisp/dark-theme.el")
@@ -1261,7 +1261,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1296,7 +1296,7 @@
 
 (assq-delete-all 'font default-frame-alist) 
 (add-to-list 'default-frame-alist '(font . "Menlo-12"))
-(setq-default indent-tabs-mode nil)
+;;(setq-default indent-tabs-mode nil)
 
 ;;(global-auto-revert-mode 1)
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
