@@ -1362,7 +1362,7 @@
 (setq mac-command-modifier 'control)
 (setq mac-option-modifier 'meta)
 (setq mac-control-modifier 'super)
-(setq mac-function-modifier 'hyper)
+(setq mac-function-modifier nil)
 (setq mac-pass-command-to-system nil)
 
 ;; (auto-fill-mode t)
