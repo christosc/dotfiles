@@ -449,5 +449,5 @@ alias emacscl="emacsclient -n"
 #export ALTERNATE_EDITOR="emacs -nw" EDITOR=emacsclient VISUAL=emacsclient
 #export EDITOR=~/bin/edit
 export PATH=$HOME/local/bin:$PATH
-export MANPATH=$HOME/local/share/man
+export MANPATH=$HOME/local/share/man:$MANPATH
 
