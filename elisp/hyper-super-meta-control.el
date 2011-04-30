@@ -5,7 +5,7 @@
 (global-set-key (kbd "C-~") 'other-frame)
 (global-set-key (kbd "C-`") (lambda () (interactive) (other-frame (- 1))))
 
-(windmove-default-keybindings 'super)
+(windmove-default-keybindings 'meta)
 
 (global-set-key (kbd "s-SPC") 'set-mark-command)
 (global-set-key (kbd "M-SPC") 'set-mark-command)

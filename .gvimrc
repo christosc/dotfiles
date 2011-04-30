@@ -15,7 +15,8 @@ set guifont=Menlo:h12
 "colorscheme VYLight
 "let s:lightcolorscheme="silent"
 "colorscheme silent
-colorscheme vylight-mod
+"colorscheme vylight-mod
+colorscheme emacs
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
@@ -28,5 +29,5 @@ set gcr=a:blinkon0
 set guioptions-=T "hide toolbar
 "set columns=80
 set hidden
-set nonumber
+set number
 "autocmd BufRead *.tex set guifont=menlo:h14

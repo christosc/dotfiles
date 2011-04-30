@@ -124,9 +124,9 @@ set autoindent
 let  g:netrw_browse_split=2
 
 " Γιὰ νὰ ἀνοίγῃ ὁ κατάλογος τῶν tags δεξιόθεν τοῦ κυρίως viewport.
-let Tlist_Use_Right_Window   = 1
-"let Tlist_Auto_Open = 1
-let Tlist_Show_One_File = 1
+"let Tlist_Use_Right_Window   = 1
+""let Tlist_Auto_Open = 1
+"let Tlist_Show_One_File = 1
 
 
 " To automatically store/restore folds
@@ -275,4 +275,4 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 
-
+set viminfo+=f1
