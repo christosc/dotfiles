@@ -1378,3 +1378,16 @@
 ;;
 ;;(require 'color-theme-tangotango)
 ;;(color-theme-tangotango)
+
+
+(defun option-modifier()
+  (let ((mod (cond ((eq mac-option-modifier 'meta) "Meta")
+                 ((eq mac-option-modifier 'control) "Control")
+                 ((eq mac-option-modifier 'hyper) "Hyper")
+                 ((eq mac-option-modifier 'super) "Super")
+                 (t "none"))))
+    (format "%-7s" mod)))
+
+(setq-default  mode-line-format (append (butlast mode-line-format 6)
+                                        '(" " (:eval (option-modifier)) " ")
+                                        (last mode-line-format 6)))
