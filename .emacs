@@ -546,11 +546,11 @@
 
 (add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
-;;(set-default 'cursor-type '(bar . 1))
-(set-default 'cursor-type 'box)
+(set-default 'cursor-type '(bar . 1))
+;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
-(setq blink-cursor-interval 0.6)
-(blink-cursor-mode 0)
+;;(setq blink-cursor-interval 0.6)
+(blink-cursor-mode 1)
 ;(set-default cursor-type 'box)
 
 
@@ -1172,6 +1172,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(cursor ((t (:background "black" :inverse-video t))))
+ '(mode-line ((((class color) (min-colors 88)) (:background "black" :foreground "white" :box (:line-width -1 :style released-button)))))
  '(variable-pitch ((t (:height 160 :family "Arial")))))
 
 
@@ -1342,7 +1343,7 @@
 (set-frame-size-according-to-resolution)
 
 (add-hook 'LaTeX-mode-hook (lambda () (progn
-                                        (variable-pitch-mode t)
+                                        ;;(variable-pitch-mode t)
                                         ;;(set-frame-font "Menlo-13")
                                         ;; (set line-spacing 1)
                                         (auto-fill-mode t)
@@ -1391,3 +1392,5 @@
 (setq-default  mode-line-format (append (butlast mode-line-format 6)
                                         '(" " (:eval (option-modifier)) " ")
                                         (last mode-line-format 6)))
+
+(buffer-face-mode 1)

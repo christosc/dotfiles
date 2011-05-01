@@ -95,8 +95,8 @@
 
 
 
-(global-set-key (kbd "M-<up>") 'scroll-down-line)
-(global-set-key (kbd "M-<down>") 'scroll-up-line)
+;;(global-set-key (kbd "M-<up>") 'scroll-down-line) 
+;;(global-set-key (kbd "M-<down>") 'scroll-up-line)
 
 (global-set-key (kbd "H-h") (quote ns-do-hide-emacs))
 (global-set-key (kbd "H-H") (quote ns-do-hide-others))

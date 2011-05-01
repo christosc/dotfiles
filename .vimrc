@@ -31,7 +31,7 @@ set hlsearch
 " ΓΙΑ NERDTree
 "autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
-
+autocmd FileType taglist set wrap
 "set nowrap
 "set columns=80
 
