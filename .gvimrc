@@ -22,7 +22,7 @@ colorscheme vylight-mod
 "set background=light
 "set number
 "hi Comment gui=None
-"set columns=80
+set columns=100
 set guicursor=i:ver10-blinkwait200-blinkon600-blinkoff500
 set guicursor+=n-c-v:blinkon0
 "set gcr=a:blinkon0

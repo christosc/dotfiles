@@ -546,11 +546,11 @@
 
 (add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
-(set-default 'cursor-type '(bar . 1))
+(set-default 'cursor-type 'box)
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
-;;(setq blink-cursor-interval 0.6)
-(blink-cursor-mode 1)
+(setq blink-cursor-interval 0.6)
+(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1350,6 +1350,8 @@
                                         (outline-minor-mode t)
                                         (server-start))))
 
+(add-hook 'debugger-mode-hook (lambda () (progn
+                                           (visual-line-mode nil))))
 ;;(setq mac-command-modifier nil)
 (define-key global-map [ns-drag-file] 'ns-find-file)
 
@@ -1381,16 +1383,26 @@
 ;;(color-theme-tangotango)
 
 
-(defun option-modifier()
-  (let ((mod (cond ((eq mac-option-modifier 'meta) "Meta")
-                 ((eq mac-option-modifier 'control) "Control")
-                 ((eq mac-option-modifier 'hyper) "Hyper")
-                 ((eq mac-option-modifier 'super) "Super")
-                 (t "none"))))
-    (format "%4s" mod)))
+;;(defun option-modifier()
+;;  (let ((mod (cond ((eq mac-option-modifier 'meta) "Meta")
+;;                 ((eq mac-option-modifier 'control) "Control")
+;;                 ((eq mac-option-modifier 'hyper) "Hyper")
+;;                 ((eq mac-option-modifier 'super) "Super")
+;;                 (t "none"))))
+;;    (format "%4s" mod)))
 
-(setq-default  mode-line-format (append (butlast mode-line-format 6)
-                                        '(" " (:eval (option-modifier)) " ")
-                                        (last mode-line-format 6)))
+(setq-default  mode-line-format (append
+                                 (butlast mode-line-format 6)
+                                 '(" ")
+                                 '((5 (:eval (symbol-name mac-option-modifier))))
+                                 '(" ")
+                                 '((5 (:eval (if mac-pass-command-to-system
+                                                 "pass"
+                                               "¬pass"))))
+                                 '(" ")
+                                 (last mode-line-format 6)))
 
 (buffer-face-mode 1)
+(setq bookmark-save-flag 1)
+
+(setq default-input-method 'greek-ibycus4)
