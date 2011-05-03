@@ -73,8 +73,8 @@
 ;;(global-set-key (kbd "C-χ C-+") 'text-scale-adjust)
 ;;κ(global-set-key (kbd "C-χ C--") 'text-scale-adjust)
 
-(global-set-key (kbd "M-<left>") 'backward-word)
-(global-set-key (kbd "M-<right>") 'forward-word)
+;;(global-set-key (kbd "M-<left>") 'backward-word)
+;;(global-set-key (kbd "M-<right>") 'forward-word)
 (global-set-key (kbd "C-<left>") 'beginning-of-visual-line)
 (global-set-key (kbd "C-<right>") 'end-of-visual-line)
 

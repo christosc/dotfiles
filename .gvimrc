@@ -16,7 +16,8 @@ set guifont=Menlo:h12
 "let s:lightcolorscheme="silent"
 "colorscheme silent
 let Tlist_WinWidth=40
-colorscheme vylight-mod
+"colorscheme vylight-mod
+colorscheme tango2
 "colorscheme emacs
 "hi CuresorLine guibg=Grey95
 "set background=light
@@ -30,5 +31,5 @@ set guicursor+=n-c-v:blinkon0
 set guioptions-=T "hide toolbar
 "set columns=80
 set hidden
-set number
+set nonumber
 "autocmd BufRead *.tex set guifont=menlo:h14

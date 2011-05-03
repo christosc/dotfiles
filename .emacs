@@ -1376,10 +1376,10 @@
 
 ;;;;;;;;; COLOR ;;;;;;;;
 (add-to-list 'load-path "~/elisp/themes") 
-;;(require 'color-theme)
-;;(color-theme-initialize)
+(require 'color-theme)
+(color-theme-initialize)
 ;;
-;;(require 'color-theme-tangotango)
+(require 'color-theme-tangotango)
 ;;(color-theme-tangotango)
 
 

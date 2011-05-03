@@ -282,3 +282,4 @@ set viminfo+=f1
 let tlist_tex_settings   = 'latex;b:bibitem;c:command;s:sections;g:graphics;l:labels'
 let tlist_make_settings  = 'make;m:makros;t:targets'
 
+set noimdisable
