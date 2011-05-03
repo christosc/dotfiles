@@ -1387,11 +1387,17 @@
     (setq mac-option-modifier nil)
     (setq mac-function-modifier 'super)))
 
+(defun mac-modifiers-control-option-command ()
+  (progn
+    (setq mac-control-modifier 'super)
+    (setq mac-option-modifier 'meta)
+    (setq mac-command-modifier 'control)
+    (setq mac-function-modifier 'hyper)))
 
 ;;(mac-modifiers-command-option-control)
 ;;(mac-modifiers-option-command-control)
-(mac-modifiers-option-control-command)
-
+;;(mac-modifiers-option-control-command)
+(mac-modifiers-control-option-command)
 
 ;; (auto-fill-mode t)
 (auto-fill-mode 1)
