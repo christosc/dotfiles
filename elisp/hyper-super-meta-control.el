@@ -282,3 +282,14 @@
 (global-set-key (kbd "H-m") 'iconify-frame)
 (global-set-key (kbd "H-μ") 'iconify-frame)
 
+
+
+(global-set-key (kbd "C-S-<space>") 'set-mark-command)
+
+(global-set-key (kbd "M-θ") 'upcase-word)
+(global-set-key (kbd "M-λ") 'downcase-word)
+
+(global-set-key (kbd "C-τ") 'transpose-chars)
+(global-set-key (kbd "M-τ") 'transpose-words)
+
+(global-set-key (kbd "M-ψ") 'capitalize-word)

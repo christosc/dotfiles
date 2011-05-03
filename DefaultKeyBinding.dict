@@ -1,0 +1,7 @@
+{
+    "^\UF703" = "moveWordForward:";  /* Ctrl-right */
+    "^\UF702" = "moveWordBackward:"; /* Ctrl-left */
+    /* "~f" = "moveWordForward:"; */ /* Option-f */
+    "^ " = "setMark:";
+    "^a" = "selectToMark:";
+}

@@ -546,10 +546,11 @@
 
 (add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
-(set-default 'cursor-type 'box)
+;;(set-default 'cursor-type 'box)
+(set-default 'cursor-type '(bar . 1))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
-(setq blink-cursor-interval 0.6)
+;;(setq blink-cursor-interval 0.6)
 (blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
@@ -1149,7 +1150,7 @@
 ;;																 ("%b - Dir:  " default-directory))))))) 
  
 (setq-default frame-title-format '("%b"
-                                   " %*"
+                                   " [%*]"
                                    (:eval
                                     (if (buffer-file-name)
                                         (concat
@@ -1262,7 +1263,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1302,7 +1303,7 @@
 ;;(global-auto-revert-mode 1)
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
-;; (blink-cursor-mode t)
+(blink-cursor-mode t)
 ;;(setq-default blink-cursor-interval 0.5)
 (setq-default indent-tabs-mode nil)
 
@@ -1362,11 +1363,35 @@
 (setq ns-function-modifier 'hyper)
 
 ;;;;;;;;;;;;;;;;; Γιὰ τὴν ἔκδοσι τοῦ YAMAMOTO! ;;;;;;;;;;;;;;;;;;;;;;;
-(setq mac-command-modifier 'control)
-(setq mac-option-modifier 'meta)
-(setq mac-control-modifier 'super)
-(setq mac-function-modifier nil)
-(setq mac-pass-command-to-system nil)
+
+(defun mac-modifiers-command-option-control ()
+  (progn
+    (setq mac-command-modifier 'control)
+    (setq mac-option-modifier 'meta)
+    (setq mac-control-modifier 'control)
+    (setq mac-function-modifier 'super)
+    (setq mac-pass-command-to-system nil)))
+
+(defun mac-modifiers-option-control-command ()
+  (progn
+    (setq mac-command-modifier 'control)
+    (setq mac-option-modifier nil)
+    (setq mac-control-modifier 'meta)
+    (setq mac-function-modifier 'super)
+    (setq mac-pass-command-to-system nil)))
+
+(defun mac-modifiers-option-command-control ()
+  (progn
+    (setq mac-control-modifier 'control)
+    (setq mac-command-modifier 'meta)
+    (setq mac-option-modifier nil)
+    (setq mac-function-modifier 'super)))
+
+
+;;(mac-modifiers-command-option-control)
+;;(mac-modifiers-option-command-control)
+(mac-modifiers-option-control-command)
+
 
 ;; (auto-fill-mode t)
 (auto-fill-mode 1)
@@ -1379,7 +1404,7 @@
 (require 'color-theme)
 (color-theme-initialize)
 ;;
-(require 'color-theme-tangotango)
+;;(require 'color-theme-tangotango)
 ;;(color-theme-tangotango)
 
 
@@ -1402,7 +1427,7 @@
                                  '(" ")
                                  (last mode-line-format 6)))
 
-(buffer-face-mode 1)
+;;(buffer-face-mode 1)
 (setq bookmark-save-flag 1)
 
 (setq default-input-method 'greek-ibycus4)
