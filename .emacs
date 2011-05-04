@@ -1174,7 +1174,7 @@
   ;; If there is more than one, they won't work right.
  '(cursor ((t (:background "black" :inverse-video t))))
  '(mode-line ((((class color) (min-colors 88)) (:background "black" :foreground "white" :box (:line-width -1 :style released-button)))))
- '(variable-pitch ((t (:height 160 :family "Arial")))))
+ '(variable-pitch ((t (:height 160 :family "Helvetica")))))
 
 
   ;; (load-file "~/elisp/dark-theme.el")
@@ -1385,14 +1385,16 @@
     (setq mac-control-modifier 'control)
     (setq mac-command-modifier 'meta)
     (setq mac-option-modifier nil)
-    (setq mac-function-modifier 'super)))
+    (setq mac-function-modifier 'super)
+    (setq mac-pass-command-to-system nil)))
 
 (defun mac-modifiers-control-option-command ()
   (progn
     (setq mac-control-modifier 'super)
     (setq mac-option-modifier 'meta)
     (setq mac-command-modifier 'control)
-    (setq mac-function-modifier 'hyper)))
+    (setq mac-function-modifier 'hyper)
+    (setq mac-pass-command-to-system nil)))
 
 ;;(mac-modifiers-command-option-control)
 ;;(mac-modifiers-option-command-control)

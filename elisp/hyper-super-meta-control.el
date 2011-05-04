@@ -255,6 +255,9 @@
 
 (define-key ctrl-semicolon-map (kbd ";") 'toggle-mac-option-modifier)
 (define-key ctrl-semicolon-map (kbd "C-;") 'toggle-mac-pass-command-to-system)
+(define-key ctrl-semicolon-map (kbd "C-;") 'toggle-mac-pass-command-to-system)
+(global-set-key (kbd "C-'") 'toggle-mac-option-modifier)
+(global-set-key (kbd "C-᾽") 'toggle-mac-option-modifier)
 
 (define-key ctrl-semicolon-map (kbd "´") '(lambda ()
                                             (interactive)
@@ -293,3 +296,4 @@
 (global-set-key (kbd "M-τ") 'transpose-words)
 
 (global-set-key (kbd "M-ψ") 'capitalize-word)
+(global-set-key (kbd "M-μ") 'newline-and-indent)
