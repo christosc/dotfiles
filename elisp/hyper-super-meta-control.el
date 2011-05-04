@@ -297,3 +297,6 @@
 
 (global-set-key (kbd "M-ψ") 'capitalize-word)
 (global-set-key (kbd "M-μ") 'newline-and-indent)
+
+(global-set-key (kbd "M-p") 'fill-paragraph)
+(global-set-key (kbd "M-π") 'fill-paragraph)

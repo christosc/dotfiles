@@ -1344,9 +1344,9 @@
 (set-frame-size-according-to-resolution)
 
 (add-hook 'LaTeX-mode-hook (lambda () (progn
-                                        ;;(variable-pitch-mode t)
+                                        (variable-pitch-mode t)
                                         ;;(set-frame-font "Menlo-13")
-                                        ;; (set line-spacing 1)
+                                        (set line-spacing 2)
                                         (auto-fill-mode t)
                                         (outline-minor-mode t)
                                         (server-start))))
@@ -1396,10 +1396,21 @@
     (setq mac-function-modifier 'hyper)
     (setq mac-pass-command-to-system nil)))
 
+(defun mac-modifiers-control-option-command-command-control ()
+  (progn
+    (setq mac-control-modifier 'meta)
+    (setq mac-option-modifier 'meta)
+    (setq mac-command-modifier 'control)
+    (setq mac-function-modifier 'super)
+    (setq mac-pass-command-to-system nil)
+    (setq mac-pass-control-to-system nil)))
+
+
 ;;(mac-modifiers-command-option-control)
 ;;(mac-modifiers-option-command-control)
 ;;(mac-modifiers-option-control-command)
-(mac-modifiers-control-option-command)
+;;(mac-modifiers-control-option-command)
+(mac-modifiers-control-option-command-command-control)
 
 ;; (auto-fill-mode t)
 (auto-fill-mode 1)
