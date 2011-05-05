@@ -547,7 +547,7 @@
 (add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
-(setq-default cursor-type '(bar . 1))
+(setq-default cursor-type '(bar . 2))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 (setq blink-cursor-interval 0.7)
@@ -1174,7 +1174,7 @@
   ;; If there is more than one, they won't work right.
  '(cursor ((t (:background "black" :inverse-video t))))
  '(mode-line ((((class color) (min-colors 88)) (:background "black" :foreground "white" :box (:line-width -1 :style released-button)))))
- '(variable-pitch ((t (:height 180 :family "Times New Roman")))))
+ '(variable-pitch ((t (:height 1.5 :family "Times New Roman")))))
 
 
   ;; (load-file "~/elisp/dark-theme.el")
@@ -1344,9 +1344,9 @@
 (set-frame-size-according-to-resolution)
 
 (add-hook 'LaTeX-mode-hook (lambda () (progn
-                                        (variable-pitch-mode t)
+                                        (variable-pitch-mode 1)
                                         ;;(set-frame-font "Menlo-13")
-                                        (set line-spacing 2)
+                                        (setq line-spacing 2)
                                         (auto-fill-mode t)
                                         (outline-minor-mode t)
                                         (server-start))))
@@ -1409,8 +1409,8 @@
 ;;(mac-modifiers-command-option-control)
 ;;(mac-modifiers-option-command-control)
 ;;(mac-modifiers-option-control-command)
-;;(mac-modifiers-control-option-command)
-(mac-modifiers-control-option-command-command-control)
+(mac-modifiers-control-option-command)
+;;(mac-modifiers-control-option-command-command-control)
 
 ;; (auto-fill-mode t)
 (auto-fill-mode 1)
@@ -1419,9 +1419,9 @@
 
 
 ;;;;;;;;; COLOR ;;;;;;;;
-(add-to-list 'load-path "~/elisp/themes") 
-(require 'color-theme)
-(color-theme-initialize)
+;;(add-to-list 'load-path "~/elisp/themes") 
+;;(require 'color-theme)
+;;(color-theme-initialize)
 ;;
 ;;(require 'color-theme-tangotango)
 ;;(color-theme-tangotango)
@@ -1450,3 +1450,6 @@
 (setq bookmark-save-flag 1)
 
 (setq default-input-method 'greek-ibycus4)
+
+(global-subword-mode 1)
+(add-to-list 'default-frame-alist '(background-color . "#F0F0F0"))
