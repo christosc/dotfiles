@@ -1,4 +1,8 @@
 {
 	"^y" = "yankAndSelect:";
+        "^\UF702" = "moveWordBackward:";
+        "^\UF703" = "moveWordForward:";
 	/* "^ " = "setMark:"; */
+       /* "^j" = "scrollLineDown:"; */
+        /*"^k" = "scrollLineUp:";*/
 }

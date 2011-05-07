@@ -547,11 +547,11 @@
 (add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
-(setq-default cursor-type '(bar . 2))
+(setq-default cursor-type '(bar . 1))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
-(setq blink-cursor-interval 0.7)
-(blink-cursor-mode 1)
+;;(setq blink-cursor-interval 0.5)
+;;(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1173,14 +1173,13 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(cursor ((t (:background "black" :inverse-video t))))
+ '(font-latex-verbatim-face ((((class color) (background light)) (:inherit fixed-pitch :foreground "SaddleBrown" :height 140))))
  '(mode-line ((((class color) (min-colors 88)) (:background "black" :foreground "white" :box (:line-width -1 :style released-button)))))
  '(variable-pitch ((t (:height 1.5 :family "Times New Roman")))))
 
 
   ;; (load-file "~/elisp/dark-theme.el")
 ;(load-file "~/elisp/light-theme.el")
-;;(put 'upcase-region 'disabled nil)
-;;(put 'downcase-region 'disabled nil)
 
 ;; (setq org-enforce-todo-dependencies t)
 ;; (setq  org-agenda-dim-blocked-tasks t)
@@ -1263,7 +1262,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1346,7 +1345,7 @@
 (add-hook 'LaTeX-mode-hook (lambda () (progn
                                         (variable-pitch-mode 1)
                                         ;;(set-frame-font "Menlo-13")
-                                        (setq line-spacing 2)
+                                        ;;(setq line-spacing 2)
                                         (auto-fill-mode t)
                                         (outline-minor-mode t)
                                         (server-start))))
@@ -1375,9 +1374,9 @@
 (defun mac-modifiers-option-control-command ()
   (progn
     (setq mac-command-modifier 'control)
-    (setq mac-option-modifier nil)
+    (setq mac-option-modifier 'super)
     (setq mac-control-modifier 'meta)
-    (setq mac-function-modifier 'super)
+    (setq mac-function-modifier 'hyper)
     (setq mac-pass-command-to-system nil)))
 
 (defun mac-modifiers-option-command-control ()
@@ -1408,8 +1407,8 @@
 
 ;;(mac-modifiers-command-option-control)
 ;;(mac-modifiers-option-command-control)
-;;(mac-modifiers-option-control-command)
-(mac-modifiers-control-option-command)
+(mac-modifiers-option-control-command)
+;;(mac-modifiers-control-option-command)
 ;;(mac-modifiers-control-option-command-command-control)
 
 ;; (auto-fill-mode t)
@@ -1453,3 +1452,5 @@
 
 (global-subword-mode 1)
 (add-to-list 'default-frame-alist '(background-color . "#F0F0F0"))
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)

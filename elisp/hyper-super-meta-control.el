@@ -242,13 +242,14 @@
 ;;(global-set-key (kbd "C-…") 'toggle-mac-option-modifier)
 ;;(global-set-key (kbd "M-C-´") 'toggle-mac-option-modifier)
 ;;
-(global-set-key (kbd "C-;") 'toggle-mac-option-modifier)
-(global-set-key (kbd "C-´") 'toggle-mac-option-modifier)
+;;(global-set-key (kbd "C-;") 'toggle-mac-option-modifier)
+;;(global-set-key (kbd "C-´") 'toggle-mac-option-modifier)
 (global-set-key (kbd "s-s") 'save-buffer)
 (global-set-key (kbd "s-σ") 'save-buffer)
 (global-set-key (kbd "C-λ") 'recenter-top-bottom)
 
 (global-set-key (kbd "H-<backspace>") 'delete-char)
+;(global-set-key (kbd "s-<backspace>") 'delete-char)
 (global-set-key (kbd "H-m") 'iconify-frame)
 (global-set-key (kbd "H-μ") 'iconify-frame)
 
