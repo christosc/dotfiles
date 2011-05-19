@@ -684,7 +684,8 @@
  '(nxhtml-skip-welcome t)
  '(org-clock-auto-clock-resolution t)
  '(scroll-conservatively 10000000)
- '(show-paren-mode t))
+ '(show-paren-mode t)
+ '(tags-case-fold-search (quote default)))
 
 
 ;;(setq calendar-month-genitive-name-array ["Ἰανουαρίου" "Φεβρουαρίου" "Μαρτίου" "Ἀπριλίου" "Μαΐου" "Ἰουνίου" "Ἰουλίου" "Αὐγούστου" "Σεπτεμβρίου" "Ὀκτωβρίου" "Νοεμβρίου" "Δεκεμβρίου"])
@@ -1175,7 +1176,7 @@
  '(cursor ((t (:background "black" :inverse-video t))))
  '(font-latex-verbatim-face ((((class color) (background light)) (:inherit fixed-pitch :foreground "SaddleBrown" :height 140))))
  '(mode-line ((((class color) (min-colors 88)) (:background "black" :foreground "white" :box (:line-width -1 :style released-button)))))
- '(variable-pitch ((t (:height 1.5 :family "Times New Roman")))))
+ '(variable-pitch ((t (:height 190 :family "Times New Roman")))))
 
 
   ;; (load-file "~/elisp/dark-theme.el")
@@ -1262,7 +1263,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1304,7 +1305,7 @@
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
 ;;(blink-cursor-mode t)
 ;;(setq-default blink-cursor-interval 0.5)
-(setq-default indent-tabs-mode nil)
+;;(setq-default indent-tabs-mode nil)
 
 
 ;;(cua-mode t)
@@ -1415,6 +1416,7 @@
 (auto-fill-mode 1)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'lua-mode-hook 'turn-on-auto-fill)
+(add-hook 'lua-mode-hook (lambda () (subword-mode 1)))
 
 
 ;;;;;;;;; COLOR ;;;;;;;;
@@ -1438,11 +1440,11 @@
                                  (butlast mode-line-format 6)
                                  '(" ")
                                  '((5 (:eval (symbol-name mac-option-modifier))))
-                                 '(" ")
-                                 '((5 (:eval (if mac-pass-command-to-system
-                                                 "pass"
-                                               "¬pass"))))
-                                 '(" ")
+                                ; '(" ")
+                                ; '((5 (:eval (if mac-pass-command-to-system
+                                ;                 "pass"
+                                ;               "¬pass"))))
+                                ; '(" ")
                                  (last mode-line-format 6)))
 
 ;;(buffer-face-mode 1)
@@ -1450,7 +1452,19 @@
 
 (setq default-input-method 'greek-ibycus4)
 
-(global-subword-mode 1)
-(add-to-list 'default-frame-alist '(background-color . "#F0F0F0"))
+;;(global-subword-mode 1) θὰ ἦτο καλὸ ἂν δούλευε...
+;;(add-to-list 'default-frame-alist '(background-color . "#F0F0F0"))
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+(require 'magit)
+(require 'magit-svn)
+
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+
+(setq
+  scroll-margin 0                  
+  scroll-conservatively 100000
+  scroll-preserve-screen-position 1)
