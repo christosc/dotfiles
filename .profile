@@ -448,7 +448,7 @@ export PATH=${HOME}/Applications/emacs-23.3-YAMAMOTO/mac/Emacs.app/Contents/MacO
 alias emacscl="emacsclient -n"
 alias emc=emacsclient
 #export ALTERNATE_EDITOR="emacs -nw" EDITOR=emacsclient VISUAL=emacsclient
-#export EDITOR=~/bin/edit
+export EDITOR=emacsclient
 export PATH=$HOME/local/bin:$PATH
 export MANPATH=$HOME/local/share/man:$MANPATH
-
+export LANG=en_US.UTF-8
