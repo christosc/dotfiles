@@ -17,13 +17,13 @@ set guifont=Menlo:h12
 "colorscheme tango2
 "colorscheme biogoo
 "colorscheme habiLight1
-colorscheme VYLight
+"colorscheme VYLight
 "let s:lightcolorscheme="silent"
 "colorscheme silent
 let Tlist_WinWidth=40
 "colorscheme vylight-mod
 "colorscheme tango2
-"colorscheme emacs
+colorscheme emacs
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
