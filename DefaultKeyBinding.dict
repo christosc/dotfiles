@@ -1,4 +1,6 @@
 {
+        "~f"      = "moveWordForward:";              /* M-f */
+        "~b"      = "moveWordBackward:";             /* M-b */
 	"^y" = "yankAndSelect:";
         "^\UF702" = "moveWordBackward:";
         "^\UF703" = "moveWordForward:";
