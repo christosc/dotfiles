@@ -57,6 +57,8 @@ hi Type guifg=#9C20EE guibg=White
 hi Special guifg=SlateBlue guibg=White
 hi Ignore guifg=White
 hi Function guifg=#9C20EE guibg=white
+hi Keyword guifg=#9C20EE guibg=white
+hi Identifier guifg=Black
 " Some specials (override hilinks)
 
 
