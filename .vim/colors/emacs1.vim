@@ -49,14 +49,14 @@ hi DiffChange guibg=LightMagenta
 hi DiffDelete gui=bold guifg=Blue guibg=LightCyan
 
 " Colors for syntax highlighting
-hi Comment guifg=#AC2020 guibg=White
+hi Comment guifg=#b22222 guibg=White
 hi Constant guifg=#8b2252 guibg=White
 hi PreProc guifg=#D569D5 guibg=White
 hi Statement gui=NONE guifg=#9C20EE guibg=White
 hi Type guifg=#9C20EE guibg=White
 hi Special guifg=SlateBlue guibg=White
 hi Ignore guifg=White
-
+hi Function guifg=#9C20EE guibg=white
 " Some specials (override hilinks)
 
 

@@ -23,7 +23,7 @@ set guifont=Menlo:h12
 let Tlist_WinWidth=40
 "colorscheme vylight-mod
 "colorscheme tango2
-colorscheme emacs
+colorscheme emacs1
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
