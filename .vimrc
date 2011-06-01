@@ -283,3 +283,5 @@ let tlist_tex_settings   = 'latex;b:bibitem;c:command;s:sections;g:graphics;l:la
 let tlist_make_settings  = 'make;m:makros;t:targets'
 
 set noimdisable
+
+set tags=./tags;

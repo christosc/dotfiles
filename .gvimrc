@@ -5,9 +5,9 @@ set guifont=Menlo:h12
 :inoremap <C-space> <ESC>
 :inoremap <D-[> <ESC>
 :map <silent> <C-h> :tabprevious<CR>
-:map <silent> <C-l> :tabNext<CR>
+:map <silent> <C-l> :tabnext<CR>
 :map <silent> <Μ-h> :tabprevious<CR>
-:map <silent> <Μ-l> :tabNext<CR>
+:map <silent> <Μ-l> :tabnext<CR>
 "inoremap <S-space> <ESC>
 "set textwidth=80
 "colorscheme desert
