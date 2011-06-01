@@ -1263,7 +1263,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1417,8 +1417,8 @@
 
 ;;(mac-modifiers-command-option-control)
 ;;(mac-modifiers-option-command-control)
-;;(mac-modifiers-option-control-command)
-(mac-modifiers-control-option-command-2)
+(mac-modifiers-option-control-command)
+;;(mac-modifiers-control-option-command-2)
 ;;(mac-modifiers-control-option-command-command-control)
 
 ;; (auto-fill-mode t)
