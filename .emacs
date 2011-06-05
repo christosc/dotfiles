@@ -547,7 +547,7 @@
 (add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
-(setq-default cursor-type '(bar . 2))
+(setq-default cursor-type '(bar . 1))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 ;;(setq blink-cursor-interval 0.5)
@@ -1263,7 +1263,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1314,7 +1314,7 @@
 ;;(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
 
-(global-linum-mode 1)
+;;(global-linum-mode 1)
 
 ;;(load-file "~/elisp/tabbar.el")
 ;;(tabbar-mode 1)
@@ -1445,16 +1445,16 @@
 ;;                 (t "none"))))
 ;;    (format "%4s" mod)))
 
-(setq-default  mode-line-format (append
-                                 (butlast mode-line-format 6)
-                                 '(" ")
-                                 '((5 (:eval (symbol-name mac-option-modifier))))
-                                ; '(" ")
-                                ; '((5 (:eval (if mac-pass-command-to-system
-                                ;                 "pass"
-                                ;               "¬pass"))))
-                                ; '(" ")
-                                 (last mode-line-format 6)))
+;;(setq-default  mode-line-format (append
+;;                                 (butlast mode-line-format 6)
+;;                                 '(" ")
+;;                                 '((5 (:eval (symbol-name mac-option-modifier))))
+;;                                ; '(" ")
+;;                                ; '((5 (:eval (if mac-pass-command-to-system
+;;                                ;                 "pass"
+;;                                ;               "¬pass"))))
+;;                                ; '(" ")
+;;                                 (last mode-line-format 6)))
 
 ;;(buffer-face-mode 1)
 (setq bookmark-save-flag 1)
@@ -1469,9 +1469,9 @@
 (require 'magit)
 (require 'magit-svn)
 
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-mode 1)
+;;(setq ido-enable-flex-matching t)
+;;(setq ido-everywhere t)
+;;(ido-mode 1)
 
 (setq
   scroll-margin 0                  
@@ -1479,4 +1479,9 @@
   scroll-preserve-screen-position 1)
 
 ;; make tags case-sensitive
-(setq tags-case-fold-search nil)
+;;(setq tags-case-fold-search nil)
+
+(speedbar-add-supported-extension ".lua")
+
+;;(require 'framemove)
+;;(framemove-default-keybindings 'control)
