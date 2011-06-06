@@ -461,7 +461,7 @@ if [ -f ~/.git-completion.sh ]; then
     PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 fi
 
-# Source the svn  bash completion file
-if [ -f ~/.bash_completion ]; then
-    source ~/.bash_completion
+# Source the svn bash completion file
+if [ -f ~/.svn-completion.sh ]; then
+    source ~/.svn-completion.sh
 fi
