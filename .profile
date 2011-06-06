@@ -452,3 +452,16 @@ alias emc=emacsclient
 export PATH=$HOME/local/bin:$PATH
 export MANPATH=$HOME/local/share/man:$MANPATH
 export LANG=en_US.UTF-8
+
+# Source the git bash completion file
+if [ -f ~/.git-completion.sh ]; then
+    source ~/.git-completion.sh
+    GIT_PS1_SHOWDIRTYSTATE=true
+    GIT_PS1_SHOWSTASHSTATE=true
+    PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+fi
+
+# Source the svn  bash completion file
+if [ -f ~/.bash_completion ]; then
+    source ~/.bash_completion
+fi
