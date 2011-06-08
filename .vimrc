@@ -127,7 +127,7 @@ let  g:netrw_browse_split=2
 let Tlist_Use_Right_Window   = 1
 ""let Tlist_Auto_Open = 1
 let Tlist_Show_One_File = 1
-
+let Tlist_Use_Horiz_Window = 1
 
 " To automatically store/restore folds
 "au BufWinLeave * mkview

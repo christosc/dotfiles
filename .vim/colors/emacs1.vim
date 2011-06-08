@@ -25,7 +25,7 @@ hi ErrorMsg guibg=Red guifg=White
 hi IncSearch gui=reverse
 hi ModeMsg gui=bold
 hi StatusLine gui=reverse,bold
-hi StatusLineNC gui=reverse
+hi StatusLineNC guibg=DimGray guifg=#E6E6E6
 hi VertSplit gui=reverse
 hi Visual gui=reverse guifg=Grey guibg=fg
 hi VisualNOS gui=underline,bold
