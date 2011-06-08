@@ -18,7 +18,7 @@ set number
 set linebreak
 set ruler
 "colorscheme desert
-colorscheme wombat
+colorscheme emacs1
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
