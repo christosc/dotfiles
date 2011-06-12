@@ -465,3 +465,7 @@ fi
 if [ -f ~/.svn-completion.sh ]; then
     source ~/.svn-completion.sh
 fi
+
+source ~/.hg-completion.sh
+
+export PATH=.:$PATH

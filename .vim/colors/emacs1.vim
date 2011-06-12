@@ -24,8 +24,8 @@ hi Normal guifg=Black guibg=White
 hi ErrorMsg guibg=Red guifg=White
 hi IncSearch gui=reverse
 hi ModeMsg gui=bold
-hi StatusLine gui=reverse,bold
-hi StatusLineNC guibg=Black guifg=#E6E6E6
+hi StatusLine gui=reverse ",bold
+hi StatusLineNC guibg=grey30 guifg=#E6E6E6
 hi VertSplit gui=reverse
 hi Visual gui=reverse guifg=Grey guibg=fg
 hi VisualNOS gui=underline,bold
@@ -35,7 +35,7 @@ hi lCursor guibg=Cyan guifg=NONE
 hi Directory guifg=Blue
 hi LineNr guifg=Brown
 hi MoreMsg gui=bold guifg=SeaGreen
-hi NonText gui=bold guifg=Blue guibg=grey90
+hi NonText gui=bold guifg=Blue guibg=grey95
 hi Question gui=bold guifg=SeaGreen
 hi Search guibg=Yellow guifg=NONE
 hi SpecialKey guifg=Blue

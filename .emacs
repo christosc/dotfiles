@@ -546,12 +546,12 @@
 
 (add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
-;;(set-default 'cursor-type 'box)
-(setq-default cursor-type '(bar . 1))
+(set-default 'cursor-type 'box)
+;;(setq-default cursor-type '(bar . 1))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 ;;(setq blink-cursor-interval 0.5)
-;;(blink-cursor-mode 0)
+(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -683,7 +683,6 @@
  '(lua-indent-level 4)
  '(nxhtml-skip-welcome t)
  '(org-clock-auto-clock-resolution t)
- '(scroll-conservatively 10000000)
  '(show-paren-mode t)
  '(tags-case-fold-search (quote default)))
 
@@ -1037,8 +1036,8 @@
 ;;(global-set-key (read-kbd-macro "M-;") 'my-comment-line-or-region)
 
 
-(add-to-list 'default-frame-alist '(width . 80))
-(add-to-list 'default-frame-alist '(height . 45))
+(add-to-list 'default-frame-alist '(width . 91))
+(add-to-list 'default-frame-alist '(height . 51))
 ;; (add-to-list 'default-frame-alist '(foreground-color  . "grey9"))
 ;; (add-to-list 'default-frame-alist '(background-color  . "grey91"))
 ;; (add-to-list 'default-frame-alist '(cursor-color  . "red3"))
@@ -1175,6 +1174,9 @@
   ;; If there is more than one, they won't work right.
  '(cursor ((t (:background "black" :inverse-video t))))
  '(font-latex-verbatim-face ((((class color) (background light)) (:inherit fixed-pitch :foreground "SaddleBrown" :height 140))))
+ '(font-lock-comment-face ((t (:foreground "dark green"))))
+ '(font-lock-function-name-face ((((class color) (min-colors 88) (background light)) (:foreground "Black" :weight bold))))
+ '(font-lock-keyword-face ((((class color) (min-colors 88) (background light)) (:foreground "Blue3"))))
  '(mode-line ((((class color) (min-colors 88)) (:background "black" :foreground "white" :box (:line-width -1 :style released-button)))))
  '(variable-pitch ((t (:height 190 :family "Times New Roman")))))
 
@@ -1263,7 +1265,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1341,7 +1343,7 @@
          (cons 'height (/ (- (x-display-pixel-height) 200)
                              (frame-char-height)))))))
 
-(set-frame-size-according-to-resolution)
+;;(set-frame-size-according-to-resolution)
 
 (add-hook 'LaTeX-mode-hook (lambda () (progn
                                         (variable-pitch-mode 1)
@@ -1414,12 +1416,22 @@
     (setq mac-pass-command-to-system nil)
     (setq mac-pass-control-to-system nil)))
 
+(defun mac-modifiers-control-option-command-capscontrol ()
+  (progn
+    (setq mac-control-modifier 'control)
+    (setq mac-option-modifier 'meta)
+;;    (setq mac-command-modifier nil)
+    (setq mac-function-modifier 'super)
+;;    (setq mac-pass-command-to-system t)
+    ))
 
 ;;(mac-modifiers-command-option-control)
 ;;(mac-modifiers-option-command-control)
-(mac-modifiers-option-control-command)
-;;(mac-modifiers-control-option-command-2)
+;;(mac-modifiers-option-control-command)
+;;(mac-modifiers-control-option-command)
+(mac-modifiers-control-option-command-2)
 ;;(mac-modifiers-control-option-command-command-control)
+;;(mac-modifiers-control-option-command-capscontrol)
 
 ;; (auto-fill-mode t)
 (auto-fill-mode 1)
@@ -1471,12 +1483,12 @@
 
 ;;(setq ido-enable-flex-matching t)
 ;;(setq ido-everywhere t)
-;;(ido-mode 1)
+(ido-mode 1)
 
-(setq
-  scroll-margin 0                  
-  scroll-conservatively 100000
-  scroll-preserve-screen-position 1)
+;;(setq
+;;  scroll-margin 0                  
+;;  scroll-conservatively 100000
+;;  scroll-preserve-screen-position 1)
 
 ;; make tags case-sensitive
 ;;(setq tags-case-fold-search nil)
@@ -1485,3 +1497,5 @@
 
 ;;(require 'framemove)
 ;;(framemove-default-keybindings 'control)
+
+(desktop-save-mode 1)

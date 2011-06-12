@@ -6,8 +6,11 @@ set guifont=Menlo:h12
 :inoremap <D-[> <ESC>
 :map <silent> <C-h> :tabprevious<CR>
 :map <silent> <C-l> :tabnext<CR>
-:map <silent> <Μ-h> :tabprevious<CR>
-:map <silent> <Μ-l> :tabnext<CR>
+":imap <silent> <C-h> :tabprevious<CR>
+":imap <silent> <C-l> :tabnext<CR>
+:map <D-j> :set invmmta<CR> 
+:map <A-h> :tabprevious<CR>
+:map <A-l> :tabnext<CR>
 "inoremap <S-space> <ESC>
 "set textwidth=80
 "colorscheme desert
@@ -29,8 +32,10 @@ colorscheme emacs1
 "set number
 "hi Comment gui=None
 set columns=100
-set guicursor=i:ver10-blinkwait200-blinkon600-blinkoff500
+set guicursor=i:ver20-blinkwait200-blinkon600-blinkoff600
 set guicursor+=n-c-v:blinkon0
+"set guicursor+=n-c-v:ver20-blinkon500-blinkoff500
+"set guicursor+=n-c-v:blinkon600-blinkoff600
 "set gcr=a:blinkon0
 "set guicursor=a:blinkon0
 set guioptions-=T "hide toolbar
