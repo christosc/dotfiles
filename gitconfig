@@ -3,5 +3,6 @@
 	email = C.Chryssochoidis@gmail.com
 [core]
 	excludesfile = /Users/christos/.gitexcludes
+	editor = /Users/christos/bin/vim
 [alias]
 	s = status --short
