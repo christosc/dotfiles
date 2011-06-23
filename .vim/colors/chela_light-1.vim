@@ -92,8 +92,8 @@ hi spellcap                                     gui=undercurl guisp=#ff2222
 hi spelllocal                                   gui=undercurl guisp=#cc2222
 hi spellrare                                    gui=undercurl guisp=#22cc22
 
-hi statusline   guibg=#2222ff   guifg=#ffffff   gui=none
-hi statuslinenc guibg=#2222ff   guifg=#999999   gui=none
+hi statusline   guibg=blue4   guifg=#ffffff   gui=none
+hi statuslinenc guibg=blue4   guifg=#999999   gui=none
 
 hi tabline      guibg=#cccccc   guifg=#222222   gui=none
 hi tablinesel   guibg=#2222ff   guifg=#ffffff   gui=none

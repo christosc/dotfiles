@@ -547,7 +547,7 @@
 (add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
-(setq-default cursor-type '(bar . 2))
+(setq-default cursor-type '(bar . 1))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 (setq blink-cursor-interval 0.6)
@@ -1265,7 +1265,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1407,6 +1407,14 @@
     (setq mac-function-modifier 'hyper)
     (setq mac-pass-command-to-system nil)))
 
+(defun mac-modifiers-control-option-command-3 ()
+  (progn
+    (setq mac-control-modifier 'meta)
+    (setq mac-option-modifier 'meta)
+    (setq mac-command-modifier 'control)
+    (setq mac-function-modifier 'super)
+    (setq mac-pass-command-to-system nil)))
+
 (defun mac-modifiers-control-option-command-command-control ()
   (progn
     (setq mac-control-modifier 'meta)
@@ -1429,7 +1437,8 @@
 ;;(mac-modifiers-option-command-control)
 ;;(mac-modifiers-option-control-command)
 ;;(mac-modifiers-control-option-command)
-(mac-modifiers-control-option-command-2)
+;;(mac-modifiers-control-option-command-2)
+(mac-modifiers-control-option-command-3)
 ;;(mac-modifiers-control-option-command-command-control)
 ;;(mac-modifiers-control-option-command-capscontrol)
 
@@ -1504,3 +1513,6 @@
   scroll-margin 0                  
   scroll-conservatively 100000
   scroll-preserve-screen-position 1)
+
+
+(global-auto-revert-mode 1)
