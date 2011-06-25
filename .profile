@@ -432,7 +432,7 @@ export LOOP_DIR=/usr/local/share/lua/5.1/loop
 alias lua="rlwrap lua" 
 
 
-export LUA_PATH="/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/?.lua;${HOME}/?.lua;./?.lua;./?.lua;?/init.lua"
+export LUA_PATH=";;/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/?.lua;${HOME}/?.lua;./?.lua;./?.lua;?/init.lua"
 alias del="rm -i"
 
 export TEXDIR="/usr/local/texlive/2010/texmf-dist/tex"
@@ -441,7 +441,7 @@ alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
 alias lualatex="rlwrap lualatex"
 alias xelatex="rlwrap xelatex"
-LESS="-IR"; export LESS
+LESS="-IRm"; export LESS
 
 ##################  EMACS ##########################################
 export PATH=${HOME}/Applications/emacs-23.3-YAMAMOTO/mac/Emacs.app/Contents/MacOS/:${PATH}:/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin

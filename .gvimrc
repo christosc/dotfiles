@@ -1,4 +1,5 @@
 set guifont=Menlo:h12
+"set guifont=Consolas:h12
 "set guifont=DejaVuSansMono:h12
 ":inoremap <S-space> <ESC>
 :inoremap <D-space> <ESC>
@@ -33,7 +34,7 @@ colorscheme chela_light-1
 "set number
 "hi Comment gui=None
 set columns=100
-set guicursor=i:ver20-blinkwait200-blinkon600-blinkoff600
+set guicursor=i:ver10-blinkwait200-blinkon600-blinkoff600
 set guicursor+=n-c-v:blinkon0
 "set guicursor+=n-c-v:ver20-blinkon500-blinkoff500
 "set guicursor+=n-c-v:blinkon600-blinkoff600
