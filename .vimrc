@@ -284,7 +284,7 @@ let tlist_make_settings  = 'make;m:makros;t:targets'
 
 set noimdisable
 
-set tags=./tags;
+set tags=./tags,tags
 
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 autocmd FileType gitcommit setlocal textwidth=72

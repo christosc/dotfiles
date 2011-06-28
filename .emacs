@@ -1438,7 +1438,7 @@
 ;;(mac-modifiers-option-control-command)
 ;;(mac-modifiers-control-option-command)
 ;;(mac-modifiers-control-option-command-2)
-(mac-modifiers-control-option-command-3)
+;;(mac-modifiers-control-option-command-3)
 ;;(mac-modifiers-control-option-command-command-control)
 ;;(mac-modifiers-control-option-command-capscontrol)
 
