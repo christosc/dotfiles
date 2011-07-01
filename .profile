@@ -468,5 +468,15 @@ fi
 
 source ~/.hg-completion.sh
 
+alias -- -="fg %-"
+alias -- +="fg %+"
+alias 1="fg %1"
+alias 2="fg %2"
+alias 3="fg %3"
+alias 4="fg %4"
+alias 5="fg %5"
+alias 6="fg %6"
+alias 7="fg %7"
+
 export PATH=.:$PATH
 alias j="jobs"
