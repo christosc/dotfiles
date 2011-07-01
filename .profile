@@ -415,7 +415,6 @@ _expand()
 
 #alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
-alias "+"=fg
 
 
 
@@ -477,6 +476,6 @@ alias 4="fg %4"
 alias 5="fg %5"
 alias 6="fg %6"
 alias 7="fg %7"
+alias j="jobs"
 
 export PATH=.:$PATH
-alias j="jobs"
