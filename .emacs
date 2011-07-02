@@ -544,7 +544,7 @@
 
 ;(blink-cursor-mode)
 
-(add-to-list 'default-frame-alist '(cursor-color . "black"))
+;;(add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
 (setq-default cursor-type '(bar . 1))
@@ -1172,12 +1172,11 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(cursor ((t (:background "black" :inverse-video t))))
+ '(cursor ((t (:background "SkyBlue"))))
  '(font-latex-verbatim-face ((((class color) (background light)) (:inherit fixed-pitch :foreground "SaddleBrown" :height 140))))
- '(font-lock-comment-face ((t (:foreground "dark green"))))
- '(font-lock-function-name-face ((((class color) (min-colors 88) (background light)) (:foreground "Black" :weight bold))))
- '(font-lock-keyword-face ((((class color) (min-colors 88) (background light)) (:foreground "Blue3"))))
- '(mode-line ((((class color) (min-colors 88)) (:background "black" :foreground "white" :box (:line-width -1 :style released-button)))))
+ '(font-lock-comment-face ((t (:foreground "mediumseagreen"))))
+ '(font-lock-function-name-face ((nil (:foreground "DodgerBlue"))))
+ '(font-lock-keyword-face ((nil (:foreground "darkkhaki"))))
  '(variable-pitch ((t (:height 190 :family "Times New Roman")))))
 
 
@@ -1390,7 +1389,7 @@
     (setq mac-function-modifier 'super)
     (setq mac-pass-command-to-system nil)))
 
-(defun mac-modifiers-control-option-command ()
+(defun mac-modifiers-super-meta-control ()
   (progn
     (setq mac-control-modifier 'super)
     (setq mac-option-modifier 'meta)
@@ -1399,7 +1398,7 @@
     (setq mac-pass-command-to-system nil)))
 
 
-(defun mac-modifiers-control-option-command-2 ()
+(defun mac-modifiers-control-meta-control ()
   (progn
     (setq mac-control-modifier 'control)
     (setq mac-option-modifier 'meta)
@@ -1407,7 +1406,7 @@
     (setq mac-function-modifier 'hyper)
     (setq mac-pass-command-to-system nil)))
 
-(defun mac-modifiers-control-option-command-3 ()
+(defun mac-modifiers-meta-meta-control ()
   (progn
     (setq mac-control-modifier 'meta)
     (setq mac-option-modifier 'meta)
@@ -1441,6 +1440,7 @@
 ;;(mac-modifiers-control-option-command-3)
 ;;(mac-modifiers-control-option-command-command-control)
 ;;(mac-modifiers-control-option-command-capscontrol)
+(mac-modifiers-control-meta-control)
 
 ;; (auto-fill-mode t)
 (auto-fill-mode 1)
@@ -1507,7 +1507,7 @@
 ;;(require 'framemove)
 ;;(framemove-default-keybindings 'control)
 
-(desktop-save-mode 1)
+;;(desktop-save-mode 1)
 
 (setq
   scroll-margin 0                  
@@ -1516,3 +1516,11 @@
 
 
 (global-auto-revert-mode 1)
+
+;;; my color customizations
+(setq default-frame-alist
+      (append default-frame-alist
+       '((foreground-color . "grey80")
+	 (background-color . "black")
+	 (cursor-color . "SkyBlue")
+	 )))

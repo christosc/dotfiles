@@ -16,7 +16,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "emacs"
+let colors_name = "emacs1"
 
 hi Normal guifg=Black guibg=White
 
