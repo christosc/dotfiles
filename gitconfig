@@ -3,6 +3,8 @@
 	email = C.Chryssochoidis@gmail.com
 [core]
 	excludesfile = /Users/christos/.gitexcludes
-	editor = /Users/christos/bin/vim
+	editor = /Applications/MacVim.app/Contents/MacOS/Vim
 [alias]
 	s = status --short
+[gui]
+	recentrepo = /private/tmp/bbbb
