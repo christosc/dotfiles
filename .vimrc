@@ -290,3 +290,5 @@ autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 autocmd FileType gitcommit setlocal textwidth=72
 set statusline=\ %t\ \ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ %h%m%r%y\ %{fugitive#statusline()}%=%c,%v\ %l/%L\ %P\ 
 
+set t_Co=256
+

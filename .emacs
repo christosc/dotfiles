@@ -1423,6 +1423,15 @@
     (setq mac-pass-command-to-system nil)
     (setq mac-pass-control-to-system nil)))
 
+(defun mac-modifiers-control-none-meta ()
+  (progn
+    (setq mac-control-modifier 'control)
+    (setq mac-option-modifier 'none)
+    (setq mac-command-modifier 'meta)
+    (setq mac-function-modifier 'super)
+    (setq mac-pass-command-to-system t)
+    (setq mac-pass-control-to-system t)))
+
 (defun mac-modifiers-control-option-command-capscontrol ()
   (progn
     (setq mac-control-modifier 'control)
@@ -1436,11 +1445,12 @@
 ;;(mac-modifiers-option-command-control)
 ;;(mac-modifiers-option-control-command)
 ;;(mac-modifiers-control-option-command)
+(mac-modifiers-control-meta-control)
 ;;(mac-modifiers-control-option-command-2)
 ;;(mac-modifiers-control-option-command-3)
 ;;(mac-modifiers-control-option-command-command-control)
 ;;(mac-modifiers-control-option-command-capscontrol)
-(mac-modifiers-control-meta-control)
+;;(mac-modifiers-control-meta-control)
 
 ;; (auto-fill-mode t)
 (auto-fill-mode 1)
