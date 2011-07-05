@@ -337,7 +337,7 @@ function en0 () {
 }
 
 
-export VIM_APP_DIR=/Applications/MacVim-7_3a-BETA-52_1
+#export VIM_APP_DIR=/Applications/MacVim-7_3a-BETA-52_1
 
 # modified from http://www.nanoant.com/programming/opening-specified-path-in-terminals-new-tab
 alias twd=new_terminal_working_directory
@@ -413,7 +413,7 @@ _expand()
 }
 
 
-#alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 
 

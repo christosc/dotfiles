@@ -18,7 +18,11 @@ set autoread
 set linebreak
 set ruler
 "colorscheme desert
-colorscheme emacs1
+"colorscheme emacs1
+"colorscheme zenburn
+colorscheme grb4
+"colorscheme inkpot
+"colorscheme gardener
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
