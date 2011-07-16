@@ -1,7 +1,7 @@
 ;-*- coding: utf-8 -*-    
 
 
-(server-start)                          
+;;(server-start)                          
 
 (add-to-list 'custom-theme-load-path "~/elisp/emacs24/color-themes")
 (add-to-list 'load-path "/Users/christos/elisp")
@@ -1215,7 +1215,7 @@
 		  (lambda ()
 			(set (make-local-variable 'cc-other-file-alist)  '(("\\.m\\'" (".h")) ("\\.h\\'" (".m" ".c" ".cpp"))))))
    ;;; word movement for camelCasey names
-(add-hook 'objc-mode-hook 'c-subword-mode)
+;;(add-hook 'objc-mode-hook 'c-subword-mode)
 
 
 (add-hook 'c-mode-common-hook
@@ -1263,7 +1263,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1501,7 +1501,7 @@
 
 ;;(setq ido-enable-flex-matching t)
 ;;(setq ido-everywhere t)
-(ido-mode 1)
+;;(ido-mode 1)
 
 ;;(setq
 ;;  scroll-margin 0                  
@@ -1537,3 +1537,7 @@
 (load-theme 'tsdh-dark t)
 ;;(windmove-default-keybindings 'meta)
 ;;(set-fringe-mode 20)
+
+;;(load "mwheel.el" nil t t)
+(require 'mouse)
+(xterm-mouse-mode t)

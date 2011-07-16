@@ -20,9 +20,11 @@ set ruler
 "colorscheme desert
 "colorscheme emacs1
 "colorscheme zenburn
-colorscheme grb4
+"colorscheme grb4
 "colorscheme inkpot
 "colorscheme gardener
+"colorscheme wombat256
+colorscheme desert256
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
@@ -51,6 +53,8 @@ autocmd FileType taglist set wrap
 "map k gk
 "map $ g$
 "map ^ g^
+inoremap jj <Esc>
+inoremap ξξ <Esc>
 map ξ j
 map κ k
 map η h

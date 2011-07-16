@@ -233,7 +233,7 @@ export GOARCH
 
 ##############################
 
-export LESS="-Pm ?f%f .?pb%pb\%:?lbLine %lb:?bbByte %bb:-... $ -m"
+#export LESS="-Pm ?f%f .?pb%pb\%:?lbLine %lb:?bbByte %bb:-... $ -m"
 
 
 
@@ -435,7 +435,7 @@ export LUA_PATH=";;/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/?.lua;${HOME}/
 alias del="rm -i"
 
 export TEXDIR="/usr/local/texlive/2010/texmf-dist/tex"
-export CDPATH=".:~/work/git:~/work"
+export CDPATH=".:~/work/git-svn:~/work/git:~/work"
 alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
 alias lualatex="rlwrap lualatex"
@@ -445,7 +445,7 @@ LESS="-IRm"; export LESS
 ##################  EMACS ##########################################
 export PATH=${HOME}/Applications/emacs-23.3-YAMAMOTO/mac/Emacs.app/Contents/MacOS/:${PATH}:/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin
 alias emacscl="emacsclient -n"
-alias emc=emacsclient
+alias emc="emacsclient -t"
 #export ALTERNATE_EDITOR="emacs -nw" EDITOR=emacsclient VISUAL=emacsclient
 #export EDITOR=emacsclient
 export PATH=$HOME/local/bin:$PATH
@@ -453,8 +453,8 @@ export MANPATH=$HOME/local/share/man:$MANPATH
 export LANG=en_US.UTF-8
 
 # Source the git bash completion file
-if [ -f ~/.git-completion.sh ]; then
-    source ~/.git-completion.sh
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+    source /usr/local/etc/bash_completion.d/git-completion.bash
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
@@ -476,6 +476,9 @@ alias 4="fg %4"
 alias 5="fg %5"
 alias 6="fg %6"
 alias 7="fg %7"
+alias 8="fg %8"
+alias 9="fg %9"
 alias j="jobs"
 
 export PATH=.:$PATH
+export JIRA_HOME="/Applications/atlassian-jira"
