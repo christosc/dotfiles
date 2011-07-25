@@ -5,7 +5,7 @@
         <key>LANG</key>
         <string>en_US</string>
 	<key>CDPATH</key>
-        <string>.:~/work/git-svn:~/work/git:~/work</string>
+        <string>.:~/devel/git-svn:~/devel/git:~/devel</string>
 	<key>PATH</key>
 	<string>.:/Users/christos/bin:/Users/christos/SDKs/android-sdk-mac_x86/tools:/opt/subversion/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/Users/christos/tools/apache-maven-2.2.1/bin:/Library/Frameworks/Python.framework/Versions/3.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/git/bin:/Users/christos/SDKs/android-sdk-mac_86/tools:/Users/christos/.cabal/bin:/Users/christos/bin:/Users/christos/SDKs/scala-2.8.0.final/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin:/Users/christos/bin:/usr/local/mysql/bin:/Users/christos/.cabal/bin/:/Users/christos/local/erlang:/Users/christos/bin:/opt/local/bin:/opt/local/sbin:/Users/christos/sdk/lua/Current:/Users/christos/.local/bin</string>
 </dict>

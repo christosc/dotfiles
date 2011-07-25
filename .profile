@@ -83,12 +83,14 @@ alias mutt="/usr/local/bin/mutt"
 #export CLICOLOR=true export LSCOLORS=ExFxCxDxBxegedabagacad
 
 #export LS_OPTIONS='-h --color=auto'
-export CLICOLOR=1
+#export CLICOLOR=1
 #LS_COLORS="ow=94:di=34"
 #export LS_COLORS
-export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
+#export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 alias ls="ls --color -h"
-export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
+export LS_COLORS="di=01;36"
+
+#export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
 
 #QTDIR=/sw/lib/qt3mac
 #PATH=$QTDIR/bin:$PATH
@@ -435,7 +437,7 @@ export LUA_PATH=";;/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/?.lua;${HOME}/
 alias del="rm -i"
 
 export TEXDIR="/usr/local/texlive/2010/texmf-dist/tex"
-export CDPATH=".:~/work/git-svn:~/work/git:~/work"
+export CDPATH=".:~/devel/git-svn:~/devel/git:~/devel"
 alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
 alias lualatex="rlwrap lualatex"
@@ -457,7 +459,8 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
     source /usr/local/etc/bash_completion.d/git-completion.bash
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
-    PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+    #PS1='\u@\h:\W[$(__git_ps1 " (%s)")]\$ '
+    PS1='\u@\h:\W $(__git_ps1 " (%s)")\$ '
 fi
 
 # Source the svn bash completion file
