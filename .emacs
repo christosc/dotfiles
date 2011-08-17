@@ -1440,11 +1440,12 @@
 ;;    (setq mac-pass-command-to-system t)
     ))
 
+(mac-modifiers-control-none-meta)
 ;;(mac-modifiers-command-option-control)
 ;;(mac-modifiers-option-command-control)
 ;;(mac-modifiers-option-control-command)
 ;;(mac-modifiers-control-option-command)
-(mac-modifiers-control-meta-control)
+;;(mac-modifiers-control-meta-control)
 ;;(mac-modifiers-control-option-command-2)
 ;;(mac-modifiers-control-option-command-3)
 ;;(mac-modifiers-control-option-command-command-control)
@@ -1540,4 +1541,4 @@
 
 ;;(load "mwheel.el" nil t t)
 (require 'mouse)
-(xterm-mouse-mode t)
+;;(xterm-mouse-mode t)

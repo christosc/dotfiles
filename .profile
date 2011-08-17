@@ -42,7 +42,7 @@ export PATH=$PATH:/Users/christos/.cabal/bin/
 
 
 ################   MODULA-3   ####################################
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/cm3/lib
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/cm3/lib:/usr/local/mysql/lib
 ############## ΤΕΛΟΣ MODULA-3 ####################################
 
 #export adalib=/usr/local/ada-4.3/lib/gcc/i686-apple-darwin/4.3.0/adalib:/usr/local/ada-4.3/lib/gcc/i686-apple-darwin9/4.3.0/adalib
@@ -363,7 +363,7 @@ INFOPATH="$HOME"/info:$INFOPATH
 # The orginal version is saved in .profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
-export PYTHONPATH=/Library/Python/2.6/site-packages:/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:${PYTHONPATH}
+export PYTHONPATH=/Library/Python/2.7/site-packages:/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:${PYTHONPATH}
 # ΓΙΑ SVN ΑΠΟ COLLABNET
 export PATH=/opt/subversion/bin:$PATH
 
@@ -485,3 +485,13 @@ alias j="jobs"
 
 export PATH=.:$PATH
 export JIRA_HOME="/Applications/atlassian-jira"
+
+##
+# Your previous /Users/christos/.profile file was backed up as /Users/christos/.profile.macports-saved_2011-08-02_at_18:45:35
+##
+
+# MacPorts Installer addition on 2011-08-02_at_18:45:35: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+#export PATH=/usr/local/ActivePerl-5.14/bin:$PATH
