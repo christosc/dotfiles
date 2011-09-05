@@ -1,4 +1,5 @@
 set guifont=Menlo:h12
+"set guifont=Cousine:h12
 "set guifont=Consolas:h12
 "set guifont=DejaVuSansMono:h12
 ":inoremap <S-space> <ESC>

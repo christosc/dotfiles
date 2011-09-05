@@ -549,11 +549,11 @@
 ;;(add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
-(setq-default cursor-type '(bar . 1))
+;;(setq-default cursor-type '(bar . 1))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
-(setq blink-cursor-interval 0.6)
-;;(blink-cursor-mode 0)
+;;(setq blink-cursor-interval 0.6)
+(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1263,7 +1263,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1344,7 +1344,7 @@
 ;;(set-frame-size-according-to-resolution)
 
 (add-hook 'LaTeX-mode-hook (lambda () (progn
-                                        (variable-pitch-mode 1)
+                                        ;;(variable-pitch-mode 1)
                                         ;;(set-frame-font "Menlo-13")
                                         ;;(setq line-spacing 2)
                                         (auto-fill-mode t)
@@ -1440,7 +1440,7 @@
 ;;    (setq mac-pass-command-to-system t)
     ))
 
-(mac-modifiers-control-none-meta)
+;;(mac-modifiers-control-none-meta)
 ;;(mac-modifiers-command-option-control)
 ;;(mac-modifiers-option-command-control)
 ;;(mac-modifiers-option-control-command)
@@ -1535,10 +1535,13 @@
 ;;	 (cursor-color . "SkyBlue")
 ;;	 )))
 
-(load-theme 'tsdh-dark t)
+;;(load-theme 'tsdh-dark t)
+;;(load-file "~/src/djcb-elisp/themes/zenburn-theme.el")
+(load-theme 'zenburn)
 ;;(windmove-default-keybindings 'meta)
 ;;(set-fringe-mode 20)
 
 ;;(load "mwheel.el" nil t t)
-(require 'mouse)
+;;(require 'mouse)
 ;;(xterm-mouse-mode t)
+(setq mac-right-option-modifier 'none)
