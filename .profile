@@ -455,8 +455,8 @@ export MANPATH=$HOME/local/share/man:$MANPATH
 export LANG=en_US.UTF-8
 
 # Source the git bash completion file
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-    source /usr/local/etc/bash_completion.d/git-completion.bash
+if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+    source /usr/local/git/contrib/completion/git-completion.bash
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     #PS1='\u@\h:\W[$(__git_ps1 " (%s)")]\$ '

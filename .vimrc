@@ -24,7 +24,9 @@ set ruler
 "colorscheme inkpot
 "colorscheme gardener
 "colorscheme wombat256
-colorscheme desert256
+"colorscheme desert256
+colorscheme chela_light-1
+
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
