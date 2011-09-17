@@ -88,7 +88,7 @@ alias mutt="/usr/local/bin/mutt"
 #export LS_COLORS
 #export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 alias ls="ls --color -h"
-export LS_COLORS="di=01;36"
+#export LS_COLORS="di=01;36" # γιὰ σκοῦρο ὑπόβαθρο
 
 #export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
 

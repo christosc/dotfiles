@@ -7,4 +7,5 @@
 	/* "^ " = "setMark:"; */
        /* "^j" = "scrollLineDown:"; */
         /*"^k" = "scrollLineUp:";*/
+        "~d"        = "deleteWordForward:";
 }

@@ -8,5 +8,5 @@
 	s = status --short
 [gui]
 	recentrepo = /private/tmp/bbbb
-[merge]
-	conflictstyle = diff3
+#[merge]
+#	conflictstyle = diff3

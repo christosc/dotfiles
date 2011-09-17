@@ -29,7 +29,8 @@ let Tlist_WinWidth=40
 "colorscheme vylight-mod
 "colorscheme tango2
 "colorscheme emacs1
-colorscheme chela_light-1
+"colorscheme chela_light-1
+colorscheme moria
 "hi CuresorLine guibg=Grey95
 "set background=light
 "set number
