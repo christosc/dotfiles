@@ -549,11 +549,11 @@
 ;;(add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
-;;(setq-default cursor-type '(bar . 1))
+(setq-default cursor-type '(bar . 1))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 ;;(setq blink-cursor-interval 0.6)
-(blink-cursor-mode 0)
+;;(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1040,7 +1040,7 @@
 
 
 (add-to-list 'default-frame-alist '(width . 91))
-(add-to-list 'default-frame-alist '(height . 51))
+(add-to-list 'default-frame-alist '(height . 55))
 ;; (add-to-list 'default-frame-alist '(foreground-color  . "grey9"))
 ;; (add-to-list 'default-frame-alist '(background-color  . "grey91"))
 ;; (add-to-list 'default-frame-alist '(cursor-color  . "red3"))
@@ -1545,3 +1545,5 @@
 ;;(require 'mouse)
 ;;(xterm-mouse-mode t)
 (setq mac-right-option-modifier 'none)
+
+(setq redisplay-dont-pause t)

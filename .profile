@@ -87,7 +87,7 @@ alias mutt="/usr/local/bin/mutt"
 #LS_COLORS="ow=94:di=34"
 #export LS_COLORS
 #export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
-alias ls="ls --color -h"
+alias ls="ls --color -h "
 #export LS_COLORS="di=01;36" # γιὰ σκοῦρο ὑπόβαθρο
 
 #export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
@@ -173,7 +173,7 @@ shopt -s nocaseglob
 
 
 #alias γιὰ OCaml
-#alias ocaml="rlwrap ocaml"
+alias ocaml="rlwrap ocaml"
 
 # path=$PATH:$HOME/godi/bin:$HOME/godi/sbin 
 #alias γιὰ SMLNJ
@@ -495,3 +495,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 #export PATH=/usr/local/ActivePerl-5.14/bin:$PATH
+
+# For OCaml's GODI
+export PATH=$PATH:/opt/godi/bin:/opt/godi/sbin
+export MANPATH=$MANPATH:/opt/godi/man
