@@ -1567,3 +1567,6 @@
 
 
 (setq redisplay-dont-pause t)
+(setq-default fill-column 78)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'python-mode-hook 'turn-on-auto-fill)
