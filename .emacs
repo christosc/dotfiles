@@ -1554,5 +1554,16 @@
 
 (global-set-key (kbd "M-;")
 
+(setq-default  mode-line-format (append
+                                 (butlast mode-line-format 6)
+                                 '(" ")
+                                 '((5 (:eval (symbol-name mac-option-modifier))))
+                                ; '(" ")
+                                ; '((5 (:eval (if mac-pass-command-to-system
+                                ;                 "pass"
+                                ;               "¬pass"))))
+                                ; '(" ")
+                                 (last mode-line-format 6)))
+
 
 (setq redisplay-dont-pause t)
