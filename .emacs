@@ -1356,11 +1356,11 @@
 ;;(setq mac-command-modifier nil)
 (define-key global-map [ns-drag-file] 'ns-find-file)
 
-(setq ns-alternate-modifier 'meta)
-(setq ns-right-alternate-modifier 'left)
-(setq ns-command-modifier 'control)
-(setq ns-control-modifier 'super)
-(setq ns-function-modifier 'hyper)
+;;(setq ns-alternate-modifier 'meta)
+;;(setq ns-right-alternate-modifier 'left)
+;;(setq ns-command-modifier 'control)
+;;(setq ns-control-modifier 'super)
+;;(setq ns-function-modifier 'hyper)
 
 ;;;;;;;;;;;;;;;;; Γιὰ τὴν ἔκδοσι τοῦ YAMAMOTO! ;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -1544,6 +1544,15 @@
 ;;(load "mwheel.el" nil t t)
 ;;(require 'mouse)
 ;;(xterm-mouse-mode t)
-(setq mac-right-option-modifier 'none)
+;;(setq mac-right-option-modifier 'none)
+
+(defun toggle-option-key()
+  (interactive)
+  (if (eq mac-option-modifier 'meta)
+      (setq mac-option-modifier 'none)
+    (setq mac-option-modifier 'meta)))
+
+(global-set-key (kbd "M-;")
+
 
 (setq redisplay-dont-pause t)
