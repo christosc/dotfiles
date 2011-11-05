@@ -301,4 +301,4 @@ autocmd FileType gitcommit setlocal textwidth=72
 "set statusline=\ %t\ \ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ %h%m%r%y\ %{fugitive#statusline()}%=%c,%v\ %l/%L\ %P\ 
 
 set t_Co=256
-
+colorscheme zenburn

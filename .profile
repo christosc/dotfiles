@@ -88,6 +88,8 @@ alias mutt="/usr/local/bin/mutt"
 #export LS_COLORS
 #export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 alias ls="ls --color -h "
+#export CLICOLOR=1
+#export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 #export LS_COLORS="di=01;36" # γιὰ σκοῦρο ὑπόβαθρο
 
 #export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
@@ -433,7 +435,7 @@ export LOOP_DIR=/usr/local/share/lua/5.1/loop
 alias lua="rlwrap lua" 
 
 
-export LUA_PATH=";;/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/?.lua;${HOME}/?.lua;./?.lua;./?.lua;?/init.lua"
+export LUA_PATH=";;${HOME}/src/lua-stdlib/src/?.lua;/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/?.lua;${HOME}/?.lua;./?.lua;?/init.lua;${HOME}/src/lua-xpath/?.lua;"
 alias del="rm -i"
 
 export TEXDIR="/usr/local/texlive/2010/texmf-dist/tex"
@@ -499,3 +501,12 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # For OCaml's GODI
 export PATH=$PATH:/opt/godi/bin:/opt/godi/sbin
 export MANPATH=$MANPATH:/opt/godi/man
+
+##
+# Your previous /Users/christos/.profile file was backed up as /Users/christos/.profile.macports-saved_2011-10-31_at_18:07:58
+##
+
+# MacPorts Installer addition on 2011-10-31_at_18:07:58: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+

@@ -1,12 +1,18 @@
 [user]
 	name = Christos Chryssochoidis
-	email = C.Chryssochoidis@gmail.com
+	email = c.chryssochoidis@gmail.com
 [core]
 	excludesfile = /Users/christos/.gitexcludes
-	editor = /Applications/MacVim.app/Contents/MacOS/Vim
+	editor = "/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 [alias]
 	s = status --short
 [gui]
 	recentrepo = /private/tmp/bbbb
 #[merge]
 #	conflictstyle = diff3
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

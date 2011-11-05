@@ -1263,7 +1263,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1413,6 +1413,11 @@
     (setq mac-function-modifier 'super)
     (setq mac-pass-command-to-system nil)))
 
+(defun mac-modifiers--none-meta ()
+  (progn
+    (setq mac-option-modifier 'none)
+    (setq mac-command-modifier 'meta)))    
+
 (defun mac-modifiers-control-option-command-command-control ()
   (progn
     (setq mac-control-modifier 'meta)
@@ -1552,21 +1557,30 @@
       (setq mac-option-modifier 'none)
     (setq mac-option-modifier 'meta)))
 
-(global-set-key (kbd "M-;")
+(mac-modifiers--none-meta)
+;;(global-set-key (kbd "C-;") 'toggle-option-key)
+;;(global-set-key (kbd "C-S-;") 'toggle-option-key)
 
-(setq-default  mode-line-format (append
-                                 (butlast mode-line-format 6)
-                                 '(" ")
-                                 '((5 (:eval (symbol-name mac-option-modifier))))
-                                ; '(" ")
-                                ; '((5 (:eval (if mac-pass-command-to-system
-                                ;                 "pass"
-                                ;               "¬pass"))))
-                                ; '(" ")
-                                 (last mode-line-format 6)))
+;;(setq-default  mode-line-format (append
+;;                                 (butlast mode-line-format 6)
+;;                                 '(" ")
+;;                                 '((5 (:eval (symbol-name mac-option-modifier))))
+;;                                ; '(" ")
+;;                                ; '((5 (:eval (if mac-pass-command-to-system
+;;                                ;                 "pass"
+;;                                ;               "¬pass"))))
+;;                                ; '(" ")
+;;                                 (last mode-line-format 6)))
 
 
 (setq redisplay-dont-pause t)
 (setq-default fill-column 78)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'python-mode-hook 'turn-on-auto-fill)
+
+;; -----------------------------------------------------------------------------
+;; Git support
+;; -----------------------------------------------------------------------------
+(add-to-list 'load-path "/opt/local/share/doc/git-core/contrib/emacs")
+(require 'git)
+(require 'git-blame)
