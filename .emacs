@@ -1109,7 +1109,7 @@
 ;;(cua-mode t)
 
 
-(load-file "~/elisp/hyper-super-meta-control.el")
+;;(load-file "~/elisp/hyper-super-meta-control.el")
 
 (filesets-init)
 
@@ -1557,7 +1557,7 @@
       (setq mac-option-modifier 'none)
     (setq mac-option-modifier 'meta)))
 
-(mac-modifiers--none-meta)
+;;(mac-modifiers--none-meta)
 ;;(global-set-key (kbd "C-;") 'toggle-option-key)
 ;;(global-set-key (kbd "C-S-;") 'toggle-option-key)
 
@@ -1572,6 +1572,8 @@
 ;;                                ; '(" ")
 ;;                                 (last mode-line-format 6)))
 
+;;(setq mac-option-modifier 'meta)
+
 
 (setq redisplay-dont-pause t)
 (setq-default fill-column 78)
@@ -1584,3 +1586,7 @@
 (add-to-list 'load-path "/opt/local/share/doc/git-core/contrib/emacs")
 (require 'git)
 (require 'git-blame)
+
+;; Γιὰ τὴν ἐπέκτασι Chrome 
+(require 'edit-server)
+(edit-server-start)
