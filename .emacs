@@ -928,8 +928,8 @@
 
 
 ;; Διὰ Org mode
-(add-to-list 'load-path "~/src/org-7.5/lisp")
-(add-to-list 'load-path "~/src/org-7.5/contrib/lisp")
+(add-to-list 'load-path "~/src/org/lisp")
+(add-to-list 'load-path "~/src/org/contrib/lisp")
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
@@ -1590,3 +1590,8 @@
 ;; Γιὰ τὴν ἐπέκτασι Chrome 
 (require 'edit-server)
 (edit-server-start)
+
+;; C-x 8 a => …
+(global-set-key (kbd "C-x 8 a") '(lambda ()
+				   (interactive)
+				   (ucs-insert #x2026)))
