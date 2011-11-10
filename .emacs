@@ -3,6 +3,9 @@
 
 ;;(server-start)                          
 
+;; Don't ask whether to follow a versioned file link; just open it.
+(setq vc-follow-symlinks t)
+
 (add-to-list 'custom-theme-load-path "~/elisp/emacs24/color-themes")
 (add-to-list 'load-path "/Users/christos/elisp")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
@@ -1130,12 +1133,12 @@
 ;; (setq ido-enable-flex-matching t) ;; enable fuzzy matching
 
 ;; HUNSPELL
-(require 'ispell)
-(setq ispell-program-name "/usr/local/bin/hunspell")
+;;(require 'ispell)
+;;(setq ispell-program-name "/usr/local/bin/hunspell")
 
 
-(setq ispell-process-directory (expand-file-name "~/"))
-(setq ispell-dictionary "en_US")
+;;(setq ispell-process-directory (expand-file-name "~/"))
+;;(setq ispell-dictionary "en_US")
 
 
 
@@ -1263,7 +1266,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1595,3 +1598,26 @@
 (global-set-key (kbd "C-x 8 a") '(lambda ()
 				   (interactive)
 				   (ucs-insert #x2026)))
+
+
+;;(eval-after-load "ispell"
+;;  '(progn (defun ispell-get-coding-system () 'utf-8)))
+;;(eval-after-load "ispell"
+;;  (progn
+;;    (setq ispell-dictionary "en_US"
+;;	  ispell-extra-args '("-a" "-i" "utf-8")
+;;	  ispell-silently-savep t
+;;	  ;;ispell-really-hunspell t)))
+;;	  )))
+
+;;(setq ispell-program-name "/opt/local/bin/hunspell")
+;;(setq-default ispell-program-name "/opt/local/bin/aspell")
+	;; ispell-dictionary-alist
+	;; '((nil ; default
+	;;    "[A-Za-z]" "[^A-Za-z]" "[']" t ("-d" "en_US" "-i"
+	;;				     "utf-8") nil utf-8)
+	;;   ("american" ; Yankee English
+	;;    "[A-Za-z]" "[^A-Za-z]" "[']" t ("-d" "en_US" "-i"
+	;;				     "utf-8") nil utf-8)))))
+;;	    (defun ispell-get-coding-system () 'utf-8)))))
+

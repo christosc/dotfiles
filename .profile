@@ -265,7 +265,7 @@ export ANDROID="$HOME"/SDKs/android-sdk-mac_86
 export PATH="$ANDROIDTOOLS":$PATH
 
 
-export DICPATH="$HOME"/dict/en_US
+export DICPATH=/opt/local/share/hunspell/
 export DICTIONARY=en_US
 
 PRINTER=192.168.1.15
