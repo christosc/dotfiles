@@ -1621,3 +1621,13 @@
 	;;				     "utf-8") nil utf-8)))))
 ;;	    (defun ispell-get-coding-system () 'utf-8)))))
 
+;; Just define this function with a name so that it's more obvious what it
+;; does.
+(defun turn-on-flyspell ()
+   "Force flyspell-mode on using a positive arg.  For use in hooks."
+   (interactive)
+   (flyspell-mode 1))
+
+(add-hook 'text-mode-hook 'turn-on-flyspell)
+(add-hook 'c-mode-common-hook 'flyspell-prog-mode)
+(add-hook 'tcl-mode-hook 'flyspell-prog-mode)
