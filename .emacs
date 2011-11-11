@@ -552,11 +552,11 @@
 ;;(add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
-(setq-default cursor-type '(bar . 1))
+;;(setq-default cursor-type '(bar . 1))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 ;;(setq blink-cursor-interval 0.6)
-;;(blink-cursor-mode 0)
+(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1266,7 +1266,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1602,16 +1602,17 @@
 
 ;;(eval-after-load "ispell"
 ;;  '(progn (defun ispell-get-coding-system () 'utf-8)))
-;;(eval-after-load "ispell"
-;;  (progn
-;;    (setq ispell-dictionary "en_US"
+(eval-after-load "ispell"
+  (progn
+    (setq ispell-dictionary "en_US"
 ;;	  ispell-extra-args '("-a" "-i" "utf-8")
 ;;	  ispell-silently-savep t
 ;;	  ;;ispell-really-hunspell t)))
-;;	  )))
+	  )))
 
 ;;(setq ispell-program-name "/opt/local/bin/hunspell")
-;;(setq-default ispell-program-name "/opt/local/bin/aspell")
+(setq-default ispell-program-name "/opt/local/bin/aspell")
+(setq ispell-extra-args '("--sug-mode=ultra"))
 	;; ispell-dictionary-alist
 	;; '((nil ; default
 	;;    "[A-Za-z]" "[^A-Za-z]" "[']" t ("-d" "en_US" "-i"
@@ -1631,3 +1632,13 @@
 (add-hook 'text-mode-hook 'turn-on-flyspell)
 (add-hook 'c-mode-common-hook 'flyspell-prog-mode)
 (add-hook 'tcl-mode-hook 'flyspell-prog-mode)
+
+;; change command to meta, and ignore option to use Greek keyboard
+(setq mac-option-modifier 'meta)    ;; option key -> meta
+(setq mac-command-modifier 'ctrl)   ;; command key -> control
+(setq mac-control-modifier 'meta)   ;; caps lock -> meta
+(setq mac-function-modifier 'super) ;; function key -> super
+
+;; make sure path is correct when launched as application
+(setenv "PATH" (getenv "PATH"))
+
