@@ -1,7 +1,7 @@
 ;-*- coding: utf-8 -*-    
 
 
-;;(server-start)                          
+(server-start)                          
 
 ;; Don't ask whether to follow a versioned file link; just open it.
 (setq vc-follow-symlinks t)
@@ -1266,7 +1266,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;

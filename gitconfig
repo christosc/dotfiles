@@ -3,7 +3,7 @@
 	email = c.chryssochoidis@gmail.com
 [core]
 	excludesfile = /Users/christos/.gitexcludes
-	editor = "/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+	editor = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 [alias]
 	s = status --short
 [gui]
