@@ -1266,7 +1266,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1545,7 +1545,8 @@
 
 ;;(load-theme 'tsdh-dark t)
 ;;(load-file "~/src/djcb-elisp/themes/zenburn-theme.el")
-(load-theme 'zenburn)
+;;(load-theme 'zenburn)
+(load-theme 'manoj-dark)
 ;;(windmove-default-keybindings 'meta)
 ;;(set-fringe-mode 20)
 
@@ -1634,9 +1635,14 @@
 (add-hook 'tcl-mode-hook 'flyspell-prog-mode)
 
 ;; change command to meta, and ignore option to use Greek keyboard
-(setq mac-option-modifier 'meta)    ;; option key -> meta
-(setq mac-command-modifier 'ctrl)   ;; command key -> control
-(setq mac-control-modifier 'meta)   ;; caps lock -> meta
+;;(setq mac-option-modifier 'meta)    ;; option key -> meta
+;;(setq mac-command-modifier 'ctrl)   ;; command key -> control
+;;(setq mac-control-modifier 'meta)   ;; caps lock -> meta
+;;(setq mac-function-modifier 'super) ;; function key -> super
+
+(setq mac-option-modifier 'none)    ;; option key -> none
+(setq mac-command-modifier 'meta)   ;; command key -> meta
+(setq mac-control-modifier 'ctrl)   ;; caps lock -> ctrl
 (setq mac-function-modifier 'super) ;; function key -> super
 
 ;; make sure path is correct when launched as application
