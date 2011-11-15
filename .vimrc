@@ -302,3 +302,5 @@ autocmd FileType gitcommit setlocal textwidth=72
 
 set t_Co=256
 colorscheme zenburn
+
+call pathogen#infect()

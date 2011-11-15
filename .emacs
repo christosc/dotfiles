@@ -1266,7 +1266,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1546,7 +1546,8 @@
 ;;(load-theme 'tsdh-dark t)
 ;;(load-file "~/src/djcb-elisp/themes/zenburn-theme.el")
 ;;(load-theme 'zenburn)
-(load-theme 'manoj-dark)
+(load-theme 'deeper-blue)
+;;(load-theme 'manoj-dark)
 ;;(windmove-default-keybindings 'meta)
 ;;(set-fringe-mode 20)
 
@@ -1644,7 +1645,40 @@
 (setq mac-command-modifier 'meta)   ;; command key -> meta
 (setq mac-control-modifier 'ctrl)   ;; caps lock -> ctrl
 (setq mac-function-modifier 'super) ;; function key -> super
-
+;;(setq mac-right-command-modifier 'ctrl)
 ;; make sure path is correct when launched as application
 (setenv "PATH" (getenv "PATH"))
+
+(global-set-key (kbd "M-β") 'backward-word)
+(global-set-key (kbd "M-φ") 'forward-word)
+(global-set-key (kbd "C-β") 'backward-char)
+(global-set-key (kbd "C-φ") 'forward-char)
+(global-set-key (kbd "C-α") 'beginning-of-visual-line)
+(global-set-key (kbd "C-ε") 'end-of-visual-line)
+(global-set-key (kbd "M-α") 'backward-sentence)
+(global-set-key (kbd "M-ε") 'forward-sentence)
+(global-set-key (kbd "M-δ") 'kill-word)
+(global-set-key (kbd "C-δ") 'delete-char)
+(global-set-key (kbd "C-ν") 'next-line)
+(global-set-key (kbd "C-π") 'previous-line)
+(global-set-key (kbd "C-χ C-σ") 'save-buffer)
+(global-set-key (kbd "C-χ σ") 'save-some-buffers)
+(global-set-key (kbd "C-κ") 'kill-visual-line)
+(global-set-key (kbd "M-κ") 'kill-sentence)
+(global-set-key (kbd "C-ς") 'kill-region)
+(global-set-key (kbd "M-ς") 'kill-ring-save)
+(global-set-key (kbd "C-υ") 'yank)
+(global-set-key (kbd "M-υ") 'yank-pop)
+(global-set-key (kbd "C-χ β") 'switch-to-buffer)
+(global-set-key (kbd "C-χ C-β") 'list-buffers)
+(global-set-key (kbd "C-χ C-ψ") 'save-buffers-kill-terminal)
+(global-set-key (kbd "M-῎") 'dabbrev-expand)
+(global-set-key (kbd "C-χ DEL") 'backward-kill-sentence)
+(global-set-key (kbd "M-μ") 'back-to-indentation)
+
+
+
+
+
+
 
