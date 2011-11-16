@@ -452,7 +452,7 @@
 
 
 ;; Haskell Mode
-;(load "~/elisp/fptools/CONTRIB/haskell-modes/emacs/haskell-mode.el") 
+(load "~/elisp/haskell-mode-2.8.0/haskell-site-file.el")
 ;(load "/Users/christos/repos/haskellmode-emacs/haskell-site-file")
 ;(load "~/elisp/fptools/CONTRIB/haskell-modes/emacs/haskell-indentation.el")
 ;(load "~/elisp/fptools/CONTRIB/haskell-modes/emacs/haskell-simple-indent.el")
@@ -460,9 +460,9 @@
 
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
 
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-ghci)
@@ -1252,7 +1252,7 @@
 ;;   ;; highlight errors/warnings in the source.
 ;;   (scion-flycheck-on-save 1))
 
-(add-hook 'haskell-mode-hook 'my-haskell-hook)
+;;(add-hook 'haskell-mode-hook 'my-haskell-hook)
 
 ;; Use ido-mode completion (matches anywhere, not just beginning)
 ;;
@@ -1266,7 +1266,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1497,8 +1497,8 @@
 
 ;;(buffer-face-mode 1)
 (setq bookmark-save-flag 1)
-
-(setq default-input-method 'greek-ibycus4)
+(load-file "~/elisp/macgreek.el")
+(setq default-input-method 'mac-greek)
 
 ;;(global-subword-mode 1) θὰ ἦτο καλὸ ἂν δούλευε...
 ;;(add-to-list 'default-frame-alist '(background-color . "#F0F0F0"))
@@ -1601,6 +1601,10 @@
 				   (interactive)
 				   (ucs-insert #x2026)))
 
+(global-set-key (kbd "C-x 8 ;") '(lambda ()
+				   (interactive)
+				   (ucs-insert #x0387)))
+
 
 ;;(eval-after-load "ispell"
 ;;  '(progn (defun ispell-get-coding-system () 'utf-8)))
@@ -1636,46 +1640,56 @@
 (add-hook 'tcl-mode-hook 'flyspell-prog-mode)
 
 ;; change command to meta, and ignore option to use Greek keyboard
-;;(setq mac-option-modifier 'meta)    ;; option key -> meta
-;;(setq mac-command-modifier 'ctrl)   ;; command key -> control
-;;(setq mac-control-modifier 'meta)   ;; caps lock -> meta
-;;(setq mac-function-modifier 'super) ;; function key -> super
-
-(setq mac-option-modifier 'none)    ;; option key -> none
-(setq mac-command-modifier 'meta)   ;; command key -> meta
-(setq mac-control-modifier 'ctrl)   ;; caps lock -> ctrl
+(setq mac-option-modifier 'meta)    ;; option key -> meta
+(setq mac-command-modifier 'ctrl)   ;; command key -> control
+(setq mac-control-modifier 'meta)   ;; caps lock -> meta
 (setq mac-function-modifier 'super) ;; function key -> super
+
+;;(setq mac-option-modifier 'none)    ;; option key -> none
+;;(setq mac-command-modifier 'meta)   ;; command key -> meta
+;;(setq mac-control-modifier 'ctrl)   ;; caps lock -> ctrl
+;;(setq mac-function-modifier 'super) ;; function key -> super
 ;;(setq mac-right-command-modifier 'ctrl)
 ;; make sure path is correct when launched as application
 (setenv "PATH" (getenv "PATH"))
 
-(global-set-key (kbd "M-β") 'backward-word)
-(global-set-key (kbd "M-φ") 'forward-word)
-(global-set-key (kbd "C-β") 'backward-char)
-(global-set-key (kbd "C-φ") 'forward-char)
-(global-set-key (kbd "C-α") 'beginning-of-visual-line)
-(global-set-key (kbd "C-ε") 'end-of-visual-line)
-(global-set-key (kbd "M-α") 'backward-sentence)
-(global-set-key (kbd "M-ε") 'forward-sentence)
-(global-set-key (kbd "M-δ") 'kill-word)
-(global-set-key (kbd "C-δ") 'delete-char)
-(global-set-key (kbd "C-ν") 'next-line)
-(global-set-key (kbd "C-π") 'previous-line)
-(global-set-key (kbd "C-χ C-σ") 'save-buffer)
-(global-set-key (kbd "C-χ σ") 'save-some-buffers)
-(global-set-key (kbd "C-κ") 'kill-visual-line)
-(global-set-key (kbd "M-κ") 'kill-sentence)
-(global-set-key (kbd "C-ς") 'kill-region)
-(global-set-key (kbd "M-ς") 'kill-ring-save)
-(global-set-key (kbd "C-υ") 'yank)
-(global-set-key (kbd "M-υ") 'yank-pop)
-(global-set-key (kbd "C-χ β") 'switch-to-buffer)
-(global-set-key (kbd "C-χ C-β") 'list-buffers)
-(global-set-key (kbd "C-χ C-ψ") 'save-buffers-kill-terminal)
-(global-set-key (kbd "M-῎") 'dabbrev-expand)
-(global-set-key (kbd "C-χ DEL") 'backward-kill-sentence)
-(global-set-key (kbd "M-μ") 'back-to-indentation)
+;;(global-set-key (kbd "M-β") 'backward-word)
+;;(global-set-key (kbd "M-φ") 'forward-word)
+;;(global-set-key (kbd "C-β") 'backward-char)
+;;(global-set-key (kbd "C-φ") 'forward-char)
+;;(global-set-key (kbd "C-α") 'beginning-of-visual-line)
+;;(global-set-key (kbd "C-ε") 'end-of-visual-line)
+;;(global-set-key (kbd "M-α") 'backward-sentence)
+;;(global-set-key (kbd "M-ε") 'forward-sentence)
+;;(global-set-key (kbd "M-δ") 'kill-word)
+;;(global-set-key (kbd "C-δ") 'delete-char)
+;;(global-set-key (kbd "C-ν") 'next-line)
+;;(global-set-key (kbd "C-π") 'previous-line)
+;;(global-set-key (kbd "C-χ C-σ") 'save-buffer)
+;;(global-set-key (kbd "C-χ σ") 'save-some-buffers)
+;;(global-set-key (kbd "C-κ") 'kill-visual-line)
+;;(global-set-key (kbd "M-κ") 'kill-sentence)
+;;(global-set-key (kbd "C-ς") 'kill-region)
+;;(global-set-key (kbd "M-ς") 'kill-ring-save)
+;;(global-set-key (kbd "C-υ") 'yank)
+;;(global-set-key (kbd "M-υ") 'yank-pop)
+;;(global-set-key (kbd "C-χ β") 'switch-to-buffer)
+;;(global-set-key (kbd "C-χ C-β") 'list-buffers)
+;;(global-set-key (kbd "C-χ C-ψ") 'save-buffers-kill-terminal)
+;;(global-set-key (kbd "M-῎") 'dabbrev-expand)
+;;(global-set-key (kbd "C-χ DEL") 'backward-kill-sentence)
+;;(global-set-key (kbd "M-μ") 'back-to-indentation)
 
+;;;;(global-set-key (kbd "M-n") 'next-line)
+;;;;(global-set-key (kbd "M-p") 'previous-line)
+;;;;(global-set-key (kbd "M-ν") 'next-line)
+;;;;(global-set-key (kbd "M-π") 'previous-line)
+
+;;(global-set-key (kbd "M-s") 'save-buffer)
+;;(global-set-key (kbd "M-S") 'save-some-buffers)
+;;(global-set-key (kbd "M-σ") 'save-buffer)
+;;(global-set-key (kbd "M-Σ") 'save-some-buffers)
+   
 
 
 
