@@ -1691,6 +1691,10 @@
 ;;(global-set-key (kbd "M-Σ") 'save-some-buffers)
    
 
+(load "~/elisp/packages/emacs-tiny-tools/lisp/other/folding.el")
+(load "folding" 'nomessage 'noerror)
+(folding-mode-add-find-file-hook)
+
 
 
 

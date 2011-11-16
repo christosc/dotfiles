@@ -3,9 +3,9 @@
 	email = c.chryssochoidis@gmail.com
 [core]
 	excludesfile = /Users/christos/.gitexcludes
-	editor = "/Applications/Emacs.app/Contents/MacOS/emacsclient"
+	editor = "/Applications/Emacs.app/Contents/MacOS/emacs -nw"
 [alias]
-	s = status --short
+	s = status
 [gui]
 	recentrepo = /private/tmp/bbbb
 #[merge]
