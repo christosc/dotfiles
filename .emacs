@@ -1,7 +1,8 @@
 ;-*- coding: utf-8 -*-    
 
-
-(server-start)                          
+(require 'server)
+(when (and (functionp 'server-running-p) (not (server-running-p)))
+  (server-start))
 
 ;; Don't ask whether to follow a versioned file link; just open it.
 (setq vc-follow-symlinks t)
