@@ -557,7 +557,7 @@
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 ;;(setq blink-cursor-interval 0.6)
-;;(blink-cursor-mode 0)
+(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1104,7 +1104,7 @@
 ;;(set-face-background 'hl-line  "lemon chiffon")
 
 ;; (add-to-list 'default-frame-alist '(cursor-color . "Black"))
-(add-to-list 'default-frame-alist '(cursor-type . (bar . 2)))
+;;(add-to-list 'default-frame-alist '(cursor-type . (bar . 2)))
 ;; (setq-default cursor-type '(bar . 1))
 
 ;; (blink-cursor-mode t)
@@ -1713,3 +1713,5 @@
 
 (fset 'desingr
    [return ?d ?e ?s ?c ?r ?i ?p ?t ?i ?o ?n ?  ?\{ return return ?\} return ?t ?h ?e ?I ?n ?g ?r ?e ?d ?i ?e ?n ?t ?s ?  ?\{ return return ?\} ?\C-p ?\C-p ?\C-p ?\C-p])
+
+(global-set-key (kbd "C-`") 'toggle-input-method)
