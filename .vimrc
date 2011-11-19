@@ -14,7 +14,7 @@ set softtabstop=4
 set noexpandtab
 set autowrite  " ὁ Μανώλης τὸ ἔχει ἔτσι (συντμ. aw)
 set autoread
-set number
+"set number
 set linebreak
 set ruler
 "colorscheme desert
@@ -301,6 +301,9 @@ autocmd FileType gitcommit setlocal textwidth=72
 "set statusline=\ %t\ \ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ %h%m%r%y\ %{fugitive#statusline()}%=%c,%v\ %l/%L\ %P\ 
 
 set t_Co=256
-colorscheme zenburn
+"colorscheme zenburn
+colorscheme wombat256
 
 call pathogen#infect()
+
+set hidden

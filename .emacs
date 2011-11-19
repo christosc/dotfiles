@@ -557,7 +557,7 @@
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 ;;(setq blink-cursor-interval 0.6)
-(blink-cursor-mode 0)
+;;(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1044,7 +1044,7 @@
 
 
 (add-to-list 'default-frame-alist '(width . 91))
-(add-to-list 'default-frame-alist '(height . 55))
+(add-to-list 'default-frame-alist '(height . 58))
 ;; (add-to-list 'default-frame-alist '(foreground-color  . "grey9"))
 ;; (add-to-list 'default-frame-alist '(background-color  . "grey91"))
 ;; (add-to-list 'default-frame-alist '(cursor-color  . "red3"))
@@ -1104,9 +1104,9 @@
 ;;(set-face-background 'hl-line  "lemon chiffon")
 
 ;; (add-to-list 'default-frame-alist '(cursor-color . "Black"))
-;; (add-to-list 'default-frame-alist '(cursor-type . (bar . 1)))
+(add-to-list 'default-frame-alist '(cursor-type . (bar . 2)))
 ;; (setq-default cursor-type '(bar . 1))
-;;(setq-default cursor-type '(bar . 1))
+
 ;; (blink-cursor-mode t)
 ;;(setq blink-cursor-interval 0.5)
 
@@ -1267,7 +1267,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1309,6 +1309,7 @@
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
 ;;(blink-cursor-mode t)
 ;;(setq-default blink-cursor-interval 0.5)
+;;(setq-default cursor-type '(bar . 1))
 ;;(setq-default indent-tabs-mode nil)
 
 
@@ -1545,9 +1546,12 @@
 ;;	 )))
 
 ;;(load-theme 'tsdh-dark t)
+;;(load-theme 'wombat t)
 ;;(load-file "~/src/djcb-elisp/themes/zenburn-theme.el")
-;;(load-theme 'zenburn)
-(load-theme 'deeper-blue)
+;;(load-theme 'zenburn t)
+(load-theme 'whiteboard t)
+;;(set-cursor-color 'green)
+;;(load-theme 'deeper-blue)
 ;;(load-theme 'manoj-dark)
 ;;(windmove-default-keybindings 'meta)
 ;;(set-fringe-mode 20)
@@ -1607,6 +1611,7 @@
 				   (ucs-insert #x0387)))
 
 
+
 ;;(eval-after-load "ispell"
 ;;  '(progn (defun ispell-get-coding-system () 'utf-8)))
 (eval-after-load "ispell"
@@ -1637,13 +1642,13 @@
    (flyspell-mode 1))
 
 (add-hook 'text-mode-hook 'turn-on-flyspell)
-(add-hook 'c-mode-common-hook 'flyspell-prog-mode)
-(add-hook 'tcl-mode-hook 'flyspell-prog-mode)
+;;(add-hook 'c-mode-common-hook 'flyspell-prog-mode)
+;;(add-hook 'tcl-mode-hook 'flyspell-prog-mode)
 
 ;; change command to meta, and ignore option to use Greek keyboard
 (setq mac-option-modifier 'meta)    ;; option key -> meta
 (setq mac-command-modifier 'ctrl)   ;; command key -> control
-(setq mac-control-modifier 'meta)   ;; caps lock -> meta
+(setq mac-control-modifier 'ctrl)   ;; caps lock -> meta
 (setq mac-function-modifier 'super) ;; function key -> super
 
 ;;(setq mac-option-modifier 'none)    ;; option key -> none
@@ -1696,8 +1701,15 @@
 (load "folding" 'nomessage 'noerror)
 (folding-mode-add-find-file-hook)
 
+(fset 'theIngredients
+   [return ?t ?h ?e ?I ?n ?g ?r ?e ?d ?i ?e ?n ?t ?s ?  ?\{ return return ?\} ?\C-p])
+
+
+(fset 'description
+   [return ?d ?e ?c backspace ?s ?c ?r ?i ?p ?t ?i ?o ?n ?  ?\{ return return ?\} ?\C-p])
 
 
 
 
-
+(fset 'desingr
+   [return ?d ?e ?s ?c ?r ?i ?p ?t ?i ?o ?n ?  ?\{ return return ?\} return ?t ?h ?e ?I ?n ?g ?r ?e ?d ?i ?e ?n ?t ?s ?  ?\{ return return ?\} ?\C-p ?\C-p ?\C-p ?\C-p])
