@@ -5,7 +5,10 @@
 	excludesfile = /Users/christos/.gitexcludes
 	editor = "/Applications/Emacs.app/Contents/MacOS/emacs -nw"
 [alias]
-	s = status
+    st = status
+    co = checkout
+    ci = commit
+    br = branch
 [gui]
 	recentrepo = /private/tmp/bbbb
 #[merge]
