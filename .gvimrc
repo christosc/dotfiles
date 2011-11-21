@@ -17,6 +17,7 @@ set guifont=Menlo:h12
 "set textwidth=80
 "colorscheme zenburn
 colorscheme BClear
+"colorscheme github2
 "colorscheme wombat
 "colorscheme wombat256
 "colorscheme desert
@@ -39,7 +40,7 @@ let Tlist_WinWidth=40
 "set background=light
 "set number
 "hi Comment gui=None
-set columns=100
+set columns=90
 "set guicursor=i:ver10-blinkwait200-blinkon600-blinkoff600
 "set guicursor+=n-c-v:blinkwait200-blinkon600-blinkoff600
 set guicursor=n-v-c:block-Cursor/lCursor-blinkwait300-blinkoff500-blinkon500,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver15-Cursor/lCursor-blinkwait300-blinkoff500-blinkon500,r-cr:hor20-Cursor/lCursor,sm:block-Cursor-blinkwait175-blinkoff500-blinkon500

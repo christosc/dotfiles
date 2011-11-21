@@ -16,7 +16,9 @@
 (setq TeX-parse-self t) ; Enable parse on load.
 (setq TeX-auto-save t) ; Enable parse on save.
 
-;;;;;;;;;;;; /AUCTeX   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'saveplace)
+(setq-default save-place t)
 
 
 ;;;;;;;;;;;;;;;;;  GNUS ;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -553,11 +555,11 @@
 ;;(add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
-;;(setq-default cursor-type '(bar . 1))
+(setq-default cursor-type '(bar . 1))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 ;;(setq blink-cursor-interval 0.6)
-(blink-cursor-mode 0)
+;;(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1267,7 +1269,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1294,7 +1296,7 @@
 (put 'narrow-to-region 'disabled nil)
 
 
-(global-set-key (kbd "C-.") 'set-mark-command)
+;;(global-set-key (kbd "C-.") 'set-mark-command)
 (global-set-key (kbd "C-γ") 'keyboard-quit)
 (global-set-key (kbd "C-α") 'beginning-of-visual-line)
 (global-set-key (kbd "C-ε") 'end-of-visual-line)
@@ -1307,7 +1309,7 @@
 ;;(global-auto-revert-mode 1)
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
-;;(blink-cursor-mode t)
+;;(blink-cursor-mode 0)
 ;;(setq-default blink-cursor-interval 0.5)
 ;;(setq-default cursor-type '(bar . 1))
 ;;(setq-default indent-tabs-mode nil)
@@ -1546,10 +1548,12 @@
 ;;	 )))
 
 ;;(load-theme 'tsdh-dark t)
+(load-theme 'tsdh-light t)
 ;;(load-theme 'wombat t)
 ;;(load-file "~/src/djcb-elisp/themes/zenburn-theme.el")
 ;;(load-theme 'zenburn t)
-(load-theme 'whiteboard t)
+;;(load-theme 'whiteboard t)
+;;(load-theme 'adwaita t)
 ;;(set-cursor-color 'green)
 ;;(load-theme 'deeper-blue)
 ;;(load-theme 'manoj-dark)
@@ -1641,14 +1645,14 @@
    (interactive)
    (flyspell-mode 1))
 
-(add-hook 'text-mode-hook 'turn-on-flyspell)
+;;(add-hook 'text-mode-hook 'turn-on-flyspell)
 ;;(add-hook 'c-mode-common-hook 'flyspell-prog-mode)
 ;;(add-hook 'tcl-mode-hook 'flyspell-prog-mode)
 
 ;; change command to meta, and ignore option to use Greek keyboard
-(setq mac-option-modifier 'meta)    ;; option key -> meta
-(setq mac-command-modifier 'ctrl)   ;; command key -> control
-(setq mac-control-modifier 'ctrl)   ;; caps lock -> meta
+(setq mac-option-modifier 'meta)  
+(setq mac-command-modifier 'ctrl) 
+(setq mac-control-modifier 'ctrl) 
 (setq mac-function-modifier 'super) ;; function key -> super
 
 ;;(setq mac-option-modifier 'none)    ;; option key -> none
@@ -1691,10 +1695,10 @@
 ;;;;(global-set-key (kbd "M-ν") 'next-line)
 ;;;;(global-set-key (kbd "M-π") 'previous-line)
 
-;;(global-set-key (kbd "M-s") 'save-buffer)
-;;(global-set-key (kbd "M-S") 'save-some-buffers)
-;;(global-set-key (kbd "M-σ") 'save-buffer)
-;;(global-set-key (kbd "M-Σ") 'save-some-buffers)
+(global-set-key (kbd "M-s") 'save-buffer)
+(global-set-key (kbd "M-S") 'save-some-buffers)
+(global-set-key (kbd "M-σ") 'save-buffer)
+(global-set-key (kbd "M-Σ") 'save-some-buffers)
    
 
 (load "~/elisp/packages/emacs-tiny-tools/lisp/other/folding.el")
@@ -1715,3 +1719,24 @@
    [return ?d ?e ?s ?c ?r ?i ?p ?t ?i ?o ?n ?  ?\{ return return ?\} return ?t ?h ?e ?I ?n ?g ?r ?e ?d ?i ?e ?n ?t ?s ?  ?\{ return return ?\} ?\C-p ?\C-p ?\C-p ?\C-p])
 
 (global-set-key (kbd "C-`") 'toggle-input-method)
+
+
+;;;;;;;;;;;;;;;;;;;;  GNUS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;(setq gnus-select-method '(nnimap "gmail"
+;;				  (nnimap-address "imap.gmail.com")
+;;				  (nnimap-server-port 993)
+;;				  (nnimap-stream ssl)))
+;;
+;;
+;;
+;;(setq message-send-mail-function 'smtpmail-send-it
+;;      smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+;;      smtpmail-auth-credentials '(("smtp.gmail.com" 587 "c.chryssochoidis@gmail.com" nil))
+;;      smtpmail-default-smtp-server "smtp.gmail.com"
+;;      smtpmail-smtp-server "smtp.gmail.com"
+;;      smtpmail-smtp-service 587
+;;      smtpmail-local-domain "localdomain")
+
+(add-hook 'text-mode-hook
+       (lambda () (set-input-method "TeX")))  ;; Automatically turn on tex
+					      ;; input method for text mode.
