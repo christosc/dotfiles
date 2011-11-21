@@ -1740,3 +1740,9 @@
 (add-hook 'text-mode-hook
        (lambda () (set-input-method "TeX")))  ;; Automatically turn on tex
 					      ;; input method for text mode.
+
+(defun count-matches-whole (regexp)
+	(interactive "MHow many matched for regexp: ")
+	(save-excursion
+	  (count-matches regexp 1 (point-max) t)
+	  ))
