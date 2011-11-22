@@ -555,11 +555,11 @@
 ;;(add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
-(setq-default cursor-type '(bar . 2))
+;;(setq-default cursor-type '(bar . 2))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 ;;(setq blink-cursor-interval 0.6)
-;;(blink-cursor-mode 0)
+(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -1538,7 +1538,7 @@
 ;;  scroll-preserve-screen-position 1)
 
 
-(global-auto-revert-mode 1)
+;;(global-auto-revert-mode 1)
 
 ;;; my color customizations
 ;;(setq default-frame-alist
@@ -1778,9 +1778,41 @@
 (add-to-list 'load-path "~/elisp/bbdb/lisp")
 (require 'bbdb)
 
-(bbdb-initialize 'gnus 'message)
-(bbdb-insinuate-message)
-(add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
+;;(bbdb-initialize 'gnus 'message)
+;;(bbdb-insinuate-message)
+;;(add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
+;;
+;;(setq bbdb-file "~/Dropbox/bbdb")
 
-(setq bbdb-file "~/Dropbox/bbdb")
+;; Helper commands for org mode's countdown timer. (So that I haven't to
+;; switch to my todo org buffer to activate/cance/pause/continue it.)
+(defun switch-org-timer-set-timer ()
+  (interactive)
+  (save-excursion
+    (save-window-excursion
+      (switch-to-buffer "todo.org" t)
+      (universal-argument)
+      (universal-argument)
+      (org-timer-set-timer))))
 
+(defun switch-org-cancel-timer ()
+  (interactive)
+  (save-excursion
+    (save-window-excursion
+      (switch-to-buffer "todo.org" t)
+      (org-timer-cancel-timer))))
+
+(defun switch-org-pause-or-continue ()
+  (interactive)
+  (save-excursion
+    (save-window-excursion
+      (switch-to-buffer "todo.org" t)
+      (org-timer-pause-or-continue))))
+
+
+(defun setup-local-org ()
+  (interactive)
+  (progn
+    (local-set-key (kbd "C-c C-c ;") 'switch-org-timer-set-timer)
+    (local-set-key (kbd "C-c C-c _") 'switch-org-cancel-timer)
+    (local-set-key (kbd "C-c C-c ,") 'switch-org-pause-or-continue)))
