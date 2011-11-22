@@ -555,7 +555,7 @@
 ;;(add-to-list 'default-frame-alist '(cursor-color . "black"))
 ;;(add-to-list 'default-frame-alist '(background-color . "grey95"))
 ;;(set-default 'cursor-type 'box)
-(setq-default cursor-type '(bar . 1))
+(setq-default cursor-type '(bar . 2))
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 ;;(setq blink-cursor-interval 0.6)
@@ -692,6 +692,7 @@
  '(lua-indent-level 4)
  '(nxhtml-skip-welcome t)
  '(org-clock-auto-clock-resolution t)
+ '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t)
  '(tags-case-fold-search (quote default)))
 
@@ -1181,7 +1182,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(font-latex-verbatim-face ((((class color) (background light)) (:inherit fixed-pitch :foreground "SaddleBrown" :height 140))))
+ '(font-latex-verbatim-face ((((class color) (background light)) (:inherit fixed-pitch :foreground "SaddleBrown" :height 140))) t)
  '(variable-pitch ((t (:height 190 :family "Times New Roman")))))
 
 
@@ -1726,16 +1727,23 @@
 ;;				  (nnimap-address "imap.gmail.com")
 ;;				  (nnimap-server-port 993)
 ;;				  (nnimap-stream ssl)))
-;;
-;;
-;;
-;;(setq message-send-mail-function 'smtpmail-send-it
-;;      smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-;;      smtpmail-auth-credentials '(("smtp.gmail.com" 587 "c.chryssochoidis@gmail.com" nil))
-;;      smtpmail-default-smtp-server "smtp.gmail.com"
-;;      smtpmail-smtp-server "smtp.gmail.com"
-;;      smtpmail-smtp-service 587
-;;      smtpmail-local-domain "localdomain")
+(setq gnus-select-method
+      '(nnimap "Mail"
+	       (nnimap-address "localhost")
+	       (nnimap-stream network)
+	       (nnimap-authenticator login)))
+
+(setq user-mail-address "c.chryssochoidis@gmail.com")
+(setq gnus-ignored-from-addresses "youruser")
+
+
+(setq message-send-mail-function 'smtpmail-send-it
+      smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+      smtpmail-auth-credentials '(("smtp.gmail.com" 587 "c.chryssochoidis@gmail.com" nil))
+      smtpmail-default-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-service 587
+      smtpmail-local-domain "localdomain")
 
 (add-hook 'text-mode-hook
        (lambda () (set-input-method "TeX")))  ;; Automatically turn on tex
@@ -1746,3 +1754,33 @@
 	(save-excursion
 	  (count-matches regexp 1 (point-max) t)
 	  ))
+
+(defun fill-current-line-region ()
+  (interactive)
+  (save-excursion
+    (let ((start (point-at-bol))
+	  (end (progn (forward-paragraph) (backward-char) (point))))
+	  (fill-region start end))))
+		 
+	
+
+
+(global-set-key (kbd "C-c q") 'fill-current-line-region)
+
+;;(defun fill-line ()
+;;  (interactive)
+;;  (save-excursion
+;;    (point-at-bol)
+;;    (set-mark)
+;;    (point-at-eol)
+;;    (fill-region)))
+;;;;;;;;;;;  BBDB ;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/elisp/bbdb/lisp")
+(require 'bbdb)
+
+(bbdb-initialize 'gnus 'message)
+(bbdb-insinuate-message)
+(add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
+
+(setq bbdb-file "~/Dropbox/bbdb")
+
