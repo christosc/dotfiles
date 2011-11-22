@@ -1549,7 +1549,8 @@
 ;;	 )))
 
 ;;(load-theme 'tsdh-dark t)
-(load-theme 'tsdh-light t)
+(if window-system
+    (load-theme 'tsdh-light t))
 ;;(load-theme 'wombat t)
 ;;(load-file "~/src/djcb-elisp/themes/zenburn-theme.el")
 ;;(load-theme 'zenburn t)
