@@ -1046,7 +1046,7 @@
 ;;(global-set-key (read-kbd-macro "M-;") 'my-comment-line-or-region)
 
 
-(add-to-list 'default-frame-alist '(width . 91))
+(add-to-list 'default-frame-alist '(width . 81))
 (add-to-list 'default-frame-alist '(height . 58))
 ;; (add-to-list 'default-frame-alist '(foreground-color  . "grey9"))
 ;; (add-to-list 'default-frame-alist '(background-color  . "grey91"))
@@ -1760,7 +1760,7 @@
   (interactive)
   (save-excursion
     (let ((start (point-at-bol))
-	  (end (progn (forward-paragraph) (backward-char) (point))))
+	  (end (search-forward "\n")))
 	  (fill-region start end))))
 		 
 	
@@ -1785,35 +1785,7 @@
 ;;
 ;;(setq bbdb-file "~/Dropbox/bbdb")
 
-;; Helper commands for org mode's countdown timer. (So that I haven't to
-;; switch to my todo org buffer to activate/cance/pause/continue it.)
-(defun switch-org-timer-set-timer ()
-  (interactive)
-  (save-excursion
-    (save-window-excursion
-      (switch-to-buffer "todo.org" t)
-      (universal-argument)
-      (universal-argument)
-      (org-timer-set-timer))))
-
-(defun switch-org-cancel-timer ()
-  (interactive)
-  (save-excursion
-    (save-window-excursion
-      (switch-to-buffer "todo.org" t)
-      (org-timer-cancel-timer))))
-
-(defun switch-org-pause-or-continue ()
-  (interactive)
-  (save-excursion
-    (save-window-excursion
-      (switch-to-buffer "todo.org" t)
-      (org-timer-pause-or-continue))))
-
-
-(defun setup-local-org ()
-  (interactive)
-  (progn
-    (local-set-key (kbd "C-c C-c ;") 'switch-org-timer-set-timer)
-    (local-set-key (kbd "C-c C-c _") 'switch-org-cancel-timer)
-    (local-set-key (kbd "C-c C-c ,") 'switch-org-pause-or-continue)))
+;; Git commit-mode
+(require 'git-commit)
+(add-hook 'git-commit-mode-hook 'turn-on-flyspell)
+(add-hook 'git-commit-mode-hook (lambda () (toggle-save-place 0)))
