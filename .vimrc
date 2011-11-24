@@ -25,8 +25,9 @@ set ruler
 "colorscheme gardener
 "colorscheme wombat256
 "colorscheme desert256
-colorscheme chela_light-1
-
+"colorscheme chela_light-1
+"colorscheme github
+colorscheme github2
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
@@ -302,7 +303,7 @@ autocmd FileType gitcommit setlocal textwidth=72
 
 set t_Co=256
 "colorscheme zenburn
-colorscheme wombat256
+"colorscheme wombat256
 
 call pathogen#infect()
 
@@ -312,3 +313,8 @@ noremap  <silent> k gk
 noremap  <silent> j gj
 noremap  <silent> 0 g0
 noremap  <silent> $ g$
+
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+

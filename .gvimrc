@@ -1,4 +1,4 @@
-set guifont=Menlo:h12
+set guifont=Consolas:h13
 "set guifont=Cousine:h12
 "set guifont=Consolas:h12
 "set guifont=DejaVuSansMono:h12

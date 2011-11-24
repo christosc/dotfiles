@@ -1304,7 +1304,7 @@
 (global-set-key (kbd "C-κ") 'kill-visual-line)
 
 (assq-delete-all 'font default-frame-alist) 
-(add-to-list 'default-frame-alist '(font . "Menlo-12"))
+(add-to-list 'default-frame-alist '(font . "Consolas-13"))
 ;;(setq-default indent-tabs-mode nil)
 
 ;;(global-auto-revert-mode 1)
@@ -1652,8 +1652,8 @@
 ;;(add-hook 'tcl-mode-hook 'flyspell-prog-mode)
 
 ;; change command to meta, and ignore option to use Greek keyboard
-(setq mac-option-modifier 'meta)  
-(setq mac-command-modifier 'ctrl) 
+(setq mac-option-modifier nil)
+(setq mac-command-modifier 'meta)
 (setq mac-control-modifier 'ctrl) 
 (setq mac-function-modifier 'super) ;; function key -> super
 
@@ -1789,3 +1789,19 @@
 (require 'git-commit)
 (add-hook 'git-commit-mode-hook 'turn-on-flyspell)
 (add-hook 'git-commit-mode-hook (lambda () (toggle-save-place 0)))
+
+;; for better scrolling
+;; nice scrolling
+(setq scroll-margin 0
+      scroll-conservatively 100000
+      scroll-preserve-screen-position 1)
+
+;; A function computing the progress I made in job.  It doesn't have any
+;; general use, but I put in here because it demonstrates the use of several
+;; Emacs built-in funtions and special forms.
+(defun progress ()
+  (interactive)
+  (let* ((beg (point-min))
+	 (end (point-max))
+	 (occ (count-matches "^description {" beg end)))
+    (message "%.1f%%" (* 100 (/ (float occ) 197)))))
