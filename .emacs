@@ -1312,7 +1312,7 @@
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
 ;;(blink-cursor-mode 0)
 ;;(setq-default blink-cursor-interval 0.5)
-;;(setq-default cursor-type '(bar . 1))
+(setq-default cursor-type '(bar . 1))
 ;;(setq-default indent-tabs-mode nil)
 
 
@@ -1746,8 +1746,8 @@
       smtpmail-smtp-service 587
       smtpmail-local-domain "localdomain")
 
-(add-hook 'text-mode-hook
-       (lambda () (set-input-method "TeX")))  ;; Automatically turn on tex
+;;(add-hook 'text-mode-hook
+;;       (lambda () (set-input-method "TeX")))  ;; Automatically turn on tex
 					      ;; input method for text mode.
 
 (defun count-matches-whole (regexp)

@@ -3,7 +3,8 @@
 	email = c.chryssochoidis@gmail.com
 [core]
 	excludesfile = /Users/christos/.gitexcludes
-	editor = "/Applications/Emacs.app/Contents/MacOS/emacsclient"
+#	editor = "/Applications/Emacs.app/Contents/MacOS/emacsclient"
+        editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
 [alias]
     st = status
     co = checkout

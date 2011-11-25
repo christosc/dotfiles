@@ -115,7 +115,7 @@ imap <C-κ> <up>
 
 set expandtab
 nnoremap <Space> l
-set autoread
+"set autoread
 
 " Γιὰ νὰ ἐπισημαίνῃ τὸ κείμενο ποὺ ξεπερανᾷ τὶς 80 στῆλες...
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -318,3 +318,15 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
+autocmd BufReadPost ~/Dropbox/work/dms/pleaserun/results.txt source ~/Dropbox/work/vim/test2.vim
+
+autocmd FileChangedShell *
+          \ echohl WarningMsg |
+          \ echo "File has been changed outside of vim." |
+          \ echohl None
+
+" Enable spell check by default for git commits
+autocmd FileType gitcommit set spell
+
+" Makefile
+autocmd FileType make set noexpandtab

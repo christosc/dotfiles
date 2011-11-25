@@ -16,7 +16,8 @@ set guifont=Consolas:h13
 "inoremap <S-space> <ESC>
 "set textwidth=80
 "colorscheme zenburn
-colorscheme BClear
+"colorscheme BClear
+colorscheme github
 "colorscheme github2
 "colorscheme wombat
 "colorscheme wombat256
@@ -43,7 +44,7 @@ let Tlist_WinWidth=40
 set columns=90
 "set guicursor=i:ver10-blinkwait200-blinkon600-blinkoff600
 "set guicursor+=n-c-v:blinkwait200-blinkon600-blinkoff600
-set guicursor=n-v-c:block-Cursor/lCursor-blinkwait300-blinkoff500-blinkon500,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver15-Cursor/lCursor-blinkwait300-blinkoff500-blinkon500,r-cr:hor20-Cursor/lCursor,sm:block-Cursor-blinkwait175-blinkoff500-blinkon500
+set guicursor=n-v-c:block-Cursor/lCursor-blinkwait300-blinkoff500-blinkon500,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver10-Cursor/lCursor-blinkwait300-blinkoff500-blinkon500,r-cr:hor20-Cursor/lCursor,sm:block-Cursor-blinkwait175-blinkoff500-blinkon500
 set guicursor+=n-c-v:blinkon0
 "set guicursor+=n-c-v:ver20-blinkon500-blinkoff500
 "set guicursor+=n-c-v:blinkon600-blinkoff600uset gcr=n:blinkon0
