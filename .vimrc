@@ -325,8 +325,10 @@ autocmd FileChangedShell *
           \ echo "File has been changed outside of vim." |
           \ echohl None
 
-" Enable spell check by default for git commits
+" Enable spell check by default for git commits.
+" You must have installed vim-git plugin.
 autocmd FileType gitcommit set spell
 
-" Makefile
+" Makefile 
 autocmd FileType make set noexpandtab
+
