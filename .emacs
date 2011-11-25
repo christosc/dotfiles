@@ -20,7 +20,7 @@
 (require 'saveplace)
 (setq-default save-place t)
 
-
+(transient-mark-mode 0)
 ;;;;;;;;;;;;;;;;;  GNUS ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;(add-to-list 'gnus-secondary-select-methods '(nnimap "gmail"
 ;;                                  (nnimap-address "imap.gmail.com")
@@ -1805,3 +1805,5 @@
 	 (end (point-max))
 	 (occ (count-matches "^description {" beg end)))
     (message "%.1f%%" (* 100 (/ (float occ) 197)))))
+
+
