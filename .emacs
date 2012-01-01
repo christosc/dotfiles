@@ -4,6 +4,22 @@
 (when (and (functionp 'server-running-p) (not (server-running-p)))
   (server-start))
 
+;;(add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
+(autoload 'post-mode "post" "mode for e-mail" t)
+(add-to-list 'auto-mode-alist 
+             '("\\.*mutt-*\\|.article\\|\\.followup" 
+                . post-mode))
+
+(add-hook 'post-mode-hook 
+  (lambda()
+    (auto-fill-mode t)    
+    (setq fill-column 72)    ; rfc 1855 for usenet messages
+    ;;(require 'footnote-mode) 
+    ;;(footmode-mode t)
+    ;;(require 'boxquote)
+    ))
+
+
 ;; Don't ask whether to follow a versioned file link; just open it.
 (setq vc-follow-symlinks t)
 
@@ -20,7 +36,7 @@
 (require 'saveplace)
 (setq-default save-place t)
 
-(transient-mark-mode 0)
+;;(transient-mark-mode 0)
 ;;;;;;;;;;;;;;;;;  GNUS ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;(add-to-list 'gnus-secondary-select-methods '(nnimap "gmail"
 ;;                                  (nnimap-address "imap.gmail.com")
@@ -264,7 +280,7 @@
 (line-number-mode t)
 
 ;;(cua-mode t)
-(setq-default transient-mark-mode t)
+;;(setq-default transient-mark-mode t)
 
 
 (setq  gnus-always-read-dribble-ﬁle t)
@@ -559,7 +575,7 @@
 ;;(set-default 'cursor-type 'box)
 ;;(set-cursor-color "black")
 ;;(setq blink-cursor-interval 0.6)
-(blink-cursor-mode 0)
+;;(blink-cursor-mode 0)
 ;(set-default cursor-type 'box)
 
 
@@ -686,12 +702,14 @@
  '(TeX-source-specials-mode t)
  '(auto-save-interval 150)
  '(column-number-mode t)
- '(custom-safe-themes (quote ("e86806b411184cc146601bb25839b607bc77d3b7" default)))
+ '(custom-safe-themes (quote ("485737acc3bedc0318a567f1c0f5e7ed2dfde3fb" "1440d751f5ef51f9245f8910113daee99848e2c0" "e254937cba0f82c2d9eb3189a60748df9e486522" "e86806b411184cc146601bb25839b607bc77d3b7" default)))
+ '(default-input-method "latin-prefix")
  '(display-time-mode t)
  '(haskell-program-name "ghci")
  '(lua-indent-level 4)
  '(nxhtml-skip-welcome t)
  '(org-clock-auto-clock-resolution t)
+ '(safe-local-variable-values (quote ((eval load-file (concat (file-name-directory filename) "utils.el")) (eval load-file (concat (file-name-directory load-file-name) "utils.el")))))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t)
  '(tags-case-fold-search (quote default)))
@@ -984,7 +1002,7 @@
 ;; Γιὰ CUA mode· ἀπὸ EmacsWiki
 ;;(cua-mode t)
 ;;(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
-(transient-mark-mode 1) ;; No region when it is not highlighted
+;;(transient-mark-mode 1) ;; No region when it is not highlighted
 ;;(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
 
@@ -1270,7 +1288,7 @@
 
 
 (add-hook 'python-mode '(lambda () flymake-mode))
-(skeleton-pair-insert-maybe 1)
+(skeleton-pair-insert-maybe 1)
 
 
 ;;;;;;;;;;;;  PAREDIT ;;;;;;;;;;;;;;;;;
@@ -1304,21 +1322,23 @@
 (global-set-key (kbd "C-κ") 'kill-visual-line)
 
 (assq-delete-all 'font default-frame-alist) 
-(add-to-list 'default-frame-alist '(font . "Consolas-13"))
+;;(add-to-list 'default-frame-alist '(font . "Consolas-13"))
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-12"))
 ;;(setq-default indent-tabs-mode nil)
 
 ;;(global-auto-revert-mode 1)
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
-;;(blink-cursor-mode 0)
-;;(setq-default blink-cursor-interval 0.5)
+(blink-cursor-mode 0)
+
 (setq-default cursor-type '(bar . 1))
+(setq-default blink-cursor-interval 0.6)
 ;;(setq-default indent-tabs-mode nil)
 
 
 ;;(cua-mode t)
 ;;(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
-(transient-mark-mode 1) ;; No region when it is not highlighted
+;;(transient-mark-mode 1) ;; No region when it is not highlighted
 ;;(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
 
@@ -1551,6 +1571,7 @@
 ;;(load-theme 'tsdh-dark t)
 (if window-system
     (load-theme 'tsdh-light t))
+    ;;(load-theme 'whiteboard t))
 ;;(load-theme 'wombat t)
 ;;(load-file "~/src/djcb-elisp/themes/zenburn-theme.el")
 ;;(load-theme 'zenburn t)
@@ -1652,9 +1673,9 @@
 ;;(add-hook 'tcl-mode-hook 'flyspell-prog-mode)
 
 ;; change command to meta, and ignore option to use Greek keyboard
-(setq mac-option-modifier nil)
-(setq mac-command-modifier 'meta)
-(setq mac-control-modifier 'ctrl) 
+(setq mac-option-modifier 'meta)
+(setq mac-command-modifier 'ctrl)
+(setq mac-control-modifier 'ctrl)
 (setq mac-function-modifier 'super) ;; function key -> super
 
 ;;(setq mac-option-modifier 'none)    ;; option key -> none
@@ -1707,18 +1728,9 @@
 (load "folding" 'nomessage 'noerror)
 (folding-mode-add-find-file-hook)
 
-(fset 'theIngredients
-   [return ?t ?h ?e ?I ?n ?g ?r ?e ?d ?i ?e ?n ?t ?s ?  ?\{ return return ?\} ?\C-p])
-
-
-(fset 'description
-   [return ?d ?e ?c backspace ?s ?c ?r ?i ?p ?t ?i ?o ?n ?  ?\{ return return ?\} ?\C-p])
 
 
 
-
-(fset 'desingr
-   [return ?d ?e ?s ?c ?r ?i ?p ?t ?i ?o ?n ?  ?\{ return return ?\} return ?t ?h ?e ?I ?n ?g ?r ?e ?d ?i ?e ?n ?t ?s ?  ?\{ return return ?\} ?\C-p ?\C-p ?\C-p ?\C-p])
 
 (global-set-key (kbd "C-`") 'toggle-input-method)
 
@@ -1796,14 +1808,16 @@
       scroll-conservatively 100000
       scroll-preserve-screen-position 1)
 
-;; A function computing the progress I made in job.  It doesn't have any
-;; general use, but I put in here because it demonstrates the use of several
-;; Emacs built-in funtions and special forms.
-(defun progress ()
-  (interactive)
-  (let* ((beg (point-min))
-	 (end (point-max))
-	 (occ (count-matches "^description {" beg end)))
-    (message "%.1f%%" (* 100 (/ (float occ) 197)))))
 
 
+
+;;(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\C-c\C-m" 'execute-extended-command)
+
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+
+(require 'package)
+;; Add the user-contributed repository
+(add-to-list 'package-archives
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))

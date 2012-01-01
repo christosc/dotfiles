@@ -104,14 +104,14 @@ map  <Home> g<Home>
 map  <End>  g<End>
 map ν n
 map Ν N
-imap <C-h> <left>
-imap <C-l> <right>
-imap <C-j> <down>
-imap <C-k> <up>
-imap <C-η> <left>
-imap <C-λ> <right>
-imap <C-ξ> <down>
-imap <C-κ> <up>
+"imap <C-h> <left>
+"imap <C-l> <right>
+"imap <C-j> <down>
+"imap <C-k> <up>
+"imap <C-η> <left>
+"imap <C-λ> <right>
+"imap <C-ξ> <down>
+"imap <C-κ> <up>
 
 set expandtab
 nnoremap <Space> l
@@ -144,7 +144,7 @@ let Tlist_Use_Right_Window   = 1
 "au BufWinLeave * mkview
 "au BufWinEnter * silent loadview
 
-map <C-Space> <Esc>
+"map <C-Space> <Esc>
 "cmap <C-Space> <C-c>
 
 
@@ -293,7 +293,8 @@ set viminfo+=f1
 let tlist_tex_settings   = 'latex;b:bibitem;c:command;s:sections;g:graphics;l:labels'
 let tlist_make_settings  = 'make;m:makros;t:targets'
 
-set noimdisable
+set noimdisable  "this seems to be useful to automatically switch back to
+                 " English keyboard, when exiting insert mode...
 
 set tags=./tags,tags
 
@@ -331,4 +332,17 @@ autocmd FileType gitcommit set spell
 
 " Makefile 
 autocmd FileType make set noexpandtab
+
+set encoding=utf-8
+
+set showcmd  " display incomplete commands 
+
+set backspace=indent,eol,start  " backspace through everything in insert mode
+
+"" Searching
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
+
 

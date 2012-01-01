@@ -510,3 +510,5 @@ export MANPATH=$MANPATH:/opt/godi/man
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+# edit file with root privs
+alias E="EDITOR=\"emacsclient -c -a emacs\" sudoedit"

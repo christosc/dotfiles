@@ -5,7 +5,7 @@ set imap_user="c.chryssochoidis@gmail.com"
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
 set postponed ="+[Gmail]/Drafts"
-set trash='[Gmail]/Trash'
+set trash ="[Gmail]/Trash"
 macro index,pager S "<save-message>=[Gmail]/Spam<enter>"    
 macro index,pager H "<save-message>=INBOX<enter>"
 set header_cache =~/.mutt/cache/headers
@@ -45,7 +45,11 @@ set sort_aux = 'last-date-received'
 # # My Editor
 #set editor='/Users/christos/bin/mvim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
 set edit_headers  
-set editor='/Applications/MacVim.app/Contents/MacOS/Vim  +/^$ ++1 -S ~/.mutt_vimrc -c "set textwidth=72"'
+#set editor='/Applications/MacVim.app/Contents/MacOS/Vim  +/^$ ++1 -S
+#~/.mutt_vimrc -c "set textwidth=72"'
+#set editor=emacsclient
+set editor="emacsclient +8 %s -a emacs"
+#set pager=emacsclient	
 #set editor='/Applications/MacVim.app/Contents/MacOS/Vim -g -f'
 #set pager='/Users/christos/bin/mvim'
 #set pager='/Applications/MacVim.app/Contents/MacOS/Vim -g'
