@@ -3,5 +3,5 @@ windowTitle = "$TM_DISPLAYNAME${TM_DIRECTORY/\A(.+)\z/${1:? – ${1/\/Users\/chr
 #windowTitle = "$TM_DISPLAYNAME${TM_DIRECTORY/\A(?:\/Users\/james\/Documents\/(?:work\/)?(?!\b(?:communication|programming|reference)\b)\w+\/?(.*)|(.+))\z/${2:? – ${2/\/Users\/james/~/}:${1/\A(?=.)/ – /}}/}"
 
 
-TM_GIT = "/opt/local/bin/git"
+TM_GIT = "/usr/local/bin/git"
 

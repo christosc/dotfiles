@@ -507,7 +507,7 @@ export MANPATH=$MANPATH:/opt/godi/man
 ##
 
 # MacPorts Installer addition on 2011-10-31_at_18:07:58: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # edit file with root privs
