@@ -512,3 +512,15 @@ export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
 
 # edit file with root privs
 alias E="EDITOR=\"emacsclient -c -a emacs\" sudoedit"
+
+# Heirloom userland 
+HEIRLOOM=/opt/heirloom 
+if [ -d $HEIRLOOM ] 
+then
+    export HEIRLOOM
+    PATH=$PATH:$HEIRLOOM/5bin 
+else
+    unset HEIRLOOM 
+fi
+
+alias grstrip="h sed -f ~/Dropbox/Documents/scripts/subst.sed"

@@ -1329,10 +1329,10 @@
 ;;(global-auto-revert-mode 1)
 ;;(add-to-list 'default-frame-alist '(background-color . "WhiteSmoke"))
 ;; (set-face-foreground 'font-lock-comment-face "DarkGreen")
-(blink-cursor-mode 0)
+;;(blink-cursor-mode 0)
 
 (setq-default cursor-type '(bar . 1))
-(setq-default blink-cursor-interval 0.6)
+;;(setq-default blink-cursor-interval 0.6)
 ;;(setq-default indent-tabs-mode nil)
 
 
@@ -1486,7 +1486,7 @@
 ;;(mac-modifiers-control-meta-control)
 
 ;; (auto-fill-mode t)
-(auto-fill-mode 1)
+;;(auto-fill-mode 1)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'lua-mode-hook 'turn-on-auto-fill)
 (add-hook 'lua-mode-hook (lambda () (subword-mode 1)))

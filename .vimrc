@@ -40,7 +40,7 @@ set hlsearch
 " ΓΙΑ NERDTree
 "autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
-autocmd FileType taglist set wrap
+"autocmd FileType taglist set wrap
 "set nowrap
 "set columns=80
 
@@ -56,8 +56,9 @@ autocmd FileType taglist set wrap
 "map k gk
 "map $ g$
 "map ^ g^
-inoremap jj <Esc>
-inoremap ξξ <Esc>
+"inoremap jj <Esc>
+"inoremap ξξ <Esc>
+inoremap <C-κ> <C-k>
 map ξ j
 map κ k
 map η h
@@ -135,7 +136,7 @@ set autoindent
 let  g:netrw_browse_split=2
 
 " Γιὰ νὰ ἀνοίγῃ ὁ κατάλογος τῶν tags δεξιόθεν τοῦ κυρίως viewport.
-let Tlist_Use_Right_Window   = 1
+"let Tlist_Use_Right_Window   = 1
 ""let Tlist_Auto_Open = 1
 "let Tlist_Show_One_File = 1
 "let Tlist_Use_Horiz_Window = 1
@@ -290,8 +291,8 @@ set viminfo+=f1
 
 " Διὰ ὑποστήριξι τοῦ LaTeX εἰς τὸ tag list.
 
-let tlist_tex_settings   = 'latex;b:bibitem;c:command;s:sections;g:graphics;l:labels'
-let tlist_make_settings  = 'make;m:makros;t:targets'
+"let tlist_tex_settings   = 'latex;b:bibitem;c:command;s:sections;g:graphics;l:labels'
+"let tlist_make_settings  = 'make;m:makros;t:targets'
 
 set noimdisable  "this seems to be useful to automatically switch back to
                  " English keyboard, when exiting insert mode...
@@ -345,4 +346,4 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
-
+digraph .M 903
