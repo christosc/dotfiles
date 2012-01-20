@@ -462,7 +462,7 @@ if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     #PS1='\u@\h:\W[$(__git_ps1 " (%s)")]\$ '
-    PS1='\u@\h:\W $(__git_ps1 " (%s)")\$ '
+    PS1='\u@\h: \w $(__git_ps1 " (%s)")\n\$ '
 fi
 
 # Source the svn bash completion file
@@ -539,3 +539,21 @@ export PATH=${HOME}/.rvm/bin:${PATH}
 
 #alias git=hub
 export PATH=/usr/local/share/python:${PATH}
+
+hg_ps1() {
+    hg prompt "({on {branch}}{ at {bookmark}}{status})" 2> /dev/null
+}
+
+#set -x
+hg_git_ps1() {
+    hg prompt 2> /dev/null
+    if [ $? -ne 0 ]
+    then
+        __git_ps1 "(%s)"
+    else
+        hg_ps1
+    fi
+        
+}
+#set +x
+export PS1='\u@\h: \w $(hg_git_ps1)\n$ '
