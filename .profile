@@ -461,8 +461,8 @@ if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
     source /usr/local/git/contrib/completion/git-completion.bash
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
-    #PS1='\u@\h:\W[$(__git_ps1 " (%s)")]\$ '
-    PS1='\u@\h: \w $(__git_ps1 " (%s)")\n\$ '
+    #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
+    PS1='\u@\h: \w $(__git_ps1 "(%s)")\n\$ '
 fi
 
 # Source the svn bash completion file
@@ -556,4 +556,4 @@ hg_git_ps1() {
         
 }
 #set +x
-export PS1='\u@\h: \w $(hg_git_ps1)\n$ '
+#export PS1='\u@\h: \w $(hg_git_ps1)\n$ '
