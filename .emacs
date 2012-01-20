@@ -1821,3 +1821,10 @@
 ;; Add the user-contributed repository
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+(add-to-list 'load-path "/Users/christos/elisp/markdown-mode")
+(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+(setq auto-mode-alist (append auto-mode-alist '(("\\.text" . markdown-mode)
+						("\\.md" . markdown-mode)
+						("\\.mdt" . markdown-mode)
+						("\\.mdwn" . markdown-mode))))

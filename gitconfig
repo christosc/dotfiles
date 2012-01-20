@@ -5,8 +5,10 @@
 	excludesfile = /Users/christos/.gitexcludes
 #	editor = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -nw"
         editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
+	autocrlf = false
 [alias]
-    st = status
+    st = status --short
+    s  = status --short
     co = checkout
     ci = commit
     br = branch

@@ -524,3 +524,17 @@ else
 fi
 
 alias grstrip="h sed -f ~/Dropbox/Documents/scripts/subst.sed"
+
+export PATH=/Applications/Emacs.app/Contents/MacOS/bin/:$PATH
+
+
+export PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin:$PATH
+
+
+# RVM (Ruby enVironment Manager)
+export MANPATH=/Users/christos/.rvm/man:$MANPATH
+export PATH=${HOME}/.rvm/bin:${PATH}
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+#alias git=hub
