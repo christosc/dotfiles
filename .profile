@@ -538,3 +538,4 @@ export PATH=${HOME}/.rvm/bin:${PATH}
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 #alias git=hub
+export PATH=/usr/local/share/python:${PATH}
