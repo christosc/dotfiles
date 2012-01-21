@@ -462,7 +462,7 @@ if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
-    PS1='\u@\h: \w $(__git_ps1 "(%s)")\n\$ '
+    PS1='[\u@\h] \w $(__git_ps1 "(%s)")\n\$ '
 fi
 
 # Source the svn bash completion file
@@ -523,10 +523,9 @@ else
     unset HEIRLOOM 
 fi
 
-alias grstrip="h sed -f ~/Dropbox/Documents/scripts/subst.sed"
 
-export PATH=/Applications/Emacs.app/Contents/MacOS/bin/:$PATH
-
+export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
+export PATH=/usr/local/bin:${PATH}
 
 export PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin:$PATH
 
