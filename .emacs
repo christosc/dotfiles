@@ -1616,7 +1616,7 @@
 (setq-default fill-column 78)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'python-mode-hook 'turn-on-auto-fill)
-
+(add-hook 'javascript-mode-hook 'turn-on-auto-fill)
 ;; -----------------------------------------------------------------------------
 ;; Git support
 ;; -----------------------------------------------------------------------------
@@ -1800,7 +1800,11 @@
 ;; Git commit-mode
 (require 'git-commit)
 (add-hook 'git-commit-mode-hook 'turn-on-flyspell)
-(add-hook 'git-commit-mode-hook (lambda () (toggle-save-place 0)))
+(add-hook 'git-commit-mode-hook (lambda ()
+                                  (progn
+                                    (toggle-save-place 0)
+                                    (auto-fill-mode 1)
+                                    (setq fill-column 72))))
 
 ;; for better scrolling
 ;; nice scrolling
@@ -1828,3 +1832,20 @@
 						("\\.md" . markdown-mode)
 						("\\.mdt" . markdown-mode)
 						("\\.mdwn" . markdown-mode))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Customize Font Faces
+;; http://www.emacswiki.org/emacs/CustomizingFaces
+(custom-set-faces
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 2.2))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.7))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.3))))
+ '(org-level-1 ((t (:inherit org-level-1 :height 1.5))))
+ '(org-level-2 ((t (:inherit org-level-2 :height 1.3))))
+ )
+
+(setq-default indent-tabs-mode nil)
+;(setq tab-stop-list (number-sequence 4 120 4))
+;(global-set-key  (kbd "TAB") 'tab-to-tab-stop)

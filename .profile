@@ -125,7 +125,7 @@ alias ecj="java org.eclipse.jdt.internal.compiler.batch.Main -source 1.5"
 
 #alias gnatmake="/usr/local/ada-4.3/bin/gnatmake"
 
-export EDITOR=vim
+#export EDITOR=vim
 export SUDO_USER=christoschryssochodis
 
 #alias xelatex="xelatex -output-driver='xdvipdfmx -q -E'"
@@ -457,12 +457,12 @@ export MANPATH=$HOME/local/share/man:$MANPATH
 export LANG=en_US.UTF-8
 
 # Source the git bash completion file
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-    source /usr/local/git/contrib/completion/git-completion.bash
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+    source /usr/local/etc/bash_completion.d/git-completion.bash
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
-    PS1='[\u@\h] \w $(__git_ps1 "(%s)")\n\$ '
+    PS1='\n[\u@\h] \w $(__git_ps1 "(%s)")\n\$ '
 fi
 
 # Source the svn bash completion file
@@ -556,3 +556,5 @@ hg_git_ps1() {
 }
 #set +x
 #export PS1='\u@\h: \w $(hg_git_ps1)\n$ '
+ALTERNATE_EDITOR=emacs
+alias emacsclient="emacsclient -nw"

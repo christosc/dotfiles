@@ -56,8 +56,8 @@ autocmd VimEnter * wincmd p
 "map k gk
 "map $ g$
 "map ^ g^
-"inoremap jj <Esc>
-"inoremap ξξ <Esc>
+inoremap jj <Esc>
+inoremap ξξ <Esc>
 inoremap <C-κ> <C-k>
 map ξ j
 map κ k
@@ -347,3 +347,5 @@ set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
 digraph .M 903
+
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
