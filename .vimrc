@@ -23,11 +23,13 @@ set ruler
 "colorscheme grb4
 "colorscheme inkpot
 "colorscheme gardener
+"colorscheme mayansmoke
+colorscheme pyte
 "colorscheme wombat256
 "colorscheme desert256
 "colorscheme chela_light-1
 "colorscheme github
-colorscheme github2
+"colorscheme github2
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
@@ -59,52 +61,116 @@ autocmd VimEnter * wincmd p
 inoremap jj <Esc>
 inoremap ξξ <Esc>
 inoremap <C-κ> <C-k>
-map ξ j
-map κ k
-map η h
-map λ l
-map Η H
-map Μ M
-map Λ L
-map ι i
-map Ι I
-map ε e
-map β b
-map ς w
-map α a
+
+" assign keyboard commands while using the greek keyboard:
 map Α A
-map ω v
-map Ω V
-map δ d
-map χ x
-map Ξ J
-map ψ c
-map ρ r
-map ο o
-map Ο O
-map θ u
-map υ y
-map π p
-map Π P
-map γγ gg
+map Β B
+map Ψ C
+map Δ D
+map Ε E
+map Φ F
 map Γ G
+map Η H
+map Ι I
+map Ξ J
+map Κ K
+map Λ L
+map Μ M
+map Ν N
+map Ο O
+map Π P
+map Q Q
+
+map Ρ R
+map Σ S
+map Τ T
+map Θ U
+map Ω V
+map W W
+map Χ X
+map Υ Y
+map Ζ Z
+map α a
+map β b
+map ψ c
+map δ d
+map ε e
+map φ f
 map γ g
-map ; q
-map γ; gq
-map απ ap
-map γς gw
-map γξ gj
-map γκ gk
-map γ$ g$
-map γ^ g^
-map γ0 g0
+map η h
+map ι i
+map ξ j
+
+map κ k
+map λ l
+map μ m
+map ν n
+map ο o
+map π p
+map q q
+map ρ r
+map σ s
+map τ t
+map θ u
+map ω v
 map ς w
+map χ x
+map υ y
+map ζ z
+
+
+
+
+
+
+
+
+"map ξ j
+"map κ k
+"map η h
+"map λ l
+"map Η H
+"map Μ M
+"map Λ L
+"map ι i
+"map Ι I
+"map ε e
+"map β b
+"map ς w
+"map α a
+"map Α A
+"map ω v
+"map Ω V
+"map δ d
+"map χ x
+"map Ξ J
+"map ψ c
+"map ρ r
+"map ο o
+"map Ο O
+"map θ u
+"map υ y
+"map π p
+"map Π P
+"map γγ gg
+"map Γ G
+"map γ g
+"map ; q
+"map γ; gq
+"map απ ap
+"map γς gw
+"map γξ gj
+"map γκ gk
+"map γ$ g$
+"map γ^ g^
+"map γ0 g0
+"map ς w
+"map ν n
+"map Ν N
 map  <Up>   k
 map  <Down> j
 map  <Home> g<Home>
 map  <End>  g<End>
-map ν n
-map Ν N
 "imap <C-h> <left>
 "imap <C-l> <right>
 "imap <C-j> <down>
@@ -349,3 +415,4 @@ set smartcase                   " ... unless they contain at least one capital l
 digraph .M 903
 
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+set t_Co=256

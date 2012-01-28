@@ -439,7 +439,7 @@ export LUA_PATH=";;${HOME}/src/lua-stdlib/src/?.lua;/usr/local/share/lua/5.1/?.l
 alias del="rm -i"
 
 export TEXDIR="/usr/local/texlive/2010/texmf-dist/tex"
-export CDPATH=".:~/devel/git-svn:~/devel/git:~/devel"
+export CDPATH=".:~/work:~/devel/git-svn:~/devel/git:~/devel"
 alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
 alias lualatex="rlwrap lualatex"
@@ -546,7 +546,7 @@ hg_ps1() {
 #set -x
 hg_git_ps1() {
     hg prompt 2> /dev/null
-    if [ $? -ne 0 ]
+    if [ $? -ne 0]  # only git
     then
         __git_ps1 "(%s)"
     else
@@ -558,3 +558,5 @@ hg_git_ps1() {
 #export PS1='\u@\h: \w $(hg_git_ps1)\n$ '
 ALTERNATE_EDITOR=emacs
 alias emacsclient="emacsclient -nw"
+
+export PATH=$HOME/bin:$PATH
