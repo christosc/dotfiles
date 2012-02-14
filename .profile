@@ -439,7 +439,7 @@ export LUA_PATH=";;${HOME}/src/lua-stdlib/src/?.lua;/usr/local/share/lua/5.1/?.l
 alias del="rm -i"
 
 export TEXDIR="/usr/local/texlive/2010/texmf-dist/tex"
-export CDPATH=".:~/work:~/devel/git-svn:~/devel/git:~/devel"
+export CDPATH=".:~/Developer:~/work:~/devel/git-svn:~/devel/git:~/devel"
 alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
 alias lualatex="rlwrap lualatex"
@@ -449,7 +449,7 @@ LESS="-IRm"; export LESS
 ##################  EMACS ##########################################
 export PATH=${HOME}/Applications/emacs-23.3-YAMAMOTO/mac/Emacs.app/Contents/MacOS/:${PATH}:/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin
 alias emacscl="emacsclient -n"
-alias emc="emacsclient -t"
+alias emc="emacsclient"
 #export ALTERNATE_EDITOR="emacs -nw" EDITOR=emacsclient VISUAL=emacsclient
 #export EDITOR=emacsclient
 export PATH=$HOME/local/bin:$PATH
@@ -557,6 +557,6 @@ hg_git_ps1() {
 #set +x
 #export PS1='\u@\h: \w $(hg_git_ps1)\n$ '
 ALTERNATE_EDITOR=emacs
-alias emacsclient="emacsclient -nw"
+alias emacsclient="emacsclient -t"
 
 export PATH=$HOME/bin:$PATH

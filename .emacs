@@ -703,7 +703,7 @@
  '(auto-save-interval 150)
  '(column-number-mode t)
  '(custom-safe-themes (quote ("485737acc3bedc0318a567f1c0f5e7ed2dfde3fb" "1440d751f5ef51f9245f8910113daee99848e2c0" "e254937cba0f82c2d9eb3189a60748df9e486522" "e86806b411184cc146601bb25839b607bc77d3b7" default)))
- '(default-input-method "latin-prefix")
+ '(default-input-method "mac-greek")
  '(display-time-mode t)
  '(haskell-program-name "ghci")
  '(lua-indent-level 4)
@@ -1674,9 +1674,10 @@
 
 ;; change command to meta, and ignore option to use Greek keyboard
 (setq mac-option-modifier 'meta)
-(setq mac-command-modifier 'ctrl)
+(setq mac-command-modifier 'super)
+(setq mac-right-command-modifier 'ctrl)
 (setq mac-control-modifier 'ctrl)
-(setq mac-function-modifier 'super) ;; function key -> super
+(setq mac-function-modifier 'hyper) 
 
 ;;(setq mac-option-modifier 'none)    ;; option key -> none
 ;;(setq mac-command-modifier 'meta)   ;; command key -> meta
@@ -1849,3 +1850,37 @@
 (setq-default indent-tabs-mode nil)
 ;(setq tab-stop-list (number-sequence 4 120 4))
 ;(global-set-key  (kbd "TAB") 'tab-to-tab-stop)
+
+(require 'textile-mode)
+(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
+
+(add-to-list 'auto-mode-alist '("\\.xslt\\'" . nxml-mode))
+
+(defvar real-keyboard-keys
+  '(("M-<up>"        . "\M-[1;9A")
+    ("M-<down>"      . "\M-[1;9B")
+    ("M-<right>"     . "\M-[1;9C")
+    ("M-<left>"      . "\M-[1;9D")
+    ("C-<return>"    . "\C-j")
+    ("C-M-<space>"   . "\C-M- ")
+;;    ("C-<delete>"    . "\M-[3;5~")
+;;    ("C-<up>"        . "\M-[1;5A")
+;;    ("C-<down>"      . "\M-[1;5B")
+;;    ("C-<right>"     . "\M-[1;5C")
+;;    ("C-<left>"      . "\M-[1;5D")
+    )
+  "An assoc list of pretty key strings
+and their terminal equivalents.")
+
+(defun key (desc)
+  (or (and window-system (read-kbd-macro desc))
+      (or (cdr (assoc desc real-keyboard-keys))
+          (read-kbd-macro desc))))
+
+(global-set-key (key "M-<left>") 'windmove-left)          ; move to left windnow
+(global-set-key (key "M-<right>") 'windmove-right)        ; move to right window
+(global-set-key (key "M-<up>") 'windmove-up)              ; move to upper window
+(global-set-key (key "M-<down>") 'windmove-down)          ; move to downer window
+(global-set-key (key "C-M-<space>") 'mark-sexp)
+
+(global-set-key (kbd "<f1>") 'mark-sexp)

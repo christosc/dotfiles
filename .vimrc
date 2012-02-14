@@ -416,3 +416,5 @@ digraph .M 903
 
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 set t_Co=256
+
+
