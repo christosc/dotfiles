@@ -552,7 +552,9 @@ hg_git_ps1() {
     else if [ -n "$(__git_ps1 '%s')" ]; then
             __git_ps1 "(%s)"
          
-    else if [ -z "$(hg prompt)" ]; then
+    else 
+        hg prompt 2> /dev/null
+        if [ $? -eq 0 ]; then
             hg_ps1 "(%s)"
          fi
        fi
