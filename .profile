@@ -546,11 +546,11 @@ hg_ps1() {
 #set -x
 hg_git_ps1() {
     hg prompt 2> /dev/null
-    if [ $? -ne 0 ]  # only git
-    then
+    if [ -d ".git" ]; then  # only git
         __git_ps1 "(%s)"
-    else
-        hg_ps1
+    else if [ -d ".hg" ]; then
+            hg_ps1
+         fi
     fi
         
 }
