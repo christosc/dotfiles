@@ -1861,8 +1861,6 @@
     ("M-<down>"      . "\M-[1;9B")
     ("M-<right>"     . "\M-[1;9C")
     ("M-<left>"      . "\M-[1;9D")
-    ("C-<return>"    . "\C-j")
-    ("C-M-<space>"   . "\C-M- ")
 ;;    ("C-<delete>"    . "\M-[3;5~")
 ;;    ("C-<up>"        . "\M-[1;5A")
 ;;    ("C-<down>"      . "\M-[1;5B")
@@ -1884,3 +1882,11 @@ and their terminal equivalents.")
 (global-set-key (key "C-M-<space>") 'mark-sexp)
 
 (global-set-key (kbd "<f1>") 'mark-sexp)
+
+;;(windmove-default-keybindings)
+;;(windmove-default-keybindings 'meta)
+
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <down>")  'windmove-down)

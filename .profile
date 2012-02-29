@@ -462,7 +462,7 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
-    PS1='\n[\u@\h] \w $(__git_ps1 "(%s)")\n\$ '
+    PS1='\u@\h: \w $(hg_git_ps1 "(%s)")\n\$ '
 fi
 
 # Source the svn bash completion file
@@ -486,7 +486,7 @@ alias 9="fg %9"
 alias j="jobs"
 
 export PATH=.:$PATH
-export JIRA_HOME="/Applications/atlassian-jira"
+export JIRA_HOME="$HOME/jira-projects"
 
 ##
 # Your previous /Users/christos/.profile file was backed up as /Users/christos/.profile.macports-saved_2011-08-02_at_18:45:35
@@ -531,10 +531,10 @@ export PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin:$PATH
 
 
 # RVM (Ruby enVironment Manager)
-export MANPATH=/Users/christos/.rvm/man:$MANPATH
-export PATH=${HOME}/.rvm/bin:${PATH}
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+#export MANPATH=/Users/christos/.rvm/man:$MANPATH
+#export PATH=${HOME}/.rvm/bin:${PATH}
+#
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 #alias git=hub
 export PATH=/usr/local/share/python:${PATH}
@@ -546,7 +546,7 @@ hg_ps1() {
 #set -x
 hg_git_ps1() {
     hg prompt 2> /dev/null
-    if [ $? -ne 0]  # only git
+    if [ $? -ne 0 ]  # only git
     then
         __git_ps1 "(%s)"
     else
@@ -560,3 +560,7 @@ ALTERNATE_EDITOR=emacs
 alias emacsclient="emacsclient -t"
 
 export PATH=$HOME/bin:$PATH
+alias t="todo.sh"
+export PATH=${HOME}/bin/todo.txt_cli:$PATH
+
+export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
