@@ -540,21 +540,25 @@ export PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin:$PATH
 export PATH=/usr/local/share/python:${PATH}
 
 hg_ps1() {
-    hg prompt "({on {branch}}{ at {bookmark}}{status})" 2> /dev/null
+    hg prompt "({on {branch}}{ at {bookmark}} {status})" 2> /dev/null
 }
 
-#set -x
 hg_git_ps1() {
-    hg prompt 2> /dev/null
     if [ -d ".git" ]; then  # only git
         __git_ps1 "(%s)"
     else if [ -d ".hg" ]; then
             hg_ps1
+         
+    else if [ -n "$(__git_ps1 '%s')" ]; then
+            __git_ps1 "(%s)"
+         
+    else if [ -z "$(hg prompt)" ]; then
+            hg_ps1 "(%s)"
          fi
+       fi
+     fi
     fi
-        
 }
-#set +x
 #export PS1='\u@\h: \w $(hg_git_ps1)\n$ '
 ALTERNATE_EDITOR=emacs
 alias emacsclient="emacsclient -t"
