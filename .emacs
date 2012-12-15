@@ -5,32 +5,32 @@
   (server-start))
 
 ;;(add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
-(autoload 'post-mode "post" "mode for e-mail" t)
-(add-to-list 'auto-mode-alist 
-             '("\\.*mutt-*\\|.article\\|\\.followup" 
-                . post-mode))
+;;;;(autoload 'post-mode "post" "mode for e-mail" t)
+;;;;(add-to-list 'auto-mode-alist 
+;;;;             '("\\.*mutt-*\\|.article\\|\\.followup" 
+;;;;                . post-mode))
 
-(add-hook 'post-mode-hook 
-  (lambda()
-    (auto-fill-mode t)    
-    (setq fill-column 72)    ; rfc 1855 for usenet messages
-    ;;(require 'footnote-mode) 
-    ;;(footmode-mode t)
-    ;;(require 'boxquote)
-    ))
+;;;;(add-hook 'post-mode-hook 
+;;;;  (lambda()
+;;;;    (auto-fill-mode t)    
+;;;;    (setq fill-column 72)    ; rfc 1855 for usenet messages
+;;;;    ;;(require 'footnote-mode) 
+;;;;    ;;(footmode-mode t)
+;;;;    ;;(require 'boxquote)
+;;;;    ))
 
 
 ;; Don't ask whether to follow a versioned file link; just open it.
 (setq vc-follow-symlinks t)
 
-(add-to-list 'custom-theme-load-path "~/elisp/emacs24/color-themes")
-(add-to-list 'load-path "/Users/christos/elisp")
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+;;;;(add-to-list 'custom-theme-load-path "~/elisp/emacs24/color-themes")
+;;;; (add-to-list 'load-path "/Users/christos/elisp")
+;;;;(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 ;;;;;;;;;;;;  AUCTeX  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
-(setq TeX-parse-self t) ; Enable parse on load.
-(setq TeX-auto-save t) ; Enable parse on save.
+;;;;(load "auctex.el" nil t t)
+;;;;(load "preview-latex.el" nil t t)
+;;;;(setq TeX-parse-self t) ; Enable parse on load.
+;;;;(setq TeX-auto-save t) ; Enable parse on save.
 
 
 (require 'saveplace)
@@ -56,7 +56,7 @@
 ;;;;;;;;;;;;;;;;;; /GNUS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(setq locale-coding-system 'utf-8)
+;;;;(setq locale-coding-system 'utf-8)
 ;;(setq system-messages-locale "el_GR.UTF-8")
 ;;(setq system-time-locale "el_GR.UTF-8")
 
@@ -67,7 +67,7 @@
 
 
 ;; Ἐνεργοποίησις ede mode πανταχοῦ
- (global-ede-mode t)
+;;;; (global-ede-mode t)
 
 
 ;;(require 'ucs-normalize)
@@ -82,15 +82,15 @@
 
 
 
-(setq debug-on-error t) 
+;;;;(setq debug-on-error t) 
 
-(show-paren-mode t)
+;;;;(show-paren-mode t)
 
 
 
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
+;;;;(set-terminal-coding-system 'utf-8)
+;;;;(set-keyboard-coding-system 'utf-8)
+;;;(prefer-coding-system 'utf-8)
 
 ;;(cua-mode t)
 
@@ -136,17 +136,17 @@
 ;; (load-file "~/elisp/color-theme-wombat.el")
 ;; (load-file "~/elisp/color-theme-sunburst.el")
 ;;;;;;;;;;;;;;;;   TUAREG MODE ΓΙΑ OCAML ;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq load-path (cons "/Users/christos/elisp/tuareg-mode-1.45.6" load-path))
+;;;;(setq load-path (cons "/Users/christos/elisp/tuareg-mode-1.45.6" load-path))
 
-(setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
-(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
-(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
+;;;;(setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
+;;;;(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
+;;;;(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
 
-(if (and (boundp 'window-system) window-system)
-	    (when (string-match "XEmacs" emacs-version)
-		  (if (not (and (boundp 'mule-x-win-initted) mule-x-win-initted))
-			              (require 'sym-lock))
-		  (require 'font-lock)))
+;;;;(if (and (boundp 'window-system) window-system)
+;;;;	    (when (string-match "XEmacs" emacs-version)
+;;;;		  (if (not (and (boundp 'mule-x-win-initted) mule-x-win-initted))
+;;;;			              (require 'sym-lock))
+;;;;		  (require 'font-lock)))
 ;;;;;;;;;;;;;;;;;;  ΤΕΛΟΣ TUAREG ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;   NXHTML ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -199,7 +199,7 @@
 
 ;; (load "ssl.el" nil t t)
 
-(mouse-wheel-mode 1)
+;;;;(mouse-wheel-mode 1)
 
 ;;(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/share/emacs/site-lisp/w3m")
 ;;(require 'w3m)
@@ -208,13 +208,13 @@
 ;;     (require 'w3m-ems)
 ;;   (require 'w3m))
 
-(setq w3m-coding-system 'utf-8
-      w3m-file-coding-system 'utf-8
-      w3m-file-name-coding-system 'utf-8
-      w3m-input-coding-system 'utf-8
-      w3m-output-coding-system 'utf-8
-      w3m-terminal-coding-system 'utf-8)
-
+;;;;(setq w3m-coding-system 'utf-8
+;;;;      w3m-file-coding-system 'utf-8
+;;;;      w3m-file-name-coding-system 'utf-8
+;;;;      w3m-input-coding-system 'utf-8
+;;;;      w3m-output-coding-system 'utf-8
+;;;;      w3m-terminal-coding-system 'utf-8)
+;;;;
 ;;(provide 'w3m-e23)
 
 
@@ -232,22 +232,22 @@
 
 ; Make Emacs use "newline-and-indent" when you hit the Enter key so
 ; that you don't need to keep using TAB to align yourself when coding.
-(global-set-key "\C-m"        'newline-and-indent)
+;;;;(global-set-key "\C-m"        'newline-and-indent)
 
 ;;(load "recentf.el")
-(recentf-mode t)
-(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+;;;;(recentf-mode t)
+;;;;(global-set-key (kbd "C-x C-r") 'recentf-open-files)
 ;(global-set-key (kbd "C-χ C-ρ") 'recentf-open-files)
 
 
 ;;(blink-cursor-mode)
 
-(defun jao-toggle-selective-display (column)
-  (interactive "P")
-  (set-selective-display
-   (if selective-display nil (or column 1))))
-
-(global-set-key [f1] 'jao-toggle-selective-display)
+;;;;(defun jao-toggle-selective-display (column)
+;;;;  (interactive "P")
+;;;;  (set-selective-display
+;;;;   (if selective-display nil (or column 1))))
+;;;;
+;;;;(global-set-key [f1] 'jao-toggle-selective-display)
 
 
 
@@ -276,14 +276,14 @@
 ;(global-set-key "\C-\S-SPC" 'set-mark-command)
 
 ;;; It is always better to know current line and column number
-(column-number-mode t)
-(line-number-mode t)
+;;;;(column-number-mode t)
+;;;;(line-number-mode t)
 
 ;;(cua-mode t)
 ;;(setq-default transient-mark-mode t)
 
 
-(setq  gnus-always-read-dribble-ﬁle t)
+;;;;(setq  gnus-always-read-dribble-ﬁle t)
 
 
 
@@ -310,7 +310,7 @@
 ;; 	 (w3-fetch-orig url target)))))
 
 
-(require 'browse-url)
+;;;;(require 'browse-url)
 
 ;; (custom-set-variables
 ;;   ;; custom-set-variables was added by Custom.
@@ -377,8 +377,8 @@
 ;(setq display-time-24hr-format t)
 
 ;; (display-time)
-(setq display-time-day-and-date t
-	  display-time-24hr-format nil)
+;;;;(setq display-time-day-and-date t
+;;;;	  display-time-24hr-format nil)
 ;; (setq display-time-load-average-threshold 1)
 ;; (setq display-time-string-forms '((propertize display-time-string 'face 'bold)))
 
@@ -399,12 +399,12 @@
 ;; (global-set-key [s-up] 'eassist-switch-h-cpp)
 
 
-(defun jao-toggle-selective-display (column)
-  (interactive "P")
-  (set-selective-display
-   (if selective-display nil (or column 1))))
-
-(global-set-key [f1] 'jao-toggle-selective-display)
+;;;;(defun jao-toggle-selective-display (column)
+;;;;  (interactive "P")
+;;;;  (set-selective-display
+;;;;   (if selective-display nil (or column 1))))
+;;;;
+;;;;(global-set-key [f1] 'jao-toggle-selective-display)
 
 ;; (autoload 'vm "~/vm" "Start VM on your primary inbox." t)
 ;; (autoload 'vm-visit-folder "~/vm" "Start VM on an arbitrary folder." t)
@@ -462,24 +462,24 @@
 
 
 
-(require 'delphi)
-(autoload 'delphi-mode "delphi")
-(setq auto-mode-alist
-	  (cons '("\\.\\(pas\\|dpr\\|dpk\\)$" . delphi-mode) auto-mode-alist))
-(add-hook 'delphi-mode-hook 'turn-on-font-lock)
+;;;;(require 'delphi)
+;;;;(autoload 'delphi-mode "delphi")
+;;;;(setq auto-mode-alist
+;;;;	  (cons '("\\.\\(pas\\|dpr\\|dpk\\)$" . delphi-mode) auto-mode-alist))
+;;;;(add-hook 'delphi-mode-hook 'turn-on-font-lock)
 
 
 
 ;; Haskell Mode
-(load "~/elisp/haskell-mode-2.8.0/haskell-site-file.el")
+;;;;(load "~/elisp/haskell-mode-2.8.0/haskell-site-file.el")
 ;(load "/Users/christos/repos/haskellmode-emacs/haskell-site-file")
 ;(load "~/elisp/fptools/CONTRIB/haskell-modes/emacs/haskell-indentation.el")
 ;(load "~/elisp/fptools/CONTRIB/haskell-modes/emacs/haskell-simple-indent.el")
 ;(load "~/elisp/fptools/CONTRIB/haskell-modes/emacs/haskell-indent.el")
 
 
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+;;;;(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+;;;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
@@ -495,10 +495,10 @@
 
 ;(add-hook 'haskell-mode-hook '(lambda () (setq haskell-indent-mode)))
 ;;(add-hook 'haskell-mode-hook 'font-lock-mode)
-(global-set-key [(control meta down-mouse-3)] 'imenu)
-(add-hook 'haskell-mode-hook 'imenu-add-menubar-index)
+;;;;(global-set-key [(control meta down-mouse-3)] 'imenu)
+;;;;(add-hook 'haskell-mode-hook 'imenu-add-menubar-index)
 ;;(setq haskell-indentation-layout-offset 4)
-(setq auto-mode-alist (cons '("\\.hs$'" . haskell-mode) auto-mode-alist))
+;;;;(setq auto-mode-alist (cons '("\\.hs$'" . haskell-mode) auto-mode-alist))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; <MMM-mode> ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -536,12 +536,12 @@
 
 
 ;; full screen toggle using command+[RET]
-(defun toggle-fullscreen () 
-  (interactive) 
-  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen) 
-                                           nil 
-                                           'fullboth)))
-(global-set-key [(meta return)] 'toggle-fullscreen)
+;;;;(defun toggle-fullscreen () 
+;;;;  (interactive) 
+;;;;  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen) 
+;;;;                                           nil 
+;;;;                                           'fullboth)))
+;;;;(global-set-key [(meta return)] 'toggle-fullscreen)
 
 
 
@@ -1323,7 +1323,7 @@
 
 (assq-delete-all 'font default-frame-alist) 
 ;;(add-to-list 'default-frame-alist '(font . "Consolas-13"))
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-12"))
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14"))
 ;;(setq-default indent-tabs-mode nil)
 
 ;;(global-auto-revert-mode 1)
@@ -1546,7 +1546,8 @@
 ;;(setq tags-case-fold-search nil)
 
 (speedbar-add-supported-extension ".lua")
-
+(speedbar-add-supported-extension ".xsl")
+(speedbar-add-supported-extension ".xml")
 ;;(require 'framemove)
 ;;(framemove-default-keybindings 'control)
 
@@ -1620,7 +1621,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Git support
 ;; -----------------------------------------------------------------------------
-(add-to-list 'load-path "/opt/local/share/doc/git-core/contrib/emacs")
+(add-to-list 'load-path "/usr/local/Cellar/git/1.7.9.2/share/git-core/contrib/emacs/")
 (require 'git)
 (require 'git-blame)
 
@@ -1674,9 +1675,9 @@
 
 ;; change command to meta, and ignore option to use Greek keyboard
 (setq mac-option-modifier 'meta)
-(setq mac-command-modifier 'super)
+(setq mac-command-modifier 'ctrl)
 (setq mac-right-command-modifier 'ctrl)
-(setq mac-control-modifier 'ctrl)
+(setq mac-control-modifier 'super)
 (setq mac-function-modifier 'hyper) 
 
 ;;(setq mac-option-modifier 'none)    ;; option key -> none
@@ -1733,7 +1734,9 @@
 
 
 
-(global-set-key (kbd "C-`") 'toggle-input-method)
+(global-set-key (kbd "C-`") 'other-frame)
+(global-set-key (kbd "C-~") 'ns-prev-frame)
+
 
 
 ;;;;;;;;;;;;;;;;;;;;  GNUS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1875,10 +1878,10 @@ and their terminal equivalents.")
       (or (cdr (assoc desc real-keyboard-keys))
           (read-kbd-macro desc))))
 
-(global-set-key (key "M-<left>") 'windmove-left)          ; move to left windnow
-(global-set-key (key "M-<right>") 'windmove-right)        ; move to right window
-(global-set-key (key "M-<up>") 'windmove-up)              ; move to upper window
-(global-set-key (key "M-<down>") 'windmove-down)          ; move to downer window
+;;(global-set-key (key "M-<left>") 'windmove-left)          ; move to left windnow
+;;(global-set-key (key "M-<right>") 'windmove-right)        ; move to right window
+;;(global-set-key (key "M-<up>") 'windmove-up)              ; move to upper window
+;;(global-set-key (key "M-<down>") 'windmove-down)          ; move to downer window
 (global-set-key (key "C-M-<space>") 'mark-sexp)
 
 (global-set-key (kbd "<f1>") 'mark-sexp)
