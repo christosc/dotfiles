@@ -1,13 +1,14 @@
 "set guifont=Consolas:h13
 "set guifont=Cousine:h12
 "set guifont=Consolas:h12
-set guifont=DejaVuSansMono:h12
+"set guifont=DejaVuSansMono:h12
+set guifont=Menlo:h11
 ":inoremap <S-space> <ESC>
 ":inoremap <D-space> <ESC>
 ":inoremap <C-space> <ESC>
 ":inoremap <D-[> <ESC>
-map <silent> <C-h> :tabprevious<CR>
-map <silent> <C-l> :tabnext<CR>
+"map <silent> <C-h> :tabprevious<CR>
+"map <silent> <C-l> :tabnext<CR>
 ":imap <silent> <C-h> :tabprevious<CR>
 ":imap <silent> <C-l> :tabnext<CR>
 map <D-j> :set invmmta<CR> 
@@ -17,7 +18,13 @@ map <A-l> :tabnext<CR>
 "set textwidth=80
 "colorscheme zenburn
 "colorscheme BClear
-colorscheme github
+"colorscheme github
+"colorscheme molokai
+"colorscheme desert256
+"colorscheme vc
+"colorscheme eclipse
+"colorscheme wombat
+colorscheme myWombat
 "colorscheme github2
 "colorscheme wombat
 "colorscheme wombat256
@@ -54,3 +61,4 @@ set guioptions-=T "hide toolbar
 set hidden
 set nonumber
 "autocmd BufRead *.tex set guifont=menlo:h14
+"set number

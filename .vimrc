@@ -8,28 +8,35 @@ set ignorecase
 set laststatus=2
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%l,%v][%p%%]\ [LEN=%L]
 syntax enable 
-set tabstop=8    " ὁ Μανώλης ἔτσι ts = 8 …
+set tabstop=4    " ὁ Μανώλης ἔτσι ts = 8 …
 set shiftwidth=4
 set softtabstop=4
-set noexpandtab
+set expandtab
 set autowrite  " ὁ Μανώλης τὸ ἔχει ἔτσι (συντμ. aw)
-set autoread
+"set autoread
 "set number
 set linebreak
 set ruler
+set background=dark
 "colorscheme desert
+"colorscheme solarized
+"colorscheme badwolf
+colorscheme ron
 "colorscheme emacs1
 "colorscheme zenburn
 "colorscheme grb4
 "colorscheme inkpot
 "colorscheme gardener
 "colorscheme mayansmoke
-colorscheme pyte
+"colorscheme pyte
+"colorscheme 256-grayvim
+"colorscheme my-256-grayvim
 "colorscheme wombat256
 "colorscheme desert256
 "colorscheme chela_light-1
 "colorscheme github
 "colorscheme github2
+"colorscheme wombat
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
@@ -58,65 +65,7 @@ autocmd VimEnter * wincmd p
 "map k gk
 "map $ g$
 "map ^ g^
-inoremap jj <Esc>
-inoremap ξξ <Esc>
-inoremap <C-κ> <C-k>
-
-" assign keyboard commands while using the greek keyboard:
-map Α A
-map Β B
-map Ψ C
-map Δ D
-map Ε E
-map Φ F
-map Γ G
-map Η H
-map Ι I
-map Ξ J
-map Κ K
-map Λ L
-map Μ M
-map Ν N
-map Ο O
-map Π P
-map Q Q
-
-map Ρ R
-map Σ S
-map Τ T
-map Θ U
-map Ω V
-map W W
-map Χ X
-map Υ Y
-map Ζ Z
-map α a
-map β b
-map ψ c
-map δ d
-map ε e
-map φ f
-map γ g
-map η h
-map ι i
-map ξ j
-
-map κ k
-map λ l
-map μ m
-map ν n
-map ο o
-map π p
-map q q
-map ρ r
-map σ s
-map τ t
-map θ u
-map ω v
-map ς w
-map χ x
-map υ y
-map ζ z
+"inoremap jj <Esc>
 
 
 
@@ -125,60 +74,7 @@ map ζ z
 
 
 
-"map ξ j
-"map κ k
-"map η h
-"map λ l
-"map Η H
-"map Μ M
-"map Λ L
-"map ι i
-"map Ι I
-"map ε e
-"map β b
-"map ς w
-"map α a
-"map Α A
-"map ω v
-"map Ω V
-"map δ d
-"map χ x
-"map Ξ J
-"map ψ c
-"map ρ r
-"map ο o
-"map Ο O
-"map θ u
-"map υ y
-"map π p
-"map Π P
-"map γγ gg
-"map Γ G
-"map γ g
-"map ; q
-"map γ; gq
-"map απ ap
-"map γς gw
-"map γξ gj
-"map γκ gk
-"map γ$ g$
-"map γ^ g^
-"map γ0 g0
-"map ς w
-"map ν n
-"map Ν N
-map  <Up>   k
-map  <Down> j
-map  <Home> g<Home>
-map  <End>  g<End>
-"imap <C-h> <left>
-"imap <C-l> <right>
-"imap <C-j> <down>
-"imap <C-k> <up>
-"imap <C-η> <left>
-"imap <C-λ> <right>
-"imap <C-ξ> <down>
-"imap <C-κ> <up>
+
 
 set expandtab
 nnoremap <Space> l
@@ -360,8 +256,6 @@ set viminfo+=f1
 "let tlist_tex_settings   = 'latex;b:bibitem;c:command;s:sections;g:graphics;l:labels'
 "let tlist_make_settings  = 'make;m:makros;t:targets'
 
-set noimdisable  "this seems to be useful to automatically switch back to
-                 " English keyboard, when exiting insert mode...
 
 set tags=./tags,tags
 
@@ -383,7 +277,7 @@ noremap  <silent> 0 g0
 noremap  <silent> $ g$
 
 nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
+set pastetoggle=<F3>
 set showmode
 
 autocmd BufReadPost ~/Dropbox/work/dms/pleaserun/results.txt source ~/Dropbox/work/vim/test2.vim
@@ -417,4 +311,126 @@ digraph .M 903
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 set t_Co=256
 
+nnoremap <F5> :buffers<CR>:buffer<Space>
+"set background=dark
+"
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+filetype plugin on
 
+" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
+" can be called correctly.
+set shellslash
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: This enables automatic indentation as you type.
+filetype indent on
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
+
+" this is mostly a matter of taste. but LaTeX looks good with just a bit
+" of indentation.
+"set sw=2
+" TIP: if you write your \label's as \label{fig:something}, then if you
+" type in \ref{fig: and press <C-n> you will automatically cycle through
+" all the figure labels. Very useful!
+set iskeyword+=:
+
+au FileChangedShell * echo "Warning: File changed on disk"
+au BufRead,BufNewFile *.md set filetype=markdown
+
+set path=.,,**
+cnoremap <Esc>b <S-Left>
+cnoremap <Esc>f <S-Right>
+
+
+function! MyTabLabel(n)
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  let string = fnamemodify(bufname(buflist[winnr - 1]), ':t')
+  "let string = bufname(buflist[winnr - 1])
+  return empty(string) ? '[unnamed]' : string
+endfunction
+
+"function! MyTabLabel(n)
+"  let buflist = tabpagebuflist(a:n)
+"  let winnr = tabpagewinnr(a:n)
+"  return bufname(buflist[winnr - 1])
+"endfunction
+
+function! MyTabLine()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    " select the highlighting
+    if i + 1 == tabpagenr()
+      let s .= '%#TabLineSel#'
+    else
+      let s .= '%#TabLine#'
+    endif
+
+    " set the tab page number (for mouse clicks)
+    let s .= '%' . (i + 1) . 'T'
+
+    " display tabnumber (for use with <count>gt, etc)
+    let s .= ' '. (i+1) . ' ' 
+
+    " the label is made by MyTabLabel()
+    let s .= ' %{MyTabLabel(' . (i + 1) . ')} '
+
+    if i+1 < tabpagenr('$')
+      let s .= ' |'
+    endif
+  endfor
+
+  " after the last tab fill with TabLineFill and reset tab page nr
+  let s .= '%#TabLineFill#%T'
+
+  " right-align the label to close the current tab page
+  if tabpagenr('$') > 1
+    let s .= '%=%#TabLine#%999Xclose'
+  endif
+
+  return s
+endfunction
+
+set tabline=%!MyTabLine()
+
+
+" tab navigation like firefox
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
+
+se mouse +=a
+
+let g:lasttab = 1
+nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
+
+au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim 
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+"set noimdisable
+set nocursorline
+set encoding=utf-8 
+set fenc=utf-8 
+"set iminsert=0
+"set imsearch=-1
+"set keymap=greek_polytonic
+set keymap=greek_utf-8
+set keymap=
+"set encoding=utf-8
+"set inputenc=utf-8
+"set fenc=utf-8
+
+au FileChangedShell * echo "Warning: File changed on disk"

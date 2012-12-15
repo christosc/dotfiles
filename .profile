@@ -6,7 +6,7 @@
 export PATH=$PATH:/usr/local/mysql/bin
 #export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig
 #export PS1="\W @ \h (\u) \$ "
-export PS1="\h \W % "
+#export PS1="\h \W % "
 #export PS1="\[\e[1m\]\h:\W \u\$\[\e[0m\] "  # ἁπλῶς ἔντονα
 #export PS1="\[\e[0;34m\]\h:\W \u\$\[\e[0m\] " # θαλασσύ
 #export PS1="\[\e[0;36m\]\h:\w \u\$\[\e[0m\] " # πρασινοθαλασσύ
@@ -83,14 +83,15 @@ alias mutt="/usr/local/bin/mutt"
 #export CLICOLOR=true export LSCOLORS=ExFxCxDxBxegedabagacad
 
 #export LS_OPTIONS='-h --color=auto'
-#export CLICOLOR=1
+export CLICOLOR=1
+export LSCOLORS=GGFxCxDxBxegedabagacad
 #LS_COLORS="ow=94:di=34"
 #export LS_COLORS
 #export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 alias ls="ls --color -h "
 #export CLICOLOR=1
 #export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-#export LS_COLORS="di=01;36" # γιὰ σκοῦρο ὑπόβαθρο
+#export LS_COLORS="di=01;33" # γιὰ σκοῦρο ὑπόβαθρο
 
 #export CGAL_MAKEFILE="/Users/christoschryssochoidis/Software_Engineering/cgal/CGAL-3.3.1/make/makefile_i386_Darwin-9.1_g++-4.0.1"
 
@@ -125,7 +126,7 @@ alias ecj="java org.eclipse.jdt.internal.compiler.batch.Main -source 1.5"
 
 #alias gnatmake="/usr/local/ada-4.3/bin/gnatmake"
 
-#export EDITOR=vim
+export EDITOR=vim
 export SUDO_USER=christoschryssochodis
 
 #alias xelatex="xelatex -output-driver='xdvipdfmx -q -E'"
@@ -256,7 +257,7 @@ export PATH="$HOME"/.cabal/bin:"$HOME"/bin:$PATH
 #export PATH=/usr/local/bin:$PATH
 
 
-#export LC_CTYPE=el_GR.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 
 export DEVHOME="$HOME"/devel
@@ -280,7 +281,7 @@ export MANPATH=/usr/local/git/share/man:$MANPATH
 export PATH=/usr/local/git/bin:$PATH
 
 ##### ΔΙΑ JAVA #########################
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 ##
 # Your previous /Users/christos/.profile file was backed up as /Users/christos/.profile.macports-saved_2010-04-26_at_03:49:08
 ##
@@ -365,7 +366,7 @@ INFOPATH="$HOME"/info:$INFOPATH
 # The orginal version is saved in .profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
-export PYTHONPATH=/Library/Python/2.7/site-packages:/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:${PYTHONPATH}
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages #:/Library/Python/2.7/site-packages:/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:${PYTHONPATH}
 # ΓΙΑ SVN ΑΠΟ COLLABNET
 export PATH=/opt/subversion/bin:$PATH
 
@@ -438,8 +439,9 @@ alias lua="rlwrap lua"
 export LUA_PATH=";;${HOME}/src/lua-stdlib/src/?.lua;/usr/local/share/lua/5.1/?.lua;${HOME}/lib/lua/?.lua;${HOME}/?.lua;./?.lua;?/init.lua;${HOME}/src/lua-xpath/?.lua;"
 alias del="rm -i"
 
-export TEXDIR="/usr/local/texlive/2010/texmf-dist/tex"
-export CDPATH=".:~/Developer:~/work:~/devel/git-svn:~/devel/git:~/devel"
+export TEXDIR="/usr/local/texlive/2012/texmf-dist/tex"
+#export CDPATH="~/Developer:~/work:~/devel/git-svn:~/devel/git:~/devel"
+export CDPATH=.:~/Work
 alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
 alias lualatex="rlwrap lualatex"
@@ -449,7 +451,7 @@ LESS="-IRm"; export LESS
 ##################  EMACS ##########################################
 export PATH=${HOME}/Applications/emacs-23.3-YAMAMOTO/mac/Emacs.app/Contents/MacOS/:${PATH}:/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin
 alias emacscl="emacsclient -n"
-alias emc="emacsclient"
+alias emc="emacsclient -nw"
 #export ALTERNATE_EDITOR="emacs -nw" EDITOR=emacsclient VISUAL=emacsclient
 #export EDITOR=emacsclient
 export PATH=$HOME/local/bin:$PATH
@@ -459,6 +461,10 @@ export LANG=en_US.UTF-8
 # Source the git bash completion file
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
     source /usr/local/etc/bash_completion.d/git-completion.bash
+fi
+
+if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
+    source /usr/local/etc/bash_completion.d/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
@@ -470,7 +476,7 @@ if [ -f ~/.svn-completion.sh ]; then
     source ~/.svn-completion.sh
 fi
 
-source ~/.hg-completion.sh
+#source /usr/local/etc/bash_completion.d/hg-completion.bash
 
 alias -- -="fg %-"
 alias -- +="fg %+"
@@ -539,19 +545,42 @@ export PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin:$PATH
 #alias git=hub
 export PATH=/usr/local/share/python:${PATH}
 
-hg_ps1() {
-    hg prompt "({on {branch}}{ at {bookmark}} {status})" 2> /dev/null
+#hg_ps1() {
+#    hg prompt "({on {branch}}{ at {bookmark}} {status})" 2> /dev/null
+#}
+
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_ENABLED=true
+function disable_git_ps1
+{
+  export GIT_PS1_ENABLED=false
+}
+
+function enable_git_ps1
+{
+  export GIT_PS1_ENABLED=true
+}
+
+function git_ps1
+{
+  $GIT_PS1_ENABLED && __git_ps1 "(%s) "
+}
+
+
+function hg_ps1
+{
+  hg prompt "({root|basename}@{bookmark}{[{tags|quiet|,}]}{ {status|modified|unknown}}{ {shelf}}) " 2> /dev/null
 }
 
 hg_git_ps1() {
-    if [ -d ".git" ]; then  # only git
-        __git_ps1 "(%s)"
-    else if [ -d ".hg" ]; then
+    if [ -d ".hg" ]; then
             hg_ps1
-         
+    else if [ -d ".git" ]; then  # only git
+        __git_ps1 "(%s)"
     else if [ -n "$(__git_ps1 '%s')" ]; then
             __git_ps1 "(%s)"
-         
     else 
         hg prompt 2> /dev/null
         if [ $? -eq 0 ]; then
@@ -563,10 +592,91 @@ hg_git_ps1() {
 }
 #export PS1='\u@\h: \w $(hg_git_ps1)\n$ '
 ALTERNATE_EDITOR=emacs
-alias emacsclient="emacsclient -t"
+#alias emacsclient="emacsclient -t"
 
 export PATH=$HOME/bin:$PATH
 alias t="todo.sh"
 export PATH=${HOME}/bin/todo.txt_cli:$PATH
 
 export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
+
+PATH=/usr/local/ActivePerl-5.14/bin:$PATH
+export PATH
+
+alias tclsh="rlwrap tclsh"
+
+PATH=/usr/local/sbin:$PATH
+export PATH
+
+#CATALINA_HOME="$HOME/apache-tomcat-7.0.29"
+#CATALINA_HOME="$HOME/apache-tomcat-7.0.28"
+#$export CATALINA_HOME
+
+#JRE_HOME="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"
+#export JRE_HOME
+
+CVSROOT=:pserver:cchryssochoidis:94Thermo80@v-srv-atlas:/cvsrep; export CVSROOT
+# port:2401
+
+#export PS1='\e[33m\][\W] \e[32m\]$(git_ps1)\e[31m\]$(hg_ps1)\e[0m\]'
+#export PS1='\e[33m\][\W] \e[32m\]$(git_ps1)\e[31m\]\e[0m\]'
+#export PS1='\u@\h:\w\$ \[\e[32m\]$(git_ps1)\[\e[31m\]\[\e[0m\]'
+#export PS1='\w\$'
+#export PS1='\e[33m\][\W] \e[32m\]$(git_ps1)\e[0m\]'
+#export PS1='\e[33m\][\W]\e[0m\]'
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+CLASSPATH=.:/Users/christos/lib/jars/antlr-3.4.jar:$CLASSPATH
+
+alias findp="ps -axww | grep $*"
+
+alias jdb="rlwrap jdb"
+
+shopt -s cdable_vars
+
+alias svndiff="svn diff --diff-cmd ${HOME}/bin/opendiff-svn-wrapper.sh"
+
+
+# Git/Subversion prompt function
+__git_svn_ps1() {
+    local s=
+    if [[ -d ".svn" ]] ; then
+        local r=`__svn_rev`
+        local b=`__svn_branch`
+        s=" [$b:$r]"
+    elif [[ -d .git ]] ; then
+        s=`__git_ps1`
+    fi
+    echo -n "$s"
+}
+
+# Outputs the current trunk, branch, or tag
+__svn_branch() {
+    local url=
+    if [[ -d .svn ]]; then
+        url=`svn info | awk '/URL:/ {print $2}'`
+        if [[ $url =~ trunk ]]; then
+            echo trunk
+        elif [[ $url =~ /branches/ ]]; then
+            echo $url | sed -e 's#^.*/\(branches/.*\)/.*$#\1#'
+        elif [[ $url =~ /tags/ ]]; then
+            echo $url | sed -e 's#^.*/\(tags/.*\)/.*$#\1#'
+        fi
+    fi
+}
+
+# Outputs the current revision
+__svn_rev() {
+    local r=$(svn info | awk '/Revision:/ {print $2}')
+
+    if [ ! -z $SVN_SHOWDIRTYSTATE ]; then
+        local svnst flag
+        svnst=$(svn status | grep '^\s*[?ACDMR?!]')
+        [ -z "$svnst" ] && flag=*
+        r=$r$flag
+    fi
+    echo $r
+}
+
+#export PS1='\[\e[33m\]\u@\h:\w\$ \[\e[32m\]$(git_ps1)\[\e[31m\]\[\e[0m\]'
+export PS1='\[\e[33m\]\u@\h:\W\$ \[\e[32m\]$(__git_svn_ps1)\[\e[31m\]\[\e[0m\]'
