@@ -344,6 +344,8 @@ set iskeyword+=:
 
 au FileChangedShell * echo "Warning: File changed on disk"
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.m set filetype=objc
+au BufRead,BufNewFile *.h set filetype=objc
 
 set path=.,,**
 cnoremap <Esc>b <S-Left>
@@ -434,3 +436,4 @@ set keymap=
 "set fenc=utf-8
 
 au FileChangedShell * echo "Warning: File changed on disk"
+let g:clang_complete_auto=0
