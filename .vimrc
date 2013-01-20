@@ -19,9 +19,10 @@ set linebreak
 set ruler
 "set background=dark
 set term=xterm-256color
-set background=light
-colorscheme default
+set background=dark
+"colorscheme default
 "colorscheme desert
+colorscheme desert256
 "colorscheme default
 "colorscheme my_default
 "colorscheme solarized
@@ -453,3 +454,6 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
 
+hi TabLine ctermfg=grey ctermbg=black cterm=none
+hi TabLineFill ctermfg=grey ctermbg=grey
+hi TabLineSel ctermfg=black ctermbg=lightgrey cterm=underline
