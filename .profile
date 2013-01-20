@@ -679,4 +679,10 @@ __svn_rev() {
 }
 
 #export PS1='\[\e[33m\]\u@\h:\w\$ \[\e[32m\]$(git_ps1)\[\e[31m\]\[\e[0m\]'
-export PS1='\[\e[33m\]\u@\h:\W\$ \[\e[32m\]$(__git_svn_ps1)\[\e[31m\]\[\e[0m\]'
+#export PS1='\[\e[33m\]\u@\h:\W\$ \[\e[32m\]$(__git_svn_ps1)\[\e[31m\]\[\e[0m\]'
+export PS1='\[\e[33m\]\u@\h:\W>\[\e[32m\]$(__git_svn_ps1)\[\e[31m\]\[\e[0m\] '
+
+PATH=$PATH:${HOME}/sdk/gwt-2.5.0/
+export PATH
+
+export PATH=/opt/subversion/bin:$PATH

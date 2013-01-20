@@ -74,12 +74,14 @@ hi Search		guibg=#cdcdfd guifg=#000000 gui=italic
 hi Ignore		guifg=#808080
 hi Identifier	guifg=#0086B3
 hi PreProc		guifg=#A0A0A0 gui=bold
-"hi Comment		guifg=#999988
-hi Comment		guifg=#6b6b6b
+"hi Comment		guifg=#27408b
+hi Comment		guifg=#006400
 "hi Comment		guifg=#6b6b6b gui=italic
 hi Constant		guifg=#177F80 gui=none
-hi String		guifg=#D81745
-hi Function		guifg=#990000 gui=bold
+"hi String		guifg=#D81745
+hi String		guifg=#8b1a1a
+hi Function		guifg=#000000 gui=bold
+"hi Function		guifg=#8b3626 gui=bold
 hi Statement	guifg=#000000 gui=bold
 hi Type			guifg=#445588 gui=bold
 hi Number		guifg=#1C9898

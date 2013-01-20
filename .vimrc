@@ -17,11 +17,17 @@ set autowrite  " ὁ Μανώλης τὸ ἔχει ἔτσι (συντμ. aw)
 "set number
 set linebreak
 set ruler
-set background=dark
+"set background=dark
+set term=xterm-256color
+set background=light
+colorscheme default
 "colorscheme desert
+"colorscheme default
+"colorscheme my_default
 "colorscheme solarized
 "colorscheme badwolf
-colorscheme ron
+"colorscheme ron
+"colorscheme ron
 "colorscheme emacs1
 "colorscheme zenburn
 "colorscheme grb4
@@ -65,7 +71,7 @@ autocmd VimEnter * wincmd p
 "map k gk
 "map $ g$
 "map ^ g^
-"inoremap jj <Esc>
+inoremap jj <Esc>
 
 
 
@@ -429,11 +435,21 @@ set fenc=utf-8
 "set iminsert=0
 "set imsearch=-1
 "set keymap=greek_polytonic
-set keymap=greek_utf-8
-set keymap=
+"set keymap=greek_utf-8
+"set keymap=
 "set encoding=utf-8
 "set inputenc=utf-8
 "set fenc=utf-8
 
 au FileChangedShell * echo "Warning: File changed on disk"
 let g:clang_complete_auto=0
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+
+
