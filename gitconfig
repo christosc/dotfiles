@@ -26,5 +26,5 @@
 	keepBackup = true
 [color]
 	ui = true
-#[push]
-#	default = simple
+[push]
+	default = current
