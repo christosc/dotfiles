@@ -17,14 +17,16 @@ set autowrite  " ὁ Μανώλης τὸ ἔχει ἔτσι (συντμ. aw)
 "set number
 set linebreak
 set ruler
+"set t_Co=256
 "set background=dark
-set term=xterm-256color
+"set term=xterm-256color
 set background=dark
 "colorscheme default
 "colorscheme desert
 colorscheme desert256
 "colorscheme default
 "colorscheme my_default
+"colorscheme macvim
 "colorscheme solarized
 "colorscheme badwolf
 "colorscheme ron
@@ -252,8 +254,8 @@ nnoremap <silent><Space> :nohlsearch<CR>l
 
 let g:LatexBox_viewer = 'skim'
 let g:LatexBox_latexmk_options = '-pvc'
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 
 set viminfo+=f1
@@ -270,7 +272,6 @@ autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 autocmd FileType gitcommit setlocal textwidth=72
 "set statusline=\ %t\ \ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ %h%m%r%y\ %{fugitive#statusline()}%=%c,%v\ %l/%L\ %P\ 
 
-set t_Co=256
 "colorscheme zenburn
 "colorscheme wombat256
 
@@ -426,10 +427,10 @@ nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
 au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim 
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-"set noimdisable
+set noimdisable
 set nocursorline
 set encoding=utf-8 
 set fenc=utf-8 
@@ -454,6 +455,8 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
 
-hi TabLine ctermfg=grey ctermbg=black cterm=none
+hi TabLine ctermfg=black ctermbg=grey cterm=none
 hi TabLineFill ctermfg=grey ctermbg=grey
-hi TabLineSel ctermfg=black ctermbg=lightgrey cterm=underline
+hi TabLineSel ctermfg=white ctermbg=black cterm=underline
+
+let c_no_curly_error = 1 " so that Objective-C block are not highlighted as errors
