@@ -460,3 +460,4 @@ hi TabLineFill ctermfg=grey ctermbg=grey
 hi TabLineSel ctermfg=white ctermbg=black cterm=underline
 
 let c_no_curly_error = 1 " so that Objective-C block are not highlighted as errors
+set ignorecase
