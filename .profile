@@ -463,12 +463,15 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
     source /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
-if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-    source /usr/local/etc/bash_completion.d/git-prompt.sh
+#if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
+if [ -f ~/.git-prompt.sh ]; then
+    source ~/.git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
-    PS1='\u@\h: \w $(hg_git_ps1 "(%s)")\n\$ '
+    #PS1='\u@\h: \w[$(__git_ps1)]\$ '
+    export PS1='\[\e[1;34m\]\u@\h:\W>\[\e[32m\]$(__git_ps1)\[\e[31m\]\[\e[0m\] '
+    #PS1='\u@\h: \w $(hg_git_ps1 "(%s)")\n\$ '
 fi
 
 # Source the svn bash completion file
@@ -680,8 +683,8 @@ __svn_rev() {
 
 #export PS1='\[\e[33m\]\u@\h:\w\$ \[\e[32m\]$(git_ps1)\[\e[31m\]\[\e[0m\]'
 #export PS1='\[\e[33m\]\u@\h:\W\$ \[\e[32m\]$(__git_svn_ps1)\[\e[31m\]\[\e[0m\]'
-export PS1='\[\e[33m\]\u@\h:\W>\[\e[32m\]$(__git_svn_ps1)\[\e[31m\]\[\e[0m\] '
-
+#export PS1='\[\e[33m\]\u@\h:\W>\[\e[32m\]$(__git_svn_ps1)\[\e[31m\]\[\e[0m\] '
+#export PS1='\[\e[1;34m\]\u@\h:\W>\[\e[32m\]$(__git_svn_ps1)\[\e[31m\]\[\e[0m\] '
 PATH=$PATH:${HOME}/sdk/gwt-2.5.0/
 export PATH
 

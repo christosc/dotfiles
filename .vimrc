@@ -10,7 +10,7 @@ set laststatus=2
 syntax enable 
 set tabstop=4    " ὁ Μανώλης ἔτσι ts = 8 …
 set shiftwidth=4
-set softtabstop=4
+"set softtabstop=4
 set expandtab
 set autowrite  " ὁ Μανώλης τὸ ἔχει ἔτσι (συντμ. aw)
 "set autoread
@@ -19,11 +19,11 @@ set linebreak
 set ruler
 "set t_Co=256
 "set background=dark
-"set term=xterm-256color
-set background=dark
+set term=xterm-256color
+set background=light
 "colorscheme default
-"colorscheme desert
-colorscheme desert256
+colorscheme desert
+"colorscheme desert256
 "colorscheme default
 "colorscheme my_default
 "colorscheme macvim
@@ -312,7 +312,7 @@ set backspace=indent,eol,start  " backspace through everything in insert mode
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
-set smartcase                   " ... unless they contain at least one capital letter
+"set smartcase                   " ... unless they contain at least one capital letter
 
 digraph .M 903
 
@@ -427,8 +427,8 @@ nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
 au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim 
-"let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set noimdisable
 set nocursorline
@@ -455,9 +455,10 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
 
-hi TabLine ctermfg=black ctermbg=grey cterm=none
-hi TabLineFill ctermfg=grey ctermbg=grey
-hi TabLineSel ctermfg=white ctermbg=black cterm=underline
+"hi TabLine ctermfg=black ctermbg=grey cterm=none
+"hi TabLineFill ctermfg=grey ctermbg=grey
+"hi TabLineSel ctermfg=white ctermbg=black cterm=underline
 
 let c_no_curly_error = 1 " so that Objective-C block are not highlighted as errors
 set ignorecase
+set ttyfast
