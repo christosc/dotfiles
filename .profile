@@ -463,9 +463,10 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
     source /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
-#if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-if [ -f ~/.git-prompt.sh ]; then
-    source ~/.git-prompt.sh
+if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
+#if [ -f ~/.git-prompt.sh ]; then
+    #source ~/.git-prompt.sh
+    source /usr/local/etc/bash_completion.d/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
