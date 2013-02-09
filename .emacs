@@ -33,7 +33,9 @@
 ;;   scroll-preserve-screen-position t)
 
 (setq-default cursor-type 'bar)
-(load-theme 'tango-dark t)
+;;(load-theme 'tango-dark t)
+;;(load-theme 'tsdh-dark t)
+(load-theme 'wheatgrass t)
 (require 'mouse)
 (xterm-mouse-mode t)
 (defun track-mouse (e))
@@ -82,3 +84,26 @@
 
 (add-to-list 'auto-mode-alist '("\\.mm\\'" . objc-mode))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . objc-mode))
+
+
+
+(setq c-mode-hook
+    (function (lambda ()
+                (setq indent-tabs-mode nil)
+                (setq c-indent-level 4)
+                (local-set-key (kbd "RET") 'newline-and-indent))))
+
+(setq objc-mode-hook
+    (function (lambda ()
+                (setq indent-tabs-mode nil)
+                (setq c-indent-level 4)
+                (local-set-key (kbd "RET") 'newline-and-indent))))
+
+(setq c++-mode-hook
+    (function (lambda ()
+                (setq indent-tabs-mode nil)
+                (setq c-indent-level 4)
+                (local-set-key (kbd "RET") 'newline-and-indent))))
+
+(setq-default indent-tabs-mode nil)
+(setq c-basic-offset 4)
