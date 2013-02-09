@@ -126,7 +126,8 @@ alias ecj="java org.eclipse.jdt.internal.compiler.batch.Main -source 1.5"
 
 #alias gnatmake="/usr/local/ada-4.3/bin/gnatmake"
 
-export EDITOR=vim
+#export EDITOR=vim
+export EDITOR=emacs
 export SUDO_USER=christoschryssochodis
 
 #alias xelatex="xelatex -output-driver='xdvipdfmx -q -E'"
@@ -690,3 +691,4 @@ PATH=$PATH:${HOME}/sdk/gwt-2.5.0/
 export PATH
 
 export PATH=/opt/subversion/bin:$PATH
+export PATH=/usr/local/git/bin:$PATH

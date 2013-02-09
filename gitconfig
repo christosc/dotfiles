@@ -4,7 +4,8 @@
 [core]
 	excludesfile = /Users/christos/.gitexcludes
 #	editor = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t"
-        editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
+	editor = emacs
+#        editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
 	autocrlf = false
 [alias]
     st = status --short
