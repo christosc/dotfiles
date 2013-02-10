@@ -91,19 +91,30 @@
     (function (lambda ()
                 (setq indent-tabs-mode nil)
                 (setq c-indent-level 4)
-                (local-set-key (kbd "RET") 'newline-and-indent))))
+                ;;(local-set-key (kbd "RET") 'newline-and-indent))))
+                (local-set-key (kbd "RET") 'comment-indent-new-line))))
 
 (setq objc-mode-hook
     (function (lambda ()
                 (setq indent-tabs-mode nil)
                 (setq c-indent-level 4)
-                (local-set-key (kbd "RET") 'newline-and-indent))))
+                ;;(local-set-key (kbd "RET") 'newline-and-indent))))
+                (local-set-key (kbd "RET") 'comment-indent-new-line)
+                (local-set-key (kbd "C-c o") 'objc-jump-between-header-source))))
 
 (setq c++-mode-hook
     (function (lambda ()
                 (setq indent-tabs-mode nil)
                 (setq c-indent-level 4)
-                (local-set-key (kbd "RET") 'newline-and-indent))))
+                ;;(local-set-key (kbd "RET") 'newline-and-indent))))
+                (local-set-key (kbd "RET") 'comment-indent-new-line))))
+
+(add-hook 'lisp-mode-hook '(lambda ()
+      ;;(local-set-key (kbd "RET") 'newline-and-indent)))
+      (local-set-key (kbd "RET") 'comment-indent-new-line)))
+
 
 (setq-default indent-tabs-mode nil)
 (setq c-basic-offset 4)
+
+(setq-default read-buffer-completion-ignore-case 1)
