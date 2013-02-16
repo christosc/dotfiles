@@ -14,19 +14,19 @@ set softtabstop=4
 set expandtab
 set autowrite  " ὁ Μανώλης τὸ ἔχει ἔτσι (συντμ. aw)
 "set autoread
-"set number
+set number
 set linebreak
 set nolist
 " Add full file path to your existing statusline
-set statusline+=%F
+"set statusline+=%F
 set ruler
 "set t_Co=256
 "set background=dark
 set term=xterm-256color
 set background=light
 "colorscheme default
-colorscheme desert
-"colorscheme desert256
+"colorscheme desert
+colorscheme desert256
 "colorscheme default
 "colorscheme my_default
 "colorscheme macvim
@@ -430,8 +430,8 @@ nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
 au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim 
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set noimdisable
 set nocursorline

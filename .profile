@@ -127,8 +127,8 @@ alias ecj="java org.eclipse.jdt.internal.compiler.batch.Main -source 1.5"
 #alias gnatmake="/usr/local/ada-4.3/bin/gnatmake"
 
 #export EDITOR=vim
-export EDITOR=emacs
-export SUDO_USER=christoschryssochodis
+#export EDITOR=emacs
+#export SUDO_USER=christoschryssochodis
 
 #alias xelatex="xelatex -output-driver='xdvipdfmx -q -E'"
 #alias emacs="$HOME/emacs/nextstep/Emacs.app/Contents/MacOS/Emacs -nw --debug-init"
@@ -470,6 +470,7 @@ if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
     source /usr/local/etc/bash_completion.d/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
+    GIT_PS1_SHOWUPSTREAM=verbose
     #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
     #PS1='\u@\h: \w[$(__git_ps1)]\$ '
     export PS1='\[\e[1;34m\]\u@\h:\W>\[\e[32m\]$(__git_ps1)\[\e[31m\]\[\e[0m\] '
@@ -535,7 +536,7 @@ else
 fi
 
 
-export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
+
 export PATH=/usr/local/bin:${PATH}
 
 export PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin:$PATH
