@@ -34,7 +34,7 @@
 
 (setq-default cursor-type 'bar)
 ;;(load-theme 'tango-dark t)
-(load-theme 'manoj-dark t)
+;;(load-theme 'manoj-dark t)
 ;;(load-theme 'tsdh-dark t)
 ;;(load-theme 'wheatgrass t)
 (require 'mouse)
@@ -91,30 +91,35 @@
 (setq c-mode-hook
     (function (lambda ()
                 (setq indent-tabs-mode nil)
-                (setq c-indent-level 4)
-                (local-set-key (kbd "RET") 'newline-and-indent))))
+                ;;(setq c-indent-level 4)
+                (setq-default indent-tabs-mode nil))))
+                ;;(local-set-key (kbd "RET") 'newline-and-indent))))
                 ;;(local-set-key (kbd "RET") 'comment-indent-new-line)
 
 
 (setq objc-mode-hook
     (function (lambda ()
                 (setq indent-tabs-mode nil)
-                (setq c-indent-level 4)
-                (local-set-key (kbd "RET") 'newline-and-indent)
+                ;;(setq c-indent-level 4)
+                (setq-default indent-tabs-mode nil)
+                ;;(local-set-key (kbd "RET") 'newline-and-indent)
                 ;;(local-set-key (kbd "RET") 'comment-indent-new-line)
                 (local-set-key (kbd "C-c o") 'objc-jump-between-header-source))))
 
 (setq c++-mode-hook
     (function (lambda ()
                 (setq indent-tabs-mode nil)
-                (setq c-indent-level 4)
-                (local-set-key (kbd "RET") 'newline-and-indent))))
+                ;;(setq c-indent-level 4)
+                (setq-default indent-tabs-mode nil))))
+                ;;(local-set-key (kbd "RET") 'newline-and-indent))))
                 ;;(local-set-key (kbd "RET") 'comment-indent-new-line)
 
 
 (add-hook 'lisp-mode-hook '(lambda ()
+                             (setq-default indent-tabs-mode nil)     
       ;;(local-set-key (kbd "RET") 'newline-and-indent)))
-      (local-set-key (kbd "RET") 'comment-indent-new-line)))
+      ;;(local-set-key (kbd "RET") 'comment-indent-new-line)
+))
 
 
 (setq-default indent-tabs-mode nil)
@@ -169,7 +174,17 @@
 ;;   scroll-conservatively 10000
 ;;   scroll-preserve-screen-position 1)
 
-;;(setq scroll-step 1)
+(setq redisplay-dont-pause t)
+(setq scroll-step 1)
 
 
 
+;;(setq-default global-font-lock-mode nil)
+(global-font-lock-mode -1)
+(setq-default indent-tabs-mode nil)
+
+(global-set-key (kbd "C-x p") (lambda () (interactive) (other-window (- 1))))
+(global-set-key (kbd "M-n") 'forward-paragraph)
+(global-set-key (kbd "M-p") 'backward-paragraph)
+(global-set-key (kbd "C-x -") 'shrink-window)
+(setq-default tab-width 4)

@@ -7,14 +7,14 @@ set backspace=indent,eol,start
 set ignorecase
 set laststatus=2
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%l,%v][%p%%]\ [LEN=%L]
-syntax enable 
-"set tabstop=4    " ὁ Μανώλης ἔτσι ts = 8 …
+"syntax enable 
+set tabstop=4    " ὁ Μανώλης ἔτσι ts = 8 …
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autowrite  " ὁ Μανώλης τὸ ἔχει ἔτσι (συντμ. aw)
 "set autoread
-set number
+"set number
 set linebreak
 set nolist
 " Add full file path to your existing statusline
@@ -23,10 +23,10 @@ set ruler
 "set t_Co=256
 "set background=dark
 set term=xterm-256color
-set background=light
+"set background=light
 "colorscheme default
 "colorscheme desert
-colorscheme desert256
+"colorscheme desert256
 "colorscheme default
 "colorscheme my_default
 "colorscheme macvim
@@ -320,7 +320,8 @@ set ignorecase                  " searches are case insensitive...
 digraph .M 903
 
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-set t_Co=256
+"set t_Co=256
+set t_Co=0
 
 nnoremap <F5> :buffers<CR>:buffer<Space>
 "set background=dark
@@ -355,8 +356,10 @@ set iskeyword+=:
 
 au FileChangedShell * echo "Warning: File changed on disk"
 au BufRead,BufNewFile *.md set filetype=markdown
-au BufRead,BufNewFile *.m set filetype=objc
-au BufRead,BufNewFile *.h set filetype=objc
+"au BufRead,BufNewFile *.m set filetype=objc
+"au BufRead,BufNewFile *.m set filetype=nosyntax
+"au BufRead,BufNewFile *.h set filetype=objc
+"au BufRead,BufNewFile *.h set filetype=nosyntax
 
 set path=.,,**
 cnoremap <Esc>b <S-Left>
@@ -462,7 +465,10 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 "hi TabLineFill ctermfg=grey ctermbg=grey
 "hi TabLineSel ctermfg=white ctermbg=black cterm=underline
 
-let c_no_curly_error = 1 " so that Objective-C block are not highlighted as errors
+"let c_no_curly_error = 1 " so that Objective-C block are not highlighted as errors
 set ignorecase
 set ttyfast
-
+set nohlsearch
+set t_Co=0
+syntax off
+set tw=0

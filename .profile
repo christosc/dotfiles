@@ -88,7 +88,7 @@ export LSCOLORS=GGFxCxDxBxegedabagacad
 #LS_COLORS="ow=94:di=34"
 #export LS_COLORS
 #export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
-alias ls="ls --color -h "
+alias ls="ls -F -h "
 #export CLICOLOR=1
 #export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 #export LS_COLORS="di=01;33" # γιὰ σκοῦρο ὑπόβαθρο
@@ -450,7 +450,7 @@ alias xelatex="rlwrap xelatex"
 LESS="-IRm"; export LESS
 
 ##################  EMACS ##########################################
-export PATH=${HOME}/Applications/emacs-23.3-YAMAMOTO/mac/Emacs.app/Contents/MacOS/:${PATH}:/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin
+export PATH=/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin:${PATH}
 alias emacscl="emacsclient -n"
 alias emc="emacsclient -nw"
 #export ALTERNATE_EDITOR="emacs -nw" EDITOR=emacsclient VISUAL=emacsclient
@@ -473,7 +473,7 @@ if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
     GIT_PS1_SHOWUPSTREAM=verbose
     #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
     #PS1='\u@\h: \w[$(__git_ps1)]\$ '
-    export PS1='\[\e[1;34m\]\u@\h:\W>\[\e[32m\]$(__git_ps1)\[\e[31m\]\[\e[0m\] '
+    export PS1='\u@\h:\W>$(__git_ps1) '
     #PS1='\u@\h: \w $(hg_git_ps1 "(%s)")\n\$ '
 fi
 
@@ -693,3 +693,9 @@ export PATH
 
 export PATH=/opt/subversion/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
+
+alias emacs="emacs -nw --color=no"
+
+#alias em="emacs -nw --color=no"
+alias sqlite3="rlwrap sqlite3"
+alias sqlite="rlwrap sqlite3"

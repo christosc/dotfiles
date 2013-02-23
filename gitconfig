@@ -1,11 +1,13 @@
 [user]
 	name = Christos Chryssochoidis
-	email = c.chryssochoidis@gmail.com
+        #email = c.chryssochoidis@gmail.com
+	email = chc@qwe.gr
 [core]
 	excludesfile = /Users/christos/.gitexcludes
 #	editor = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t"
-	editor = emacs
-#        editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
+        # editor = emacs
+        # editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
+    editor = "em"	
 	autocrlf = false
 [alias]
     st = status --short
@@ -13,6 +15,7 @@
     co = checkout
     ci = commit
     br = branch
+    graph = log --graph
 [gui]
 	recentrepo = /private/tmp/bbbb
 #[merge]
@@ -26,6 +29,6 @@
 [mergetool]
 	keepBackup = true
 [color]
-	ui = true
+        #ui = true
 [push]
 	default = current
