@@ -705,3 +705,4 @@ alias sqlite="rlwrap sqlite3"
 shopt -s extglob
 alias emls="ps | grep em | grep -v grep"
 alias lsem="ps | grep em | grep -v grep"
+alias lem="ps | grep em | grep -v grep"
