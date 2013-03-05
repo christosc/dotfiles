@@ -12,6 +12,7 @@
 [alias]
     st = status --short
     s  = status
+	sh = show
 	d  = diff
     co = checkout
     ci = commit
