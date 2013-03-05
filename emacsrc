@@ -1,6 +1,6 @@
-bind-to-key help			FNP
+bind-to-key help FNP  ; F1 for help screen
 
-set $tab 4
+set $tab 4  ; show tabs as 4 spaces
 ;set $softtab 4
 ;set $tabwidth 4
 ;set $tabsize 4
@@ -28,5 +28,6 @@ set $tab 4
 
 !endm
 
-bind-to-key execute-macro-36	FNQ
+bind-to-key execute-macro-36	FNQ  ; F2 to set modes as appopriate
 
+bind-to-key set-mark ^@  ; Control-space to set mark
