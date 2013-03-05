@@ -1,4 +1,24 @@
+bind-to-key help			FNP
+
 set $tab 4
 ;set $softtab 4
 ;set $tabwidth 4
 ;set $tabsize 4
+
+36	store-macro
+	set %rctmp &sin $cfname "."
+	!if &equ %rctmp 0
+		!return
+	!endif
+	set %rctmp &mid $cfname &add %rctmp 1 5
+	!if &seq %rctmp "m" &or &seq %rctmp "c" &seq %rctmp "h"
+		add-mode "cmode"
+	!endif
+	!if &or &seq %rctmp "md" &or &seq %rctmp "txt" &or &seq %rctmp "doc" &or &seq %rctmp "tmp" &seq %rctmp "tex"
+		add-mode "wrap"
+	!endif
+
+!endm
+
+bind-to-key execute-macro-36	FNQ
+

@@ -42,7 +42,7 @@ export PATH=$PATH:/Users/christos/.cabal/bin/
 
 
 ################   MODULA-3   ####################################
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/cm3/lib:/usr/local/mysql/lib
+#export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/cm3/lib:/usr/local/mysql/lib
 ############## ΤΕΛΟΣ MODULA-3 ####################################
 
 #export adalib=/usr/local/ada-4.3/lib/gcc/i686-apple-darwin/4.3.0/adalib:/usr/local/ada-4.3/lib/gcc/i686-apple-darwin9/4.3.0/adalib
@@ -99,7 +99,7 @@ alias ls="ls -F -h "
 #PATH=$QTDIR/bin:$PATH
 #DYLD_LIBRARY_PATH=$QTDIR/lib:$DYLD_LIBRARY_PATH
 
-#diko mou ayto...
+#δικό μου αὐτό...
 #export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH
 
 #export QTDIR PATH DYLD_LIBRARY_PATH
@@ -470,10 +470,12 @@ if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
     source /usr/local/etc/bash_completion.d/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
-    GIT_PS1_SHOWUPSTREAM=verbose
+    #GIT_PS1_SHOWUPSTREAM=verbose
     #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
     #PS1='\u@\h: \w[$(__git_ps1)]\$ '
-    export PS1='\u@\h:\W>$(__git_ps1) '
+    temp="$(tty)"
+    cur_tty="${temp:5}" # The tty we are working on
+    export PS1="\u@\h:${cur_tty} \W\$(__git_ps1) > "
     #PS1='\u@\h: \w $(hg_git_ps1 "(%s)")\n\$ '
 fi
 
@@ -555,10 +557,10 @@ export PATH=/usr/local/share/python:${PATH}
 #    hg prompt "({on {branch}}{ at {bookmark}} {status})" 2> /dev/null
 #}
 
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWSTASHSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-export GIT_PS1_ENABLED=true
+#export GIT_PS1_SHOWDIRTYSTATE=true
+#export GIT_PS1_SHOWSTASHSTATE=true
+#export GIT_PS1_SHOWUNTRACKEDFILES=true
+#export GIT_PS1_ENABLED=true
 function disable_git_ps1
 {
   export GIT_PS1_ENABLED=false
@@ -699,3 +701,7 @@ alias emacs="emacs -nw --color=no"
 #alias em="emacs -nw --color=no"
 alias sqlite3="rlwrap sqlite3"
 alias sqlite="rlwrap sqlite3"
+
+shopt -s extglob
+alias emls="ps | grep em | grep -v grep"
+alias lsem="ps | grep em | grep -v grep"
