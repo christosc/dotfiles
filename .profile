@@ -475,7 +475,8 @@ if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
     #PS1='\u@\h: \w[$(__git_ps1)]\$ '
     temp="$(tty)"
     cur_tty="${temp:5}" # The tty we are working on
-    export PS1="\u@\h:${cur_tty}:\W\$(__git_ps1) > "
+    #export PS1="\u@\h:${cur_tty}:\W\$(__git_ps1) > "
+	export PS1="\u@\h:\W\$(__git_ps1) > "
     #PS1='\u@\h: \w $(hg_git_ps1 "(%s)")\n\$ '
 fi
 
@@ -703,6 +704,11 @@ alias sqlite3="rlwrap sqlite3"
 alias sqlite="rlwrap sqlite3"
 
 shopt -s extglob
-alias emls="ps | grep em | grep -v grep"
-alias lsem="ps | grep em | grep -v grep"
+temp="$(tty)"
+cur_tty="${temp:5}" # The tty we are working on
+
+alias emls="ps | grep em | grep ${cur_tty} | grep -v grep"
+alias lsem="ps | grep em | grep ${cur_tty} | grep -v grep"
 alias lem="ps | grep em | grep -v grep"
+
+alias e="ps | grep em | grep ${cur_tty} | grep -v grep"
