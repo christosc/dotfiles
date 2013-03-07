@@ -52,6 +52,7 @@ set term=xterm-256color
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
+set nowrap
 
 " Γιά νά θέτῃ αὐτόματα κατάλληλον ἐσοχήν.
 "set autoindent
@@ -149,7 +150,7 @@ let g:Tex_ViewRule_pdf = 'Preview'
 "noremap   <Down>   <NOP>
 "noremap   <Left>   <NOP>
 "noremap   <Right>  <NOP>
-set wrap
+"set wrap
 
 if has("vms")
   set nobackup          " do not keep a backup file, use versions instead

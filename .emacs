@@ -5,7 +5,7 @@
 (setq-default word-wrap t)
 (global-visual-line-mode)
 (setq column-number-mode t)
-(load-file "~/dotfiles/elisp/macgreek.el")
+;;(load-file "~/dotfiles/elisp/macgreek.el")
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist (cons '("\\.text" . markdown-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
@@ -188,3 +188,14 @@
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "C-x -") 'shrink-window)
 (setq-default tab-width 4)
+
+
+(menu-bar-mode -1)
+
+
+
+
+
+
+
+
