@@ -9,6 +9,7 @@
         # editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
     editor = "em"	
 	autocrlf = false
+	pager = less -x1,5
 [alias]
     st = status --short
     s  = status
