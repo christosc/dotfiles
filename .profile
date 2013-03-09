@@ -704,6 +704,7 @@ alias sqlite3="rlwrap sqlite3"
 alias sqlite="rlwrap sqlite3"
 
 shopt -s extglob
+shopt -s globstar
 temp="$(tty)"
 cur_tty="${temp:5}" # The tty we are working on
 
