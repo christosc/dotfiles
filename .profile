@@ -476,7 +476,7 @@ if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
     temp="$(tty)"
     cur_tty="${temp:5}" # The tty we are working on
     #export PS1="\u@\h:${cur_tty}:\W\$(__git_ps1) > "
-	export PS1="\u@\h:\W\$(__git_ps1) > "
+	export PS1="\u@\h:\W\$(__git_ps1) % "
     #PS1='\u@\h: \w $(hg_git_ps1 "(%s)")\n\$ '
 fi
 
