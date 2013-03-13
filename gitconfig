@@ -5,20 +5,21 @@
 [core]
 	excludesfile = /Users/christos/.gitexcludes
 #	editor = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t"
-        # editor = emacs
-        # editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
-    editor = "em"	
+        # editor = emacs -nw --color=no
+        #editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
+	editor = "em"	
 	autocrlf = false
-	pager = less -x1,5
+	pager = less -XRFS -x1,9
+
 [alias]
-    st = status --short
-    s  = status
+    	st = status --short
+    	s  = status --short
 	sh = show
 	d  = diff
-    co = checkout
-    ci = commit
-    br = branch
-    graph = log --graph
+    	co = checkout
+    	ci = commit
+    	br = branch
+    	graph = log --graph
 [gui]
 	recentrepo = /private/tmp/bbbb
 #[merge]
@@ -35,3 +36,7 @@
         #ui = true
 [push]
 	default = current
+[filter "tabspace"]
+	smudge = unexpand --tabs=8 --first-only
+	clean = expand --tabs=8 --initial
+	#clean = expand  --initial

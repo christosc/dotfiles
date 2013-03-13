@@ -3,6 +3,7 @@
 ;;(setq mac-function-modifier 'super)
 (setq ispell-program-name "/usr/local/bin/aspell")
 (setq-default word-wrap t)
+;;(setq-default c-electric-flag nil)
 (global-visual-line-mode)
 (setq column-number-mode t)
 ;;(load-file "~/dotfiles/elisp/macgreek.el")
@@ -90,40 +91,41 @@
 
 (setq c-mode-hook
     (function (lambda ()
-                (setq indent-tabs-mode nil)
+                ;(setq indent-tabs-mode nil)
                 ;;(setq c-indent-level 4)
-                (setq-default indent-tabs-mode nil))))
-                ;;(local-set-key (kbd "RET") 'newline-and-indent))))
+                ;;(setq-default indent-tabs-mode nil)
+                (local-set-key (kbd "RET") 'newline-and-indent)
                 ;;(local-set-key (kbd "RET") 'comment-indent-new-line)
-
+)))
 
 (setq objc-mode-hook
     (function (lambda ()
-                (setq indent-tabs-mode nil)
+                ;(setq indent-tabs-mode nil)
                 ;;(setq c-indent-level 4)
-                (setq-default indent-tabs-mode nil)
-                ;;(local-set-key (kbd "RET") 'newline-and-indent)
+                ;(setq-default indent-tabs-mode nil)
+                (local-set-key (kbd "RET") 'newline-and-indent)
                 ;;(local-set-key (kbd "RET") 'comment-indent-new-line)
-                (local-set-key (kbd "C-c o") 'objc-jump-between-header-source))))
+                (local-set-key (kbd "C-c o") 'objc-jump-between-header-source)
+)))
 
 (setq c++-mode-hook
     (function (lambda ()
-                (setq indent-tabs-mode nil)
+                ;;(setq indent-tabs-mode nil)
                 ;;(setq c-indent-level 4)
-                (setq-default indent-tabs-mode nil))))
+                ;;(setq-default indent-tabs-mode nil))))
                 ;;(local-set-key (kbd "RET") 'newline-and-indent))))
                 ;;(local-set-key (kbd "RET") 'comment-indent-new-line)
-
+)))
 
 (add-hook 'lisp-mode-hook '(lambda ()
-                             (setq-default indent-tabs-mode nil)     
+                             ;;(setq-default indent-tabs-mode nil)     
       ;;(local-set-key (kbd "RET") 'newline-and-indent)))
       ;;(local-set-key (kbd "RET") 'comment-indent-new-line)
 ))
 
 
-(setq-default indent-tabs-mode nil)
-(setq c-basic-offset 4)
+;;(setq-default indent-tabs-mode nil)
+;;(setq c-basic-offset 4)
 
 (setq-default read-buffer-completion-ignore-case 1)
 (global-subword-mode 1)
@@ -174,14 +176,14 @@
 ;;   scroll-conservatively 10000
 ;;   scroll-preserve-screen-position 1)
 
-(setq redisplay-dont-pause t)
+;;(setq redisplay-dont-pause t)
 (setq scroll-step 1)
 
 
 
 ;;(setq-default global-font-lock-mode nil)
 (global-font-lock-mode -1)
-(setq-default indent-tabs-mode nil)
+;;(setq-default indent-tabs-mode nil)
 
 (global-set-key (kbd "C-x p") (lambda () (interactive) (other-window (- 1))))
 (global-set-key (kbd "M-n") 'forward-paragraph)
@@ -192,10 +194,16 @@
 
 (menu-bar-mode -1)
 
+(eval-after-load 'cc-mode
+  '(progn
+     (define-key c-mode-base-map "/" 'self-insert-command)
+     (define-key c-mode-base-map "*" 'self-insert-command)
+     (define-key c-mode-map (kbd "TAB") 'self-insert-command)))
+     
+(global-set-key (kbd "TAB") 'self-insert-command)
 
 
 
 
-
-
-
+(global-set-key (kbd "DEL") 'backward-delete-char)
+(setq c-backspace-function 'backward-delete-char)

@@ -447,7 +447,7 @@ alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
 alias lualatex="rlwrap lualatex"
 alias xelatex="rlwrap xelatex"
-LESS="-IRm"; export LESS
+#LESS="-IRm -FXRS -x4"; export LESS
 
 ##################  EMACS ##########################################
 export PATH=/Applications/Emacs.app/Contents/MacOS/:/Applications/Emacs.app/Contents/MacOS/bin:${PATH}
@@ -708,8 +708,8 @@ shopt -s globstar
 temp="$(tty)"
 cur_tty="${temp:5}" # The tty we are working on
 
-alias emls="ps | grep em | grep ${cur_tty} | grep -v grep"
-alias lsem="ps | grep em | grep ${cur_tty} | grep -v grep"
-alias lem="ps | grep em | grep -v grep"
+alias emls="ps | grep 'em ' | grep ${cur_tty} | grep -v grep"
+alias lsem="ps | grep 'em ' | grep ${cur_tty} | grep -v grep"
+alias lem="ps | grep 'em ' | grep -v grep"
 
-alias e="ps | grep em | grep ${cur_tty} | grep -v grep"
+alias e="ps | grep 'em ' | grep ${cur_tty} | grep -v grep"
