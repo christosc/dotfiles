@@ -12,14 +12,15 @@
 	pager = less -XRFS -x1,9
 
 [alias]
-    	st = status --short
-    	s  = status --short
+	st = status --short
+	s  = status --short
 	sh = show
 	d  = diff
-    	co = checkout
-    	ci = commit
-    	br = branch
-    	graph = log --graph
+	co = checkout
+	ci = commit
+	br = branch
+	b  = branch
+	graph = log --graph
 [gui]
 	recentrepo = /private/tmp/bbbb
 #[merge]

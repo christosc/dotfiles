@@ -128,7 +128,7 @@
 ;;(setq c-basic-offset 4)
 
 (setq-default read-buffer-completion-ignore-case 1)
-(global-subword-mode 1)
+;;(global-subword-mode 1)
 
 (require 'package)
 (add-to-list 'package-archives 
@@ -207,3 +207,13 @@
 
 (global-set-key (kbd "DEL") 'backward-delete-char)
 (setq c-backspace-function 'backward-delete-char)
+
+(setq-default transient-mark-mode nil)
+
+(global-set-key (kbd "C-x x") 'next-buffer)
+
+
+(global-set-key (kbd "C-z") 'scroll-down-command)
+(global-set-key (kbd "M-r") 'replace-string)
+(global-set-key (kbd "C-M-r") 'query-replace)
+(global-set-key (kbd "C-x C-d") 'save-buffer)
