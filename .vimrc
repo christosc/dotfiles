@@ -56,7 +56,7 @@ set term=xterm-256color
 "hi LineNr guifg=DarkGray
 "hi LineNr ctermfg=Gray
 "set wrap
-set nowrap
+"set nowrap
 
 " Γιά νά θέτῃ αὐτόματα κατάλληλον ἐσοχήν.
 "set autoindent
@@ -283,7 +283,7 @@ autocmd FileType gitcommit setlocal textwidth=72
 "colorscheme zenburn
 "colorscheme wombat256
 
-call pathogen#infect()
+"call pathogen#infect()
 
 set hidden
 
@@ -472,6 +472,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 "let c_no_curly_error = 1 " so that Objective-C block are not highlighted as errors
 set ignorecase
+set smartcase
 set ttyfast
 set nohlsearch
 set t_Co=0
@@ -479,3 +480,5 @@ syntax off
 set tw=0
 set tabstop=4
 set noexpandtab
+set foldlevelstart=1
+set nowrapscan

@@ -125,7 +125,7 @@
 
 
 ;;(setq-default indent-tabs-mode nil)
-(setq c-basic-offset 4)
+;;(setq c-basic-offset 4)
 
 (setq-default read-buffer-completion-ignore-case 1)
 ;;(global-subword-mode 1)
@@ -163,7 +163,7 @@
 ;;(ido-mode 1)
 
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
-;(require 'magit)
+(require 'magit)
 
 ;;(setq-default shift-select-mode t)
 (windmove-default-keybindings)
@@ -213,10 +213,7 @@
 (global-set-key (kbd "C-x x") 'next-buffer)
 
 
-;;(global-set-key (kbd "C-z") 'scroll-down-command)
+(global-set-key (kbd "C-z") 'scroll-down-command)
 (global-set-key (kbd "M-r") 'replace-string)
 (global-set-key (kbd "C-M-r") 'query-replace)
 (global-set-key (kbd "C-x C-d") 'save-buffer)
-
-(when (fboundp 'windmove-default-keybindings)
-      (windmove-default-keybindings))
