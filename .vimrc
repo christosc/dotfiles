@@ -305,7 +305,7 @@ autocmd FileChangedShell *
 
 " Enable spell check by default for git commits.
 " You must have installed vim-git plugin.
-autocmd FileType gitcommit set spell
+" autocmd FileType gitcommit set spell
 
 " Makefile 
 autocmd FileType make set noexpandtab
@@ -481,4 +481,4 @@ set tw=0
 set tabstop=4
 set noexpandtab
 set foldlevelstart=1
-set nowrapscan
+"set nowrapscan
