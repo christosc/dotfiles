@@ -482,3 +482,15 @@ set tabstop=4
 set noexpandtab
 set foldlevelstart=1
 "set nowrapscan
+"
+
+function! SwitchSourceHeader()
+  "update!
+  if (expand ("%:e") == "m")
+    find %:t:r.h
+  else
+    find %:t:r.m
+  endif
+endfunction
+
+nmap ,s :call SwitchSourceHeader()<CR>
