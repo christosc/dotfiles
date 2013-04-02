@@ -155,7 +155,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(mode-line-inactive ((t (:inherit mode-line :inverse-video t :weight normal)))))
 
 
 ;; (setq ido-enable-flex-matching t)
@@ -182,7 +182,7 @@
 
 
 ;;(setq-default global-font-lock-mode nil)
-(global-font-lock-mode -1)
+;;(global-font-lock-mode -1)
 ;;(setq-default indent-tabs-mode nil)
 
 (global-set-key (kbd "C-x p") (lambda () (interactive) (other-window (- 1))))
@@ -220,3 +220,26 @@
 
 (when (fboundp 'windmove-default-keybindings)
       (windmove-default-keybindings))
+;(set-face-attribute  'mode-line
+;                 nil 
+;                 :foreground "white"
+;                 :background "black" 
+;                 :box '(:line-width 1 :style released-button))
+;(set-face-attribute  'mode-line-inactive
+;                 nil 
+;                 :foreground "black"
+;                 :background "white"
+;                 :box '(:line-width 1 :style released-button))
+
+;(set-face-attribute  'mode-line-inactive nil 
+;                 :foreground "black"
+;                 :background "grey"		
+;                 :box '(:line-width 1 :style released-button)
+;				  :inverse-video t
+;			     :box '(:line-width 1)
+;)
+
+
+;(set-face-attribute  'mode-line-inactive nil 
+;:inverse-video nil
+;:weight 'extra-light)

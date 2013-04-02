@@ -474,7 +474,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 set ignorecase
 set smartcase
 set ttyfast
-set nohlsearch
+"set nohlsearch
 set t_Co=0
 syntax off
 set tw=0
