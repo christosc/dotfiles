@@ -85,6 +85,7 @@ autocmd VimEnter * wincmd p
 inoremap jj <Esc>
 
 
+execute pathogen#infect()
 
 
 
@@ -496,3 +497,5 @@ endfunction
 nmap ,s :call SwitchSourceHeader()<CR>
  
 set iskeyword-=:
+DoMatchParen
+set showmatch
