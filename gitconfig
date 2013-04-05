@@ -7,13 +7,13 @@
 #	editor = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t"
         # editor = emacs -nw --color=no
         #editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
-	editor = "em"	
+	editor = "vim"	
 	autocrlf = false
-	pager = less -XRFS -x1,9
+	pager = less -XRFS -x1,5
 
 [alias]
 	st = status --short
-	s  = status --short
+	s  = status
 	sh = show
 	d  = diff
 	co = checkout
@@ -38,6 +38,6 @@
 [push]
 	default = current
 [filter "tabspace"]
-	smudge = unexpand --tabs=8 --first-only
-	clean = expand --tabs=8 --initial
+	#smudge = unexpand --tabs=8 --first-only
+	#clean = expand --tabs=8 --initial
 	#clean = expand  --initial

@@ -419,7 +419,7 @@ _expand()
 }
 
 
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+#alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 
 
@@ -460,14 +460,13 @@ export MANPATH=$HOME/local/share/man:$MANPATH
 export LANG=en_US.UTF-8
 
 # Source the git bash completion file
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-    source /usr/local/etc/bash_completion.d/git-completion.bash
+if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+    source /usr/local/git/contrib/completion/git-completion.bash
 fi
 
-if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-#if [ -f ~/.git-prompt.sh ]; then
+if [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
     #source ~/.git-prompt.sh
-    source /usr/local/etc/bash_completion.d/git-prompt.sh
+    source /usr/local/git/contrib/completion/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     #GIT_PS1_SHOWUPSTREAM=verbose
@@ -698,7 +697,7 @@ export PATH
 export PATH=/opt/subversion/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
 
-alias emacs="emacs -nw --color=no"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw --color=no"
 
 #alias em="emacs -nw --color=no"
 alias sqlite3="rlwrap sqlite3"

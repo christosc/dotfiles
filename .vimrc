@@ -494,3 +494,5 @@ function! SwitchSourceHeader()
 endfunction
 
 nmap ,s :call SwitchSourceHeader()<CR>
+ 
+set iskeyword-=:
