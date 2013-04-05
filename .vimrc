@@ -362,9 +362,9 @@ set iskeyword+=:
 
 au FileChangedShell * echo "Warning: File changed on disk"
 au BufRead,BufNewFile *.md set filetype=markdown
-"au BufRead,BufNewFile *.m set filetype=objc
+au BufRead,BufNewFile *.m set filetype=objc
 "au BufRead,BufNewFile *.m set filetype=nosyntax
-"au BufRead,BufNewFile *.h set filetype=objc
+au BufRead,BufNewFile *.h set filetype=objc
 "au BufRead,BufNewFile *.h set filetype=nosyntax
 
 set path=.,,**
@@ -497,5 +497,5 @@ endfunction
 nmap ,s :call SwitchSourceHeader()<CR>
  
 set iskeyword-=:
-DoMatchParen
+"DoMatchParen
 set showmatch
