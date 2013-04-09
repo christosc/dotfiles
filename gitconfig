@@ -3,7 +3,7 @@
         #email = c.chryssochoidis@gmail.com
 	email = chc@qwe.gr
 [core]
-	excludesfile = /Users/christos/.gitexcludes
+	excludesfile = ~/.gitexcludes
 #	editor = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t"
         # editor = emacs -nw --color=no
         #editor = "/Applications/MacVim.app/Contents/MacOS/Vim"

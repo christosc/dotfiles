@@ -12,9 +12,9 @@ set laststatus=2
 "set shiftwidth=4
 "set softtabstop=4
 "set expandtab
-set tabstop=4
+set tabstop=8
 "set softtabstop=4
-set shiftwidth=4
+set shiftwidth=8
 set noexpandtab
 set autowrite  " ὁ Μανώλης τὸ ἔχει ἔτσι (συντμ. aw)
 "set autoread
@@ -94,7 +94,6 @@ execute pathogen#infect()
 
 
 
-set expandtab
 nnoremap <Space> l
 "set autoread
 
@@ -479,8 +478,6 @@ set ttyfast
 set t_Co=0
 syntax off
 set tw=0
-set tabstop=4
-set noexpandtab
 set foldlevelstart=1
 "set nowrapscan
 "
@@ -498,4 +495,4 @@ nmap ,s :call SwitchSourceHeader()<CR>
  
 set iskeyword-=:
 "DoMatchParen
-set showmatch
+"set showmatch

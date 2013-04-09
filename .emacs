@@ -182,7 +182,7 @@
 
 
 ;;(setq-default global-font-lock-mode nil)
-;;(global-font-lock-mode -1)
+(global-font-lock-mode -1)
 ;;(setq-default indent-tabs-mode nil)
 
 (global-set-key (kbd "C-x p") (lambda () (interactive) (other-window (- 1))))

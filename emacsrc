@@ -1,6 +1,6 @@
 bind-to-key help FNP  ; F1 for help screen
 
-set $tab 4  ; show tabs as 4 spaces
+;set $tab 4  ; show tabs as 4 spaces
 ;set $softtab 4
 ;set $tabwidth 4
 ;set $tabsize 4
