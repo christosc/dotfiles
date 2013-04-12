@@ -109,7 +109,7 @@ set writebackup
 set foldmethod=manual
 nnoremap <silent> <F3> :TlistToggle<CR>
 
-set autoindent
+"set autoindent
 
 
 let  g:netrw_browse_split=2
@@ -496,3 +496,4 @@ nmap ,s :call SwitchSourceHeader()<CR>
 set iskeyword-=:
 "DoMatchParen
 "set showmatch
+"set expandtab

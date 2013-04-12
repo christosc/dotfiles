@@ -103,7 +103,7 @@
                 ;(setq indent-tabs-mode nil)
                 ;;(setq c-indent-level 4)
                 ;(setq-default indent-tabs-mode nil)
-                (local-set-key (kbd "RET") 'newline-and-indent)
+                (local-set-key (kbd "RET") 'newline)
                 ;;(local-set-key (kbd "RET") 'comment-indent-new-line)
                 (local-set-key (kbd "C-c o") 'objc-jump-between-header-source)
 )))
@@ -125,7 +125,7 @@
 
 
 ;;(setq-default indent-tabs-mode nil)
-(setq c-basic-offset 4)
+(setq c-basic-offset 8)
 
 (setq-default read-buffer-completion-ignore-case 1)
 ;;(global-subword-mode 1)
@@ -189,7 +189,7 @@
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "C-x -") 'shrink-window)
-(setq-default tab-width 4)
+(setq-default tab-width 8)
 
 
 (menu-bar-mode -1)
@@ -198,7 +198,8 @@
   '(progn
      (define-key c-mode-base-map "/" 'self-insert-command)
      (define-key c-mode-base-map "*" 'self-insert-command)
-     (define-key c-mode-map (kbd "TAB") 'self-insert-command)))
+     (define-key c-mode-map (kbd "TAB") 'self-insert-command)
+))
      
 (global-set-key (kbd "TAB") 'self-insert-command)
 
