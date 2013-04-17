@@ -10,7 +10,7 @@
 	#editor = "vim"	
 	editor = "em"	
 	autocrlf = false
-	#pager = less -XRFS -x1,5
+	pager = less -XRFS -x1,5
 
 [alias]
 	st = status --short
