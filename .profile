@@ -713,3 +713,4 @@ alias lsem="ps | grep 'em ' | grep ${cur_tty} | grep -v grep"
 alias lem="ps | grep 'em ' | grep -v grep"
 
 alias e="ps | grep 'em ' | grep ${cur_tty} | grep -v grep"
+alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw --color=no"
