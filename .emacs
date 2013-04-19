@@ -104,7 +104,7 @@
                 ;;(setq c-indent-level 4)
                 ;(setq-default indent-tabs-mode nil)
                 ;(local-set-key (kbd "RET") 'newline)
-                (local-set-key (kbd "RET") 'comment-indent-new-line)
+                (local-set-key (kbd "RET") 'newline-and-indent)
                 (local-set-key (kbd "C-c o") 'objc-jump-between-header-source)
 )))
 
