@@ -7,11 +7,11 @@
 #	editor = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t"
         # editor = emacs -nw --color=no
         #editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
-	#editor = "vim"	
-	editor = "/Applications/Emacs.app/Contents/MacOS/Emacs -nw --color=no"
-    #editor = "em"	
+	editor = "vim"	
+	#editor = "/Applications/Emacs.app/Contents/MacOS/Emacs -nw --color=no"
+	#editor = "em"	
 	autocrlf = false
-	pager = less -XRFS -x1,5
+	#pager = less -XRFS -x1,5
 
 [alias]
 	st = status --short
