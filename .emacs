@@ -190,7 +190,7 @@
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "C-x -") 'shrink-window)
-(setq-default tab-width 4)
+(setq-default tab-width 8)
 
 
 (menu-bar-mode -1)
@@ -247,3 +247,7 @@
 ;:weight 'extra-light)
 
 (global-set-key (kbd "RET") 'comment-indent-new-line)
+
+(setq-default c-basic-offset 8
+              tab-width 8
+              indent-tabs-mode t)

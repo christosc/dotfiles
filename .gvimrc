@@ -2,7 +2,7 @@
 "set guifont=Cousine:h12
 "set guifont=Consolas:h12
 "set guifont=DejaVuSansMono:h12
-set guifont=Menlo:h11
+set guifont=Menlo:h12
 ":inoremap <S-space> <ESC>
 ":inoremap <D-space> <ESC>
 ":inoremap <C-space> <ESC>
@@ -132,3 +132,5 @@ set guitabtooltip=%{GuiTabToolTip()}
 
 set background=dark
 colorscheme desert
+set t_Co=0
+syntax off

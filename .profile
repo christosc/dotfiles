@@ -468,7 +468,7 @@ if [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
     #source ~/.git-prompt.sh
     source /usr/local/git/contrib/completion/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE=true
-    GIT_PS1_SHOWSTASHSTATE=true
+    #GIT_PS1_SHOWSTASHSTATE=true
     #GIT_PS1_SHOWUPSTREAM=verbose
     #PS1='\u@\h: \w[$(__git_ps1 " (%s)")]\n\$ '
     #PS1='\u@\h: \w[$(__git_ps1)]\$ '
@@ -476,7 +476,8 @@ if [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
     cur_tty="${temp:5}" # The tty we are working on
     #export PS1="\u@\h:${cur_tty}:\W\$(__git_ps1) > "
 	#export PS1="\u@\h:\W\$(__git_ps1) % "
-	export PS1="[\u@\h: \W] $ "
+	export PS1="[\u@\h:\W]\$(__git_ps1) "
+	#export PS1="[\u@\h: \W] $ "
     #PS1='\u@\h: \w $(hg_git_ps1 "(%s)")\n\$ '
 fi
 
