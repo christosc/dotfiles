@@ -287,10 +287,10 @@ autocmd FileType gitcommit setlocal textwidth=72
 
 set hidden
 
-noremap  <silent> k gk
-noremap  <silent> j gj
-noremap  <silent> 0 g0
-noremap  <silent> $ g$
+"noremap  <silent> k gk
+"noremap  <silent> j gj
+"noremap  <silent> 0 g0
+"noremap  <silent> $ g$
 
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F3>

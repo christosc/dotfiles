@@ -8,8 +8,8 @@
         #editor = emacs -nw --color=no
         #editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
 	#editor = "vim"	
-	editor = "/Applications/Emacs.app/Contents/MacOS/Emacs -nw --color=no"
-	#editor = "em"	
+	#editor = "/Applications/Emacs.app/Contents/MacOS/Emacs -nw --color=no"
+	editor = "em"	
 	autocrlf = false
 	#pager = less -XRFS -x1,5
 
@@ -43,3 +43,6 @@
 	#smudge = unexpand --tabs=8 --first-only
 	#clean = expand --tabs=8 --initial
 	#clean = expand  --initial
+	
+[diff "localizablestrings"]
+	textconv = "iconv -f utf-16 -t utf-8"

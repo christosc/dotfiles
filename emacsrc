@@ -32,6 +32,8 @@ bind-to-key execute-macro-36	FNQ  ; F2 to set modes as appopriate
 
 bind-to-key set-mark ^@  ; Control-space to set mark
 
+bind-to-key search-forward ^S ;
+
 40 	store-macro
 	insert-string "·"
 !endm
