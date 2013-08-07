@@ -442,7 +442,7 @@ alias del="rm -i"
 
 export TEXDIR="/usr/local/texlive/2012/texmf-dist/tex"
 #export CDPATH="~/Developer:~/work:~/devel/git-svn:~/devel/git:~/devel"
-export CDPATH=.:~/Work
+export CDPATH=.:~/Work:/Users/chc/Library/Application\ Support/iPhone\ Simulator
 alias luatex="rlwrap luatex"
 alias xetex="rlwrap xetex"
 alias lualatex="rlwrap lualatex"
@@ -476,7 +476,7 @@ if [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
     cur_tty="${temp:5}" # The tty we are working on
     #export PS1="\u@\h:${cur_tty}:\W\$(__git_ps1) > "
 	#export PS1="\u@\h:\W\$(__git_ps1) % "
-	export PS1="[\u@\h:\W]\$(__git_ps1) "
+	export PS1="[\u@\h:\W]\$(__git_ps1) % "
 	#export PS1="[\u@\h: \W] $ "
     #PS1='\u@\h: \w $(hg_git_ps1 "(%s)")\n\$ '
 fi
@@ -715,3 +715,6 @@ alias lem="ps | grep 'em ' | grep -v grep"
 
 alias e="ps | grep 'em ' | grep ${cur_tty} | grep -v grep"
 #alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw --color=no"
+
+export PATH=$PATH:/Applications/adt-bundle-mac-x86_64/tools:/Applications/adt-bundle-mac-x86_64/platform-tools
+

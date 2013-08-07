@@ -195,14 +195,15 @@
 
 (menu-bar-mode -1)
 
-(eval-after-load 'cc-mode
+(eval-after-load "cc-mode"
   '(progn
      (define-key c-mode-base-map "/" 'self-insert-command)
      (define-key c-mode-base-map "*" 'self-insert-command)
      (define-key c-mode-map (kbd "TAB") 'self-insert-command)
+     (define-key c-mode-map (kbd ";") 'self-insert-command)     
 ))
      
-;;(global-set-key (kbd "TAB") 'self-insert-command)
+
 
 
 
@@ -247,7 +248,18 @@
 ;:weight 'extra-light)
 
 (global-set-key (kbd "RET") 'comment-indent-new-line)
+(global-set-key (kbd "TAB") 'self-insert-command)
 
 (setq-default c-basic-offset 8
               tab-width 8
               indent-tabs-mode t)
+
+;;(eval-after-load "cc-mode"
+;;'(progn
+;;  (define-key c-mode-map (kbd "TAB") 'self-insert-command)
+;;  (define-key c-mode-map (kbd ";") 'self-insert-command)
+;;))
+
+(global-set-key (kbd "DEL") 'backward-delete-char)
+(setq c-backspace-function 'backward-delete-char)
+(setq mac-right-command-modifuer 'ctrl)

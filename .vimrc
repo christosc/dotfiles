@@ -441,7 +441,6 @@ au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
 "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-set noimdisable
 set nocursorline
 set encoding=utf-8 
 set fenc=utf-8 
@@ -499,3 +498,7 @@ set iskeyword-=:
 "set expandtab
 
 au FileType c,cpp,objc setlocal comments-=:// comments+=f://
+
+set keymap=greek_utf-8
+set iminsert=0
+set imsearch=-1
