@@ -502,3 +502,5 @@ au FileType c,cpp,objc setlocal comments-=:// comments+=f://
 set keymap=greek_utf-8
 set iminsert=0
 set imsearch=-1
+
+inoremap <c-l> <c-^>

@@ -718,3 +718,4 @@ alias e="ps | grep 'em ' | grep ${cur_tty} | grep -v grep"
 
 export PATH=$PATH:/Applications/adt-bundle-mac-x86_64/tools:/Applications/adt-bundle-mac-x86_64/platform-tools
 
+alias mutt="cd ~/Desktop && mutt"
