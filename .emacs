@@ -260,6 +260,9 @@
   (define-key c-mode-map (kbd "TAB") 'self-insert-command)
   (define-key c-mode-map (kbd ";") 'self-insert-command)
   (define-key objc-mode-map (kbd ":") 'self-insert-command)
+  (define-key objc-mode-map (kbd ",") 'self-insert-command)
+  (define-key objc-mode-map (kbd "{") 'self-insert-command)
+  (define-key objc-mode-map (kbd "}") 'self-insert-command)
 ))
 
 (global-set-key (kbd "DEL") 'backward-delete-char)
