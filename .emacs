@@ -211,7 +211,7 @@
 (global-set-key (kbd "DEL") 'backward-delete-char)
 (setq c-backspace-function 'backward-delete-char)
 
-(setq-default transient-mark-mode nil)
+;;(setq-default transient-mark-mode nil)
 
 (global-set-key (kbd "C-x x") 'next-buffer)
 
@@ -261,10 +261,14 @@
   (define-key c-mode-map (kbd ";") 'self-insert-command)
   (define-key objc-mode-map (kbd ":") 'self-insert-command)
   (define-key objc-mode-map (kbd ",") 'self-insert-command)
-  (define-key objc-mode-map (kbd "{") 'self-insert-command)
-  (define-key objc-mode-map (kbd "}") 'self-insert-command)
+  ;;(define-key objc-mode-map (kbd "{") 'self-insert-command)
+  ;;(define-key objc-mode-map (kbd "}") 'self-insert-command)
 ))
 
 (global-set-key (kbd "DEL") 'backward-delete-char)
 (setq c-backspace-function 'backward-delete-char)
 (setq mac-right-command-modifuer 'ctrl)
+
+;;(add-to-list 'auto-mode-alist '("\\.m\\'" . c-mode))
+
+(setq default-input-method "greek-babel")
