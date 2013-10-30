@@ -35,7 +35,13 @@ bind-to-key set-mark ^@  ; Control-space to set mark
 bind-to-key search-forward ^S ;
 
 40 	store-macro
-	insert-string "·"
+	insert-string "·"
 !endm
 
 bind-to-key execute-macro-40 M-:
+
+20 store-macro
+    shell-command "kill -TSTP -$PPID"
+!endm
+
+bind-to-key execute-macro-20 ^Z
