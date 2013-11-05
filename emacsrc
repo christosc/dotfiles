@@ -41,7 +41,7 @@ bind-to-key search-forward ^S ;
 bind-to-key execute-macro-40 M-:
 
 20 store-macro
-    shell-command "kill -TSTP -$PPID"
+    shell-command "kill -TSTP $PPID"
 !endm
 
 bind-to-key execute-macro-20 ^Z
