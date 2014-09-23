@@ -23,7 +23,13 @@ export PATH=$PATH:/usr/local/mysql/bin
 #export PS1="\[\033[34m\][\$(date +%H%M)][\u@\h:\w]$ "
 #umask 077
 
+# GIT
 
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
 
 
 
