@@ -13,3 +13,9 @@ size = 12.0
   [window.dimensions]
   columns = 150
   lines = 40
+
+# This keybinding seems to fix C-space in some situations
+[[keyboard.bindings]]
+key = "Space"
+mods = "Control"
+chars = "\u0000"
