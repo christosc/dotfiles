@@ -3,8 +3,10 @@
   blinking = "Always"
 
 [shell]
+#program = "C:\\Windows\\System32\\wsl.exe"
+#args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu"]
 program = "C:\\Windows\\System32\\wsl.exe"
-args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu"]
+args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu-18.04"]
 
 [font]
 size = 12.0
@@ -35,3 +37,8 @@ style = "Bold"
 key = "Space"
 mods = "Control"
 chars = "\u0000"
+
+[[keyboard.bindings]]
+key = "Slash"
+mods = "Control"
+chars = "\u001f"
