@@ -1,19 +1,56 @@
-[cursor]
-  [cursor.style]
-  blinking = "Always"
+#[cursor]
+#  [cursor.style]
+#  blinking = "Always"
 
-[shell]
+[terminal.shell]
 #program = "C:\\Windows\\System32\\wsl.exe"
 #args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu"]
 program = "C:\\Windows\\System32\\wsl.exe"
 args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu-18.04"]
 
-[font]
-size = 12.0
+# [font]
+# size = 12.0
+# 
+# [font.bold]
+# family = "Consolas"
+# style = "Bold"
+# 
+#   [font.bold_italic]
+#   family = "Consolas"
+#   style = "Bold Italic"
+# 
+#   [font.italic]
+#   family = "Consolas"
+#   style = "Italic"
+# 
+#   [font.normal]
+#   family = "Consolas"
+#   style = "Regular"
 
-[font.bold]
-family = "Cascadia Mono"
-style = "Bold"
+# [font.bold]
+# family = "Cascadia Mono"
+# style = "Bold"
+# 
+#   [font.bold_italic]
+#   family = "Cascadia Mono"
+#   style = "Bold Italic"
+# 
+#   [font.italic]
+#   family = "Cascadia Mono"
+#   style = "Italic"
+# 
+#   [font.normal]
+#   family = "Cascadia Mono"
+
+[font]
+  size = 12.0
+  [font.normal]
+  family = "Cascadia Mono"
+  style = "Regular"
+
+  [font.bold]
+  family = "Cascadia Mono"
+  style = "Bold"
 
   [font.bold_italic]
   family = "Cascadia Mono"
@@ -22,10 +59,6 @@ style = "Bold"
   [font.italic]
   family = "Cascadia Mono"
   style = "Italic"
-
-  [font.normal]
-  family = "Cascadia Mono"
-  style = "Regular"
 
 [window]
   [window.dimensions]
@@ -42,3 +75,5 @@ chars = "\u0000"
 key = "Slash"
 mods = "Control"
 chars = "\u001f"
+
+[terminal]
