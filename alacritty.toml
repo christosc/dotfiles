@@ -1,12 +1,14 @@
-#[cursor]
-#  [cursor.style]
-#  blinking = "Always"
+[cursor]
+  [cursor.style]
+  blinking = "Always"
 
 [terminal.shell]
 #program = "C:\\Windows\\System32\\wsl.exe"
 #args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu"]
 program = "C:\\Windows\\System32\\wsl.exe"
-args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu-18.04"]
+#args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu-18.04"]
+#args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu"]        
+args = ["-d Ubuntu"]        
 
 # [font]
 # size = 12.0
@@ -45,19 +47,23 @@ args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu-18.04"]
 [font]
   size = 12.0
   [font.normal]
-  family = "Cascadia Mono"
+  #family = "Cascadia Mono"
+  family = "Consolas"
   style = "Regular"
 
   [font.bold]
-  family = "Cascadia Mono"
+  #family = "Cascadia Mono"
+  family = "Consolas"
   style = "Bold"
 
   [font.bold_italic]
-  family = "Cascadia Mono"
+  #family = "Cascadia Mono"
+  family = "Consolas"
   style = "Bold Italic"
 
   [font.italic]
-  family = "Cascadia Mono"
+  #family = "Cascadia Mono"
+  family = "Consolas"
   style = "Italic"
 
 [window]
@@ -76,4 +82,21 @@ key = "Slash"
 mods = "Control"
 chars = "\u001f"
 
-[terminal]
+# ~/.config/alacritty/alacritty.toml
+
+# Disable Alacritty’s own mouse bindings so that mouse events are forwarded
+# to applications (like Emacs) running inside the terminal.
+
+
+#[mouse]
+#        bindings = []
+
+
+#[terminal]
+[env]
+TERM = "xterm-256color"
+
+[colors.primary]
+foreground = "#FFFFFF"  # This sets the font color (white in this case)
+background = "#000000"  # This sets the background color
+
