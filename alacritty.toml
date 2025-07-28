@@ -7,24 +7,24 @@
 #args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu"]
 program = "C:\\Windows\\System32\\wsl.exe"
 #args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu-18.04"]
-#args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu"]        
-args = ["-d Ubuntu"]        
+#args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu"]
+args = ["-d Ubuntu"]
 
 # [font]
 # size = 12.0
-# 
+#
 # [font.bold]
 # family = "Consolas"
 # style = "Bold"
-# 
+#
 #   [font.bold_italic]
 #   family = "Consolas"
 #   style = "Bold Italic"
-# 
+#
 #   [font.italic]
 #   family = "Consolas"
 #   style = "Italic"
-# 
+#
 #   [font.normal]
 #   family = "Consolas"
 #   style = "Regular"
@@ -32,39 +32,30 @@ args = ["-d Ubuntu"]
 # [font.bold]
 # family = "Cascadia Mono"
 # style = "Bold"
-# 
+#
 #   [font.bold_italic]
 #   family = "Cascadia Mono"
 #   style = "Bold Italic"
-# 
+#
 #   [font.italic]
 #   family = "Cascadia Mono"
 #   style = "Italic"
-# 
+#
 #   [font.normal]
 #   family = "Cascadia Mono"
 
 [font]
-  size = 12.0
-  [font.normal]
-  #family = "Cascadia Mono"
-  family = "Consolas"
-  style = "Regular"
+  #normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
+  #bold = { family = "FiraCode Nerd Font Moni", style = "Bold" }
+  #italic = { family = "FiraCode Nerd Font Moni", style = "Italic" }
+  #bold_italic = { family = "FiraCode Nerd Font Mono", style = "Bold Italic" }
 
-  [font.bold]
-  #family = "Cascadia Mono"
-  family = "Consolas"
-  style = "Bold"
+  normal = { family = "MesloLGS Nerd Font", style = "Regular" }
+  bold = { family = "MesloLGS Nerd Font", style = "Bold" }
+  italic = { family = "MesloLGS Nerd Font", style = "Italic" }
+  bold_italic = { family = "MesloLGS Nerd Font", style = "Bold Italic" }
 
-  [font.bold_italic]
-  #family = "Cascadia Mono"
-  family = "Consolas"
-  style = "Bold Italic"
-
-  [font.italic]
-  #family = "Cascadia Mono"
-  family = "Consolas"
-  style = "Italic"
+  size = 11.0  # You can adjust the size as needed
 
 [window]
   [window.dimensions]
