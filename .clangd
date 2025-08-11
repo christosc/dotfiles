@@ -1,0 +1,21 @@
+# .clangd
+Diagnostics:
+  ClangTidy:
+    FastCheckFilter: None   # Strict is default; None runs everything
+
+# Fragment common to C and C++ source files
+CompileFlags:
+  Add: [-Wno-unused-parameter, -m32] # need -m32 to align with the real compiler, which apparently compiles with a long of 32 bits.
+  Remove: [-fconcepts]
+---
+# Fragment specific to C source files
+If:
+  PathMatch: ".*\\.c$"
+CompileFlags:
+  Add: [-x, c]      # Explicitly add the flag to treat input as C code.
+---
+# Fragment specific to C++ source files
+If:
+  PathMatch: ".*\\.(cpp|cxx|cc|c\\+\\+|hpp|hxx|h)$"
+CompileFlags:
+  Add: [-x, c++]      # Explicitly add the flag to treat input as C++ code.
