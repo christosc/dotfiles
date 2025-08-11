@@ -3,6 +3,12 @@ Diagnostics:
   ClangTidy:
     FastCheckFilter: None   # Strict is default; None runs everything
 
+Format:
+  # Use your project's .clang-format
+  Style: file
+  # Fallback if no .clang-format is found
+  FallbackStyle: LLVM
+
 # Fragment common to C and C++ source files
 CompileFlags:
   Add: [-Wno-unused-parameter, -m32] # need -m32 to align with the real compiler, which apparently compiles with a long of 32 bits.
