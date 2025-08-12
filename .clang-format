@@ -28,7 +28,6 @@ AllowShortLoopsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: None
 IndentCaseLabels: false
 ColumnLimit: 100
-
 # Additional Linux-style settings
 AlignTrailingComments: true
 AlignConsecutiveAssignments: false

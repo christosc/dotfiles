@@ -1,7 +1,7 @@
 # .clangd
-Diagnostics:
-  ClangTidy:
-    FastCheckFilter: None   # Strict is default; None runs everything
+#Diagnostics:
+#  ClangTidy:
+#    FastCheckFilter: None   # Strict is default; None runs everything
 
 Format:
   # Use your project's .clang-format
