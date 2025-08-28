@@ -3,6 +3,9 @@
 #  ClangTidy:
 #    FastCheckFilter: None   # Strict is default; None runs everything
 
+Index:
+  Background: Build
+
 Format:
   # Use your project's .clang-format
   Style: file
