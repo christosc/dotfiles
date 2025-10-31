@@ -15,6 +15,7 @@ Checks: >
   -readability-braces-around-statements,
   -bugprone-easily-swappable-parameters,
   -readability-implicit-bool-conversion,
+  -readability-inconsistent-declaration-parameter-name,
 
 WarningsAsErrors: ''
 HeaderFilterRegex: ''
