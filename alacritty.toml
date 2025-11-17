@@ -1,3 +1,6 @@
+[selection]
+  save_to_clipboard = true
+
 [cursor]
   [cursor.style]
   blinking = "Always"
@@ -55,12 +58,12 @@ args = ["-d Ubuntu"]
   #italic = { family = "MesloLGS Nerd Font", style = "Italic" }
   #bold_italic = { family = "MesloLGS Nerd Font", style = "Bold Italic" }
 
-  normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-  bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
-  italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
-  bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+  normal = { family = "UbuntuMono Nerd Font", style = "Regular" }
+  bold = { family = "UbuntuMono Nerd Font", style = "Bold" }
+  italic = { family = "UbuntuMono Nerd Font", style = "Italic" }
+  bold_italic = { family = "UbuntuMono Nerd Font", style = "Bold Italic" }
 
-  size = 11.0  # You can adjust the size as needed
+  size = 12.0  # You can adjust the size as needed
 
 [window]
   [window.dimensions]
