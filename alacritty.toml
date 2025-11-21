@@ -99,3 +99,7 @@ TERM = "xterm-256color"
 foreground = "#FFFFFF"  # This sets the font color (white in this case)
 background = "#000000"  # This sets the background color
 
+[terminal]
+osc52 = "Copy" # I don't set it to "CopyPaste" for security: I don't
+	       # want a remote script be able to read my Windows
+	       # clipboard (might have passwords)
