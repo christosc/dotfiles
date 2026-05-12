@@ -10,6 +10,11 @@ Index:
 CompileFlags:
   Add: [-Wno-unused-parameter, -m32] # need -m32 to align with the real compiler, which apparently compiles with a long of 32 bits.
   Remove: [-fconcepts]
+
+Diagnostics:
+  Suppress:
+    - builtin_definition
+
 ---
 # Fragment specific to C source files
 If:
