@@ -54,6 +54,13 @@ local config = wezterm.config_builder()
 -- Default domain: Connect directly to the Ubuntu WSL instance natively.
 -- This ensures proper process management and prevents zombie processes.
 config.default_domain = 'WSL:Ubuntu'
+config.font_size = 11.0  -- default is 12.0
+
+config.front_end = 'WebGpu'
+config.webgpu_power_preference = 'HighPerformance'
+config.animation_fps = 1
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+config.enable_kitty_graphics = false
 
 -- ============================================================================
 -- Return Configuration
