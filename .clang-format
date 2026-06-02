@@ -57,3 +57,4 @@ SpaceInEmptyParentheses: false
 MaxEmptyLinesToKeep: 2
 KeepEmptyLinesAtTheStartOfBlocks: false
 SortIncludes: false
+ReflowComments: IndentOnly
