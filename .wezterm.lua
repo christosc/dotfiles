@@ -69,11 +69,13 @@ config.colors = {
   foreground = '#e8e8e8',
 }
 
-config.default_cursor_style = 'BlinkingBlock'  -- ἢ BlinkingBar
-config.cursor_blink_rate = 500                 -- ms (default 800)
+config.default_cursor_style = 'SteadyBlock'
+
+-- config.default_cursor_style = 'BlinkingBlock'  -- ἢ BlinkingBar
+-- config.cursor_blink_rate = 500                 -- ms (default 800)
 config.animation_fps = 1
-config.cursor_blink_ease_in = 'Constant'
-config.cursor_blink_ease_out = 'Constant'
+-- config.cursor_blink_ease_in = 'Constant'
+-- config.cursor_blink_ease_out = 'Constant'
 
 -- ============================================================================
 -- Return Configuration
