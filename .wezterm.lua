@@ -51,16 +51,29 @@ end)
 -- 3. Initialize the configuration builder
 local config = wezterm.config_builder()
 
+config.automatically_reload_config = true
+
 -- Default domain: Connect directly to the Ubuntu WSL instance natively.
 -- This ensures proper process management and prevents zombie processes.
 config.default_domain = 'WSL:Ubuntu'
 config.font_size = 11.0  -- default is 12.0
 
 config.front_end = 'WebGpu'
+--config.front_end = 'OpenGL'
 config.webgpu_power_preference = 'HighPerformance'
-config.animation_fps = 1
+--config.animation_fps = 1
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.enable_kitty_graphics = false
+
+config.colors = {
+  foreground = '#e8e8e8',
+}
+
+config.default_cursor_style = 'BlinkingBlock'  -- ἢ BlinkingBar
+config.cursor_blink_rate = 500                 -- ms (default 800)
+config.animation_fps = 1
+config.cursor_blink_ease_in = 'Constant'
+config.cursor_blink_ease_out = 'Constant'
 
 -- ============================================================================
 -- Return Configuration
