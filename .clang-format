@@ -6,6 +6,7 @@ IndentWidth: 4
 UseTab: Never
 TabWidth: 4
 AccessModifierOffset: -4
+NamespaceIndentation: None
 
 # Linux style characteristics with custom brace breaking
 BreakBeforeBraces: Custom
