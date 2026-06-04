@@ -83,9 +83,9 @@ config.animation_fps = 1
 -- config.cursor_blink_ease_in = 'Constant'
 -- config.cursor_blink_ease_out = 'Constant'
 
-config.enable_kitty_keyboard = true
--- Keep this off (its default); if enabled it takes precedence over KKP.
-config.enable_csi_u_key_encoding = false
+config.enable_kitty_keyboard = true       -- KKP for direct (kkp.el) sessions; separate request, no conflict
+config.enable_csi_u_key_encoding = false  -- keep off: it would suppress modifyOtherKeys
+config.allow_win32_input_mode = false     -- THE FIX: stop Win32 input mode from overriding modifyOtherKeys
 
 -- ============================================================================
 -- Return Configuration
