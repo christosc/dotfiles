@@ -71,11 +71,21 @@ config.colors = {
 
 config.default_cursor_style = 'SteadyBlock'
 
+local act = wezterm.action
+config.keys = {
+  -- Let C-M-% fall through to the terminal app (Emacs query-replace-regexp)
+  { key = '%', mods = 'CTRL|SHIFT|ALT', action = act.DisableDefaultAssignment },
+}
+
 -- config.default_cursor_style = 'BlinkingBlock'  -- ἢ BlinkingBar
 -- config.cursor_blink_rate = 500                 -- ms (default 800)
 config.animation_fps = 1
 -- config.cursor_blink_ease_in = 'Constant'
 -- config.cursor_blink_ease_out = 'Constant'
+
+config.enable_kitty_keyboard = true
+-- Keep this off (its default); if enabled it takes precedence over KKP.
+config.enable_csi_u_key_encoding = false
 
 -- ============================================================================
 -- Return Configuration
