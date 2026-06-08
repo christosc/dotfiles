@@ -76,10 +76,18 @@ key = "Space"
 mods = "Control"
 chars = "\u0000"
 
+# Emacs undo
 [[keyboard.bindings]]
 key = "Slash"
 mods = "Control"
 chars = "\u001f"
+
+# C-%, to be used in conjunction with ESC prefix for query-replace-regexp in
+# Emacs.
+[[keyboard.bindings]]
+key = "%"
+mods = "Control|Shift"
+chars = "\u001b[37;5u"
 
 # ~/.config/alacritty/alacritty.toml
 
