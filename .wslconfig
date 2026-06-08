@@ -1,0 +1,35 @@
+# %UserProfile%\.wslconfig  (e.g. C:\Users\chryssoc\.wslconfig)
+# Global settings for all WSL 2 distros. Run `wsl --shutdown` after editing.
+
+[wsl2]
+# Cap VM memory at 16 GB, leaving 16 GB for Windows and corporate agents.
+# With autoMemoryReclaim this is a ceiling, not constant usage.
+memory=16GB
+
+# 8 of 12 logical processors: uses SMT for build throughput while keeping
+# 4 free for Windows. Bump to 10 for maximum build speed.
+processors=8
+
+# Swap as a safety margin for occasional heavy local compiles.
+swap=8GB
+
+# Mirror Windows network interfaces into WSL. Big help with corporate
+# VPN/proxy. If networking misbehaves, remove this line to fall back to NAT.
+networkingMode=mirrored
+
+# Resolve DNS through Windows; fixes DNS resolution under VPN/proxy.
+dnsTunneling=true
+
+# Use the Windows HTTP proxy configuration automatically inside WSL.
+autoProxy=true
+
+# Apply Windows firewall rules to the WSL VM (default is true anyway).
+firewall=true
+
+[experimental]
+# Gradually return cached memory to Windows when the VM is idle.
+autoMemoryReclaim=gradual
+
+# sparseVhd intentionally disabled: WSL gates it behind --allow-unsafe
+# due to data-corruption reports. Not worth the risk for a dev disk.
+# sparseVhd=true
