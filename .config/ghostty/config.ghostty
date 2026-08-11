@@ -1,5 +1,5 @@
 
-theme = "Catppuccin Mocha"
+#theme = "Catppuccin Mocha"
 # ~/.config/ghostty/config
 cursor-style = block
 cursor-style-blink = false

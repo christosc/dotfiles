@@ -5,13 +5,13 @@
   [cursor.style]
   blinking = "Always"
 
-[terminal.shell]
+#[terminal.shell]
 #program = "C:\\Windows\\System32\\wsl.exe"
 #args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu"]
-program = "C:\\Windows\\System32\\wsl.exe"
+#program = "C:\\Windows\\System32\\wsl.exe"
 #args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu-18.04"]
 #args = ["--cd /mnt/c/Users/chryssoc -d Ubuntu"]
-args = ["-d Ubuntu"]
+#args = ["-d Ubuntu"]
 
 # [font]
 # size = 12.0
@@ -48,22 +48,23 @@ args = ["-d Ubuntu"]
 #   family = "Cascadia Mono"
 
 [font]
-  #normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
-  #bold = { family = "FiraCode Nerd Font Moni", style = "Bold" }
-  #italic = { family = "FiraCode Nerd Font Moni", style = "Italic" }
-  #bold_italic = { family = "FiraCode Nerd Font Mono", style = "Bold Italic" }
+  size = 14.0  # You can adjust the size as needed
+#   #normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
+#   #bold = { family = "FiraCode Nerd Font Moni", style = "Bold" }
+#   #italic = { family = "FiraCode Nerd Font Moni", style = "Italic" }
+#   #bold_italic = { family = "FiraCode Nerd Font Mono", style = "Bold Italic" }
 
-  #normal = { family = "MesloLGS Nerd Font", style = "Regular" }
-  #bold = { family = "MesloLGS Nerd Font", style = "Bold" }
-  #italic = { family = "MesloLGS Nerd Font", style = "Italic" }
-  #bold_italic = { family = "MesloLGS Nerd Font", style = "Bold Italic" }
+#   #normal = { family = "MesloLGS Nerd Font", style = "Regular" }
+#   #bold = { family = "MesloLGS Nerd Font", style = "Bold" }
+#   #italic = { family = "MesloLGS Nerd Font", style = "Italic" }
+#   #bold_italic = { family = "MesloLGS Nerd Font", style = "Bold Italic" }
 
-  normal = { family = "UbuntuMono Nerd Font", style = "Regular" }
-  bold = { family = "UbuntuMono Nerd Font", style = "Bold" }
-  italic = { family = "UbuntuMono Nerd Font", style = "Italic" }
-  bold_italic = { family = "UbuntuMono Nerd Font", style = "Bold Italic" }
+#   normal = { family = "UbuntuMono Nerd Font", style = "Regular" }
+#   bold = { family = "UbuntuMono Nerd Font", style = "Bold" }
+#   italic = { family = "UbuntuMono Nerd Font", style = "Italic" }
+#   bold_italic = { family = "UbuntuMono Nerd Font", style = "Bold Italic" }
 
-  size = 12.0  # You can adjust the size as needed
+#   size = 12.0  # You can adjust the size as needed
 
 [window]
   [window.dimensions]
