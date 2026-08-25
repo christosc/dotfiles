@@ -26,9 +26,9 @@ BraceWrapping:
   SplitEmptyNamespace: true
 AllowShortIfStatementsOnASingleLine: false
 AllowShortLoopsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: None
+AllowShortFunctionsOnASingleLine: Empty
 IndentCaseLabels: false
-ColumnLimit: 100
+ColumnLimit: 80
 # Additional Linux-style settings
 AlignTrailingComments: true
 AlignConsecutiveAssignments: false
